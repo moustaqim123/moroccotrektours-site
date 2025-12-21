@@ -1,0 +1,39 @@
+Image Audit - tensor-coronal
+
+Total inline <img> occurrences found: 77
+
+Summary by file (occurrence count):
+- index.html: 4
+- about.html: 5
+- contact.html: 1
+- customize-trip.html: 1
+- blog.html: 6
+- blog-atlas.html: 6
+- blog-coastal.html: 6
+- blog-culture.html: 6
+- blog-fes.html: 6
+- blog-marrakech.html: 6
+- blog-sahara.html: 7
+- tours.html: 0 (no inline tour images beyond logo)
+- tour-agafay.html: 1
+- tour-ait-bougmez.html: 1
+- tour-atlas-villages.html: 1
+- tour-chefchaouen.html: 5
+- tour-essaouira.html: 5
+- tour-mgoun.html: 1
+- tour-saghro.html: 1
+- tour-siroua.html: 1
+- tour-todra-dades.html: 1
+- tour-toubkal.html: 1
+
+Notes:
+- Many images are external (Unsplash CDN) and several are local under `images/` (e.g., `logo.png`, `saghro_main.jpg`, `guide_*.jpg`, `team4.jpg`).
+- The site uses an inline logo (`images/logo.png`) in nav across many pages.
+
+Recommended next steps:
+1) Confirm CMS choice and image URL schema.
+2) Replace inline `src` attributes with `data-cms-image="<image-key>"` attributes and add a `js/cms-sync.js` to fetch CMS image manifest and replace `img.src` at runtime.
+3) Add server-side build step or CI job to validate no hard-coded local images remain.
+4) Implement per-package WhatsApp links and map injection via the same `cms-sync.js`.
+
+If you want, I can implement step 2 as a prototype now (create `js/cms-sync.js`, update HTML to use `data-cms-image` for logo, and add a sample `cms-manifest.json`).

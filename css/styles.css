@@ -1,0 +1,834 @@
+/* 
+   Mountain Tourism Website - Main Stylesheet
+   Theme: Nature, Adventure, Professional
+*/
+
+/* ---------------------------------- */
+/* 1. Variables & Reset               */
+/* ---------------------------------- */
+:root {
+    /* Color Palette */
+    --primary-color: #2d5016;
+    /* Forest Green */
+    --secondary-color: #8b4513;
+    /* Earthy Brown */
+    --accent-color: #e67e22;
+    /* Warm Orange */
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --bg-light: #ffffff;
+    --bg-off-white: #f9f9f9;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --container-width: 1200px;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* ---------------------------------- */
+/* 2. Navigation                      */
+/* ---------------------------------- */
+.navbar {
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    /* Aligned */
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-tagline {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+    letter-spacing: 0.5px;
+    font-style: normal;
+    opacity: 1;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    line-height: 1.2;
+    max-width: 200px;
+    /* Increased */
+}
+
+/* Smart Gallery */
+.smart-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.smart-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.smart-gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon List Style for Tours */
+.tour-highlights-list.icon-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tour-highlights-list.icon-list li i {
+    color: var(--accent-color);
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* ---------------------------------- */
+/* 3. Hero Sections                   */
+/* ---------------------------------- */
+.hero-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: var(--text-light);
+    margin-top: 80px;
+    /* Offset fixed nav */
+}
+
+/* Overlay for text readability */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: var(--spacing-md);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+/* Smaller Hero for Internal Pages */
+.hero-small {
+    height: 50vh;
+}
+
+.hero-small .hero-title {
+    font-size: 2.5rem;
+}
+
+/* ---------------------------------- */
+/* 4. Sections & Components           */
+/* ---------------------------------- */
+.section-padding {
+    padding: var(--spacing-lg) 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.feature-item {
+    background: var(--bg-off-white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Tour Cards */
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tour-card {
+    background: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.tour-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-details {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-title {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tour-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.tour-price {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin: var(--spacing-sm) 0;
+}
+
+.tour-btn {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tour-btn:hover {
+    background-color: #1e360f;
+}
+
+/* About Section Styles */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-sm);
+    border: 3px solid var(--primary-color);
+}
+
+/* Blog Styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.blog-card {
+    background: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: var(--spacing-md);
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Contact Form */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    background: var(--bg-off-white);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+}
+
+.contact-info-block {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-form .form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-body);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* ---------------------------------- */
+/* 5. Footer                          */
+/* ---------------------------------- */
+.footer {
+    background-color: #222;
+    color: var(--text-light);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-col h4 {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* ---------------------------------- */
+/* 6. Animations & Mobile             */
+/* ---------------------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        height: calc(100vh - 80px);
+        background-color: var(--bg-light);
+        flex-direction: column;
+        width: 100%;
+        padding: var(--spacing-md);
+        text-align: center;
+        transition: var(--transition);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------- */
+/* 7. Individual Tour Page Styles     */
+/* ---------------------------------- */
+.tour-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    /* Align text to bottom */
+    color: var(--text-light);
+    margin-top: 80px;
+}
+
+.tour-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.tour-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: var(--spacing-lg);
+}
+
+.tour-hero-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tour-hero-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.tour-hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tour Content Layout */
+.tour-page-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Content vs Sidebar */
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.tour-main-content h2 {
+    color: var(--primary-color);
+    margin-top: var(--spacing-md);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.tour-overview {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Highlights */
+.highlights-box {
+    background: #f0f7ea;
+    /* Light green tint */
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.highlights-box ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.highlights-box li {
+    position: relative;
+    padding-left: 25px;
+}
+
+.highlights-box li::before {
+    content: '\f00c';
+    /* Font Awesome Check */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Itinerary */
+.itinerary-step {
+    margin-bottom: var(--spacing-md);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.itinerary-day-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Accommodation & Lists */
+.info-list {
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.info-list li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-list li::before {
+    content: '\f105';
+    /* Chevron right */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Sidebar Info */
+.tour-sidebar-card {
+    background: var(--bg-light);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    position: sticky;
+    top: 100px;
+    /* Sticky sidebar */
+}
+
+.sidebar-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-info-row:last-child {
+    border-bottom: none;
+}
+
+.sidebar-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.sidebar-value {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Mobile adjustments for tour grid */
+@media (max-width: 768px) {
+    .tour-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-hero {
+        height: 50vh;
+    }
+
+    .tour-hero-title {
+        font-size: 2rem;
+    }
+
+    .highlights-box ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------- */
+/* 8. WhatsApp Floating CTA Button    */
+/* ---------------------------------- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float i {
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 26px;
+    }
+}

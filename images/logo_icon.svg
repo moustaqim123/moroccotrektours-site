@@ -1,0 +1,37 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for Gradients -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C49102;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brownGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5D2906;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Archway -->
+  <path d="M 50 350 L 50 200 A 150 150 0 0 1 350 200 L 350 350" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Mountains -->
+  <path d="M 55 350 L 140 240 L 225 350 Z" fill="url(#brownGradient)" />
+  <path d="M 175 350 L 262.5 240 L 345 350 Z" fill="url(#brownGradient)" opacity="0.9"/>
+  
+  <!-- Connecting ground line (optional/stylistic) -->
+  <rect x="50" y="350" width="300" height="10" fill="#8B4513" />
+
+  <!-- Compass Rose (Central Element) -->
+  <g transform="translate(200, 180)">
+    <!-- Back Star -->
+    <path d="M 0 -60 L 15 -15 L 60 0 L 15 15 L 0 60 L -15 15 L -60 0 L -15 -15 Z" fill="#F4A460" />
+    <!-- Front Star -->
+    <path d="M 0 -70 L 10 -10 L 70 0 L 10 10 L 0 70 L -10 10 L -70 0 L -10 -10 Z" fill="url(#goldGradient)" />
+    <!-- Compass Letters -->
+    <text x="0" y="-80" font-family="serif" font-size="16" fill="#8B4513" text-anchor="middle" font-weight="bold">N</text>
+    <text x="80" y="5" font-family="serif" font-size="16" fill="#8B4513" text-anchor="middle" font-weight="bold">E</text>
+    <text x="-80" y="5" font-family="serif" font-size="16" fill="#8B4513" text-anchor="middle" font-weight="bold">W</text>
+  </g>
+  
+  <!-- Text acts as a separate element usually, but including here for the square composition -->
+</svg>

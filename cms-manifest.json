@@ -1,0 +1,626 @@
+﻿{
+    "images":  {
+                   "auto.images.agafay_desert":  "images/agafay_desert.jpg",
+                   "auto.images.ait_bougmez":  "images/ait_bougmez.jpg",
+                   "auto.images.atlas_village":  "images/atlas_village.jpg",
+                   "auto.images.guide_coastal_vibes":  "images/guide_coastal_vibes.jpg",
+                   "auto.images.guide_culture_flavors":  "images/guide_culture_flavors.jpg",
+                   "auto.images.guide_high_atlas":  "images/guide_high_atlas.jpg",
+                   "auto.images.guide_sahara_desert":  "images/guide_sahara_desert.jpg",
+                   "auto.images.happy_valley_main":  "images/happy_valley_main.jpg",
+                   "auto.images.logo":  "images/logo.png",
+                   "auto.images.logo_full":  "images/logo_full.svg",
+                   "auto.images.logo_icon":  "images/logo_icon.svg",
+                   "auto.images.mgoun":  "images/mgoun.jpg",
+                   "auto.images.mgoun_main":  "images/mgoun_main.jpg",
+                   "auto.images.saghro_bab_nali":  "images/saghro_bab_nali.jpg",
+                   "auto.images.saghro_cathedral":  "images/saghro_cathedral.jpg",
+                   "auto.images.saghro_main":  "images/saghro_main.jpg",
+                   "auto.images.saghro_sunset_rocks":  "images/saghro_sunset_rocks.jpg",
+                   "auto.images.sahara_erg_chebbi":  "images/sahara_erg_chebbi.jpg",
+                   "auto.images.siroua_main":  "images/siroua_main.jpg",
+                   "auto.images.siroua_volcanic_pools":  "images/siroua_volcanic_pools.jpg",
+                   "auto.images.todra_dades":  "images/todra_dades.jpg",
+                   "auto.images.toubkal_summit":  "images/toubkal_summit.jpg",
+                   "auto.images.volcanic_canyon":  "images/volcanic_canyon.jpg",
+                   "pages.about.team.team4.image":  "images/team4.jpg",
+                   "pages.blog.cards.guide_coastal_vibes.image":  "images/guide_coastal_vibes.jpg",
+                   "pages.blog.cards.guide_culture_flavors.image":  "images/guide_culture_flavors.jpg",
+                   "pages.blog.cards.guide_high_atlas.image":  "images/guide_high_atlas.jpg",
+                   "pages.blog.cards.guide_sahara_desert.image":  "images/guide_sahara_desert.jpg",
+                   "pages.index.cards.tour-saghro.image":  "images/saghro_main.jpg",
+                   "pages.tours.cards.tour-agafay.image":  "images/agafay_desert.jpg",
+                   "pages.tours.cards.tour-ait-bougmez.image":  "images/happy_valley_main.jpg",
+                   "pages.tours.cards.tour-atlas-villages.image":  "images/atlas_village.jpg",
+                   "pages.tours.cards.tour-mgoun.image":  "images/mgoun_main.jpg",
+                   "pages.tours.cards.tour-saghro.image":  "images/saghro_main.jpg",
+                   "pages.tours.cards.tour-sahara-erg-chebbi.image":  "images/sahara_erg_chebbi.jpg",
+                   "pages.tours.cards.tour-siroua.image":  "images/siroua_main.jpg",
+                   "pages.tours.cards.tour-todra-dades.image":  "images/todra_dades.jpg",
+                   "pages.tours.cards.tour-toubkal.image":  "images/toubkal_summit.jpg",
+                   "site.logo":  "images/logo_icon.svg"
+               },
+    "backgrounds_meta":  {
+                             "pages.tours.hero":  {
+                                                      "type":  "background",
+                                                      "usage":  "hero",
+                                                      "targets":  [
+                                                                      "header.hero-section.hero-small"
+                                                                  ],
+                                                      "required":  true
+                                                  },
+                             "pages.about.hero":  {
+                                                      "type":  "background",
+                                                      "usage":  "hero",
+                                                      "targets":  [
+                                                                      "header.hero-section.hero-small"
+                                                                  ],
+                                                      "required":  true
+                                                  },
+                             "pages.blog-atlas.hero":  {
+                                                           "type":  "background",
+                                                           "usage":  "hero",
+                                                           "targets":  [
+                                                                           "header.hero-section.hero-small"
+                                                                       ],
+                                                           "required":  true
+                                                       },
+                             "pages.blog-coastal.hero":  {
+                                                             "type":  "background",
+                                                             "usage":  "hero",
+                                                             "targets":  [
+                                                                             "header.hero-section.hero-small"
+                                                                         ],
+                                                             "required":  true
+                                                         },
+                             "pages.blog-culture.hero":  {
+                                                             "type":  "background",
+                                                             "usage":  "hero",
+                                                             "targets":  [
+                                                                             "header.hero-section.hero-small"
+                                                                         ],
+                                                             "required":  true
+                                                         },
+                             "pages.blog-fes.hero":  {
+                                                         "type":  "background",
+                                                         "usage":  "hero",
+                                                         "targets":  [
+                                                                         "header.hero-section.hero-small"
+                                                                     ],
+                                                         "required":  true
+                                                     },
+                             "pages.blog-marrakech.hero":  {
+                                                               "type":  "background",
+                                                               "usage":  "hero",
+                                                               "targets":  [
+                                                                               "header.hero-section.hero-small"
+                                                                           ],
+                                                               "required":  true
+                                                           },
+                             "pages.blog-sahara.hero":  {
+                                                            "type":  "background",
+                                                            "usage":  "hero",
+                                                            "targets":  [
+                                                                            "header.hero-section.hero-small"
+                                                                        ],
+                                                            "required":  true
+                                                        },
+                             "pages.blog.hero":  {
+                                                     "type":  "background",
+                                                     "usage":  "hero",
+                                                     "targets":  [
+                                                                     "header.hero-section.hero-small"
+                                                                 ],
+                                                     "required":  true
+                                                 },
+                             "pages.contact.hero":  {
+                                                        "type":  "background",
+                                                        "usage":  "hero",
+                                                        "targets":  [
+                                                                        "header.hero-section.hero-small"
+                                                                    ],
+                                                        "required":  true
+                                                    },
+                             "pages.customize-trip.hero":  {
+                                                               "type":  "background",
+                                                               "usage":  "hero",
+                                                               "targets":  [
+                                                                               "header.hero-section.hero-small"
+                                                                           ],
+                                                               "required":  true
+                                                           },
+                             "pages.index.hero":  {
+                                                      "type":  "background",
+                                                      "usage":  "hero",
+                                                      "targets":  [
+                                                                      "header.hero-section.hero-small"
+                                                                  ],
+                                                      "required":  true
+                                                  },
+                             "pages.tour-ait-bougmez.hero":  {
+                                                                 "type":  "background",
+                                                                 "usage":  "hero",
+                                                                 "targets":  [
+                                                                                 "header.hero-section.hero-medium"
+                                                                             ],
+                                                                 "required":  true
+                                                             },
+                             "pages.tour-mgoun.hero":  {
+                                                           "type":  "background",
+                                                           "usage":  "hero",
+                                                           "targets":  [
+                                                                           "header.hero-section.hero-medium"
+                                                                       ],
+                                                           "required":  true
+                                                       },
+                             "pages.tour-sahara-erg-chebbi.hero":  {
+                                                                       "type":  "background",
+                                                                       "usage":  "hero",
+                                                                       "targets":  [
+                                                                                       "header.tour-hero"
+                                                                                   ],
+                                                                       "required":  true
+                                                                   },
+                             "pages.tour-toubkal.hero":  {
+                                                             "type":  "background",
+                                                             "usage":  "hero",
+                                                             "targets":  [
+                                                                             "header.tour-hero"
+                                                                         ],
+                                                             "required":  true
+                                                         },
+                             "pages.tour-todra-dades.hero":  {
+                                                                 "type":  "background",
+                                                                 "usage":  "hero",
+                                                                 "targets":  [
+                                                                                 "header.tour-hero"
+                                                                             ],
+                                                                 "required":  true
+                                                             },
+                             "pages.tour-siroua.hero":  {
+                                                            "type":  "background",
+                                                            "usage":  "hero",
+                                                            "targets":  [
+                                                                            "header.hero-section.hero-medium"
+                                                                        ],
+                                                            "required":  true
+                                                        },
+                             "pages.tour-saghro.hero":  {
+                                                            "type":  "background",
+                                                            "usage":  "hero",
+                                                            "targets":  [
+                                                                            "header.hero-section.hero-medium"
+                                                                        ],
+                                                            "required":  true
+                                                        },
+                             "pages.tour-essaouira.hero":  {
+                                                               "type":  "background",
+                                                               "usage":  "hero",
+                                                               "targets":  [
+                                                                               "header.tour-hero"
+                                                                           ],
+                                                               "required":  true
+                                                           },
+                             "pages.tour-atlas-villages.hero":  {
+                                                                    "type":  "background",
+                                                                    "usage":  "hero",
+                                                                    "targets":  [
+                                                                                    "header.tour-hero"
+                                                                                ],
+                                                                    "required":  true
+                                                                },
+                             "pages.tour-chefchaouen.hero":  {
+                                                                 "type":  "background",
+                                                                 "usage":  "hero",
+                                                                 "targets":  [
+                                                                                 "header.tour-hero"
+                                                                             ],
+                                                                 "required":  true
+                                                             },
+                             "pages.tour-agafay.hero":  {
+                                                            "type":  "background",
+                                                            "usage":  "hero",
+                                                            "targets":  [
+                                                                            "header.tour-hero"
+                                                                        ],
+                                                            "required":  true
+                                                        }
+                         },
+    "site":  {
+                 "logo":  "images/logo_icon.svg",
+                 "whatsapp_default":  "212600000000"
+             },
+    "backgrounds":  {
+                        "pages.tours.hero":  "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1920\u0026q=80",
+                        "pages.about.hero":  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920\u0026q=80",
+                        "pages.blog-atlas.hero":  "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1920\u0026q=80",
+                        "pages.blog-coastal.hero":  "https://images.unsplash.com/photo-1570192515024-d39235e23c72?w=1920\u0026q=80",
+                        "pages.blog-culture.hero":  "https://images.unsplash.com/photo-1512413914633-b5043f4041ea?w=1920\u0026q=80",
+                        "pages.blog-fes.hero":  "https://images.unsplash.com/photo-1549557766-06de31766a4f?w=1920\u0026q=80",
+                        "pages.blog-marrakech.hero":  "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1920\u0026q=80",
+                        "pages.blog-sahara.hero":  "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=1920\u0026q=80",
+                        "pages.blog.hero":  "https://images.unsplash.com/photo-1548013146-72479768bada?w=1920\u0026q=80",
+                        "pages.contact.hero":  "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1920\u0026q=80",
+                        "pages.customize-trip.hero":  "https://images.unsplash.com/photo-1531573032890-50d42188448b?w=1920\u0026q=80",
+                        "pages.index.hero":  "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1920\u0026q=80",
+                        "pages.tour-ait-bougmez.hero":  "images/happy_valley_main.jpg",
+                        "pages.tour-mgoun.hero":  "images/mgoun_main.jpg",
+                        "pages.tour-sahara-erg-chebbi.hero":  "images/sahara_erg_chebbi.jpg",
+                        "pages.tour-toubkal.hero":  "images/toubkal_summit.jpg",
+                        "pages.tour-todra-dades.hero":  "images/todra_dades.jpg",
+                        "pages.tour-siroua.hero":  "images/siroua_main.jpg",
+                        "pages.tour-saghro.hero":  "images/saghro_main.jpg",
+                        "pages.tour-essaouira.hero":  "https://images.unsplash.com/photo-1528657249085-399a35356b90?w=1920\u0026q=80",
+                        "pages.tour-atlas-villages.hero":  "images/atlas_village.jpg",
+                        "pages.tour-chefchaouen.hero":  "https://images.unsplash.com/photo-1553701879-4f5e5a7e1c27?w=1920\u0026q=80",
+                        "pages.tour-agafay.hero":  "images/agafay_desert.jpg"
+                    },
+    "images_meta":  {
+                        "auto.images.saghro_bab_nali":  {
+                                                            "required":  false,
+                                                            "usage":  "asset",
+                                                            "type":  "image",
+                                                            "targets":  [
+
+                                                                        ]
+                                                        },
+                        "pages.tours.cards.tour-ait-bougmez.image":  {
+                                                                         "type":  "image",
+                                                                         "usage":  "card",
+                                                                         "targets":  [
+                                                                                         "article.tour-card:nth-of-type(6) img.tour-image"
+                                                                                     ],
+                                                                         "required":  true
+                                                                     },
+                        "auto.images.siroua_main":  {
+                                                        "required":  false,
+                                                        "usage":  "asset",
+                                                        "type":  "image",
+                                                        "targets":  [
+
+                                                                    ]
+                                                    },
+                        "pages.tours.cards.tour-mgoun.image":  {
+                                                                   "type":  "image",
+                                                                   "usage":  "card",
+                                                                   "targets":  [
+                                                                                   "article.tour-card:nth-of-type(7) img.tour-image"
+                                                                               ],
+                                                                   "required":  true
+                                                               },
+                        "auto.images.agafay_desert":  {
+                                                          "required":  false,
+                                                          "usage":  "asset",
+                                                          "type":  "image",
+                                                          "targets":  [
+
+                                                                      ]
+                                                      },
+                        "auto.images.guide_high_atlas":  {
+                                                             "required":  false,
+                                                             "usage":  "asset",
+                                                             "type":  "image",
+                                                             "targets":  [
+
+                                                                         ]
+                                                         },
+                        "pages.blog.cards.guide_coastal_vibes.image":  {
+                                                                           "type":  "image",
+                                                                           "usage":  "card",
+                                                                           "targets":  [
+                                                                                           "section .cards img"
+                                                                                       ],
+                                                                           "required":  true
+                                                                       },
+                        "pages.tours.cards.tour-toubkal.image":  {
+                                                                     "type":  "image",
+                                                                     "usage":  "card",
+                                                                     "targets":  [
+                                                                                     "article.tour-card:nth-of-type(9) img.tour-image"
+                                                                                 ],
+                                                                     "required":  true
+                                                                 },
+                        "pages.tours.cards.tour-atlas-villages.image":  {
+                                                                            "type":  "image",
+                                                                            "usage":  "card",
+                                                                            "targets":  [
+                                                                                            "article.tour-card:nth-of-type(2) img.tour-image"
+                                                                                        ],
+                                                                            "required":  true
+                                                                        },
+                        "pages.tours.cards.tour-siroua.image":  {
+                                                                    "type":  "image",
+                                                                    "usage":  "card",
+                                                                    "targets":  [
+                                                                                    "article.tour-card:nth-of-type(5) img.tour-image"
+                                                                                ],
+                                                                    "required":  true
+                                                                },
+                        "auto.images.logo":  {
+                                                 "required":  false,
+                                                 "usage":  "asset",
+                                                 "type":  "image",
+                                                 "targets":  [
+
+                                                             ]
+                                             },
+                        "auto.images.toubkal_summit":  {
+                                                           "required":  false,
+                                                           "usage":  "asset",
+                                                           "type":  "image",
+                                                           "targets":  [
+
+                                                                       ]
+                                                       },
+                        "auto.images.ait_bougmez":  {
+                                                        "required":  false,
+                                                        "usage":  "asset",
+                                                        "type":  "image",
+                                                        "targets":  [
+
+                                                                    ]
+                                                    },
+                        "pages.tours.cards.tour-todra-dades.image":  {
+                                                                         "type":  "image",
+                                                                         "usage":  "card",
+                                                                         "targets":  [
+                                                                                         "article.tour-card:nth-of-type(4) img.tour-image"
+                                                                                     ],
+                                                                         "required":  true
+                                                                     },
+                        "auto.images.todra_dades":  {
+                                                        "required":  false,
+                                                        "usage":  "asset",
+                                                        "type":  "image",
+                                                        "targets":  [
+
+                                                                    ]
+                                                    },
+                        "auto.images.happy_valley_main":  {
+                                                              "required":  false,
+                                                              "usage":  "asset",
+                                                              "type":  "image",
+                                                              "targets":  [
+
+                                                                          ]
+                                                          },
+                        "auto.images.saghro_sunset_rocks":  {
+                                                                "required":  false,
+                                                                "usage":  "asset",
+                                                                "type":  "image",
+                                                                "targets":  [
+
+                                                                            ]
+                                                            },
+                        "auto.images.sahara_erg_chebbi":  {
+                                                              "required":  false,
+                                                              "usage":  "asset",
+                                                              "type":  "image",
+                                                              "targets":  [
+
+                                                                          ]
+                                                          },
+                        "auto.images.atlas_village":  {
+                                                          "required":  false,
+                                                          "usage":  "asset",
+                                                          "type":  "image",
+                                                          "targets":  [
+
+                                                                      ]
+                                                      },
+                        "auto.images.guide_sahara_desert":  {
+                                                                "required":  false,
+                                                                "usage":  "asset",
+                                                                "type":  "image",
+                                                                "targets":  [
+
+                                                                            ]
+                                                            },
+                        "auto.images.guide_coastal_vibes":  {
+                                                                "required":  false,
+                                                                "usage":  "asset",
+                                                                "type":  "image",
+                                                                "targets":  [
+
+                                                                            ]
+                                                            },
+                        "pages.tours.cards.tour-agafay.image":  {
+                                                                    "type":  "image",
+                                                                    "usage":  "card",
+                                                                    "targets":  [
+                                                                                    "article.tour-card:nth-of-type(1) img.tour-image"
+                                                                                ],
+                                                                    "required":  true
+                                                                },
+                        "auto.images.saghro_cathedral":  {
+                                                             "required":  false,
+                                                             "usage":  "asset",
+                                                             "type":  "image",
+                                                             "targets":  [
+
+                                                                         ]
+                                                         },
+                        "auto.images.mgoun":  {
+                                                  "required":  false,
+                                                  "usage":  "asset",
+                                                  "type":  "image",
+                                                  "targets":  [
+
+                                                              ]
+                                              },
+                        "auto.images.siroua_volcanic_pools":  {
+                                                                  "required":  false,
+                                                                  "usage":  "asset",
+                                                                  "type":  "image",
+                                                                  "targets":  [
+
+                                                                              ]
+                                                              },
+                        "auto.images.guide_culture_flavors":  {
+                                                                  "required":  false,
+                                                                  "usage":  "asset",
+                                                                  "type":  "image",
+                                                                  "targets":  [
+
+                                                                              ]
+                                                              },
+                        "auto.images.logo_full":  {
+                                                      "required":  false,
+                                                      "usage":  "asset",
+                                                      "type":  "image",
+                                                      "targets":  [
+
+                                                                  ]
+                                                  },
+                        "auto.images.saghro_main":  {
+                                                        "required":  false,
+                                                        "usage":  "asset",
+                                                        "type":  "image",
+                                                        "targets":  [
+
+                                                                    ]
+                                                    },
+                        "auto.images.logo_icon":  {
+                                                      "required":  false,
+                                                      "usage":  "asset",
+                                                      "type":  "image",
+                                                      "targets":  [
+
+                                                                  ]
+                                                  },
+                        "pages.blog.cards.guide_high_atlas.image":  {
+                                                                        "type":  "image",
+                                                                        "usage":  "card",
+                                                                        "targets":  [
+                                                                                        "section .cards img"
+                                                                                    ],
+                                                                        "required":  true
+                                                                    },
+                        "pages.blog.cards.guide_sahara_desert.image":  {
+                                                                           "type":  "image",
+                                                                           "usage":  "card",
+                                                                           "targets":  [
+                                                                                           "section .cards img"
+                                                                                       ],
+                                                                           "required":  true
+                                                                       },
+                        "pages.index.cards.tour-saghro.image":  {
+                                                                    "type":  "image",
+                                                                    "usage":  "card",
+                                                                    "targets":  [
+                                                                                    "section .tours-grid article.tour-card img.tour-image"
+                                                                                ],
+                                                                    "required":  true
+                                                                },
+                        "pages.tours.cards.tour-saghro.image":  {
+                                                                    "type":  "image",
+                                                                    "usage":  "card",
+                                                                    "targets":  [
+                                                                                    "article.tour-card:nth-of-type(3) img.tour-image"
+                                                                                ],
+                                                                    "required":  true
+                                                                },
+                        "pages.blog.cards.guide_culture_flavors.image":  {
+                                                                             "type":  "image",
+                                                                             "usage":  "card",
+                                                                             "targets":  [
+                                                                                             "section .cards img"
+                                                                                         ],
+                                                                             "required":  true
+                                                                         },
+                        "auto.images.volcanic_canyon":  {
+                                                            "required":  false,
+                                                            "usage":  "asset",
+                                                            "type":  "image",
+                                                            "targets":  [
+
+                                                                        ]
+                                                        },
+                        "pages.tours.cards.tour-sahara-erg-chebbi.image":  {
+                                                                               "type":  "image",
+                                                                               "usage":  "card",
+                                                                               "targets":  [
+                                                                                               "article.tour-card:nth-of-type(8) img.tour-image"
+                                                                                           ],
+                                                                               "required":  true
+                                                                           },
+                        "auto.images.mgoun_main":  {
+                                                       "required":  false,
+                                                       "usage":  "asset",
+                                                       "type":  "image",
+                                                       "targets":  [
+
+                                                                   ]
+                                                   },
+                        "pages.about.team.team4.image":  {
+                                                             "type":  "image",
+                                                             "usage":  "team",
+                                                             "targets":  [
+                                                                             ".team-member img.team-photo"
+                                                                         ],
+                                                             "required":  true
+                                                         }
+                    },
+    "packages":  {
+                     "site":  {
+                                  "slug":  "site",
+                                  "title":  "Site Contact",
+                                  "whatsapp_message":  "Hello! I\u0027m interested and would like more information."
+                              },
+                     "tour-agafay":  {
+                                         "slug":  "tour-agafay",
+                                         "title":  "Agafay Desert \u0026 Marrakech Day Trek",
+                                         "whatsapp_message":  "Hello! I\u0027m interested in the Agafay Desert \u0026 Marrakech Day Trek (tour-agafay)."
+                                     },
+                     "tour-atlas-villages":  {
+                                                 "slug":  "tour-atlas-villages",
+                                                 "title":  "Atlas Mountain Village Discovery",
+                                                 "whatsapp_message":  "Hello! I\u0027m interested in the Atlas Mountain Village Discovery (tour-atlas-villages)."
+                                             },
+                     "tour-saghro":  {
+                                         "slug":  "tour-saghro",
+                                         "title":  "Jebel Saghro \u0026 AÃ¯t Atta",
+                                         "whatsapp_message":  "Hello! I\u0027m interested in the Jebel Saghro \u0026 AÃ¯t Atta trek (tour-saghro)."
+                                     },
+                     "tour-todra-dades":  {
+                                              "slug":  "tour-todra-dades",
+                                              "title":  "Todra \u0026 Dades Gorges Expedition",
+                                              "whatsapp_message":  "Hello! I\u0027m interested in the Todra \u0026 Dades Gorges Expedition (tour-todra-dades)."
+                                          },
+                     "tour-siroua":  {
+                                         "slug":  "tour-siroua",
+                                         "title":  "Massif du Siroua \u0026 Saffron",
+                                         "whatsapp_message":  "Hello! I\u0027m interested in the Massif du Siroua trek (tour-siroua)."
+                                     },
+                     "tour-ait-bougmez":  {
+                                              "slug":  "tour-ait-bougmez",
+                                              "title":  "The Happy Valley (AÃ¯t Bougmez)",
+                                              "whatsapp_message":  "Hello! I\u0027m interested in The Happy Valley (AÃ¯t Bougmez) trek (tour-ait-bougmez)."
+                                          },
+                     "tour-mgoun":  {
+                                        "slug":  "tour-mgoun",
+                                        "title":  "M\u0027Goun Expedition",
+                                        "whatsapp_message":  "Hello! I\u0027m interested in the M\u0027Goun Expedition (tour-mgoun)."
+                                    },
+                     "tour-sahara-erg-chebbi":  {
+                                                    "slug":  "tour-sahara-erg-chebbi",
+                                                    "title":  "Sahara Desert \u0026 Erg Chebbi Trek",
+                                                    "whatsapp_message":  "Hello! I\u0027m interested in the Sahara Desert \u0026 Erg Chebbi Trek (tour-sahara-erg-chebbi)."
+                                                },
+                     "tour-toubkal":  {
+                                          "slug":  "tour-toubkal",
+                                          "title":  "High Atlas Summit Challenge",
+                                          "whatsapp_message":  "Hello! I\u0027m interested in the High Atlas Summit Challenge (tour-toubkal)."
+                                      },
+                     "tour-chefchaouen":  {
+                                              "slug":  "tour-chefchaouen",
+                                              "title":  "Chefchaouen Mountains \u0026 Blue City",
+                                              "whatsapp_message":  "Hello! I\u0027m interested in the Chefchaouen Mountains (tour-chefchaouen)."
+                                          },
+                     "tour-essaouira":  {
+                                            "slug":  "tour-essaouira",
+                                            "title":  "Essaouira Coastal Trek",
+                                            "whatsapp_message":  "Hello! I\u0027m interested in the Essaouira Coastal Trek (tour-essaouira)."
+                                        }
+                 }
+}
