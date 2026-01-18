@@ -1,7 +1,0 @@
-images/hero_home.jpg (612, 396) RGB
-images/hero_tours.jpg (1024, 682) RGB
-images/hero_customize.jpg (612, 408) RGB
-images/hero_about.jpg (612, 408) RGB
-images/hero_guide.jpg (1024, 1024) RGB
-images/team4.jpg (1200, 800) RGB
-images/guide_culture_flavors.jpg (550, 413) RGB
