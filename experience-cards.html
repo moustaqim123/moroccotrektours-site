@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Experience Cards | Morocco Trek Tours</title>
+    <meta name="description"
+        content="Exclusive, high-end experience guide cards for Sahara Desert, Essaouira, and Moroccan Cuisine.">
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #0c0c0c;
+            --card-bg: #1a1a1a;
+            --text-gold: #c5a059;
+            --text-muted: #a0a0a0;
+            --white: #ffffff;
+            --transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        }
+        * {
+            margin: 0;
+    <link rel="stylesheet" href="css/cta-whatsapp.min.css">
+    <script src="js/cta-whatsapp-analytics.js"></script>
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s forwards 0.2s;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--text-gold);
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Grid Layout */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            perspective: 1000px;
+        }
+
+        .card {
+            position: relative;
+            height: 600px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(50px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transition: var(--transition);
+        }
+
+        .card:nth-child(1) {
+            animation: fadeIn 1s forwards 0.4s;
+        }
+
+        .card:nth-child(2) {
+            animation: fadeIn 1s forwards 0.6s;
+        }
+
+        .card:nth-child(3) {
+            animation: fadeIn 1s forwards 0.8s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Elegant Overlay */
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 60px 40px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-overlay {
+            padding-bottom: 80px;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-gold);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            max-width: 90%;
+            opacity: 0.8;
+            margin-bottom: 25px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-description {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .card-cta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--white);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+            transition: var(--transition);
+        }
+
+        .card-cta span {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-cta span {
+            transform: translateX(5px);
+        }
+
+        /* Reflection Effect */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transform: skewX(-25deg);
+            transition: 0.8s;
+            z-index: 3;
+        }
+
+        .card:hover::after {
+            left: 150%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .card {
+                height: 500px;
+            }
+        }
+    </style>
+    <link rel="canonical" href="https://moroccotrektours.com/experience-cards.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta property="og:description" content="Experience unforgettable Morocco mountain trekking and desert camping adventures. Book your expert-guided tour with Morocco Trek Tours today.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta name="twitter:description" content="Expert-guided Morocco mountain trekking and desert adventures.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212600000000",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <p class="subtitle">UNFORGETTABLE MOMENTS</p>
+            <h1>The Experience Collection</h1>
+        </header>
+
+        <div class="cards-grid">
+            <!-- Card 1: Sahara Desert -->
+            <div class="card" id="sahara">
+                <div class="card-image-wrapper">
+                    <img src="images/luxury/sahara.jpg" alt="Luxury Sahara Desert" loading="lazy">
+                </div>
+                <div class="card-overlay">
+                    <span class="card-category">Majestic Landscapes</span>
+                    <h2 class="card-title">Sahara Desert</h2>
+                    <p class="card-description">
+                        Endless golden dunes and silence that speaks to the soul. A majestic escape into the heart of
+                        the serene horizon.
+                    </p>
+                    <div class="card-cta">Wander Far <span>&rarr;</span></div>
+                </div>
+            </div>
+
+            <!-- Card 2: Essaouira -->
+            <div class="card" id="essaouira">
+                <!-- WhatsApp Floating Button -->
+                <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                </body>
+
+            </html>
+                </div>
+                <div class="card-overlay">
+                    <span class="card-category">Coastal Charm</span>
+                    <h2 class="card-title">Essaouira</h2>
+                    <p class="card-description">
+                        Where the ocean breeze meets historic ramparts. A sophisticated coastal retreat of white
+                        architecture and azure dreams.
+                    </p>
+                    <div class="card-cta">Breathe Deep <span>&rarr;</span></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Moroccan Tagine -->
+            <div class="card" id="tagine">
+                <div class="card-image-wrapper">
+                    <img src="images/luxury/tagine.jpg" alt="Gourmet Moroccan Tagine" loading="lazy">
+                </div>
+                <div class="card-overlay">
+                    <span class="card-category">Culinary Journey</span>
+                    <h2 class="card-title">Moroccan Tagine</h2>
+                    <p class="card-description">
+                        An indulgent symphony of flavors. Experience authenticity plated with gourmet elegance and rich,
+                        aromatic warmth.
+                    </p>
+                    <div class="card-cta">Taste Essence <span>&rarr;</span></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 MOROCCO TOURS GATE &bull; CURATED EXPERIENCES
+        </footer>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>
+
+

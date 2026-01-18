@@ -1,0 +1,18 @@
+{
+  "name": "tensor-coronal-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "generate-images": "node tools/generate-images-json.js",
+    "watch-images": "node tools/watch-images.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "chokidar": "^3.5.3",
+    "express": "^4.18.2",
+    "mime-types": "^2.1.35",
+    "sharp": "^0.32.4",
+    "socket.io": "^4.7.2"
+  }
+}

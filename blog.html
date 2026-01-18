@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination Guide | Morocco Tours Gate</title>
+    <title>Destination Guide | Morocco Trek Tours</title>
     <meta name="description"
         content="Explore our comprehensive guide to Morocco. Expert tips on Marrakech, Fes, Atlas Mountains, Sahara Desert, and authentic cultural experiences.">
     <!-- Google Fonts -->
@@ -14,9 +14,42 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/logo_icon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/assets/logo_icon.svg">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://moroccotrektours.com/blog.html">
+    <link rel="alternate" hreflang="fr" href="https://moroccotrektours.com/blog-fr.html">
+    <link rel="canonical" href="https://moroccotrektours.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta property="og:description"
+        content="Experience unforgettable Morocco mountain trekking and desert camping adventures. Book your expert-guided tour with Morocco Trek Tours today.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta name="twitter:description" content="Expert-guided Morocco mountain trekking and desert adventures.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212600000000",
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
@@ -25,8 +58,8 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <img data-cms-image="site.logo" alt="Morocco Tours Gate" style="height: 60px;">
-                <span class="logo-tagline">Your Gateway to Authentic Adventure</span>
+                <img loading="lazy" src="images/assets/logo.png" alt="Morocco Trek Tours" class="logo-img">
+                <div class="logo-subtitle">your gateway to the authentic adventure</div>
             </a>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,12 +71,25 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html" class="active">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
+
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="active">English</a></li>
+                        <li><a href="blog-fr.html">Français</a></li>
+                        </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" data-cms-bg="pages.blog.hero">
+    <header class="hero-section hero-small"
+        style="background-image: url('images/hero/hero_guide.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="hero-content">
             <h1 class="hero-title">Morocco Destination Guide</h1>
             <p class="hero-description">Discover the magic of the Kingdom. From ancient medinas to the endless dunes.
@@ -58,7 +104,7 @@
 
                 <!-- 1. Marrakech -->
                 <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&q=80"
+                    <img src="images/destinations/marrakech.jpg" loading="lazy"
                         alt="Marrakech Jemaa el-Fna Souks" class="blog-image">
                     <div class="blog-content">
                         <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Marrakech: The Red City</h3>
@@ -70,8 +116,8 @@
 
                 <!-- 2. Fes -->
                 <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&q=80"
-                        alt="Fes Medina Tannery" class="blog-image">
+                    <img src="images/destinations/fes.jpg" loading="lazy" alt="Fes Medina Tannery"
+                        class="blog-image">
                     <div class="blog-content">
                         <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Fes: The Cultural Heart</h3>
                         <p>Explore the world's largest car-free urban area, ancient tanneries, and the spiritual soul of
@@ -82,8 +128,8 @@
 
                 <!-- 3. Atlas Mountains -->
                 <article class="blog-card">
-                    <img data-cms-image="pages.blog.cards.guide_high_atlas.image"
-                        alt="Atlas Mountains Berber Village" class="blog-image">
+                    <img src="images/hight_atlas.jpg" loading="lazy" alt="Atlas Mountains Berber Village"
+                        class="blog-image">
                     <div class="blog-content">
                         <h3 style="margin-bottom: 10px; font-size: 1.2rem;">The High Atlas</h3>
                         <p>Walk among the clouds in traditional Berber villages and challenge yourself on North Africa's
@@ -94,8 +140,8 @@
 
                 <!-- 4. Sahara Desert -->
                 <article class="blog-card">
-                    <img data-cms-image="pages.blog.cards.guide_sahara_desert.image"
-                        alt="Sahara Desert Dunes Camel Trek" class="blog-image">
+                    <img src="images/sahara_morocco.jpg" loading="lazy" alt="Sahara Desert Dunes Camel Trek"
+                        class="blog-image">
                     <div class="blog-content">
                         <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Sahara Desert</h3>
                         <p>Experience the silence of the Erg Chebbi dunes, ride camels at sunset, and sleep under a
@@ -106,8 +152,8 @@
 
                 <!-- 5. Coastal Morocco -->
                 <article class="blog-card">
-                    <img data-cms-image="pages.blog.cards.guide_coastal_vibes.image"
-                        alt="Essaouira Blue Boats Coast" class="blog-image">
+                    <img src="images/guide_coastal_vibes.jpg" loading="lazy" alt="Essaouira Blue Boats Coast"
+                        class="blog-image">
                     <div class="blog-content">
                         <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Coastal Vibes</h3>
                         <p>Relax in the breezy medina of Essaouira, watch the blue fishing boats, and walk through Argan
@@ -118,8 +164,7 @@
 
                 <!-- 6. Culture & Food -->
                 <article class="blog-card">
-                    <img data-cms-image="pages.blog.cards.guide_culture_flavors.image"
-                        alt="Moroccan Tagine Food Culture" class="blog-image">
+                    <img src="images/tagin.jpg" loading="lazy" alt="Moroccan Tagine Food Culture" class="blog-image">
                     <div class="blog-content">
                         <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Culture & Flavors</h3>
                         <p>Taste the spices of a slow-cooked tagine, experience a traditional Hammam, and learn local
@@ -138,7 +183,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Morocco Tours Gate</h4>
+                    <h4>Morocco Trek Tours</h4>
                     <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
                         last a lifetime.</p>
                 </div>
@@ -155,9 +200,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Mountain Road, Highland</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@moroccotoursgate.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> +212 659 56 5040</li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
                         <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
@@ -167,19 +212,17 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Morocco Tours Gate. All rights reserved.</p>
+                <p>&copy; 2024 Morocco Trek Tours. All rights reserved.</p>
             </div>
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a data-cms-whatsapp="site" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-
-    <script src="js/cms-sync.js"></script>
-    <script src="js/cms-sync.js"></script>
     <script src="js/main.js"></script>
-</body>
+    </body>
 
 </html>

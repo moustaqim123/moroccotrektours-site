@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rif Mountains & Chefchaouen | Morocco Tours Gate</title>
+    <title>Rif Mountains & Chefchaouen | Morocco Trek Tours</title>
     <meta name="description"
         content="Discover the Blue City of Chefchaouen and hike the lush Rif Mountains. A 3-day blend of culture and nature in Northern Morocco.">
     <!-- Google Fonts -->
@@ -14,19 +14,52 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/logo_icon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/assets/logo_icon.svg">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://moroccotrektours.com/tour-chefchaouen.html">
+    <link rel="alternate" hreflang="fr" href="https://moroccotrektours.com/tour-chefchaouen-fr.html">
+    <link rel="canonical" href="https://moroccotrektours.com/tour-chefchaouen.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta property="og:description" content="Experience unforgettable Morocco mountain trekking and desert camping adventures. Book your expert-guided tour with Morocco Trek Tours today.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta name="twitter:description" content="Expert-guided Morocco mountain trekking and desert adventures.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212600000000",
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
+    <!-- Static site: CMS intentionally disabled -->
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <img data-cms-image="site.logo" alt="Morocco Tours Gate" style="height: 60px;">
-                <span class="logo-tagline">Your Gateway to Authentic Adventure</span>
+                <img loading="lazy" src="images/assets/logo.png" alt="Morocco Trek Tours" class="logo-img">
+                <div class="logo-subtitle">your gateway to the authentic adventure</div>
             </a>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,12 +71,24 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
+            
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="active">English</a></li>
+                        <li><a href="tour-chefchaouen-fr.html">Français</a></li>
+                        </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Tour Hero Section -->
-    <header class="tour-hero" data-cms-bg="pages.tour-chefchaouen.hero">
+    <!-- Tour Content -->
+    <header class="tour-hero" style="background-image: url('images/chefchaoun_akchour.jpg');">
         <div class="container">
             <div class="tour-hero-content">
                 <h1 class="tour-hero-title">Rif Mountains & Chefchaouen</h1>
@@ -56,15 +101,12 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <section class="section-padding">
         <div class="container">
             <div class="tour-page-grid">
 
-                <!-- Left Column: Content -->
                 <div class="tour-main-content">
 
-                    <!-- Overview -->
                     <div id="overview">
                         <h2>Trip Overview</h2>
                         <p class="tour-overview">
@@ -77,21 +119,8 @@
                             hiking in nature—visiting God's Bridge and Akchour Waterfalls—with a cultural immersion in
                             the blue-washed streets of the Medina.
                         </p>
-
-                        <!-- Smart Gallery -->
-                        <div class="smart-gallery">
-                            <img src="https://images.unsplash.com/photo-1553701879-4f5e5a7e1c27?w=600&q=80"
-                                alt="Blue City Streets" loading="lazy">
-                            <img src="https://images.unsplash.com/photo-1534329539061-19209d371b0f?w=600&q=80"
-                                alt="Akchour Waterfalls" loading="lazy">
-                            <img src="https://images.unsplash.com/photo-1589307718915-d713c415539d?w=600&q=80"
-                                alt="Rif Mountains" loading="lazy">
-                            <img src="https://images.unsplash.com/photo-1512413914633-b5043f4041ea?w=600&q=80"
-                                alt="Chefchaouen Doorway" loading="lazy">
-                        </div>
                     </div>
 
-                    <!-- Highlights -->
                     <div id="highlights" class="highlights-box">
                         <h3><i class="fas fa-star" style="color:var(--accent-color); margin-right:10px;"></i> Highlights
                         </h3>
@@ -104,7 +133,6 @@
                         </ul>
                     </div>
 
-                    <!-- Itinerary -->
                     <div id="itinerary">
                         <h2>Detailed Itinerary</h2>
 
@@ -129,7 +157,6 @@
                         </div>
                     </div>
 
-                    <!-- Accommodation & Meals -->
                     <div id="accommodation">
                         <h2>Accommodation & Meals</h2>
                         <ul class="info-list">
@@ -140,7 +167,6 @@
                         </ul>
                     </div>
 
-                    <!-- What to Bring -->
                     <div id="gear">
                         <h2>What to Bring</h2>
                         <ul class="info-list">
@@ -151,14 +177,12 @@
                         </ul>
                     </div>
 
-                    <!-- Fitness -->
                     <div id="fitness">
                         <h2>Fitness & Difficulty</h2>
                         <p><strong>Medium.</strong> The hikes are moderate in length and difficulty. Suitable for active
                             travelers who enjoy nature walks but don't want extreme mountaineering.</p>
                     </div>
 
-                    <!-- Know Before You Go -->
                     <div id="know-before">
                         <h2>Know Before You Go</h2>
                         <ul class="info-list">
@@ -167,7 +191,6 @@
                         </ul>
                     </div>
 
-                    <!-- Best Time -->
                     <div id="best-time">
                         <h2>Best Time to Go</h2>
                         <p><strong>Spring (April-June)</strong> is magnificent for wildflowers and green forests. Autumn
@@ -175,7 +198,6 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Sidebar -->
                 <div class="tour-sidebar">
                     <div class="tour-sidebar-card">
                         <div class="sidebar-info-row">
@@ -215,8 +237,9 @@
                             </ul>
                         </div>
 
-                        <a data-cms-whatsapp="tour-chefchaouen" class="btn btn-primary"
-                            style="width: 100%; text-align: center; margin-top: 20px;">Contact Us to Book</a>
+                        <a class="btn btn-primary book-now"
+                            style="width: 100%; text-align: center; margin-top: 20px;">Contact Us
+                            to Book</a>
                     </div>
                 </div>
 
@@ -229,7 +252,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Morocco Tours Gate</h4>
+                    <h4>Morocco Trek Tours</h4>
                     <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
                         last a lifetime.</p>
                 </div>
@@ -247,24 +270,32 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Mountain Road, Highland</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@moroccotoursgate.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Morocco Tours Gate. All rights reserved.</p>
+                <p>&copy; 2024 Morocco Trek Tours. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <!-- WhatsApp Floating Button -->
-    <a data-cms-whatsapp="tour-chefchaouen" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-
+    <!-- Keep site scripts here -->
     <script src="js/main.js"></script>
-</body>
+    </body>
 
 </html>
+
+
+

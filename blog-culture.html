@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culture & Flavors | Morocco Destination Guide</title>
+    <title>Culture & Flavors | Morocco Trek Tours</title>
     <meta name="description"
         content="Immerse yourself in Moroccan culture. Discover the art of Tagine, the ritual of the Hammam, and the warmth of Moroccan hospitality.">
     <!-- Google Fonts -->
@@ -14,9 +14,41 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/logo_icon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/assets/logo_icon.svg">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://moroccotrektours.com/blog-culture.html">
+    <link rel="alternate" hreflang="fr" href="https://moroccotrektours.com/blog-culture-fr.html">
+    <link rel="canonical" href="https://moroccotrektours.com/blog-culture.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta property="og:description" content="Experience unforgettable Morocco mountain trekking and desert camping adventures. Book your expert-guided tour with Morocco Trek Tours today.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta name="twitter:description" content="Expert-guided Morocco mountain trekking and desert adventures.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212600000000",
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
@@ -25,8 +57,8 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <img data-cms-image="site.logo" alt="Morocco Tours Gate" style="height: 60px;">
-                <span class="logo-tagline">Your Gateway to Authentic Adventure</span>
+                <img loading="lazy" src="images/assets/logo.png" alt="Morocco Trek Tours" class="logo-img">
+                <div class="logo-subtitle">your gateway to the authentic adventure</div>
             </a>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,12 +70,24 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html" class="active">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
+            
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="active">English</a></li>
+                        <li><a href="blog-culture-fr.html">Français</a></li>
+                        </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" data-cms-bg="pages.blog-culture.hero">
+    <header class="hero-section hero-small" style="background-image: url('images/Colorful Moroccan food spread.jpg');">
         <div class="hero-content">
             <h1 class="hero-title">Culture & Flavors</h1>
             <p class="hero-description">The heart of Morocco is tasted in its food and felt in its traditions.</p>
@@ -78,8 +122,8 @@
 
                         <!-- Item 1 -->
                         <div>
-                            <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80"
-                                alt="Moroccan Tagine" style="border-radius: 8px; margin-bottom: 15px;">
+                            <img src="images/flavor_tagine.jpg" loading="lazy" alt="Moroccan Tagine"
+                                style="border-radius: 8px; margin-bottom: 15px;">
                             <h3>The Art of Tagine</h3>
                             <p>Named after the clay pot it’s cooked in, Tagine is the national dish. Whether it’s lamb
                                 with prunes, chicken with preserved lemons, or a vegetable medley, the cone-shaped lid
@@ -88,8 +132,8 @@
 
                         <!-- Item 2 -->
                         <div>
-                            <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
-                                alt="Moroccan Mint Tea" style="border-radius: 8px; margin-bottom: 15px;">
+                            <img src="images/flavor_tea.jpg" alt="Moroccan Mint Tea"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Mint Tea Ritual</h3>
                             <p>Known as "Berber Whiskey," mint tea is served everywhere, all the time. It is a sign of
                                 welcome. The higher the pour, the better the foam—and it’s always impolite to refuse a
@@ -98,8 +142,8 @@
 
                         <!-- Item 3 -->
                         <div>
-                            <img src="https://images.unsplash.com/photo-1560933930-99849925244a?w=600&q=80"
-                                alt="Traditional Hammam Spa" style="border-radius: 8px; margin-bottom: 15px;">
+                            <img src="images/flaavor_hamam.jpg" alt="Traditional Hammam Spa"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>The Hammam</h3>
                             <p>More than just a spa, the Hammam is a weekly ritual for cleansing the body and
                                 socializing. A scrub with black soap and a kessa glove leaves your skin feeling brand
@@ -140,44 +184,14 @@
         </div>
     </section>
 
-    <!-- Related Tours -->
-    <section class="section-padding bg-off-white">
-        <div class="container">
-            <h2 class="section-title">Experience it Yourself</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Every tour we offer is a cultural immersion.</p>
-            <div class="tours-grid">
-                <!-- Tour 1 -->
-                <article class="tour-card">
-                    <img src="https://images.unsplash.com/photo-1564507004663-b6dfb3c8186b?w=600&q=80"
-                        alt="High Atlas Summit Challenge" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Atlas Villages</h3>
-                        <p class="tour-description">Share a meal with a Berber family in their home in the High Atlas
-                            Mountains.</p>
-                        <a href="tour-atlas-villages.html" class="tour-btn">View Details</a>
-                    </div>
-                </article>
 
-                <!-- Tour 2 -->
-                <article class="tour-card">
-                    <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&q=80"
-                        alt="Agafay Desert Day Trek" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Fes & Culture</h3>
-                        <p class="tour-description">Explore the spiritual and culinary capital of Morocco.</p>
-                        <a href="blog-fes.html" class="tour-btn">Read More</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Morocco Tours Gate</h4>
+                    <h4>Morocco Trek Tours</h4>
                     <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
                         last a lifetime.</p>
                 </div>
@@ -195,9 +209,12 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Mountain Road, Highland</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@moroccotoursgate.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
                         <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
@@ -207,18 +224,20 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Morocco Tours Gate. All rights reserved.</p>
+                <p>&copy; 2024 Morocco Trek Tours. All rights reserved.</p>
             </div>
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a data-cms-whatsapp="site" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-
-    <script src="js/cms-sync.js"></script>
     <script src="js/main.js"></script>
-</body>
+    </body>
 
 </html>
+
+
+

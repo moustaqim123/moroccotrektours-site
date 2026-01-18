@@ -1,4 +1,6 @@
-Image Audit - tensor-coronal
+<!-- Static site: CMS intentionally disabled -->
+
+Image Audit - tensor-coronal (ARCHIVE)
 
 Total inline <img> occurrences found: 77
 
@@ -30,10 +32,13 @@ Notes:
 - Many images are external (Unsplash CDN) and several are local under `images/` (e.g., `logo.png`, `saghro_main.jpg`, `guide_*.jpg`, `team4.jpg`).
 - The site uses an inline logo (`images/logo.png`) in nav across many pages.
 
-Recommended next steps:
-1) Confirm CMS choice and image URL schema.
-2) Replace inline `src` attributes with `data-cms-image="<image-key>"` attributes and add a `js/cms-sync.js` to fetch CMS image manifest and replace `img.src` at runtime.
-3) Add server-side build step or CI job to validate no hard-coded local images remain.
-4) Implement per-package WhatsApp links and map injection via the same `cms-sync.js`.
+Status:
+- The project has been converted to a static-first setup. CMS-driven runtime image replacement has been disabled across the codebase.
 
-If you want, I can implement step 2 as a prototype now (create `js/cms-sync.js`, update HTML to use `data-cms-image` for logo, and add a sample `cms-manifest.json`).
+Historical Recommendations (for archive/reference only):
+1) Confirm CMS choice and image URL schema.
+2) Replace inline `src` attributes with `data-cms-image="<image-key>"` attributes and add a `js/cms-sync.js` to fetch CMS image manifest and replace `img.src` at runtime. (ARCHIVED)
+3) Add server-side build step or CI job to validate no hard-coded local images remain.
+4) Implement per-package WhatsApp links and map injection via the same `cms-sync.js` (if re-enabling CMS).
+
+This file is preserved for audit history. CMS-specific recommendations are archived and the site operates without CMS integrations.

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventures & Hiking Tours | Morocco Tours Gate</title>
+    <title>Adventures & Hiking Tours | Morocco Trek Tours</title>
     <meta name="description"
         content="Discover our expertly curated Morocco hiking and desert tours. From the High Atlas summits to the Sahara dunes. Book your adventure today.">
     <!-- Google Fonts -->
@@ -14,9 +14,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/logo_icon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/assets/logo_icon.svg">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://moroccotrektours.com/tours.html">
+    <link rel="alternate" hreflang="fr" href="https://moroccotrektours.com/tours-fr.html">
     <style>
         /* Specific styles for the new tour cards */
         .tour-badge {
@@ -29,6 +32,7 @@
             font-weight: 600;
             font-size: 0.8rem;
             text-transform: uppercase;
+            z-index: 10;
         }
 
         .badge-very-hard {
@@ -71,64 +75,93 @@
 
         .tour-card {
             position: relative;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .tour-highlights {
-            margin: 15px 0;
-            padding: 10px;
-            background: #f9f9f9;
-            border-radius: 5px;
+        .tour-card:hover {
+            transform: translateY(-5px);
         }
 
-        .tour-highlights h4 {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
+        .tour-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .tour-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tour-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
             color: var(--primary-color);
         }
 
-        .tour-highlights ul {
-            list-style: disc;
-            padding-left: 20px;
+        .tour-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
             font-size: 0.9rem;
-            margin-bottom: 0;
+            color: #666;
         }
 
-        /* Expandable Details */
-        details {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            cursor: pointer;
+        .tour-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        summary {
-            font-weight: 600;
-            color: var(--primary-color);
-            outline: none;
+        .tour-details p {
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
-        .itinerary-list {
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
-        .itinerary-day {
-            margin-bottom: 8px;
-            padding-bottom: 8px;
-            border-bottom: 1px dashed #eee;
-        }
-
-        .itinerary-day strong {
-            color: var(--accent-color);
-        }
-
-        .included-list {
-            margin-top: 10px;
-            font-size: 0.85rem;
-            color: #555;
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
         }
     </style>
+    <link rel="canonical" href="https://moroccotrektours.com/tours.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta property="og:description"
+        content="Experience unforgettable Morocco mountain trekking and desert camping adventures. Book your expert-guided tour with Morocco Trek Tours today.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morocco Trek Tours | Expert-Guided Mountain Adventures">
+    <meta name="twitter:description" content="Expert-guided Morocco mountain trekking and desert adventures.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212600000000",
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
@@ -137,8 +170,8 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <img data-cms-image="site.logo" alt="Morocco Tours Gate" style="height: 60px;">
-                <span class="logo-tagline">Your Gateway to Authentic Adventure</span>
+                <img loading="lazy" src="images/assets/logo.png" alt="Morocco Trek Tours" class="logo-img">
+                <div class="logo-subtitle">your gateway to the authentic adventure</div>
             </a>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -150,13 +183,26 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
+
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="#" class="active">English</a></li>
+                        <li><a href="tours-fr.html">Français</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" data-cms-bg="pages.tours.hero">
-        <div class="hero-content">
+    <header class="hero-section hero-small"
+        style="background-image: url('images/hero/hero_tours.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Adventures & Hiking Tours</h1>
             <p class="hero-description">From the peaks of the Atlas to the dunes of the Sahara. Find your perfect
                 challenge.</p>
@@ -166,191 +212,14 @@
     <!-- Tours List -->
     <section class="section-padding">
         <div class="container">
-            <div class="tours-grid">
+            <div class="tour-card-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
 
-                <!-- 1. Easy: Agafay -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-easy">Easy</span>
-                    <img data-cms-image="pages.tours.cards.tour-agafay.image" alt="Agafay Desert Day Trek Near Marrakech Morocco"
-                        class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Agafay Desert & Marrakech Day Trek</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 1 Day</span>
-                            <span><i class="fas fa-camel"></i> Stony Desert</span>
-                        </div>
-                        <p>Experience the "desert" just an hour from Marrakech. Perfect for those with limited time who
-                            want a taste of adventure.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-agafay.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-agafay" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 2. Moderate: Atlas Villages -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Moderate</span>
-                    <img data-cms-image="pages.tours.cards.tour-atlas-villages.image" alt="Berber Village Atlas Mountains Morocco" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Atlas Mountain Village Discovery</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 3 Days</span>
-                            <span><i class="fas fa-home"></i> Cultural Trek</span>
-                        </div>
-                        <p>Immerse yourself in Berber culture. Walk from village to village, staying with local families
-                            in comfortable guesthouses.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-atlas-villages.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-atlas-villages" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 3. Moderate: Jebel Saghro (NEW) -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Moderate</span>
-                    <img data-cms-image="pages.tours.cards.tour-saghro.image" alt="Jebel Saghro Volcanic Landscape" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Jebel Saghro & Aït Atta</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 5 Days</span>
-                            <span><i class="fas fa-volcano"></i> Volcanic Trek</span>
-                        </div>
-                        <p>Explore the dramatic volcanic landscapes and wide plateaus of the Saghro Massif. Meet the Aït
-                            Atta nomads in their winter pastures.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-saghro.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-saghro" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 4. Challenging: Todra & Dades -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium-high">Challenging</span>
-                    <img data-cms-image="pages.tours.cards.tour-todra-dades.image" alt="Todra Gorges Canyon Expedition Morocco" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Todra & Dades Gorges Expedition</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Days</span>
-                            <span><i class="fas fa-stream"></i> Canyons</span>
-                        </div>
-                        <p>Explore the stunning geological formations of Morocco's "Grand Canyon". A mix of ridge
-                            walking and valley trails.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-todra-dades.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-todra-dades" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 5. Challenging: Massif du Siroua (NEW) -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium-high">Challenging</span>
-                    <img data-cms-image="pages.tours.cards.tour-siroua.image" alt="Massif du Siroua Saffron Fields" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Massif du Siroua & Saffron</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 6 Days</span>
-                            <span><i class="fas fa-mountain"></i> Anti-Atlas</span>
-                        </div>
-                        <p>Trek through ancient volcanic peaks and hidden valleys known for saffron cultivation. A
-                            bridge between the High Atlas and the desert.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-siroua.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-siroua" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 6. Moderate: Aït Bougmez Happy Valley (NEW) -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Moderate</span>
-                    <img data-cms-image="pages.tours.cards.tour-ait-bougmez.image" alt="Ait Bougmez Happy Valley Cultural Trek" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">The Happy Valley</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Days</span>
-                            <span><i class="fas fa-home"></i> Cultural Trek</span>
-                        </div>
-                        <p>Cultural immersion in Aït Bougmez: Berber villages, apple orchards, dinosaur tracks, and
-                            traditional gîtes.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-ait-bougmez.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-ait-bougmez" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 7. Very Challenging: M'Goun Expedition (NEW) -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-hard">Very Challenging</span>
-                    <img data-cms-image="pages.tours.cards.tour-mgoun.image" alt="M'Goun Summit Expedition 4071m" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">M'Goun Expedition</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Days</span>
-                            <span><i class="fas fa-mountain"></i> Summit Trek</span>
-                        </div>
-                        <p>Conquer Morocco's second-highest peak (4071m) via the legendary M'Goun ridge and Tarkeddite
-                            Plateau.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-mgoun.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-mgoun" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 6. Challenging: Sahara Erg Chebbi -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-hard">Challenging</span>
-                    <img data-cms-image="pages.tours.cards.tour-sahara-erg-chebbi.image" alt="Sahara Desert Erg Chebbi Dunes Trek Morocco"
-                        class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Sahara Desert & Erg Chebbi Trek</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 5 Days</span>
-                            <span><i class="fas fa-sun"></i> Desert Expedition</span>
-                        </div>
-                        <p>A physically demanding but magical journey deep into the dunes. Experience the vast silence
-                            of the Sahara and traditional nomadic life.</p>
-
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-sahara-erg-chebbi.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
-                                Details</a>
-                            <a data-cms-whatsapp="tour-sahara-erg-chebbi" class="tour-btn">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 7. Very Challenging: Toubkal -->
+                <!-- 1. Toubkal Summit -->
                 <article class="tour-card">
                     <span class="tour-badge badge-very-hard">Very Challenging</span>
-                    <img data-cms-image="pages.tours.cards.tour-toubkal.image" alt="Mount Toubkal Summit Challenge High Atlas Morocco"
-                        class="tour-image">
+                    <img src="images/tours/toubkal/toubkal_summit.jpg" loading="lazy" width="600" height="400"
+                        alt="Mount Toubkal Summit Challenge High Atlas Morocco" class="tour-image">
                     <div class="tour-details">
                         <h3 class="tour-title">High Atlas Summit Challenge</h3>
                         <div class="tour-meta">
@@ -360,18 +229,258 @@
                         <p>The ultimate express challenge to the highest peak in North Africa (4,167m). Recommended for
                             experienced trekkers with excellent fitness.</p>
 
-                        <div class="tour-buttons" style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="tour-toubkal.html" class="tour-btn"
-                                style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">More
+                        <div class="tour-buttons">
+                            <a href="tour-toubkal.html" class="btn btn-secondary">More
                                 Details</a>
-                            <a data-cms-whatsapp="tour-toubkal" class="tour-btn">Book Now</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. M'Goun Expedition -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-hard">Very Challenging</span>
+                    <img src="images/tours/mgoun/mgoun_main.jpg" loading="lazy" width="600" height="400"
+                        alt="M'Goun Summit Expedition 4071m" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">M'Goun Expedition</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 4 Days</span>
+                            <span><i class="fas fa-mountain"></i> Summit Trek</span>
+                        </div>
+                        <p>Conquer Morocco's second-highest peak (4071m) via the legendary M'Goun ridge and Tarkeddite
+                            Plateau. For serious trekkers.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-mgoun.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. The Happy Valley (Ait Bougmez) -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-medium">Moderate</span>
+                    <img src="images/tours/happy_valley/happy_valley_main.jpg" loading="lazy" width="600"
+                        height="400" alt="Ait Bougmez Happy Valley Cultural Trek" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">The Happy Valley</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 4 Days</span>
+                            <span><i class="fas fa-home"></i> Cultural Trek</span>
+                        </div>
+                        <p>Cultural immersion in Aït Bougmez: Berber villages, apple orchards, dinosaur tracks, and
+                            traditional gîtes in the Heart of the Atlas.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-ait-bougmez.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Jebel Saghro -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-medium">Moderate</span>
+                    <img src="images/tours/saghro/saghro_main.jpg" loading="lazy" width="600" height="400"
+                        alt="Jebel Saghro Volcanic Landscape" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Jebel Saghro & Aït Atta</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 5 Days</span>
+                            <span><i class="fas fa-volcano"></i> Volcanic Trek</span>
+                        </div>
+                        <p>Explore the dramatic volcanic landscapes and wide plateaus of the Saghro Massif. Meet the Aït
+                            Atta nomads in their winter pastures.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-saghro.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Massif du Siroua -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-medium-high">Challenging</span>
+                    <img src="images/tours/siroua/siroua_main.jpg" loading="lazy" width="600" height="400"
+                        alt="Massif du Siroua Saffron Fields" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Massif du Siroua & Saffron</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 6 Days</span>
+                            <span><i class="fas fa-mountain"></i> Anti-Atlas</span>
+                        </div>
+                        <p>Trek through ancient volcanic peaks and hidden valleys known for saffron cultivation. A
+                            bridge between the High Atlas and the desert.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-siroua.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Sahara Erg Chebbi -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-hard">Challenging</span>
+                    <img src="images/tours/sahara/sahara_erg_chebbi.jpg" loading="lazy" width="600" height="400"
+                        alt="Sahara Desert Erg Chebbi Dunes Trek Morocco" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Sahara Desert & Erg Chebbi Trek</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 5 Days</span>
+                            <span><i class="fas fa-sun"></i> Desert Expedition</span>
+                        </div>
+                        <p>A physically demanding but magical journey deep into the dunes. Experience the vast silence
+                            of the Sahara and traditional nomadic life.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-sahara-erg-chebbi.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Todra & Dades -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-medium-high">Challenging</span>
+                    <img src="images/tours/todra_dades/todra_dades.jpg" loading="lazy" width="600" height="400"
+                        alt="Todra Gorges Canyon Expedition Morocco" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Todra & Dades Gorges Expedition</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 4 Days</span>
+                            <span><i class="fas fa-stream"></i> Canyons</span>
+                        </div>
+                        <p>Explore the stunning geological formations of Morocco's "Grand Canyon". A mix of ridge
+                            walking and lush green valley trails.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-todra-dades.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Essaouira -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-very-easy">Very Easy</span>
+                    <img src="images/guide_coastal_vibes.jpg" loading="lazy" width="600" height="400"
+                        alt="Essaouira Coastal & Argan Forest" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Essaouira Coastal & Argan Forest</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 1 Day</span>
+                            <span><i class="fas fa-water"></i> Atlantic Coast</span>
+                        </div>
+                        <p>Escape the heat of the city for the cool breezes of the Atlantic. Visit the UNESCO World
+                            Heritage site, walk the ramparts, and explore the Argan forests.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-essaouira.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. Agafay Desert -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-easy">Easy</span>
+                    <img src="images/tours/agafay/agafay_desert.jpg" loading="lazy" width="600" height="400"
+                        alt="Agafay Desert Landscapes" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Agafay Desert Escape</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 1 Day</span>
+                            <span><i class="fas fa-sun"></i> Desert</span>
+                        </div>
+                        <p>Experience the "stone desert" just an hour from Marrakech. Perfect for those with limited
+                            time who
+                            want a taste of adventure with camel rides and tea in a nomad tent.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-agafay.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 10. Atlas Villages -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-medium">Moderate</span>
+                    <img src="images/destinations/atlas_village.jpg" loading="lazy" width="600" height="400"
+                        alt="Berber Village Atlas Mountains Morocco" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Atlas Mountain Village Discovery</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 3 Days</span>
+                            <span><i class="fas fa-home"></i> Cultural Trek</span>
+                        </div>
+                        <p>Immerse yourself in Berber culture. Walk from village to village, staying with local families
+                            in comfortable guesthouses and enjoying traditional hospitality.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-atlas-villages.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 11. Chefchaouen -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-medium">Moderate</span>
+                    <img src="images/tours/chefchaouen/chefchaoun_rif.jpg" loading="lazy" width="600"
+                        height="400" alt="Rif Mountains & Chefchaouen" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Rif Mountains & Chefchaouen</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 3 Days</span>
+                            <span><i class="fas fa-map-marker-alt"></i> North Morocco</span>
+                        </div>
+                        <p>Explore the lush green landscapes of Northern Morocco. Hike through the Rif
+                            Mountains with their dense forests and waterfalls, ending in the Blue City.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-chefchaouen.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- 10. Ouzoud Waterfalls & Bin El Ouidane -->
+                <article class="tour-card">
+                    <span class="tour-badge badge-easy">Easy</span>
+                    <img src="images/ouzoud_card1.jpg" loading="lazy" width="600" height="400"
+                        alt="Ouzoud Waterfalls and Bin El Ouidane Lake Morocco" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Ouzoud Waterfalls & Bin El Ouidane</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 3 Days</span>
+                            <span><i class="fas fa-water"></i> Nature & Lakes</span>
+                        </div>
+                        <p>A refreshing journey from Marrakech to North Africa’s highest waterfalls and the stunning
+                            turquoise waters of Bin El Ouidane lake. Perfect for nature lovers and families.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-ouzoud.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
                         </div>
                     </div>
                 </article>
 
             </div>
 
-        </div>
         </div>
     </section>
 
@@ -380,7 +489,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Morocco Tours Gate</h4>
+                    <h4>Morocco Trek Tours</h4>
                     <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
                         last a lifetime.</p>
                 </div>
@@ -397,9 +506,12 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Mountain Road, Highland</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@moroccotoursgate.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
                         <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
@@ -409,19 +521,19 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Morocco Tours Gate. All rights reserved.</p>
+                <p>&copy; 2024 Morocco Trek Tours. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a data-cms-whatsapp="site" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="js/cms-sync.js"></script>
-    <script src="js/cms-sync.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
