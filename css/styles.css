@@ -143,6 +143,69 @@ img {
     width: auto;
     display: block;
     image-rendering: -webkit-optimize-contrast;
+    /* Ensure SVG logo scales properly */
+    max-width: 95px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-left: 18px;
+}
+
+.logo-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 3rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo-title .morocco {
+    color: var(--primary-color);
+    /* Dark emerald green */
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.15rem;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.logo-title .trek-tours {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 0.1rem;
+}
+
+.logo-title .trek {
+    color: var(--accent-color);
+    /* Golden color */
+    font-weight: 900;
+    text-shadow: 0 2px 4px rgba(184, 134, 11, 0.4);
+    font-size: 1.15em;
+    letter-spacing: 0.2px;
+    transform: translateY(-0.5px);
+}
+
+.logo-title .tours {
+    color: var(--primary-color);
+    /* Dark emerald green */
+    font-size: 0.95em;
+    font-weight: 800;
+    letter-spacing: 0.1px;
 }
 
 .logo-subtitle {
@@ -174,6 +237,26 @@ img {
 
     .logo-img {
         height: 80px;
+        max-width: 80px;
+    }
+
+    .logo-title {
+        font-size: 1.3rem;
+        height: 2.6rem;
+        letter-spacing: 0.3px;
+    }
+
+    .logo-title .trek {
+        font-size: 1.1em;
+    }
+
+    .logo-title .tours {
+        font-size: 0.9em;
+    }
+
+    .logo-text {
+        gap: 12px;
+        margin-left: 15px;
     }
 
     .logo-subtitle {
@@ -199,6 +282,42 @@ img {
 
     .logo-img {
         height: 65px;
+        max-width: 65px;
+    }
+
+    .logo-title {
+        display: none;
+        /* Hide title on mobile for cleaner look */
+    }
+
+    .logo-text {
+        margin-left: 10px;
+        gap: 10px;
+    }
+
+    .logo-title {
+        font-size: 1.2rem;
+        height: 2.4rem;
+        letter-spacing: 0.2px;
+    }
+
+    .logo-title .morocco {
+        font-weight: 800;
+        margin-bottom: 0.1rem;
+    }
+
+    .logo-title .trek-tours {
+        gap: 4px;
+    }
+
+    .logo-title .trek {
+        font-size: 1.05em;
+        font-weight: 800;
+    }
+
+    .logo-title .tours {
+        font-size: 0.85em;
+        font-weight: 700;
     }
 
     .logo-subtitle {
@@ -236,6 +355,7 @@ img {
 
     .logo-img {
         height: 55px;
+        max-width: 55px;
     }
 }
 

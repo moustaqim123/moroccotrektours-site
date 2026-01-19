@@ -1,0 +1,47 @@
+<svg width="400" height="80" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Combined Logo: Graphic + Text (Separated Elements) -->
+
+  <!-- Logo Graphic Section (Left) -->
+  <g transform="translate(0, 10)">
+    <defs>
+      <linearGradient id="combinedLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#004d33;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#006b4a;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#004d33;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+
+    <!-- Mountain Peaks -->
+    <path d="M5 35 L10 25 L15 30 L20 20 L25 28 L30 18 L35 30 L40 23 L45 33 L50 25 L55 35 Z" fill="url(#combinedLogoGradient)" stroke="#002a1f" stroke-width="0.5"/>
+
+    <!-- Trekking Path -->
+    <path d="M2 40 Q10 32 18 37 Q26 32 34 37 Q42 32 50 40" stroke="#B8860B" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Compass Rose -->
+    <circle cx="27" cy="15" r="4" fill="#B8860B" stroke="#8B7355" stroke-width="0.5"/>
+    <path d="M27 11 L29 15 L27 14 L25 15 Z" fill="#8B0000"/> <!-- North -->
+    <path d="M27 19 L25 15 L27 16 L29 15 Z" fill="#004d33"/> <!-- South -->
+
+    <!-- Trekking Boots -->
+    <ellipse cx="12" cy="42" rx="3" ry="1.5" fill="#8B4513"/>
+    <ellipse cx="42" cy="42" rx="3" ry="1.5" fill="#8B4513"/>
+    <rect x="10" y="41" width="4" height="2.5" fill="#654321"/>
+    <rect x="40" y="41" width="4" height="2.5" fill="#654321"/>
+  </g>
+
+  <!-- Separator Line -->
+  <line x1="65" y1="10" x2="65" y2="70" stroke="#ddd" stroke-width="1" opacity="0.5"/>
+
+  <!-- Text Section (Right) -->
+  <g transform="translate(80, 0)">
+    <!-- Main Title Text -->
+    <text x="0" y="25" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#004d33">
+      MOROCCO TREK TOURS
+    </text>
+
+    <!-- Subtitle Text -->
+    <text x="0" y="50" font-family="Open Sans, sans-serif" font-size="12" font-weight="400" fill="#666666">
+      your gateway to the authentic adventure
+    </text>
+  </g>
+</svg>
