@@ -1782,3 +1782,145 @@ body {
     padding-left: 0;
     padding-right: 18px;
 }
+
+/* ---------------------------------- */
+/* 10. Section-Aware Navigation       */
+/* ---------------------------------- */
+
+/* Desktop Side Navigation Buttons (Prev/Next) */
+.section-nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    z-index: 9998;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 0 8px 8px 0;
+    opacity: 0.6;
+}
+
+.section-nav-btn.next-btn {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.section-nav-btn.prev-btn {
+    left: 0;
+}
+
+.section-nav-btn:hover {
+    width: 80px;
+    background: var(--primary-color);
+    color: #fff;
+    opacity: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.section-nav-btn i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.section-nav-btn.prev-btn:hover i {
+    transform: translateX(-5px);
+}
+
+.section-nav-btn.next-btn:hover i {
+    transform: translateX(5px);
+}
+
+.nav-btn-label {
+    position: absolute;
+    bottom: -30px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.section-nav-btn:hover .nav-btn-label {
+    opacity: 1;
+    bottom: -40px;
+}
+
+/* Hide desktop side buttons on mobile */
+@media (max-width: 768px) {
+    .section-nav-btn {
+        display: none !important;
+    }
+}
+
+/* Page Transitions Improvement */
+body.page-transitioning {
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.page-slide-out-left {
+    animation: slideOutLeft 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.page-slide-out-right {
+    animation: slideOutRight 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.page-slide-in-left {
+    animation: slideInLeft 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.page-slide-in-right {
+    animation: slideInRight 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

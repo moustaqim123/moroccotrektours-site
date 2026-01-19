@@ -640,4 +640,121 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardStyle = document.createElement('style');
     cardStyle.innerHTML = '.tour-card, .blog-card { cursor: pointer; }';
     document.head.appendChild(cardStyle);
+
+    // --- Section-Aware Navigation: Desktop Side Buttons & Mobile Swipes ---
+    (function initSectionNavigation() {
+        const currentPath = window.location.pathname;
+        const filename = currentPath.split('/').pop() || 'index.html';
+        const isFrench = filename.includes('-fr.html');
+        const cleanFilename = filename.replace('-fr.html', '.html');
+
+        // 1. Define Section Sequences
+        const sequences = {
+            main: ['index.html', 'tours.html', 'customize-trip.html', 'about.html', 'blog.html', 'contact.html'],
+            tours: [
+                'tour-toubkal.html', 'tour-mgoun.html', 'tour-ait-bougmez.html',
+                'tour-saghro.html', 'tour-siroua.html', 'tour-sahara-erg-chebbi.html',
+                'tour-todra-dades.html', 'tour-essaouira.html', 'tour-agafay.html',
+                'tour-atlas-villages.html', 'tour-chefchaouen.html', 'tour-ouzoud.html'
+            ],
+            blog: [
+                'blog-marrakech.html', 'blog-fes.html', 'blog-atlas.html',
+                'blog-sahara.html', 'blog-coastal.html', 'blog-culture.html'
+            ]
+        };
+
+        // Determine current section and index
+        let currentSection = null;
+        let currentIndex = -1;
+
+        for (const [key, seq] of Object.entries(sequences)) {
+            const idx = seq.indexOf(cleanFilename);
+            if (idx !== -1) {
+                currentSection = key;
+                currentIndex = idx;
+                break;
+            }
+        }
+
+        if (!currentSection) return;
+
+        function getTargetUrl(index) {
+            if (index < 0 || index >= sequences[currentSection].length) return null;
+            const target = sequences[currentSection][index];
+            return isFrench ? target.replace('.html', '-fr.html') : target;
+        }
+
+        const prevUrl = getTargetUrl(currentIndex - 1);
+        const nextUrl = getTargetUrl(currentIndex + 1);
+
+        // 2. Desktop Navigation (Side Buttons)
+        if (window.innerWidth > 768) {
+            if (prevUrl) {
+                const btn = document.createElement('a');
+                btn.href = prevUrl;
+                btn.className = 'section-nav-btn prev-btn';
+                btn.innerHTML = '<i class="fas fa-chevron-left"></i><span class="nav-btn-label">Previous</span>';
+                btn.setAttribute('aria-label', 'Previous Page');
+                document.body.appendChild(btn);
+            }
+            if (nextUrl) {
+                const btn = document.createElement('a');
+                btn.href = nextUrl;
+                btn.className = 'section-nav-btn next-btn';
+                btn.innerHTML = '<i class="fas fa-chevron-right"></i><span class="nav-btn-label">Next</span>';
+                btn.setAttribute('aria-label', 'Next Page');
+                document.body.appendChild(btn);
+            }
+        }
+
+        // 3. Mobile Swipe Navigation
+        let touchStartX = 0;
+        let touchStartY = 0;
+        const SWIPE_THRESHOLD = 80;
+        const LOCK_THRESHOLD = 30; // Min horizontal move to ignore vertical scroll
+
+        function handleNavigate(direction) {
+            const targetUrl = direction === 'left' ? nextUrl : prevUrl;
+            if (targetUrl) {
+                document.body.classList.add('page-transitioning');
+                const animClass = direction === 'left' ? 'page-slide-out-left' : 'page-slide-out-right';
+                document.body.classList.add(animClass);
+
+                setTimeout(() => {
+                    window.location.href = targetUrl + '?swipe=' + direction;
+                }, 400);
+            }
+        }
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const touchEndY = e.changedTouches[0].screenY;
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+
+            // Horizontal Swipe Check: diffX must be large, diffY must be relatively small
+            if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(diffX) > Math.abs(diffY)) {
+                handleNavigate(diffX < 0 ? 'left' : 'right');
+            }
+        }, { passive: true });
+
+        // 4. Handle Slide-In Animation on Load
+        const urlParams = new URLSearchParams(window.location.search);
+        const prevSwipe = urlParams.get('swipe');
+        if (prevSwipe) {
+            const inAnim = prevSwipe === 'left' ? 'page-slide-in-left' : 'page-slide-in-right';
+            document.body.classList.add(inAnim);
+
+            setTimeout(() => {
+                const newUrl = window.location.pathname + window.location.hash;
+                window.history.replaceState({}, document.title, newUrl);
+                document.body.classList.remove(inAnim);
+            }, 600);
+        }
+    })();
 });
