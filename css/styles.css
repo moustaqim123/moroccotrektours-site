@@ -138,14 +138,26 @@ img {
 }
 
 .logo-img {
-    height: 95px;
-    /* Maximum visibility */
-    width: auto;
+    width: 180px;
+    height: auto;
     display: block;
     image-rendering: -webkit-optimize-contrast;
     /* Ensure SVG logo scales properly */
-    max-width: 95px;
+    max-width: 100%;
     object-fit: contain;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        width: 120px;
+    }
 }
 
 .logo-text {
