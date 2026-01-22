@@ -1,15 +1,6 @@
-/* 
-   Mountain Tourism Website - Main Stylesheet
-   Theme: Nature, Adventure, Professional
-*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* ---------------------------------- */
-/* 1. Variables & Reset               */
-/* ---------------------------------- */
 :root {
-    /* Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
-
     /* Color Palette */
     --primary-color: #004d33;
     /* Dark Emerald Green */
@@ -44,20 +35,20 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 110px;
+    scroll-padding-top: 90px;
     /* Offset for desktop fixed header */
 }
 
 @media (max-width: 768px) {
     html {
-        scroll-padding-top: 85px;
+        scroll-padding-top: 75px;
         /* Offset for mobile fixed header */
     }
 }
 
 @media (max-width: 480px) {
     html {
-        scroll-padding-top: 75px;
+        scroll-padding-top: 65px;
         /* Offset for extra small mobile header */
     }
 }
@@ -114,8 +105,8 @@ img {
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 110px;
-    /* Increased for larger logo visibility */
+    height: 90px;
+    /* Balanced for premium visibility */
     display: flex;
     align-items: center;
     transition: var(--transition);
@@ -138,26 +129,14 @@ img {
 }
 
 .logo-img {
-    width: 180px;
-    height: auto;
+    height: 85px;
+    /* Increased size significantly for better presence */
+    width: auto;
     display: block;
     image-rendering: -webkit-optimize-contrast;
-    /* Ensure SVG logo scales properly */
     max-width: 100%;
     object-fit: contain;
-}
-
-/* Responsive logo sizing */
-@media (max-width: 768px) {
-    .logo-img {
-        width: 140px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-img {
-        width: 120px;
-    }
+    transition: var(--transition);
 }
 
 .logo-text {
@@ -165,116 +144,76 @@ img {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    margin-left: 18px;
+    margin-left: 15px;
 }
 
 .logo-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    line-height: 1.05;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 3rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    line-height: 1.1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
-.logo-title .morocco {
+/* Each line same width for perfect balance */
+.logo-title .line {
+    display: inline-block;
+    width: 160px;
+    text-align: left;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: var(--primary-color);
-    /* Dark emerald green */
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.15rem;
-    font-weight: 900;
-    letter-spacing: 0.3px;
 }
 
-.logo-title .trek-tours {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    justify-content: center;
-    margin-top: 0.1rem;
-}
-
-.logo-title .trek {
+/* Gold color for TREK word */
+.trek-word {
     color: var(--accent-color);
-    /* Golden color */
-    font-weight: 900;
-    text-shadow: 0 2px 4px rgba(184, 134, 11, 0.4);
-    font-size: 1.15em;
-    letter-spacing: 0.2px;
-    transform: translateY(-0.5px);
-}
-
-.logo-title .tours {
-    color: var(--primary-color);
-    /* Dark emerald green */
-    font-size: 0.95em;
-    font-weight: 800;
-    letter-spacing: 0.1px;
 }
 
 .logo-subtitle {
+    display: block;
+    font-size: 0.75rem;
     color: var(--accent-color);
-    /* Matches the new Dark Gold */
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    font-family: var(--font-body);
     font-style: italic;
-    font-weight: 500;
-    text-transform: capitalize;
-    border-left: 1.5px solid rgba(212, 175, 55, 0.4);
-    /* Subtle vertical golden line */
-    padding-left: 18px;
-    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    opacity: 0.9;
     max-width: 170px;
-    /* Sophisticated vertical block */
+    border-left: 1.5px solid rgba(184, 134, 11, 0.3);
+    padding-left: 15px;
+    line-height: 1.3;
 }
 
 /* Tablet Responsiveness */
 @media (max-width: 1024px) {
     .navbar {
-        height: 100px;
+        height: 80px;
     }
 
     .hero-section {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     .logo-img {
-        height: 80px;
-        max-width: 80px;
+        height: 50px;
     }
 
-    .logo-title {
-        font-size: 1.3rem;
-        height: 2.6rem;
-        letter-spacing: 0.3px;
-    }
-
-    .logo-title .trek {
-        font-size: 1.1em;
-    }
-
-    .logo-title .tours {
-        font-size: 0.9em;
+    .logo-title .line {
+        width: 110px;
+        font-size: 1rem;
     }
 
     .logo-text {
-        gap: 12px;
-        margin-left: 15px;
+        gap: 10px;
     }
 
     .logo-subtitle {
-        font-size: 0.85rem;
-        padding-left: 15px;
-        max-width: 150px;
+        font-size: 0.7rem;
+        padding-left: 12px;
+        max-width: 140px;
     }
 
     .nav-links {
@@ -285,56 +224,28 @@ img {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        height: 85px;
+        height: 75px;
     }
 
     .hero-section {
-        margin-top: 85px;
+        margin-top: 75px;
     }
 
     .logo-img {
-        height: 65px;
-        max-width: 65px;
+        height: 45px;
     }
 
-    .logo-title {
-        display: none;
-        /* Hide title on mobile for cleaner look */
+    .logo-title .line {
+        width: 100px;
+        font-size: 0.9rem;
     }
 
     .logo-text {
-        margin-left: 10px;
-        gap: 10px;
-    }
-
-    .logo-title {
-        font-size: 1.2rem;
-        height: 2.4rem;
-        letter-spacing: 0.2px;
-    }
-
-    .logo-title .morocco {
-        font-weight: 800;
-        margin-bottom: 0.1rem;
-    }
-
-    .logo-title .trek-tours {
-        gap: 4px;
-    }
-
-    .logo-title .trek {
-        font-size: 1.05em;
-        font-weight: 800;
-    }
-
-    .logo-title .tours {
-        font-size: 0.85em;
-        font-weight: 700;
+        gap: 8px;
     }
 
     .logo-subtitle {
         display: none;
-        /* Hide subtitle on mobile for cleaner look */
     }
 
     .nav-links {

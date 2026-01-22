@@ -1,0 +1,22 @@
+<svg width="300" height="350" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Morocco Trek Tours - High Quality Vector Icon -->
+  
+  <!-- Stylized Footprint Shape (Emerald Green) -->
+  <path d="M150 10C100 10 60 55 60 120C60 185 100 250 150 315C165 335 185 335 200 315C250 250 290 185 290 120C290 55 250 10 200 10C190 10 160 10 150 10Z" 
+        fill="#0B3D2E" />
+  
+  <!-- Outer Traction Marks for Detail -->
+  <path d="M75 80L50 90M75 120L50 120M75 160L55 175" stroke="#0B3D2E" stroke-width="15" stroke-linecap="round"/>
+  <path d="M225 80L250 90M225 120L250 120M225 160L245 175" stroke="#0B3D2E" stroke-width="15" stroke-linecap="round"/>
+  
+  <!-- Inner Details Grouped for the visual center -->
+  <g transform="translate(15, 20)">
+      <!-- Mountain Peak in Gold -->
+      <path d="M85 180L135 100L185 180" stroke="#D4A017" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- Smaller Peak -->
+      <path d="M110 180L135 140L160 180" stroke="#D4A017" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      
+      <!-- Winding Path in Gold -->
+      <path d="M135 180Q135 210 160 220T135 270" stroke="#D4A017" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

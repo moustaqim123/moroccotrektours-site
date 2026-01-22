@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Morocco Trek Tours - High Quality Vector Icon -->
+  
+  <!-- Outer Footpath/Outline in Emerald Green -->
+  <path d="M256 50C180 50 140 100 140 180C140 260 180 340 230 420C240 440 272 440 282 420C332 340 372 260 372 180C372 100 332 50 256 50Z" 
+        stroke="#004d33" stroke-width="20" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Inner Mountain Peak in Gold -->
+  <path d="M190 280L256 150L322 280" stroke="#FFD700" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M230 280L256 210L282 280" stroke="#FFD700" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Winding Trail in Gold -->
+  <path d="M256 280C256 310 280 320 280 350C280 380 256 390 256 420" stroke="#FFD700" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- "T" Symbol within the sun or peak if needed, but keeping it clean -->
+  <circle cx="256" cy="110" r="25" fill="#FFD700"/>
+</svg>
