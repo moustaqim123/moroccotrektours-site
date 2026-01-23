@@ -35,13 +35,13 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 110px;
+    scroll-padding-top: 72px;
     /* Offset for desktop fixed header */
 }
 
 @media (max-width: 768px) {
     html {
-        scroll-padding-top: 75px;
+        scroll-padding-top: 72px;
         /* Offset for mobile fixed header */
     }
 }
@@ -97,18 +97,18 @@ img {
 /* ---------------------------------- */
 /* 2. Navigation                      */
 /* ---------------------------------- */
-.navbar {
+.header,
+.navbar,
+.site-header {
     background-color: var(--bg-light);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    /* Sophisticated subtle shadow */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 110px;
-    /* Balanced for premium visibility */
     display: flex;
     align-items: center;
+    height: 72px;
     transition: var(--transition);
 }
 
@@ -130,9 +130,9 @@ img {
 
 /* Lightweight Header Logo */
 .logo-container img {
-    height: 56px;
+    max-height: 38px;
     width: auto;
-    object-fit: contain;
+    display: block;
 }
 
 .logo-text {
@@ -186,15 +186,15 @@ img {
 /* Tablet Responsiveness */
 @media (max-width: 1024px) {
     .navbar {
-        height: 80px;
+        height: 72px;
     }
 
     .hero-section {
         margin-top: 80px;
     }
 
-    .logo-img {
-        height: 50px;
+    .logo-container img {
+        max-height: 38px;
     }
 
     .logo-title .line {
@@ -220,15 +220,15 @@ img {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        height: 75px;
+        height: 72px;
     }
 
     .hero-section {
         margin-top: 75px;
     }
 
-    .logo-img {
-        height: 45px;
+    .logo-container img {
+        max-height: 38px;
     }
 
     .logo-title .line {
@@ -265,16 +265,15 @@ img {
 
 @media (max-width: 480px) {
     .navbar {
-        height: 75px;
+        height: 72px;
     }
 
     .hero-section {
         margin-top: 75px;
     }
 
-    .logo-img {
-        height: 55px;
-        max-width: 55px;
+    .logo-container img {
+        max-height: 38px;
     }
 }
 

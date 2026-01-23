@@ -35,7 +35,7 @@
     "pages.tours.cards.tour-siroua.image": "images/siroua_main.jpg",
     "pages.tours.cards.tour-todra-dades.image": "images/todra_dades.jpg",
     "pages.tours.cards.tour-toubkal.image": "images/toubkal_summit.jpg",
-    "site.logo": "images/logo.png"
+    "site.logo": "images/assets/logo-header.png"
   },
   "packages": {
     "site": {

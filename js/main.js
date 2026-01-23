@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function buildVCardBlob() {
         // Fetch the site logo so the VCard contains the same image used on the website
-        const logoBase64 = await fetchImageAsBase64('images/assets/logo.png');
+        const logoBase64 = await fetchImageAsBase64('images/assets/icon-brand.png');
 
         const lines = [
             'BEGIN:VCARD',
