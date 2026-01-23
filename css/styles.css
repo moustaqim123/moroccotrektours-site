@@ -128,14 +128,11 @@ img {
     gap: 18px;
 }
 
-.logo-img {
-    height: 110px;
+/* Lightweight Header Logo */
+.logo-container img {
+    height: 56px;
     width: auto;
-    display: block;
-    image-rendering: -webkit-optimize-contrast;
-    max-width: 100%;
     object-fit: contain;
-    transition: var(--transition);
 }
 
 .logo-text {
