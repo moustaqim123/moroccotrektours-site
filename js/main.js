@@ -287,8 +287,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!target) return;
         e.preventDefault();
+
+        // New Logic: Check if within a Toubkal card with a duration selector
+        const card = target.closest('.tour-card.tour-toubkal');
+        let selectedDuration = '';
+        if (card) {
+            const select = card.querySelector('.day-select');
+            if (select) {
+                selectedDuration = select.options[select.selectedIndex].text;
+            }
+        }
+
         const phoneNumber = '212659565040';
-        const preFilledMessage = 'Hello! I want to book now.';
+        let preFilledMessage = 'Hello! I want to book now.';
+        if (selectedDuration) {
+            preFilledMessage = `Hello! I am interested in booking the Toubkal tour for: ${selectedDuration}.`;
+        }
+
         const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
         let url = isMobile
             ? `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(preFilledMessage)}`
@@ -564,6 +579,167 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Unify Tour Detail Inline Styles ---
+    // Many tour pages have inline styles on itinerary blocks (duration-section/itinerary-option).
+    // We remove those inline styles (only inside .tour-main-content) so global CSS can unify the UI.
+    (function normalizeTourDetailStyles() {
+        const main = document.querySelector('.tour-main-content');
+        if (!main) return;
+
+        const selectors = [
+            '.duration-section[style]',
+            '.duration-section h3[style]',
+            '.itinerary-option[style]',
+            '.itinerary-option h3[style]',
+            '.itinerary-options-container[style]',
+            '#itinerary [style]'
+        ];
+
+        const nodes = main.querySelectorAll(selectors.join(','));
+        nodes.forEach(el => {
+            // Keep intentional inline icon colors / small UI accents outside itinerary blocks.
+            // Since we scope to .tour-main-content, be conservative and only remove styles
+            // from the itinerary-related nodes above.
+            el.removeAttribute('style');
+        });
+    })();
+
+    // --- Logo Animation (anime.js) ---
+    // Lightweight SVG stroke animation over the header logo with safe fallback.
+    (function initLogoAnimation() {
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+
+        const logoContainer = document.querySelector('.logo-container');
+        if (!logoContainer) return;
+        if (logoContainer.querySelector('.logo-anim-svg')) return;
+
+        const img = logoContainer.querySelector('img');
+        if (!img) return;
+
+        const ensureAnime = () => new Promise((resolve) => {
+            if (window.anime) return resolve(true);
+
+            const existing = document.querySelector('script[data-animejs="true"]');
+            if (existing) {
+                existing.addEventListener('load', () => resolve(!!window.anime), { once: true });
+                existing.addEventListener('error', () => resolve(false), { once: true });
+                return;
+            }
+
+            const s = document.createElement('script');
+            s.src = 'https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js';
+            s.async = true;
+            s.defer = true;
+            s.dataset.animejs = 'true';
+            s.addEventListener('load', () => resolve(!!window.anime), { once: true });
+            s.addEventListener('error', () => resolve(false), { once: true });
+            document.head.appendChild(s);
+        });
+
+        const svgNS = 'http://www.w3.org/2000/svg';
+        const iconSvgUrl = 'images/assets/logo-icon.svg';
+
+        const loadInlineSvg = async (url) => {
+            try {
+                const res = await fetch(url, { cache: 'no-store' });
+                if (!res.ok) return null;
+                const txt = await res.text();
+                const doc = new DOMParser().parseFromString(txt, 'image/svg+xml');
+                const svgEl = doc.querySelector('svg');
+                if (!svgEl) return null;
+                svgEl.classList.add('logo-anim-svg');
+                svgEl.setAttribute('aria-hidden', 'true');
+                svgEl.setAttribute('focusable', 'false');
+                return svgEl;
+            } catch {
+                return null;
+            }
+        };
+
+        const start = async () => {
+            const ok = await ensureAnime();
+            if (!ok || !window.anime) {
+                console.warn('[LogoAnim] anime.js not available, aborting');
+                return;
+            }
+
+            const svg = await loadInlineSvg(iconSvgUrl);
+            if (!svg) {
+                console.warn('[LogoAnim] SVG not loaded, fallback to PNG');
+                img.style.opacity = '1';
+                logoContainer.classList.remove('logo-animating');
+                return;
+            }
+            console.log('[LogoAnim] SVG loaded and parsed');
+
+            // Ensure we only show the icon svg (no text). If the SVG contains text, we hide it.
+            svg.querySelectorAll('text').forEach(t => t.setAttribute('display', 'none'));
+
+            // Normalize fills/strokes for a luxury look (the CSS handles actual colors)
+            svg.querySelectorAll('[fill]').forEach(el => {
+                const v = (el.getAttribute('fill') || '').trim();
+                if (v && v !== 'none') el.setAttribute('fill', 'none');
+            });
+
+            logoContainer.appendChild(svg);
+
+            const drawables = Array.from(svg.querySelectorAll('path, line, polyline, polygon, circle, rect, ellipse'))
+                .filter(el => typeof el.getTotalLength === 'function');
+
+            if (drawables.length === 0) {
+                console.warn('[LogoAnim] No drawable elements found, fallback to PNG');
+                svg.remove();
+                img.style.opacity = '1';
+                logoContainer.classList.remove('logo-animating');
+                return;
+            }
+            console.log('[LogoAnim] Drawable elements found:', drawables.length);
+
+            // Hide briefly, then animate (requested behavior on every page)
+            const HIDE_MS = 500;
+            img.style.opacity = '0';
+            logoContainer.classList.add('logo-animating');
+
+            await new Promise((r) => setTimeout(r, HIDE_MS));
+            console.log('[LogoAnim] Starting anime timeline');
+
+            drawables.forEach((p) => {
+                const len = p.getTotalLength();
+                p.style.strokeDasharray = String(len);
+                p.style.strokeDashoffset = String(len);
+            });
+
+            window.anime.timeline({
+                easing: 'easeInOutSine'
+            })
+                .add({
+                    targets: drawables,
+                    opacity: [0, 1],
+                    duration: 160,
+                    delay: window.anime.stagger(90)
+                })
+                .add({
+                    targets: drawables,
+                    strokeDashoffset: [window.anime.setDashoffset, 0],
+                    duration: 1050,
+                    delay: window.anime.stagger(80)
+                }, '-=80')
+                .add({
+                    targets: img,
+                    opacity: [0, 1],
+                    duration: 420,
+                    complete: () => {
+                        console.log('[LogoAnim] Animation complete, cleaning up');
+                        logoContainer.classList.remove('logo-animating');
+                        svg.remove();
+                    }
+                }, '-=240');
+        };
+
+        start();
+    })();
+
     // --- Language Selection ---
     // --- Language Selection (Static URL Redirection) ---
     const langSwitcher = document.querySelector('.lang-switcher');
@@ -592,18 +768,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (selectedLang === 'Français') {
                     // Switch to French
-                    if (!filename.includes('-fr.html')) {
+                    if (!filename.includes('-fr.html') && filename !== 'tour-10-jours.html') {
                         if (filename === 'index.html' || filename === '') {
                             targetFilename = 'index-fr.html';
+                        } else if (filename === 'tour-10-days.html') {
+                            targetFilename = 'tour-10-jours.html';
                         } else {
                             targetFilename = filename.replace('.html', '-fr.html');
                         }
                     }
                 } else if (selectedLang === 'English') {
                     // Switch to English
-                    if (filename.includes('-fr.html')) {
+                    if (filename.includes('-fr.html') || filename === 'tour-10-jours.html') {
                         if (filename === 'index-fr.html') {
                             targetFilename = 'index.html';
+                        } else if (filename === 'tour-10-jours.html') {
+                            targetFilename = 'tour-10-days.html';
                         } else {
                             targetFilename = filename.replace('-fr.html', '.html');
                         }
@@ -622,7 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Set active state based on current URL
         const currentFilename = window.location.pathname.split('/').pop() || 'index.html';
-        const isFrench = currentFilename.includes('-fr.html');
+        const isFrench = currentFilename.includes('-fr.html') || currentFilename === 'tour-10-jours.html';
 
         langBtnSpan.textContent = isFrench ? 'Français' : 'English';
 
@@ -645,22 +825,53 @@ document.addEventListener('DOMContentLoaded', () => {
     (function initSectionNavigation() {
         const currentPath = window.location.pathname;
         const filename = currentPath.split('/').pop() || 'index.html';
-        const isFrench = filename.includes('-fr.html');
-        const cleanFilename = filename.replace('-fr.html', '.html');
+        const isFrench = filename.includes('-fr.html') || filename === 'tour-10-jours.html';
+        const cleanFilename = filename === 'tour-10-jours.html' ? 'tour-10-days.html' : filename.replace('-fr.html', '.html');
 
-        // 1. Define Section Sequences
+        // 1. Define Section Sequences and Titles
         const sequences = {
             main: ['index.html', 'tours.html', 'customize-trip.html', 'about.html', 'blog.html', 'contact.html'],
             tours: [
-                'tour-toubkal.html', 'tour-mgoun.html', 'tour-ait-bougmez.html',
+                'tour-toubkal.html', 'tour-azzaden-tamsoult.html', 'tour-10-days.html', 'tour-mgoun.html', 'tour-ait-bougmez.html',
                 'tour-saghro.html', 'tour-siroua.html', 'tour-sahara-erg-chebbi.html',
                 'tour-todra-dades.html', 'tour-essaouira.html', 'tour-agafay.html',
-                'tour-atlas-villages.html', 'tour-chefchaouen.html', 'tour-ouzoud.html'
+                'tour-atlas-villages.html', 'tour-chefchaouen.html', 'tour-ouzoud.html',
+                'tour-sahara-merzouga.html'
             ],
             blog: [
                 'blog-marrakech.html', 'blog-fes.html', 'blog-atlas.html',
                 'blog-sahara.html', 'blog-coastal.html', 'blog-culture.html'
             ]
+        };
+
+        const titles = {
+            'index.html': { en: 'Home', fr: 'Accueil' },
+            'tours.html': { en: 'Our Tours', fr: 'Circuits' },
+            'customize-trip.html': { en: 'Customize', fr: 'Personnaliser' },
+            'about.html': { en: 'About Us', fr: 'À Propos' },
+            'blog.html': { en: 'Guide', fr: 'Guide' },
+            'contact.html': { en: 'Contact', fr: 'Contact' },
+            'tour-toubkal.html': { en: 'Toubkal', fr: 'Toubkal' },
+            'tour-azzaden-tamsoult.html': { en: 'Azaden', fr: 'Azaden' },
+            'tour-10-days.html': { en: 'Adventure', fr: 'Aventure' },
+            'tour-mgoun.html': { en: 'M\'Goun', fr: 'M\'Goun' },
+            'tour-ait-bougmez.html': { en: 'Happy Valley', fr: 'Aït Bougmez' },
+            'tour-saghro.html': { en: 'Saghro', fr: 'Saghro' },
+            'tour-siroua.html': { en: 'Siroua', fr: 'Siroua' },
+            'tour-sahara-erg-chebbi.html': { en: 'Sahara', fr: 'Sahara' },
+            'tour-todra-dades.html': { en: 'Todra', fr: 'Todra' },
+            'tour-essaouira.html': { en: 'Essaouira', fr: 'Essaouira' },
+            'tour-agafay.html': { en: 'Agafay', fr: 'Agafay' },
+            'tour-atlas-villages.html': { en: 'Villages', fr: 'Villages' },
+            'tour-chefchaouen.html': { en: 'Chefchaouen', fr: 'Chefchaouen' },
+            'tour-ouzoud.html': { en: 'Ouzoud', fr: 'Ouzoud' },
+            'tour-sahara-merzouga.html': { en: 'Merzouga', fr: 'Merzouga' },
+            'blog-marrakech.html': { en: 'Marrakech', fr: 'Marrakech' },
+            'blog-fes.html': { en: 'Fes', fr: 'Fès' },
+            'blog-atlas.html': { en: 'Atlas', fr: 'Atlas' },
+            'blog-sahara.html': { en: 'Sahara', fr: 'Sahara' },
+            'blog-coastal.html': { en: 'Coastal', fr: 'Littoral' },
+            'blog-culture.html': { en: 'Culture', fr: 'Culture' }
         };
 
         // Determine current section and index
@@ -681,7 +892,11 @@ document.addEventListener('DOMContentLoaded', () => {
         function getTargetUrl(index) {
             if (index < 0 || index >= sequences[currentSection].length) return null;
             const target = sequences[currentSection][index];
-            return isFrench ? target.replace('.html', '-fr.html') : target;
+            if (isFrench) {
+                if (target === 'tour-10-days.html') return 'tour-10-jours.html';
+                return target.replace('.html', '-fr.html');
+            }
+            return target;
         }
 
         const prevUrl = getTargetUrl(currentIndex - 1);
@@ -690,19 +905,31 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Desktop Navigation (Side Buttons)
         if (window.innerWidth > 768) {
             if (prevUrl) {
+                const prevFilename = sequences[currentSection][currentIndex - 1];
+                const prevTitle = titles[prevFilename] ? (isFrench ? titles[prevFilename].fr : titles[prevFilename].en) : (isFrench ? 'Précédent' : 'Previous');
+
                 const btn = document.createElement('a');
                 btn.href = prevUrl;
                 btn.className = 'section-nav-btn prev-btn';
-                btn.innerHTML = '<i class="fas fa-chevron-left"></i><span class="nav-btn-label">Previous</span>';
-                btn.setAttribute('aria-label', 'Previous Page');
+                btn.innerHTML = `
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="nav-btn-title">${prevTitle}</span>
+                `;
+                btn.setAttribute('aria-label', `Previous: ${prevTitle}`);
                 document.body.appendChild(btn);
             }
             if (nextUrl) {
+                const nextFilename = sequences[currentSection][currentIndex + 1];
+                const nextTitle = titles[nextFilename] ? (isFrench ? titles[nextFilename].fr : titles[nextFilename].en) : (isFrench ? 'Suivant' : 'Next');
+
                 const btn = document.createElement('a');
                 btn.href = nextUrl;
                 btn.className = 'section-nav-btn next-btn';
-                btn.innerHTML = '<i class="fas fa-chevron-right"></i><span class="nav-btn-label">Next</span>';
-                btn.setAttribute('aria-label', 'Next Page');
+                btn.innerHTML = `
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="nav-btn-title">${nextTitle}</span>
+                `;
+                btn.setAttribute('aria-label', `Next: ${nextTitle}`);
                 document.body.appendChild(btn);
             }
         }
@@ -757,4 +984,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 600);
         }
     })();
+
+
 });

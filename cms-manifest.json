@@ -1,23 +1,23 @@
 {
   "images": {
-    "auto.images.agafay_desert": "images/agafay_desert.jpg",
+    "auto.images.agafay_desert": "images/agafay_desert1.jpg",
     "auto.images.ait_bougmez": "images/ait_bougmez.jpg",
     "auto.images.atlas_village": "images/atlas_village.jpg",
     "auto.images.guide_coastal_vibes": "images/guide_coastal_vibes.jpg",
     "auto.images.guide_culture_flavors": "images/guide_culture_flavors.jpg",
     "auto.images.guide_high_atlas": "images/guide_high_atlas.jpg",
-    "auto.images.guide_sahara_desert": "images/guide_sahara_desert.jpg",
-    "auto.images.happy_valley_main": "images/happy_valley_main.jpg",
-    "auto.images.mgoun": "images/mgoun.jpg",
-    "auto.images.mgoun_main": "images/mgoun_main.jpg",
+    "auto.images.guide_sahara_desert": "images/guide_sahara_desert1.jpeg",
+    "auto.images.happy_valley_main": "images/happy_valley_main1.jpg",
+    "auto.images.mgoun": "images/mgoun_main1.jpeg",
+    "auto.images.mgoun_main": "images/mgoun_main1.jpeg",
     "auto.images.saghro_bab_nali": "images/saghro_bab_nali.jpg",
     "auto.images.saghro_cathedral": "images/saghro_cathedral.jpg",
     "auto.images.saghro_main": "images/saghro_main.jpg",
     "auto.images.saghro_sunset_rocks": "images/saghro_sunset_rocks.jpg",
     "auto.images.sahara_erg_chebbi": "images/sahara_erg_chebbi.jpg",
-    "auto.images.siroua_main": "images/siroua_main.jpg",
+    "auto.images.siroua_main": "images/siroua_main1.jpeg",
     "auto.images.siroua_volcanic_pools": "images/siroua_volcanic_pools.jpg",
-    "auto.images.todra_dades": "images/todra_dades.jpg",
+    "auto.images.todra_dades": "images/todra_dades1.jpg",
     "auto.images.toubkal_summit": "images/toubkal_summit.jpg",
     "auto.images.volcanic_canyon": "images/volcanic_canyon.jpg",
     "pages.about.team.team4.image": "images/team4.jpg",
@@ -26,15 +26,16 @@
     "pages.blog.cards.guide_high_atlas.image": "images/guide_high_atlas.jpg",
     "pages.blog.cards.guide_sahara_desert.image": "images/guide_sahara_desert.jpg",
     "pages.index.cards.tour-saghro.image": "images/saghro_main.jpg",
-    "pages.tours.cards.tour-agafay.image": "images/agafay_desert.jpg",
-    "pages.tours.cards.tour-ait-bougmez.image": "images/happy_valley_main.jpg",
+    "pages.tours.cards.tour-agafay.image": "images/agafay_desert1.jpg",
+    "pages.tours.cards.tour-ait-bougmez.image": "images/happy_valley_main1.jpg",
     "pages.tours.cards.tour-atlas-villages.image": "images/atlas_village.jpg",
-    "pages.tours.cards.tour-mgoun.image": "images/mgoun_main.jpg",
+    "pages.tours.cards.tour-mgoun.image": "images/mgoun_main1.jpeg",
     "pages.tours.cards.tour-saghro.image": "images/saghro_main.jpg",
-    "pages.tours.cards.tour-sahara-erg-chebbi.image": "images/sahara_erg_chebbi.jpg",
-    "pages.tours.cards.tour-siroua.image": "images/siroua_main.jpg",
-    "pages.tours.cards.tour-todra-dades.image": "images/todra_dades.jpg",
+    "pages.tours.cards.tour-sahara-erg-chebbi.image": "images/sahara_erg_chebbi1.jpeg",
+    "pages.tours.cards.tour-siroua.image": "images/siroua_main1.jpeg",
+    "pages.tours.cards.tour-todra-dades.image": "images/todra_dades1.jpg",
     "pages.tours.cards.tour-toubkal.image": "images/toubkal_summit.jpg",
+    "pages.tours.cards.tour-10-days.image": "images/tours/tour-10-days/tour-10-days-main.jpg",
     "site.logo": "images/assets/logo-header.png"
   },
   "packages": {
@@ -97,6 +98,11 @@
       "slug": "tour-essaouira",
       "title": "Essaouira Coastal Trek",
       "whatsapp_message": "Hello! I'm interested in the Essaouira Coastal Trek (tour-essaouira)."
+    },
+    "tour-10-days": {
+      "slug": "tour-10-days",
+      "title": "10-Day Morocco Adventure",
+      "whatsapp_message": "Hello! I'm interested in the 10-Day Morocco Adventure (tour-10-days)."
     }
   },
   "backgrounds_meta": {
@@ -286,29 +292,29 @@
     }
   },
   "backgrounds": {
-    "pages.tours.hero": "images/hero_tours.jpg",
-    "pages.about.hero": "images/hero_about.jpg",
+    "pages.tours.hero": "images/hero/hero_tours.jpg",
+    "pages.about.hero": "images/hero/hero_about.jpg",
     "pages.blog-atlas.hero": "images/atlas_village.jpg",
-    "pages.blog-coastal.hero": "images/guide_coastal_vibes.jpg",
+    "pages.blog-coastal.hero": "images/guide_coastal_vibes1.jpg",
     "pages.blog-culture.hero": "images/saghro_cathedral.jpg",
     "pages.blog-fes.hero": "images/guide_culture_flavors.jpg",
     "pages.blog-marrakech.hero": "images/guide_high_atlas.jpg",
     "pages.blog-sahara.hero": "images/guide_sahara_desert.jpg",
-    "pages.blog.hero": "images/hero_guide.jpg",
-    "pages.contact.hero": "images/team4.jpg",
-    "pages.customize-trip.hero": "images/hero_customize.jpg",
-    "pages.index.hero": "images/hero_home.jpg",
-    "pages.tour-ait-bougmez.hero": "images/happy_valley_main.jpg",
-    "pages.tour-mgoun.hero": "images/mgoun_main.jpg",
-    "pages.tour-sahara-erg-chebbi.hero": "images/sahara_erg_chebbi.jpg",
+    "pages.blog.hero": "images/hero/hero_guide.jpg",
+    "pages.contact.hero": "images/hero/hero_contact.jpg",
+    "pages.customize-trip.hero": "images/hero/hero_customize.jpg",
+    "pages.index.hero": "images/hero/hero_home.jpg",
+    "pages.tour-ait-bougmez.hero": "images/happy_valley_main1.jpg",
+    "pages.tour-mgoun.hero": "images/mgoun_main1.jpeg",
+    "pages.tour-sahara-erg-chebbi.hero": "images/sahara_erg_chebbi1.jpeg",
     "pages.tour-toubkal.hero": "images/toubkal_summit.jpg",
-    "pages.tour-todra-dades.hero": "images/todra_dades.jpg",
-    "pages.tour-siroua.hero": "images/siroua_main.jpg",
+    "pages.tour-todra-dades.hero": "images/todra_dades1.jpg",
+    "pages.tour-siroua.hero": "images/siroua_main1.jpeg",
     "pages.tour-saghro.hero": "images/saghro_main.jpg",
-    "pages.tour-essaouira.hero": "images/guide_coastal_vibes.jpg",
+    "pages.tour-essaouira.hero": "images/guide_coastal_vibes1.jpg",
     "pages.tour-atlas-villages.hero": "images/atlas_village.jpg",
-    "pages.tour-chefchaouen.hero": "images/volcanic_canyon.jpg",
-    "pages.tour-agafay.hero": "images/agafay_desert.jpg"
+    "pages.tour-chefchaouen.hero": "images/chefchaoun_akchour.jpg",
+    "pages.tour-agafay.hero": "images/agafay_desert1.jpg"
   },
   "images_meta": {
     "auto.images.todra_dades": {
@@ -548,6 +554,14 @@
       "usage": "card",
       "targets": [
         "article.tour-card:nth-of-type(7) img.tour-image"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-10-days.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card.tour-10-days img.tour-image"
       ],
       "required": true
     }

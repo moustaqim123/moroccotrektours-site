@@ -5,159 +5,690 @@
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
-    <meta property="og:title" content="Morocco Trek Tours">
-    <meta property="og:description" content="Gateway To Authentic Adventures">
+    <meta property="og:title" content="Morocco Trek Tours - Aventures de Luxe">
+    <meta property="og:description"
+        content="Circuits premium et exclusifs dans les paysages les plus à couper le souffle du Maroc">
     <meta property="og:image" content="images/assets/icon-brand.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventures & Circuits de Randonnée | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Hreflang tags -->
-    
-    
-    
+
     <style>
-        /* Specific styles for the new tour cards */
-        .tour-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 5px 12px;
-            border-radius: 20px;
-            color: white;
-            font-weight: 600;
-            font-size: 0.8rem;
+        :root {
+            --luxury-gold: var(--accent-color, #B8860B);
+            --luxury-gold-light: #f7efdb;
+            --luxury-dark: var(--text-dark, #1a1a1a);
+            --luxury-gray: rgba(26, 26, 26, 0.72);
+            --luxury-light-gray: var(--bg-off-white, #f7f9f7);
+            --luxury-shadow: rgba(0, 0, 0, 0.12);
+            --luxury-shadow-hover: rgba(0, 0, 0, 0.18);
+            --luxury-border: rgba(0, 0, 0, 0.06);
+        }
+
+        /* Hero Section - Luxury Style */
+        .hero-section {
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+                url('images/hero/hero_tours.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: #fff;
+            margin-top: 100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading, 'Poppins', sans-serif);
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-body, 'Open Sans', sans-serif);
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--luxury-gold-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        /* Section Container */
+        .luxury-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .luxury-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Section Header */
+        .luxury-section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .luxury-section-title {
+            font-family: var(--font-heading, 'Poppins', sans-serif);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--luxury-dark);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .luxury-section-subtitle {
+            font-family: var(--font-body, 'Open Sans', sans-serif);
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--luxury-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .luxury-divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--luxury-gold), transparent);
+            margin: 25px auto;
+        }
+
+        /* Category Section */
+        .tour-category {
+            margin-bottom: 100px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+        }
+
+        .category-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 120px;
+            height: 2px;
+            background: var(--luxury-gold);
+        }
+
+        .category-title-group {
+            flex: 1;
+        }
+
+        .category-tag {
+            display: inline-block;
+            font-family: var(--font-heading, 'Poppins', sans-serif);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--luxury-gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .category-title {
+            font-family: var(--font-heading, 'Poppins', sans-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--luxury-dark);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .category-description {
+            font-family: var(--font-body, 'Open Sans', sans-serif);
+            font-size: 1rem;
+            color: var(--luxury-gray);
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        /* Cards Grid (no side scrolling) */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            margin: 40px 0;
+            padding: 0;
+        }
+
+        .carousel-wrapper {
+            overflow: visible;
+            padding: 0;
+            cursor: default;
+            user-select: auto;
+        }
+
+        .carousel-track {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Luxury Tour Card */
+        .luxury-tour-card {
+            position: relative;
+            flex: 0 0 340px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--luxury-shadow);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--luxury-border);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: cardAppear 0.6s ease forwards;
+        }
+
+        .luxury-tour-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .luxury-tour-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .luxury-tour-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .luxury-tour-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .luxury-tour-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .luxury-tour-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes cardAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .luxury-tour-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px var(--luxury-shadow-hover);
             z-index: 10;
         }
 
-        .badge-very-hard {
-            background-color: #8B0000;
+        .luxury-tour-card:focus-within {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px var(--luxury-shadow-hover);
+            z-index: 10;
         }
 
-        .badge-hard {
-            background-color: #d32f2f;
+        /* Card Image */
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
         }
 
-        .badge-medium-high {
-            background-color: #e64a19;
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 1;
         }
 
-        .badge-medium {
-            background-color: #f57c00;
+        .luxury-tour-card:hover .card-image {
+            transform: scale(1.08);
         }
 
-        .badge-medium-easy {
-            background-color: #fbc02d;
-            color: #333;
+        /* Card Badge */
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 5;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge-popular {
+            background: rgba(212, 175, 55, 0.95);
+            color: #1a1a1a;
+        }
+
+        .badge-customizable {
+            background: rgba(0, 77, 51, 0.95);
+            color: #fff;
+        }
+
+        .badge-challenging {
+            background: rgba(139, 0, 0, 0.95);
+            color: #fff;
+        }
+
+        .badge-moderate {
+            background: rgba(245, 124, 0, 0.95);
+            color: #fff;
         }
 
         .badge-easy {
-            background-color: #388e3c;
+            background: rgba(56, 142, 60, 0.95);
+            color: #fff;
         }
 
-        .badge-very-easy {
-            background-color: #8bc34a;
-            color: #333;
-        }
-
-        .tour-card {
-            position: relative;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        /* Card Content */
+        .card-content {
+            padding: 25px;
+            flex: 1;
             display: flex;
             flex-direction: column;
+            background: linear-gradient(to bottom, #fff 0%, rgba(247, 249, 247, 0.65) 100%);
         }
 
-        .tour-card:hover {
-            transform: translateY(-5px);
+        .card-title {
+            font-family: var(--font-heading, 'Poppins', sans-serif);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--luxury-dark);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            letter-spacing: 0.3px;
         }
 
-        .tour-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .tour-details {
-            padding: 20px;
+        .card-meta {
             display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .tour-title {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-
-        .tour-meta {
-            display: flex;
-            gap: 15px;
+            gap: 18px;
             margin-bottom: 15px;
-            font-size: 0.9rem;
-            color: #666;
+            font-family: var(--font-body, 'Open Sans', sans-serif);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--luxury-gray);
+            flex-wrap: wrap;
         }
 
-        .tour-meta span {
+        .card-meta span {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
-        .tour-details p {
+        .card-meta i {
+            color: var(--luxury-gold);
+            font-size: 0.9rem;
+        }
+
+        .card-description {
+            font-family: var(--font-body, 'Open Sans', sans-serif);
+            font-size: 0.95rem;
+            color: var(--luxury-gray);
+            line-height: 1.7;
             margin-bottom: 20px;
-            flex-grow: 1;
+            flex: 1;
         }
 
-        .tour-buttons {
+        /* Card Actions */
+        .card-actions {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card-btn {
+            flex: 1;
+            padding: 12px 20px;
+            font-family: var(--font-heading, 'Poppins', sans-serif);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .card-btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(0, 77, 51, 0.45);
+            color: var(--primary-color, #004d33);
+        }
+
+        .card-btn-secondary:hover {
+            background: var(--luxury-dark);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-btn-primary {
+            background: linear-gradient(135deg, var(--primary-color, #004d33) 0%, rgba(0, 77, 51, 0.92) 100%);
+            color: #fff;
+            border: 1px solid rgba(0, 77, 51, 0.8);
+        }
+
+        .card-btn-primary:hover {
+            background: linear-gradient(135deg, #c5a028 0%, var(--luxury-gold) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Carousel Navigation */
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            opacity: 0.9;
+        }
+
+        .carousel-nav:hover {
+            background: var(--luxury-gold);
+            color: #1a1a1a;
+            transform: translateY(-50%) scale(1.15);
+            opacity: 1;
+            border-color: var(--luxury-gold);
+        }
+
+        .carousel-nav.prev {
+            left: -15px;
+        }
+
+        .carousel-nav.next {
+            right: -15px;
+        }
+
+        .carousel-nav i {
+            font-size: 1.5rem;
+            color: var(--luxury-dark);
+            transition: color 0.3s ease;
+        }
+
+        .carousel-nav:hover i {
+            color: #1a1a1a;
+        }
+
+        /* Progress Indicator */
+        .carousel-progress {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .progress-dot.active {
+            background: var(--luxury-gold);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .luxury-tour-card {
+                flex: 0 0 320px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .luxury-section-title {
+                font-size: 2.4rem;
+            }
+
+            .category-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .luxury-tour-card {
+                flex: 0 0 300px;
+            }
+
+            .carousel-nav {
+                width: 45px;
+                height: 45px;
+            }
+
+            .carousel-nav.prev {
+                left: -10px;
+            }
+
+            .carousel-nav.next {
+                right: -10px;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+                margin-top: 85px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .luxury-section {
+                padding: 60px 0;
+            }
+
+            .luxury-section-title {
+                font-size: 2rem;
+            }
+
+            .luxury-tour-card {
+                flex: 0 0 280px;
+            }
+
+            .card-image-wrapper {
+                height: 200px;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .carousel-track {
+                gap: 20px;
+                padding: 0 10px;
+            }
+
+            .category-header {
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+
+            .category-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .luxury-tour-card {
+                flex: 0 0 260px;
+            }
+
+            .card-image-wrapper {
+                height: 180px;
+            }
+
+            .card-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .card-btn {
+                width: 100%;
+            }
+
+            .progress-dot.active {
+                width: 20px;
+            }
+        }
+
+        /* Loading State */
+        .carousel-wrapper.loading .carousel-track {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .loading-placeholder {
+            flex: 0 0 340px;
+            height: 450px;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 16px;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Accessibility */
+        .carousel-wrapper:focus {
+            outline: 2px solid var(--luxury-gold);
+            outline-offset: 4px;
+        }
+
+        .card-btn:focus,
+        .carousel-nav:focus {
+            outline: 2px solid var(--luxury-gold);
+            outline-offset: 2px;
+        }
+
+        /* Smooth scroll behavior for carousel */
+        .carousel-wrapper {
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        .luxury-tour-card {
+            scroll-snap-align: start;
         }
     </style>
-    
-    
-    
-    
-    
-    
-    
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TravelAgency",
-      "name": "Morocco Trek Tours",
-      "image": "https://moroccotrektours.com/images/assets/logo-header.png",
-      "description": "Trekking en montagne et aventures dans le désert du Maroc avec guides experts.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Marrakech",
-        "addressCountry": "MA"
-      },
-      "url": "https://moroccotrektours.com/",
-      "telephone": "+212600000000",
-      "priceRange": "$$"
-    }
-    </script>
 </head>
 
 <body>
@@ -166,13 +697,14 @@
     <nav class="navbar">
         <div class="container">
             <a href="index-fr.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
                         <span class="line"><span class="trek-word">TREK</span> TOURS</span>
                     </div>
-                    <span class="logo-subtitle">Your Gateway to Authentic Adventures</span>
+                    <span class="logo-subtitle">Votre porte d'entrée vers des aventures authentiques</span>
                 </div>
             </a>
             <div class="mobile-menu-btn">
@@ -194,7 +726,7 @@
                     </button>
                     <ul class="lang-dropdown">
                         <li><a href="tours.html">English</a></li>
-                        <li><a href="#" class="active">Français</a></li>
+                        <li><a href="tours-fr.html" class="active">Français</a></li>
                     </ul>
                 </li>
             </ul>
@@ -202,262 +734,431 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small"
-        style="background-image: url('images/hero/hero_tours.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="hero-content" style="color: #FFFFFF;">
-            <h1 class="hero-title">Aventures & Circuits de Randonnée</h1>
-            <p class="hero-description">Des sommets de l'Atlas aux dunes du Sahara. Trouvez votre défi parfait.</p>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Aventures Sélectionnées</h1>
+            <p class="hero-subtitle">Des sommets de l'Atlas aux dunes du Sahara. Découvrez les voyages les plus
+                exclusifs du Maroc, conçus pour le voyageur exigeant.</p>
         </div>
     </header>
 
-    <!-- Tours List -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="tour-card-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+    <!-- Tours Collection -->
+    <section class="luxury-section">
+        <div class="luxury-container">
 
-                <!-- 1. Toubkal Summit -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-very-hard">Très Difficile</span>
-                    <img src="images/tours/toubkal/toubkal_summit.jpg" loading="lazy" width="600" height="400"
-                        alt="Défi du Sommet du Mont Toubkal Haut Atlas Maroc" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Défi du Sommet du Haut Atlas</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 2 Jours</span>
-                            <span><i class="fas fa-mountain"></i> Mont Toubkal</span>
-                        </div>
-                        <p>Le défi express ultime vers le plus haut sommet d'Afrique du Nord (4 167 m). Recommandé pour les randonneurs expérimentés avec une excellente condition physique.</p>
+            <!-- Peaks & Summits -->
+            <div class="tour-category" id="peaks">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <span class="category-tag">Collection des Sommets</span>
+                        <h3 class="category-title">Sommets Qui Définissent le Maroc</h3>
+                        <p class="category-description">Toubkal, M'Goun, Saghro & Siroua — altitude, grands horizons et
+                            une randonnée inoubliable.</p>
+                    </div>
+                </div>
 
-                        <div class="tour-buttons">
-                            <a href="tour-toubkal-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carousel-peaks">
+                        <div class="carousel-track">
+                            <!-- Card 1: Toubkal -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/toubkal/toubkal_summit.jpg"
+                                        alt="Défi du Sommet du Mont Toubkal" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-customizable">Personnalisable</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Mont Toubkal : Options de 1 à 6 Jours</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 1 - 6 Jours</span>
+                                        <span><i class="fas fa-mountain"></i> 4 167m</span>
+                                    </div>
+                                    <p class="card-description">Le défi ultime vers le plus haut sommet d'Afrique du
+                                        Nord. Choisissez votre rythme, des excursions express d'un jour aux circuits
+                                        immersifs de 6 jours à travers les villages berbères et les prairies alpines.
+                                    </p>
+                                    <div class="card-actions">
+                                        <a href="tour-toubkal-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 4: M'Goun Expedition -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/mgoun/mgoun_main.jpg" alt="Expédition Sommet M'Goun"
+                                        class="card-image" loading="lazy">
+                                    <span class="card-badge badge-challenging">Très Difficile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Expédition M'Goun</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 4 Jours</span>
+                                        <span><i class="fas fa-mountain"></i> Trek Sommet</span>
+                                    </div>
+                                    <p class="card-description">Vainquez le troisième plus haut sommet du Maroc (4 071
+                                        m) via la légendaire crête du M'Goun et le plateau de Tarkeddite. Pour les
+                                        randonneurs expérimentés à la recherche de vraie nature sauvage.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-mgoun-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 5: Jebel Saghro -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/saghro/saghro_main.jpg" alt="Jebel Saghro Paysage Volcanique"
+                                        class="card-image" loading="lazy">
+                                    <span class="card-badge badge-moderate">Modéré</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Jebel Saghro & Aït Atta</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 5 Jours</span>
+                                        <span><i class="fas fa-volcano"></i> Trek Volcanique</span>
+                                    </div>
+                                    <p class="card-description">Explorez les paysages volcaniques spectaculaires et les
+                                        larges plateaux du massif du Saghro. Rencontrez les nomades Aït Atta dans leurs
+                                        pâturages d'hiver et témoignez de la beauté brute et intacte.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-saghro-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 6: Massif du Siroua -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/siroua/siroua_main.jpg"
+                                        alt="Massif du Siroua Champs de Safran" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-challenging">Difficile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Massif du Siroua & Safran</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 6 Jours</span>
+                                        <span><i class="fas fa-mountain"></i> Anti-Atlas</span>
+                                    </div>
+                                    <p class="card-description">Randonnez à travers d'anciens pics volcaniques et des
+                                        vallées cachées connues pour la culture du safran. Un pont entre le Haut Atlas
+                                        et le désert, riche en couleurs et en arômes.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-siroua-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <!-- 2. M'Goun Expedition -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-hard">Très Difficile</span>
-                    <img src="images/tours/mgoun/mgoun_main.jpg" loading="lazy" width="600" height="400"
-                        alt="Expédition Sommet M'Goun 4 071 m" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Expédition M'Goun</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Jours</span>
-                            <span><i class="fas fa-mountain"></i> Trek Sommet</span>
-                        </div>
-                        <p>Vainquez le troisième plus haut sommet du Maroc (4 071 m) via la légendaire crête du M'Goun et le plateau de Tarkeddite. Pour les randonneurs expérimentés.</p>
+            <!-- Desert Expeditions -->
+            <div class="tour-category" id="desert">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <span class="category-tag">Expéditions Désert</span>
+                        <h3 class="category-title">Dunes Dorées & Nuits au Sahara</h3>
+                        <p class="category-description">Balades à dos de chameau, camps sous les étoiles et l'immensité
+                            du Sahara marocain. Vivez la magie du désert.</p>
+                    </div>
+                </div>
 
-                        <div class="tour-buttons">
-                            <a href="tour-mgoun-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carousel-desert">
+                        <div class="carousel-track">
+                            <!-- Card 7: Sahara Erg Chebbi -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/sahara/sahara_erg_chebbi.jpg"
+                                        alt="Désert du Sahara Erg Chebbi Dunes" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-challenging">Difficile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Désert du Sahara & Trek Erg Chebbi</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 5 Jours</span>
+                                        <span><i class="fas fa-sun"></i> Expédition Désert</span>
+                                    </div>
+                                    <p class="card-description">Un voyage physiquement exigeant mais magique au plus
+                                        profond des dunes. Vivez le vaste silence du Sahara et la vie nomade
+                                        traditionnelle sous des ciels étoilés.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-sahara-erg-chebbi-fr.html"
+                                            class="card-btn card-btn-secondary">Plus de Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 8: Agafay Desert -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/agafay/agafay_desert.jpg" alt="Désert d'Agafay Paysages"
+                                        class="card-image" loading="lazy">
+                                    <span class="card-badge badge-easy">Personnalisable</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Désert d'Agafay : Journée ou Séjour en Bivouac</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 1 - 5 Jours</span>
+                                        <span><i class="fas fa-sun"></i> Expérience Désert</span>
+                                    </div>
+                                    <p class="card-description">Des balades à chameau au coucher du soleil et dîners aux
+                                        lanternes jusqu'au bivouac de luxe et treks de plusieurs jours dans l'Atlas.
+                                        Découvrez le silence d'Agafay, à quelques heures de Marrakech.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-agafay-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 9: Merzouga Desert Discovery -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/sahara_merzouga_desert_discovery.jpg"
+                                        alt="Découverte du Désert de Merzouga" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-popular">Populaire</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Découverte du Désert de Merzouga : 3 Jours</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 3 Jours</span>
+                                        <span><i class="fas fa-sun"></i> Expérience Désert</span>
+                                    </div>
+                                    <p class="card-description">Le voyage marocain le plus emblématique. Traversez le
+                                        Haut Atlas, explorez Aït Ben Haddou et passez une nuit magique dans un camp
+                                        berbère au milieu des dunes de l'Erg Chebbi.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-sahara-merzouga-fr.html" class="card-btn card-btn-secondary">Plus
+                                            de Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <!-- 3. The Happy Valley (Ait Bougmez) -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Modéré</span>
-                    <img src="images/tours/happy_valley/happy_valley_main.jpg" loading="lazy" width="600"
-                        height="400" alt="Aït Bougmez Vallée Heureuse Trek Culturel" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">La Vallée Heureuse</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Jours</span>
-                            <span><i class="fas fa-home"></i> Trek Culturel</span>
-                        </div>
-                        <p>Immersion culturelle à Aït Bougmez : villages berbères, vergers de pommiers, traces de dinosaures et gîtes traditionnels au cœur de l'Atlas.</p>
+            <!-- Trek Classics & Scenic Routes -->
+            <div class="tour-category" id="treks">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <span class="category-tag">Itinéraires Trek</span>
+                        <h3 class="category-title">Treks Classiques & Échappées Scéniques</h3>
+                        <p class="category-description">Vallées, villages, canyons, cascades et littoral — des
+                            itinéraires soigneusement conçus entre effort, confort et émerveillement.</p>
+                    </div>
+                </div>
 
-                        <div class="tour-buttons">
-                            <a href="tour-ait-bougmez-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carousel-treks">
+                        <div class="carousel-track">
+                            <!-- Card: Azaden & Tamsoult -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/destinations/atlas_village.jpg"
+                                        alt="Trek Vallée d'Azzaden & Tamsoult" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-customizable">Personnalisable</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Azaden & Tamsoult Valley Trek</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 1 - 4 Jours</span>
+                                        <span><i class="fas fa-mountain"></i> Vallées de l'Atlas</span>
+                                    </div>
+                                    <p class="card-description">Cascades, villages en terrasses et sentiers
+                                        emblématiques de l'Atlas. Choisissez votre rythme et composez le trek parfait au
+                                        départ d'Imlil.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-azzaden-tamsoult-fr.html" class="card-btn card-btn-secondary">Plus
+                                            de Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card: 10-Day Morocco Adventure -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/tour-10-days/tour-10-days-main.jpg"
+                                        alt="Grande Aventure de 10 Jours au Maroc" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-challenging">Difficile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Grande Aventure de 10 Jours au Maroc</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 10 Jours</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> À travers le Maroc</span>
+                                    </div>
+                                    <p class="card-description">Un récit complet du Maroc — montagnes, désert et villes
+                                        mythiques — pour celles et ceux qui veulent tout vivre.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-10-jours.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 10: The Happy Valley -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/happy_valley/happy_valley_main.jpg"
+                                        alt="Aït Bougmez Vallée Heureuse Trek Culturel" class="card-image"
+                                        loading="lazy">
+                                    <span class="card-badge badge-moderate">Modéré</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">La Vallée Heureuse</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 4 Jours</span>
+                                        <span><i class="fas fa-home"></i> Trek Culturel</span>
+                                    </div>
+                                    <p class="card-description">Immersion culturelle à Aït Bougmez : villages berbères,
+                                        vergers de pommiers, traces de dinosaures et gîtes traditionnels au cœur de
+                                        l'Atlas. Authentique et inoubliable.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-ait-bougmez-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 11: Atlas Villages -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/atlas_village1.jpg" alt="Village Berbère Montagnes de l'Atlas"
+                                        class="card-image" loading="lazy">
+                                    <span class="card-badge badge-moderate">Modéré</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Découverte des Villages de l'Atlas</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 3 Jours</span>
+                                        <span><i class="fas fa-home"></i> Trek Culturel</span>
+                                    </div>
+                                    <p class="card-description">Immergez-vous dans la culture berbère. Marchez de
+                                        village en village, séjournez chez l'habitant dans des maisons d'hôtes
+                                        confortables et profitez de l'hospitalité traditionnelle.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-atlas-villages-fr.html" class="card-btn card-btn-secondary">Plus
+                                            de Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 12: Ouzoud Waterfalls -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/ouzoud_card1.jpg" alt="Cascades d'Ouzoud et Lac Bin El Ouidane"
+                                        class="card-image" loading="lazy">
+                                    <span class="card-badge badge-easy">Facile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Cascades d'Ouzoud & Bin El Ouidane</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 3 Jours</span>
+                                        <span><i class="fas fa-water"></i> Nature & Lacs</span>
+                                    </div>
+                                    <p class="card-description">Un voyage rafraîchissant de Marrakech vers les plus
+                                        hautes cascades d'Afrique du Nord et les eaux turquoise du lac Bin El Ouidane.
+                                        Parfait pour les amoureux de nature et les familles.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-ouzoud-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 13: Todra & Dades -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/todra_dades/todra_dades.jpg"
+                                        alt="Gorges du Todra Expédition Canyon" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-challenging">Difficile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Expédition Gorges du Todra & Dades</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 4 Jours</span>
+                                        <span><i class="fas fa-stream"></i> Canyons</span>
+                                    </div>
+                                    <p class="card-description">Explorez les formations géologiques spectaculaires du
+                                        "Grand Canyon" du Maroc. Un mélange de randonnée sur crête et de sentiers dans
+                                        des vallées verdoyantes à travers des falaises de calcaire imposantes.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-todra-dades-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 14: Essaouira -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/guide_coastal_vibes1.jpg" alt="Essaouira Côte & Forêt d'Argan"
+                                        class="card-image" loading="lazy">
+                                    <span class="card-badge badge-easy">Très Facile</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Essaouira Côte & Forêt d'Argan</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 1 Jour</span>
+                                        <span><i class="fas fa-water"></i> Côte Atlantique</span>
+                                    </div>
+                                    <p class="card-description">Brise marine, remparts et ruelles d'artisans. Une
+                                        journée rafraîchissante loin de Marrakech avec un avant-goût du charme côtier du
+                                        Maroc.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-essaouira-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 15: Chefchaouen -->
+                            <article class="luxury-tour-card" tabindex="0">
+                                <div class="card-image-wrapper">
+                                    <img src="images/tours/chefchaouen/chefchaoun_rif.jpg"
+                                        alt="Montagnes du Rif et Chefchaouen" class="card-image" loading="lazy">
+                                    <span class="card-badge badge-moderate">Modéré</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Montagnes du Rif et Chefchaouen</h3>
+                                    <div class="card-meta">
+                                        <span><i class="far fa-clock"></i> 3 Jours</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Nord du Maroc</span>
+                                    </div>
+                                    <p class="card-description">Randonnez sur les sentiers verdoyants du nord et
+                                        terminez dans la Ville Bleue du Maroc — un mélange inspirant de nature, de
+                                        culture et de couleurs.</p>
+                                    <div class="card-actions">
+                                        <a href="tour-chefchaouen-fr.html" class="card-btn card-btn-secondary">Plus de
+                                            Détails</a>
+                                        <a class="card-btn card-btn-primary book-now">Réserver</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                </article>
-
-                <!-- 4. Jebel Saghro -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Modéré</span>
-                    <img src="images/tours/saghro/saghro_main.jpg" loading="lazy" width="600" height="400"
-                        alt="Jebel Saghro Paysage Volcanique" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Jebel Saghro & Aït Atta</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 5 Jours</span>
-                            <span><i class="fas fa-volcano"></i> Trek Volcanique</span>
-                        </div>
-                        <p>Explorez les paysages volcaniques spectaculaires et les larges plateaux du massif du Saghro. Rencontrez les nomades Aït Atta dans leurs pâturages d'hiver.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-saghro-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 5. Massif du Siroua -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium-high">Difficile</span>
-                    <img src="images/tours/siroua/siroua_main.jpg" loading="lazy" width="600" height="400"
-                        alt="Massif du Siroua Champs de Safran" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Massif du Siroua & Safran</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 6 Jours</span>
-                            <span><i class="fas fa-mountain"></i> Anti-Atlas</span>
-                        </div>
-                        <p>Randonnez à travers d'anciens pics volcaniques et des vallées cachées connues pour la culture du safran. Un pont entre le Haut Atlas et le désert.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-siroua-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 6. Sahara Erg Chebbi -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-hard">Difficile</span>
-                    <img src="images/tours/sahara/sahara_erg_chebbi.jpg" loading="lazy" width="600" height="400"
-                        alt="Désert du Sahara Erg Chebbi Trek Dunes Maroc" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Désert du Sahara & Trek Erg Chebbi</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 5 Jours</span>
-                            <span><i class="fas fa-sun"></i> Expédition Désert</span>
-                        </div>
-                        <p>Un voyage physiquement exigeant mais magique au plus profond des dunes. Vivez le vaste silence du Sahara et la vie nomade traditionnelle.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-sahara-erg-chebbi-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 7. Todra & Dades -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium-high">Difficile</span>
-                    <img src="images/tours/todra_dades/todra_dades.jpg" loading="lazy" width="600" height="400"
-                        alt="Gorges du Todra Expédition Canyon Maroc" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Expédition Gorges du Todra & Dades</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 4 Jours</span>
-                            <span><i class="fas fa-stream"></i> Canyons</span>
-                        </div>
-                        <p>Explorez les formations géologiques époustouflantes du "Grand Canyon" du Maroc. Un mélange de marche sur crête et de sentiers de vallée luxuriants.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-todra-dades-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 8. Essaouira -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-very-easy">Très Facile</span>
-                    <img src="images/guide_coastal_vibes.jpg" loading="lazy" width="600" height="400"
-                        alt="Essaouira Côte & Forêt d'Argan" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Essaouira Côte & Forêt d'Argan</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 1 Jour</span>
-                            <span><i class="fas fa-water"></i> Côte Atlantique</span>
-                        </div>
-                        <p>Échappez à la chaleur de la ville pour les brises fraîches de l'Atlantique. Visitez le site du patrimoine mondial de l'UNESCO, promenez-vous sur les remparts et explorez les forêts d'Argan.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-essaouira-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 9. Agafay Desert -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-easy">Facile</span>
-                    <img src="images/tours/agafay/agafay_desert.jpg" loading="lazy" width="600" height="400"
-                        alt="Désert d'Agafay Paysages" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Évasion Désert d'Agafay</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 1 Jour</span>
-                            <span><i class="fas fa-sun"></i> Désert</span>
-                        </div>
-                        <p>Découvrez le "désert de pierre" à seulement une heure de Marrakech. Parfait pour ceux qui ont peu de temps et
-                            veulent un avant-goût d'aventure avec des balades à dos de chameau et du thé sous une tente nomade.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-agafay-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 10. Atlas Villages -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Modéré</span>
-                    <img src="images/destinations/atlas_village.jpg" loading="lazy" width="600" height="400"
-                        alt="Village Berbère Montagnes de l'Atlas Maroc" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Découverte des Villages de l'Atlas</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 3 Jours</span>
-                            <span><i class="fas fa-home"></i> Trek Culturel</span>
-                        </div>
-                        <p>Immergez-vous dans la culture berbère. Marchez de village en village, en séjournant chez des familles locales
-                            dans des maisons d'hôtes confortables et en profitant de l'hospitalité traditionnelle.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-atlas-villages-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 11. Chefchaouen -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-medium">Modéré</span>
-                    <img src="images/tours/chefchaouen/chefchaoun_rif.jpg" loading="lazy" width="600"
-                        height="400" alt="Montagnes du Rif et Chefchaouen" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Montagnes du Rif et Chefchaouen</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 3 Jours</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Nord du Maroc</span>
-                        </div>
-                        <p>Explorez les paysages verts luxuriants du Nord du Maroc. Randonnez à travers les montagnes du Rif
-                            avec leurs forêts denses et leurs cascades, pour finir dans la Ville Bleue.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-chefchaouen-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- 12. Ouzoud Waterfalls & Bin El Ouidane -->
-                <article class="tour-card">
-                    <span class="tour-badge badge-easy">Facile</span>
-                    <img src="images/ouzoud_card1.jpg" loading="lazy" width="600" height="400"
-                        alt="Cascades d'Ouzoud et Lac Bin El Ouidane Maroc" class="tour-image">
-                    <div class="tour-details">
-                        <h3 class="tour-title">Cascades d'Ouzoud & Bin El Ouidane</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 3 Jours</span>
-                            <span><i class="fas fa-water"></i> Nature & Lacs</span>
-                        </div>
-                        <p>Un voyage rafraîchissant de Marrakech aux plus hautes cascades d'Afrique du Nord et aux eaux turquoise époustouflantes du lac Bin El Ouidane. Parfait pour les amoureux de la nature et les familles.</p>
-
-                        <div class="tour-buttons">
-                            <a href="tour-ouzoud-fr.html" class="btn btn-secondary">Plus de Détails</a>
-                            <a href="contact-fr.html" class="btn btn-primary book-now">Réserver Maintenant</a>
-                        </div>
-                    </div>
-                </article>
-
+                </div>
             </div>
 
         </div>
@@ -469,8 +1170,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui
-                        durent toute une vie.</p>
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Liens Rapides</h4>
@@ -512,6 +1213,52 @@
     </a>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Card click navigation
+            document.addEventListener('click', (e) => {
+                const card = e.target.closest('.luxury-tour-card');
+                if (!card) return;
+
+                // If clicked on a button, let it handle the click
+                if (e.target.closest('a, button')) return;
+
+                // Otherwise navigate to details page
+                const detailsLink = card.querySelector('.card-btn-secondary');
+                if (detailsLink) {
+                    window.location.href = detailsLink.getAttribute('href');
+                }
+            });
+
+            // Keyboard navigation for cards
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    const focusedCard = document.activeElement.closest('.luxury-tour-card');
+                    if (focusedCard) {
+                        e.preventDefault();
+                        const detailsLink = focusedCard.querySelector('.card-btn-secondary');
+                        if (detailsLink) {
+                            window.location.href = detailsLink.getAttribute('href');
+                        }
+                    }
+                }
+            });
+
+            // Smooth scroll for category anchors
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
