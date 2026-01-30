@@ -285,7 +285,7 @@ img {
     }
 
     .logo-container img {
-        max-height: 50px;
+        max-height: 200px !important; /* Increased from 50px to 200px */
     }
 
     .logo-title .line {
@@ -330,7 +330,7 @@ img {
     }
 
     .logo-container img {
-        max-height: 50px;
+        max-height: 200px !important; /* Increased from 50px to 200px */
     }
 }
 
