@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morocco Trek Tours - Logo Animation</title>
+    <link rel="stylesheet" href="css/logo-animation.css">
+</head>
+
+<body>
+    <div class="animation-container">
+        <svg id="logo-animation" width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="animFootGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0B5D44;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#043927;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#032D1F;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Centered logo symbol -->
+            <g id="logo-symbol" transform="translate(400, 400)">
+                <g transform="scale(2.5) translate(-100, -130)">
+
+                    <!-- Footprint outline - animated path -->
+                    <path id="footprint-outline"
+                        d="M 80 220 C 80 220 60 200 50 170 C 45 150 40 120 45 90 C 48 70 55 50 70 35 C 85 20 105 15 120 20 C 135 25 145 40 148 60 C 150 75 148 90 145 105 C 142 120 138 135 135 150 C 130 175 120 200 105 215 C 95 225 85 225 80 220 Z"
+                        fill="url(#animFootGradient)" stroke="#043927" stroke-width="3" stroke-dasharray="1000"
+                        stroke-dashoffset="1000" />
+
+                    <!-- Toes - animated individually -->
+                    <ellipse id="toe1" cx="45" cy="35" rx="18" ry="22" fill="#0B5D44" stroke="#043927" stroke-width="2"
+                        opacity="0" />
+                    <ellipse id="toe2" cx="75" cy="25" rx="20" ry="25" fill="#0B5D44" stroke="#043927" stroke-width="2"
+                        opacity="0" />
+                    <ellipse id="toe3" cx="108" cy="20" rx="22" ry="28" fill="#0B5D44" stroke="#043927" stroke-width="2"
+                        opacity="0" />
+                    <ellipse id="toe4" cx="142" cy="28" rx="20" ry="25" fill="#0B5D44" stroke="#043927" stroke-width="2"
+                        opacity="0" />
+                    <ellipse id="toe5" cx="170" cy="40" rx="18" ry="22" fill="#0B5D44" stroke="#043927" stroke-width="2"
+                        opacity="0" />
+
+                    <!-- Mountain peaks - animated as contour lines -->
+                    <g id="mountain-group" transform="translate(50, 100)">
+                        <!-- Mountain contour lines - draw from outside to inside -->
+                        <path id="mountain-line1" d="M 10 40 L 25 10 L 35 25 L 50 5 L 65 20 L 75 35 L 85 25 L 95 40"
+                            fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-dasharray="300" stroke-dashoffset="300" />
+
+                        <path id="mountain-line2" d="M 15 38 L 28 15 L 38 28 L 50 10 L 62 25 L 72 36 L 82 28 L 90 38"
+                            fill="none" stroke="#D4AF37" stroke-width="3.5" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-dasharray="280" stroke-dashoffset="280" opacity="0.8" />
+
+                        <path id="mountain-line3" d="M 20 36 L 30 20 L 42 30 L 50 15 L 58 28 L 68 35 L 78 30 L 85 36"
+                            fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-dasharray="260" stroke-dashoffset="260" opacity="0.6" />
+
+                        <!-- Peak highlights -->
+                        <circle id="peak1" cx="25" cy="10" r="4" fill="#D4AF37" opacity="0" />
+                        <circle id="peak2" cx="50" cy="5" r="4" fill="#D4AF37" opacity="0" />
+                        <circle id="peak3" cx="85" cy="25" r="3" fill="#D4AF37" opacity="0" />
+                    </g>
+
+                    <!-- Curved path line at bottom -->
+                    <path id="bottom-curve" d="M 55 180 Q 75 165 95 180" fill="none" stroke="#D4AF37" stroke-width="3.5"
+                        stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100" />
+                </g>
+            </g>
+        </svg>
+
+        <div class="animation-controls">
+            <button id="replay-btn">Replay Animation</button>
+        </div>
+    </div>
+
+    <script src="js/logo-animation.js"></script>
+</body>
+
+</html>

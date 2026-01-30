@@ -13,12 +13,18 @@
     <title>Adventures & Hiking Tours | Morocco Trek Tours</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Logo Entrance Animation -->
+    <link rel="stylesheet" href="css/logo-entrance.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
 
     <style>
         :root {
@@ -36,7 +42,7 @@
         .hero-section {
             height: 70vh;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-                        url('images/hero/hero_tours.jpg');
+                url('images/hero/hero_tours.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -225,12 +231,29 @@
             animation: cardAppear 0.6s ease forwards;
         }
 
-        .luxury-tour-card:nth-child(1) { animation-delay: 0.1s; }
-        .luxury-tour-card:nth-child(2) { animation-delay: 0.2s; }
-        .luxury-tour-card:nth-child(3) { animation-delay: 0.3s; }
-        .luxury-tour-card:nth-child(4) { animation-delay: 0.4s; }
-        .luxury-tour-card:nth-child(5) { animation-delay: 0.5s; }
-        .luxury-tour-card:nth-child(6) { animation-delay: 0.6s; }
+        .luxury-tour-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .luxury-tour-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .luxury-tour-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .luxury-tour-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .luxury-tour-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .luxury-tour-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
 
         @keyframes cardAppear {
             to {
@@ -494,6 +517,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -637,8 +661,13 @@
         }
 
         @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
         }
 
         /* Accessibility */
@@ -711,21 +740,23 @@
     <header class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">Curated Adventures</h1>
-            <p class="hero-subtitle">From the peaks of the Atlas to the dunes of the Sahara. Discover Morocco's most exclusive journeys, crafted for the discerning traveler.</p>
+            <p class="hero-subtitle">From the peaks of the Atlas to the dunes of the Sahara. Discover Morocco's most
+                exclusive journeys, crafted for the discerning traveler.</p>
         </div>
     </header>
 
     <!-- Tours Collection -->
     <section class="luxury-section">
         <div class="luxury-container">
-            
+
             <!-- Peaks & Summits -->
             <div class="tour-category" id="peaks">
                 <div class="category-header">
                     <div class="category-title-group">
                         <span class="category-tag">Summit Collection</span>
                         <h3 class="category-title">Summits That Define Morocco</h3>
-                        <p class="category-description">Toubkal, M'Goun, Saghro & Siroua—bold terrain, big horizons, and the kind of trekking you remember for life.</p>
+                        <p class="category-description">Toubkal, M'Goun, Saghro & Siroua—bold terrain, big horizons, and
+                            the kind of trekking you remember for life.</p>
                     </div>
                 </div>
 
@@ -735,10 +766,8 @@
                             <!-- Card 1: Toubkal -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/toubkal/toubkal_summit.jpg" 
-                                         alt="Mount Toubkal Summit Challenge" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/toubkal/toubkal_summit.jpg"
+                                        alt="Mount Toubkal Summit Challenge" class="card-image" loading="lazy">
                                     <span class="card-badge badge-customizable">Customizable</span>
                                 </div>
                                 <div class="card-content">
@@ -747,7 +776,9 @@
                                         <span><i class="far fa-clock"></i> 1 - 6 Days</span>
                                         <span><i class="fas fa-mountain"></i> 4,167m</span>
                                     </div>
-                                    <p class="card-description">The ultimate challenge to the highest peak in North Africa. Choose your pace from express day trips to 6-day immersive circuits through Berber villages and alpine meadows.</p>
+                                    <p class="card-description">The ultimate challenge to the highest peak in North
+                                        Africa. Choose your pace from express day trips to 6-day immersive circuits
+                                        through Berber villages and alpine meadows.</p>
                                     <div class="card-actions">
                                         <a href="tour-toubkal.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -758,10 +789,8 @@
                             <!-- Card 4: M'Goun Expedition -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/mgoun/mgoun_main.jpg" 
-                                         alt="M'Goun Summit Expedition" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/mgoun/mgoun_main.jpg" alt="M'Goun Summit Expedition"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Very Challenging</span>
                                 </div>
                                 <div class="card-content">
@@ -770,7 +799,9 @@
                                         <span><i class="far fa-clock"></i> 4 Days</span>
                                         <span><i class="fas fa-mountain"></i> Summit Trek</span>
                                     </div>
-                                    <p class="card-description">Conquer Morocco's third-highest peak (4,071m) via the legendary M'Goun ridge and Tarkeddite Plateau. For experienced trekkers seeking true wilderness.</p>
+                                    <p class="card-description">Conquer Morocco's third-highest peak (4,071m) via the
+                                        legendary M'Goun ridge and Tarkeddite Plateau. For experienced trekkers seeking
+                                        true wilderness.</p>
                                     <div class="card-actions">
                                         <a href="tour-mgoun.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -781,10 +812,8 @@
                             <!-- Card 5: Jebel Saghro -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/saghro/saghro_main.jpg" 
-                                         alt="Jebel Saghro Volcanic Landscape" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/saghro/saghro_main.jpg" alt="Jebel Saghro Volcanic Landscape"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-moderate">Moderate</span>
                                 </div>
                                 <div class="card-content">
@@ -793,7 +822,9 @@
                                         <span><i class="far fa-clock"></i> 5 Days</span>
                                         <span><i class="fas fa-volcano"></i> Volcanic Trek</span>
                                     </div>
-                                    <p class="card-description">Explore dramatic volcanic landscapes and wide plateaus of the Saghro Massif. Meet the Aït Atta nomads in their winter pastures and witness raw, untouched beauty.</p>
+                                    <p class="card-description">Explore dramatic volcanic landscapes and wide plateaus
+                                        of the Saghro Massif. Meet the Aït Atta nomads in their winter pastures and
+                                        witness raw, untouched beauty.</p>
                                     <div class="card-actions">
                                         <a href="tour-saghro.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -804,10 +835,8 @@
                             <!-- Card 6: Massif du Siroua -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/siroua/siroua_main.jpg" 
-                                         alt="Massif du Siroua Saffron Fields" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/siroua/siroua_main.jpg" alt="Massif du Siroua Saffron Fields"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Challenging</span>
                                 </div>
                                 <div class="card-content">
@@ -816,7 +845,9 @@
                                         <span><i class="far fa-clock"></i> 6 Days</span>
                                         <span><i class="fas fa-mountain"></i> Anti-Atlas</span>
                                     </div>
-                                    <p class="card-description">Trek through ancient volcanic peaks and hidden valleys known for saffron cultivation. A bridge between the High Atlas and the desert, rich in colors and aromas.</p>
+                                    <p class="card-description">Trek through ancient volcanic peaks and hidden valleys
+                                        known for saffron cultivation. A bridge between the High Atlas and the desert,
+                                        rich in colors and aromas.</p>
                                     <div class="card-actions">
                                         <a href="tour-siroua.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -834,7 +865,8 @@
                     <div class="category-title-group">
                         <span class="category-tag">Desert Expeditions</span>
                         <h3 class="category-title">Golden Dunes & Sahara Nights</h3>
-                        <p class="category-description">Sunset camel rides, desert camps, and the vastness of the Moroccan Sahara. Experience the magic of the desert.</p>
+                        <p class="category-description">Sunset camel rides, desert camps, and the vastness of the
+                            Moroccan Sahara. Experience the magic of the desert.</p>
                     </div>
                 </div>
 
@@ -844,10 +876,8 @@
                             <!-- Card 7: Sahara Erg Chebbi -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/sahara/sahara_erg_chebbi.jpg" 
-                                         alt="Sahara Desert Erg Chebbi Dunes" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/sahara/sahara_erg_chebbi.jpg"
+                                        alt="Sahara Desert Erg Chebbi Dunes" class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Challenging</span>
                                 </div>
                                 <div class="card-content">
@@ -856,9 +886,12 @@
                                         <span><i class="far fa-clock"></i> 5 Days</span>
                                         <span><i class="fas fa-sun"></i> Desert Expedition</span>
                                     </div>
-                                    <p class="card-description">A physically demanding but magical journey deep into the dunes. Experience the vast silence of the Sahara and traditional nomadic life under star-filled skies.</p>
+                                    <p class="card-description">A physically demanding but magical journey deep into the
+                                        dunes. Experience the vast silence of the Sahara and traditional nomadic life
+                                        under star-filled skies.</p>
                                     <div class="card-actions">
-                                        <a href="tour-sahara-erg-chebbi.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-sahara-erg-chebbi.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -867,10 +900,8 @@
                             <!-- Card 8: Agafay Desert -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/agafay/agafay_desert.jpg" 
-                                         alt="Agafay Desert Landscapes" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/agafay/agafay_desert.jpg" alt="Agafay Desert Landscapes"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-easy">Customizable</span>
                                 </div>
                                 <div class="card-content">
@@ -879,7 +910,9 @@
                                         <span><i class="far fa-clock"></i> 1 - 5 Days</span>
                                         <span><i class="fas fa-sun"></i> Desert Experience</span>
                                     </div>
-                                    <p class="card-description">From sunset camel rides and lantern-lit dinners to luxury glamping and multi-day treks into the Atlas foothills. Discover the silence of Agafay, just hours from Marrakech.</p>
+                                    <p class="card-description">From sunset camel rides and lantern-lit dinners to
+                                        luxury glamping and multi-day treks into the Atlas foothills. Discover the
+                                        silence of Agafay, just hours from Marrakech.</p>
                                     <div class="card-actions">
                                         <a href="tour-agafay.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -890,10 +923,8 @@
                             <!-- Card 9: Merzouga Desert Discovery -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/sahara_merzouga_desert_discovery.jpg" 
-                                         alt="Merzouga Desert Discovery" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/sahara_merzouga_desert_discovery.jpg"
+                                        alt="Merzouga Desert Discovery" class="card-image" loading="lazy">
                                     <span class="card-badge badge-popular">Popular</span>
                                 </div>
                                 <div class="card-content">
@@ -902,9 +933,12 @@
                                         <span><i class="far fa-clock"></i> 3 Days</span>
                                         <span><i class="fas fa-sun"></i> Desert Experience</span>
                                     </div>
-                                    <p class="card-description">The most iconic Moroccan journey. Cross the High Atlas, explore Ait Ben Haddou, and spend a magical night in a Berber camp amidst the golden dunes of Erg Chebbi.</p>
+                                    <p class="card-description">The most iconic Moroccan journey. Cross the High Atlas,
+                                        explore Ait Ben Haddou, and spend a magical night in a Berber camp amidst the
+                                        golden dunes of Erg Chebbi.</p>
                                     <div class="card-actions">
-                                        <a href="tour-sahara-merzouga.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-sahara-merzouga.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -920,7 +954,8 @@
                     <div class="category-title-group">
                         <span class="category-tag">Trek Routes</span>
                         <h3 class="category-title">Classic Treks & Scenic Escapes</h3>
-                        <p class="category-description">Valleys, villages, canyons, waterfalls, and coastlines—carefully curated routes that balance challenge, comfort, and wonder.</p>
+                        <p class="category-description">Valleys, villages, canyons, waterfalls, and coastlines—carefully
+                            curated routes that balance challenge, comfort, and wonder.</p>
                     </div>
                 </div>
 
@@ -930,10 +965,8 @@
                             <!-- Card: Azaden & Tamsoult -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/destinations/atlas_village.jpg" 
-                                         alt="Azzaden & Tamsoult Valley Trek" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/destinations/atlas_village.jpg"
+                                        alt="Azzaden & Tamsoult Valley Trek" class="card-image" loading="lazy">
                                     <span class="card-badge badge-customizable">Customizable</span>
                                 </div>
                                 <div class="card-content">
@@ -942,9 +975,11 @@
                                         <span><i class="far fa-clock"></i> 1 - 4 Days</span>
                                         <span><i class="fas fa-mountain"></i> Atlas Valleys</span>
                                     </div>
-                                    <p class="card-description">Waterfalls, terraced villages, and classic Atlas trails. Choose your pace and build the perfect short trek from Imlil.</p>
+                                    <p class="card-description">Waterfalls, terraced villages, and classic Atlas trails.
+                                        Choose your pace and build the perfect short trek from Imlil.</p>
                                     <div class="card-actions">
-                                        <a href="tour-azzaden-tamsoult.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-azzaden-tamsoult.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -953,10 +988,8 @@
                             <!-- Card: 10-Day Morocco Adventure -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/tour-10-days/tour-10-days-main.jpg" 
-                                         alt="10-Day Morocco Grand Tour" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/tour-10-days/tour-10-days-main.jpg"
+                                        alt="10-Day Morocco Grand Tour" class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Challenging</span>
                                 </div>
                                 <div class="card-content">
@@ -965,7 +998,8 @@
                                         <span><i class="far fa-clock"></i> 10 Days</span>
                                         <span><i class="fas fa-map-marker-alt"></i> Across Morocco</span>
                                     </div>
-                                    <p class="card-description">A complete Morocco story—mountains, deserts, and legendary cities—crafted for travelers who want it all.</p>
+                                    <p class="card-description">A complete Morocco story—mountains, deserts, and
+                                        legendary cities—crafted for travelers who want it all.</p>
                                     <div class="card-actions">
                                         <a href="tour-10-days.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -976,10 +1010,8 @@
                             <!-- Card 10: The Happy Valley -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/happy_valley/happy_valley_main.jpg" 
-                                         alt="Ait Bougmez Happy Valley Cultural Trek" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/happy_valley/happy_valley_main.jpg"
+                                        alt="Ait Bougmez Happy Valley Cultural Trek" class="card-image" loading="lazy">
                                     <span class="card-badge badge-moderate">Moderate</span>
                                 </div>
                                 <div class="card-content">
@@ -988,9 +1020,12 @@
                                         <span><i class="far fa-clock"></i> 4 Days</span>
                                         <span><i class="fas fa-home"></i> Cultural Trek</span>
                                     </div>
-                                    <p class="card-description">Cultural immersion in Aït Bougmez: Berber villages, apple orchards, dinosaur tracks, and traditional gîtes in the Heart of the Atlas. Authentic and unforgettable.</p>
+                                    <p class="card-description">Cultural immersion in Aït Bougmez: Berber villages,
+                                        apple orchards, dinosaur tracks, and traditional gîtes in the Heart of the
+                                        Atlas. Authentic and unforgettable.</p>
                                     <div class="card-actions">
-                                        <a href="tour-ait-bougmez.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-ait-bougmez.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -999,10 +1034,8 @@
                             <!-- Card 11: Atlas Villages -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/atlas_village1.jpg" 
-                                         alt="Berber Village Atlas Mountains" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/atlas_village1.jpg" alt="Berber Village Atlas Mountains"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-moderate">Moderate</span>
                                 </div>
                                 <div class="card-content">
@@ -1011,9 +1044,12 @@
                                         <span><i class="far fa-clock"></i> 3 Days</span>
                                         <span><i class="fas fa-home"></i> Cultural Trek</span>
                                     </div>
-                                    <p class="card-description">Immerse yourself in Berber culture. Walk from village to village, staying with local families in comfortable guesthouses and enjoying traditional hospitality.</p>
+                                    <p class="card-description">Immerse yourself in Berber culture. Walk from village to
+                                        village, staying with local families in comfortable guesthouses and enjoying
+                                        traditional hospitality.</p>
                                     <div class="card-actions">
-                                        <a href="tour-atlas-villages.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-atlas-villages.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -1022,10 +1058,8 @@
                             <!-- Card 12: Ouzoud Waterfalls -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/ouzoud_card1.jpg" 
-                                         alt="Ouzoud Waterfalls and Bin El Ouidane Lake" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/ouzoud_card1.jpg" alt="Ouzoud Waterfalls and Bin El Ouidane Lake"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-easy">Easy</span>
                                 </div>
                                 <div class="card-content">
@@ -1034,7 +1068,9 @@
                                         <span><i class="far fa-clock"></i> 3 Days</span>
                                         <span><i class="fas fa-water"></i> Nature & Lakes</span>
                                     </div>
-                                    <p class="card-description">A refreshing journey from Marrakech to North Africa's highest waterfalls and the stunning turquoise waters of Bin El Ouidane lake. Perfect for nature lovers and families.</p>
+                                    <p class="card-description">A refreshing journey from Marrakech to North Africa's
+                                        highest waterfalls and the stunning turquoise waters of Bin El Ouidane lake.
+                                        Perfect for nature lovers and families.</p>
                                     <div class="card-actions">
                                         <a href="tour-ouzoud.html" class="card-btn card-btn-secondary">More Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
@@ -1045,10 +1081,8 @@
                             <!-- Card 13: Todra & Dades -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/todra_dades/todra_dades.jpg" 
-                                         alt="Todra Gorges Canyon Expedition" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/todra_dades/todra_dades.jpg"
+                                        alt="Todra Gorges Canyon Expedition" class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Challenging</span>
                                 </div>
                                 <div class="card-content">
@@ -1057,9 +1091,12 @@
                                         <span><i class="far fa-clock"></i> 4 Days</span>
                                         <span><i class="fas fa-stream"></i> Canyons</span>
                                     </div>
-                                    <p class="card-description">Explore the stunning geological formations of Morocco's "Grand Canyon". A mix of ridge walking and lush green valley trails through towering limestone cliffs.</p>
+                                    <p class="card-description">Explore the stunning geological formations of Morocco's
+                                        "Grand Canyon". A mix of ridge walking and lush green valley trails through
+                                        towering limestone cliffs.</p>
                                     <div class="card-actions">
-                                        <a href="tour-todra-dades.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-todra-dades.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -1068,10 +1105,8 @@
                             <!-- Card 14: Essaouira -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/guide_coastal_vibes1.jpg" 
-                                         alt="Essaouira Coastal & Argan Forest" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/guide_coastal_vibes1.jpg" alt="Essaouira Coastal & Argan Forest"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-easy">Very Easy</span>
                                 </div>
                                 <div class="card-content">
@@ -1080,9 +1115,11 @@
                                         <span><i class="far fa-clock"></i> 1 Day</span>
                                         <span><i class="fas fa-water"></i> Atlantic Coast</span>
                                     </div>
-                                    <p class="card-description">Sea breeze, ramparts, and artisan alleys. A refreshing day away from Marrakech with a taste of Morocco's coastal charm.</p>
+                                    <p class="card-description">Sea breeze, ramparts, and artisan alleys. A refreshing
+                                        day away from Marrakech with a taste of Morocco's coastal charm.</p>
                                     <div class="card-actions">
-                                        <a href="tour-essaouira.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-essaouira.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -1091,10 +1128,8 @@
                             <!-- Card 15: Chefchaouen -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/chefchaouen/chefchaoun_rif.jpg" 
-                                         alt="Rif Mountains & Chefchaouen" 
-                                         class="card-image"
-                                         loading="lazy">
+                                    <img src="images/tours/chefchaouen/chefchaoun_rif.jpg"
+                                        alt="Rif Mountains & Chefchaouen" class="card-image" loading="lazy">
                                     <span class="card-badge badge-moderate">Moderate</span>
                                 </div>
                                 <div class="card-content">
@@ -1103,9 +1138,11 @@
                                         <span><i class="far fa-clock"></i> 3 Days</span>
                                         <span><i class="fas fa-map-marker-alt"></i> North Morocco</span>
                                     </div>
-                                    <p class="card-description">Hike lush northern paths and finish in Morocco's Blue City—an inspiring blend of nature, culture, and color.</p>
+                                    <p class="card-description">Hike lush northern paths and finish in Morocco's Blue
+                                        City—an inspiring blend of nature, culture, and color.</p>
                                     <div class="card-actions">
-                                        <a href="tour-chefchaouen.html" class="card-btn card-btn-secondary">More Details</a>
+                                        <a href="tour-chefchaouen.html" class="card-btn card-btn-secondary">More
+                                            Details</a>
                                         <a class="card-btn card-btn-primary book-now">Book Now</a>
                                     </div>
                                 </div>
@@ -1124,7 +1161,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that last a lifetime.</p>
+                    <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
+                        last a lifetime.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>

@@ -1,0 +1,190 @@
+/* Logo Animation Styles - Premium & Cinematic */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a1f1a 0%, #1a3a2e 50%, #0a1f1a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.animation-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#logo-animation {
+    max-width: 90vw;
+    max-height: 80vh;
+    filter: drop-shadow(0 20px 60px rgba(212, 175, 55, 0.3));
+}
+
+/* Animation Controls */
+.animation-controls {
+    display: flex;
+    gap: 20px;
+}
+
+#replay-btn {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#replay-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+    background: linear-gradient(135deg, #E5C048 0%, #C9A530 100%);
+}
+
+#replay-btn:active {
+    transform: translateY(0);
+}
+
+/* Animation Keyframes */
+
+/* Footprint outline draw animation */
+@keyframes drawFootprint {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Fill animation */
+@keyframes fillFootprint {
+    from {
+        fill-opacity: 0;
+    }
+
+    to {
+        fill-opacity: 1;
+    }
+}
+
+/* Toe fade-in animation */
+@keyframes fadeInToe {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mountain line convergence */
+@keyframes drawMountainLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Peak highlight pulse */
+@keyframes peakPulse {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bottom curve draw */
+@keyframes drawCurve {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Glow effect for final state */
+@keyframes finalGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
+    }
+}
+
+/* Animation classes applied via JavaScript */
+.animate-footprint {
+    animation: drawFootprint 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+        fillFootprint 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
+}
+
+.animate-toe {
+    animation: fadeInToe 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-mountain-line {
+    animation: drawMountainLine 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-peak {
+    animation: peakPulse 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-curve {
+    animation: drawCurve 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.final-state {
+    animation: finalGlow 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #logo-animation {
+        max-width: 95vw;
+    }
+
+    #replay-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Loading state */
+.loading {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

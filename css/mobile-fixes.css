@@ -1,0 +1,138 @@
+/* =========================================
+   Mobile Optimization Overrides - PREMIUM
+   Focus: Navigation, Padding, Font Sizes, Hero
+   ========================================= */
+
+/* GLOBAL HELPER: Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 1. HERO SECTION - UNIFIED & CONSISTENT */
+.tour-hero,
+.hero-section {
+    background-size: cover !important;
+    background-position: center !important;
+    /* Fixes "images not in place" */
+    background-repeat: no-repeat !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Add a premium overlay to ensure text readability on all images */
+.tour-hero::before,
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.tour-hero .container,
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+
+    /* 2. NAVIGATION & HEADER FIXES */
+    .navbar {
+        height: 70px;
+        /* Fixed height for header */
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-container img {
+        max-height: 50px;
+    }
+
+    .nav-links {
+        top: 70px;
+        /* Match navbar height */
+        padding-top: 20px;
+        background-color: #fff;
+        /* Solid background */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3. HERO TYPOGRAPHY ON MOBILE */
+    h1,
+    .hero-title,
+    .tour-hero-title {
+        font-size: 1.8rem !important;
+        /* Readable, not huge */
+        line-height: 1.3;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        /* Safety padding */
+    }
+
+    .tour-hero-meta {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    /* 4. LAYOUT & SPACING */
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Fix Grid specific to tour pages */
+    .tour-page-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Order: Content first, then pricing card on mobile? 
+       Usually sidebar (pricing) is good at bottom or top. 
+       Let's keep default flow but ensure spacing. */
+
+    /* 5. CARDS & ELEMENTS */
+    .tour-card,
+    .itinerary-option,
+    .highlights-box {
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        /* Soft premium shadow */
+        margin-bottom: 25px;
+        overflow: hidden;
+        /* Contains images */
+    }
+
+    /* Fix "Book Now" sticky buttons/elements */
+    .sticky-booking {
+        z-index: 9999;
+        /* Maintain visibility */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 6. DESCRIPTIVE TEXT READABILITY */
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    .tour-overview {
+        text-align: justify;
+        /* Cleaner look for blocks of text */
+    }
+}
