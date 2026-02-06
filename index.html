@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Page Transitions -->
     <link rel="stylesheet" href="css/page-transitions.css">
+    <!-- Emergency Mobile Fix - Must be last CSS -->
+    <link rel="stylesheet" href="css/mobile-emergency.css" media="screen and (max-width: 768px)">
     <!-- Hreflang tags -->
 
 
@@ -486,11 +488,23 @@
         <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
     </div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/cta-whatsapp-analytics.js"></script>
-    <!-- Page Transitions -->
-    <script src="js/page-transitions.js"></script>
+    <!-- Load minimal scripts for mobile -->
+    <script>
+        // Detect if mobile
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Load only essential scripts for mobile
+            document.write('<script src="js/mobile-essential.js" defer><\/script>');
+        } else {
+            // Load all scripts for desktop
+            document.write('<script src="/socket.io/socket.io.js"><\/script>');
+            document.write('<script src="js/main.js" defer><\/script>');
+            document.write('<script src="js/cta-whatsapp-analytics.js" defer><\/script>');
+            document.write('<script src="js/page-transitions.js" defer><\/script>');
+            document.write('<script src="js/mobile-optimization.js" defer><\/script>');
+        }
+    </script>
 </body>
 
 </html>

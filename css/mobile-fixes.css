@@ -13,11 +13,15 @@ img {
     transform: translateZ(0); /* Standard property */
     will-change: transform; /* Optimize animations */
     image-rendering: -webkit-optimize-contrast; /* Improve image rendering */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    pointer-events: none; /* Improve scrolling performance */
 }
 
 .tour-hero,
 .hero-section {
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     height: auto !important;
     background-image: var(--hero-desktop) !important;
     background-size: cover !important;
@@ -31,6 +35,11 @@ img {
     justify-content: center;
     text-align: center;
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, opacity;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -39,6 +48,10 @@ img {
         -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
         -webkit-font-smoothing: antialiased; /* Improve text rendering */
         text-rendering: optimizeSpeed; /* Optimize text rendering */
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
     .tour-hero,

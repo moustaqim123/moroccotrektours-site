@@ -1,0 +1,107 @@
+/* Emergency Mobile Fix - Simplified version to prevent freezing */
+
+/* Disable all animations and transitions on mobile */
+@media (max-width: 768px) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        will-change: auto !important;
+    }
+    
+    /* Simplify hero section */
+    .tour-hero,
+    .hero-section {
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        background: linear-gradient(135deg, #004d33 0%, #006644 100%) !important;
+        background-image: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        position: relative !important;
+    }
+    
+    /* Simplify navigation */
+    .navbar {
+        position: relative !important;
+        height: auto !important;
+        padding: 10px 0 !important;
+        box-shadow: none !important;
+    }
+    
+    /* Simplify images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        opacity: 1 !important;
+    }
+    
+    /* Simplify layout */
+    .container {
+        padding: 0 15px !important;
+        max-width: 100% !important;
+    }
+    
+    /* Simplify text */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 10px 0 !important;
+        font-weight: normal !important;
+    }
+    
+    /* Simplify sections */
+    section {
+        padding: 20px 0 !important;
+    }
+    
+    /* Simplify grid layouts */
+    .tour-card-grid,
+    .tour-page-grid {
+        display: block !important;
+        gap: 0 !important;
+    }
+    
+    /* Simplify cards */
+    .tour-card,
+    .itinerary-option,
+    .highlights-box {
+        margin-bottom: 15px !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        border-radius: 5px !important;
+        padding: 15px !important;
+    }
+    
+    /* Simplify footer */
+    .footer {
+        background: #333 !important;
+        color: #fff !important;
+        padding: 20px 0 !important;
+    }
+    
+    /* Hide problematic elements */
+    .lightbox,
+    .whatsapp-float,
+    .sticky-booking {
+        display: none !important;
+    }
+    
+    /* Simplify body */
+    body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: static !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+    
+    html {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+}
