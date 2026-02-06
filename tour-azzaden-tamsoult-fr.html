@@ -51,7 +51,7 @@
         /* Modern Hero Styling - Force Full Height & Fixed Background */
         .tour-hero {
             height: 100vh !important;
-            background-image: var(--hero-desktop) !important;
+            background-image: url('images/destinations/atlas_village1.webp') !important;
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
@@ -65,7 +65,7 @@
 
         @media (max-width: 768px) {
             .tour-hero {
-                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-image: url('images/destinations/atlas_village1.webp') !important;
                 background-attachment: scroll !important;
                 height: 60vh !important;
             }
@@ -626,13 +626,11 @@
                                 </div>
                             </div>
                             <div class="assurance-contact">
-                                <a href="tel:+212659565040" class="contact-link">
+                                <a href="tel:+212659565040" class="contact-link" aria-label="Appelez-nous">
                                     <i class="fas fa-phone"></i>
-                                    <span>+212 659 56 5040</span>
                                 </a>
-                                <a href="https://wa.me/212659565040" class="contact-link whatsapp">
+                                <a href="https://wa.me/212659565040" class="contact-link whatsapp" aria-label="Contactez-nous sur WhatsApp">
                                     <i class="fab fa-whatsapp"></i>
-                                    <span>WhatsApp</span>
                                 </a>
                             </div>
                         </div>
@@ -686,11 +684,7 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank"
-        rel="noopener">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+
 
     <!-- Sticky Booking Element -->
     <div class="sticky-booking" id="stickyBooking">

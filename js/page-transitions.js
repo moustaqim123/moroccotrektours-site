@@ -151,8 +151,8 @@
 
         // Optimize for mobile
         if (isMobile()) {
-            // Prevent bounce scrolling on iOS
-            document.body.style.overscrollBehavior = 'none';
+            // Allow normal scrolling on mobile devices
+            document.body.style.overscrollBehavior = 'auto';
         }
     }
 

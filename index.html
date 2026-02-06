@@ -5,21 +5,19 @@
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
-    <meta property="og:title" content="Morocco Trek Tours">
-    <meta property="og:description" content="Gateway To Authentic Adventures">
+    <meta property="og:title" content="Morocco Trek Tours - Luxury Adventures">
+    <meta property="og:description" content="Premium and exclusive tours in Morocco's most breathtaking landscapes">
     <meta property="og:image" content="images/assets/icon-brand.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morocco Trek Tours | Expert-Guided Mountain Adventures</title>
+    <title>Adventures & Trekking Tours | Morocco Trek Tours</title>
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Favicon -->
-
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -27,7 +25,6 @@
     <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Page Transitions -->
     <link rel="stylesheet" href="css/page-transitions.css">
-    <!-- Hreflang tags -->
 
 
     <style>
@@ -158,12 +155,18 @@
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
+            height: auto !important;
+            min-height: 100vh !important;
+            overflow: visible !important;
         }
 
         @media (max-width: 768px) {
             .hero-section.home-hero {
                 background-image: url('images/hero/hero_home_mobile.jpg') !important;
                 background-attachment: scroll !important;
+                height: auto !important;
+                min-height: 60vh !important;
+                overflow: visible !important;
             }
         }
     </style>
@@ -204,11 +207,11 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <link rel="stylesheet" href="css/cta-whatsapp.min.css">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
-                        alt="Morocco Trek Tours" class="logo-img"></div>
+                <div class="logo-container">
+                    <img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img">
+                </div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -221,12 +224,13 @@
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="tours.html">Tours</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html" class="active">Tours</a></li>
                 <li><a href="customize-trip.html">Customize</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -234,8 +238,8 @@
                         <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
                     </button>
                     <ul class="lang-dropdown">
-                        <li><a href="index.html" class="active">English</a></li>
-                        <li><a href="index-fr.html">Français</a></li>
+                        <li><a href="tours.html" class="active">English</a></li>
+                        <li><a href="tours-fr.html">Français</a></li>
                     </ul>
                 </li>
             </ul>
@@ -486,11 +490,11 @@
         <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
     </div>
 
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/cta-whatsapp-analytics.js"></script>
-    <!-- Page Transitions -->
     <script src="js/page-transitions.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/cta-whatsapp-analytics.js"></script>
 </body>
 
 </html>

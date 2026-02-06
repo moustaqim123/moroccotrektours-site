@@ -11,7 +11,7 @@ img {
 
 .tour-hero,
 .hero-section {
-    height: 100vh !important;
+    min-height: 100vh;
     background-image: var(--hero-desktop) !important;
     background-size: cover !important;
     background-position: center !important;
@@ -23,18 +23,33 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: visible;
 }
 
 @media (max-width: 768px) {
+
+    /* Global scroll safeguard - ensure mobile scrolling works */
+    body {
+        overflow-y: auto !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+
+    html {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
 
     .tour-hero,
     .hero-section {
         background-image: var(--hero-mobile, var(--hero-desktop)) !important;
         background-attachment: scroll !important;
-        /* Fixes gray areas/jitter on mobile */
-        height: 60vh !important;
-        /* Optimized mobile height */
-        min-height: 400px;
+        /* Allow content to determine height */
+        height: auto !important;
+        min-height: 60vh;
+        /* Ensure minimum height for mobile */
+        max-height: none !important;
+        overflow: visible !important;
     }
 }
 
