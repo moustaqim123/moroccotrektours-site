@@ -151,8 +151,10 @@
 
         // Optimize for mobile
         if (isMobile()) {
-            // Allow normal scrolling on mobile devices
+            // Allow normal scrolling on mobile devices - DO NOT block scroll
             document.body.style.overscrollBehavior = 'auto';
+            document.body.style.overflowY = 'auto';
+            document.documentElement.style.overflowY = 'auto';
         }
     }
 

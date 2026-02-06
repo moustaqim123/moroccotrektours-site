@@ -564,9 +564,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.toggle('active');
             mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
             mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+            
+            // Toggle body scroll lock
+            if (isActive) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
         });
 
         // Close menu when a link is clicked
@@ -575,7 +582,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.querySelector('i').classList.add('fa-bars');
                 mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                document.body.classList.remove('menu-open');
             });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                document.body.classList.remove('menu-open');
+            }
         });
     }
 
