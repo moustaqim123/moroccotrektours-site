@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Morocco Trek Tours | Mobile</title>
+    <style>
+        /* Ultra-minimal CSS for maximum compatibility */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #fff;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: #004d33;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .content {
+            margin-top: 70px;
+            padding: 15px;
+        }
+        
+        .hero {
+            background: #006644;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .tour-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .tour-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .tour-info {
+            padding: 15px;
+        }
+        
+        .tour-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #004d33;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: 30px;
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">Morocco Trek Tours</a>
+        </div>
+    </header>
+    
+    <main class="content">
+        <section class="hero">
+            <h1>Discover Morocco's Beauty</h1>
+            <p>Experience the best trekking adventures in the Atlas Mountains</p>
+        </section>
+        
+        <section class="tours">
+            <div class="tour-card">
+                <img src="images/tours/toubkal-ascent.jpg" alt="Toubkal Ascent" class="tour-image">
+                <div class="tour-info">
+                    <h2 class="tour-title">Mount Toubkal Ascent</h2>
+                    <p>2-day trek to the highest peak in North Africa</p>
+                    <a href="/tour-toubkal-ascent.html" class="btn">View Tour</a>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <img src="images/tours/ourika-valley.jpg" alt="Ourika Valley" class="tour-image">
+                <div class="tour-info">
+                    <h2 class="tour-title">Ourika Valley</h2>
+                    <p>Scenic day trip to the beautiful Ourika Valley</p>
+                    <a href="/tour-ourika-valley.html" class="btn">View Tour</a>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <img src="images/tours/berber-villages.jpg" alt="Berber Villages" class="tour-image">
+                <div class="tour-info">
+                    <h2 class="tour-title">Berber Villages Trek</h2>
+                    <p>Immerse yourself in local culture</p>
+                    <a href="/tour-berber-villages.html" class="btn">View Tour</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Contact us: info@moroccotrektours.com</p>
+            <p>Phone: +212 659 565 040</p>
+            <p>© 2024 Morocco Trek Tours. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/212659565040" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Minimal JavaScript -->
+    <script>
+        // Load Font Awesome for WhatsApp icon
+        (function() {
+            const fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+            fa.integrity = 'sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==';
+            fa.crossOrigin = 'anonymous';
+            fa.referrerPolicy = 'no-referrer';
+            document.head.appendChild(fa);
+            
+            // Prevent zooming
+            document.addEventListener('touchmove', function(e) {
+                if (e.scale !== 1) { 
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            }, { passive: false });
+        })();
+    </script>
+</body>
+</html>
