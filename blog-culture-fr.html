@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,27 +11,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culture &amp; Saveurs | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -49,6 +56,25 @@
       "priceRange": "$$"
     }
     </script>
+    <style>
+        /* Modern Hero Styling */
+        .hero-section {
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,8 +82,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index-fr.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index-fr.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -76,7 +103,7 @@
                 <li><a href="about-fr.html">À Propos</a></li>
                 <li><a href="blog-fr.html" class="active">Guide</a></li>
                 <li><a href="contact-fr.html">Contact</a></li>
-            
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -93,10 +120,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" style="background-image: url('images/Colorful Moroccan food spread.jpg');">
+    <header class="hero-section hero-small" style="--hero-desktop: url('images/Colorful Moroccan food spread.jpg');">
         <div class="hero-content">
             <h1 class="hero-title">Culture &amp; Saveurs</h1>
-            <p class="hero-description">Le cœur du Maroc se goûte dans sa nourriture et se ressent dans ses traditions.</p>
+            <p class="hero-description">Le cœur du Maroc se goûte dans sa nourriture et se ressent dans ses traditions.
+            </p>
         </div>
     </header>
 
@@ -106,13 +134,16 @@
             <div style="max-width: 800px; margin: 0 auto;">
                 <h2 class="section-title">Un Festin pour l'Âme</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                    La culture marocaine est une riche tapisserie tissée à partir d'influences Amazigh (Berbère), Arabes et Européennes. C'est
+                    La culture marocaine est une riche tapisserie tissée à partir d'influences Amazigh (Berbère), Arabes
+                    et Européennes. C'est
                     une culture qui tourne autour de l'hospitalité, de la famille et du respect de la tradition.
                 </p>
                 <p style="font-size: 1.1rem;">
                     La nourriture est l'expression ultime de cette hospitalité. Des épices complexes d'un tajine mijoté
-                    à la douceur du thé à la menthe versé de haut, chaque repas est une célébration. Au-delà de la table,
-                    des traditions comme le Hammam (bain de vapeur) offrent une fenêtre sur le rythme quotidien de la vie marocaine.
+                    à la douceur du thé à la menthe versé de haut, chaque repas est une célébration. Au-delà de la
+                    table,
+                    des traditions comme le Hammam (bain de vapeur) offrent une fenêtre sur le rythme quotidien de la
+                    vie marocaine.
                 </p>
             </div>
         </div>
@@ -128,25 +159,32 @@
 
                         <!-- Item 1 -->
                         <div>
-                            <img src="images/flavor_tagine.jpg" loading="lazy" alt="Tajine Marocain" style="border-radius: 8px; margin-bottom: 15px;">
+                            <img src="images/flavor_tagine.jpg" loading="lazy" alt="Tajine Marocain"
+                                style="border-radius: 8px; margin-bottom: 15px;">
                             <h3>L'Art du Tajine</h3>
-                            <p>Nommé d'après le pot en argile dans lequel il est cuit, le Tajine est le plat national. Qu'il s'agisse d'agneau
-                                aux pruneaux, de poulet aux citrons confits ou d'un mélange de légumes, le couvercle en forme de cône
+                            <p>Nommé d'après le pot en argile dans lequel il est cuit, le Tajine est le plat national.
+                                Qu'il s'agisse d'agneau
+                                aux pruneaux, de poulet aux citrons confits ou d'un mélange de légumes, le couvercle en
+                                forme de cône
                                 piège la vapeur pour créer des chefs-d'œuvre tendres et savoureux.</p>
                         </div>
 
                         <!-- Item 2 -->
                         <div>
-                            <img src="images/flavor_tea.jpg" alt="Thé à la Menthe Marocain" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/flavor_tea.jpg" alt="Thé à la Menthe Marocain"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Rituel du Thé à la Menthe</h3>
-                            <p>Connu sous le nom de "Whisky Berbère", le thé à la menthe est servi partout, tout le temps. C'est un signe de
-                                bienvenue. Plus le versement est haut, meilleure est la mousse—et il est toujours impoli de refuser un
+                            <p>Connu sous le nom de "Whisky Berbère", le thé à la menthe est servi partout, tout le
+                                temps. C'est un signe de
+                                bienvenue. Plus le versement est haut, meilleure est la mousse—et il est toujours impoli
+                                de refuser un
                                 verre.</p>
                         </div>
 
                         <!-- Item 3 -->
                         <div>
-                            <img src="images/flaavor_hamam.jpg" alt="Spa Hammam Traditionnel" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/flaavor_hamam.jpg" alt="Spa Hammam Traditionnel"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Le Hammam</h3>
                             <p>Plus qu'un simple spa, le Hammam est un rituel hebdomadaire pour nettoyer le corps et
                                 socialiser. Un gommage au savon noir et un gant kessa laisse votre peau comme neuve.</p>
@@ -167,18 +205,21 @@
                 <div class="feature-item">
                     <i class="fas fa-hand-paper feature-icon"></i>
                     <h3>Mangez avec Votre Main</h3>
-                    <p>Il est traditionnel de manger le tajine et le couscous avec votre main droite, en utilisant du pain pour ramasser la
+                    <p>Il est traditionnel de manger le tajine et le couscous avec votre main droite, en utilisant du
+                        pain pour ramasser la
                         nourriture. C'est une façon intime de partager un repas.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-coins feature-icon"></i>
                     <h3>Pourboires</h3>
-                    <p>Les pourboires sont courants. Un petit pourboire (5-10%) dans les restaurants ou pour les guides est apprécié et va loin.</p>
+                    <p>Les pourboires sont courants. Un petit pourboire (5-10%) dans les restaurants ou pour les guides
+                        est apprécié et va loin.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-smile feature-icon"></i>
                     <h3>Ramadan</h3>
-                    <p>Si vous visitez pendant le Ramadan, respectez le jeûne en ne mangeant pas ou en ne buvant pas en public pendant les heures de jour
+                    <p>Si vous visitez pendant le Ramadan, respectez le jeûne en ne mangeant pas ou en ne buvant pas en
+                        public pendant les heures de jour
                         heures. Le repas Iftar du soir est une occasion joyeuse à laquelle se joindre.</p>
                 </div>
             </div>
@@ -193,7 +234,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui
                         durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
@@ -211,8 +253,10 @@
                     <h4>Informations de Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Maroc</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -228,13 +272,16 @@
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="js/main.js"></script>
-    
 
 
 
-</body></html>
+
+</body>
+
+</html>

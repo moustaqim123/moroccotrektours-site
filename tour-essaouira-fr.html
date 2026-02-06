@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,29 +11,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Côte Atlantique &amp; Essaouira | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Luxury Pricing CSS -->
     <link rel="stylesheet" href="css/luxury-pricing.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -58,8 +65,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index-fr.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index-fr.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -94,19 +102,153 @@
         </div>
     </nav>
 
-    <!-- Tour Hero Section -->
-    <header class="tour-hero" style="background-image: url('images/guide_coastal_vibes1.jpg');">
-        <div class="container">
-            <div class="tour-hero-content">
-                <h1 class="tour-hero-title">Côte Atlantique &amp; Essaouira</h1>
-                <div class="tour-hero-meta">
-                    <span><i class="far fa-clock"></i> 2 Jours</span>
-                    <span><i class="fas fa-tachometer-alt"></i> Facile</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Côte Atlantique</span>
+    <!-- Hero Section -->
+    <div style="position: sticky; top: 0; width: 100%; height: 100vh; z-index: 1;">
+        <!-- Background Image -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/tours/essaouira/guide_coastal_vibes1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 1;
+        "></div>
+        
+        <!-- Overlay -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        "></div>
+        
+        <!-- Content -->
+        <div class="container" style="position: relative; z-index: 3; height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+            <div style="color: #fff; max-width: 800px;">
+                <h1 style="
+                    font-size: 2.8rem;
+                    margin-bottom: 1rem;
+                    color: #fff;
+                    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+                ">Côte Atlantique & Essaouira</h1>
+                
+                <div style="display: flex; gap: 20px; margin: 20px 0; font-size: 1.1rem;">
+                    <span><i class="fas fa-tachometer-alt" style="color: #f39c12;"></i> Facile</span>
+                    <span><i class="fas fa-map-marker-alt" style="color: #f39c12;"></i> Côte Atlantique</span>
+                    <span><i class="far fa-clock" style="color: #f39c12;"></i> 2 Jours</span>
                 </div>
+                
+                <a href="#book-now" class="btn btn-primary" style="
+                    display: inline-block;
+                    padding: 12px 30px;
+                    background-color: #e67e22;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                ">Réserver Maintenant</a>
             </div>
         </div>
-    </header>
+    </div>
+    
+    <style>
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/tours/essaouira/Essaouira-blue-boats_mobile.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .hero-meta {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-meta i {
+            margin-right: 5px;
+            color: #f39c12;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/tours/essaouira/Essaouira-blue-boats_mobile.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 
     <!-- Main Content -->
     <section class="section-padding">
@@ -120,10 +262,14 @@
                     <div id="overview">
                         <h2>Aperçu du Voyage</h2>
                         <p class="tour-overview">
-                            Découvrez la beauté côtière du Maroc lors de cette excursion relaxante de 2 jours vers Essaouira. Cette ancienne ville portugaise offre un mélange parfait de culture, d'histoire et de détente sur la plage.
+                            Découvrez la beauté côtière du Maroc lors de cette excursion relaxante de 2 jours vers
+                            Essaouira. Cette ancienne ville portugaise offre un mélange parfait de culture, d'histoire
+                            et de détente sur la plage.
                         </p>
                         <p class="tour-overview">
-                            Vous explorerez la médina historique, découvrirez l'artisanat local, profiterez de fruits de mer frais et vous détendrez sur les plages de sable fin. C'est l'occasion idéale de découvrir un côté différent du Maroc, loin des montagnes et du désert.
+                            Vous explorerez la médina historique, découvrirez l'artisanat local, profiterez de fruits de
+                            mer frais et vous détendrez sur les plages de sable fin. C'est l'occasion idéale de
+                            découvrir un côté différent du Maroc, loin des montagnes et du désert.
                         </p>
 
 
@@ -131,7 +277,8 @@
 
                     <!-- Highlights -->
                     <div id="highlights" class="highlights-box">
-                        <h3><i class="fas fa-star" style="color:var(--accent-color); margin-right:10px;"></i> Points Forts
+                        <h3><i class="fas fa-star" style="color:var(--accent-color); margin-right:10px;"></i> Points
+                            Forts
                         </h3>
                         <ul>
                             <li>Exploration de la médina historique d'Essaouira</li>
@@ -148,26 +295,36 @@
                         <h2>Itinéraire Détaillé</h2>
 
                         <div class="itinerary-step">
-                            <span class="itinerary-day-title">Jour 1 : Marrakech → Essaouira — Arrivée &amp; Découverte</span>
-                            <p>Nous quittons Marrakech tôt le matin pour un trajet de 3 heures le long de la côte. À notre arrivée à Essaouira, nous commençons par une visite guidée de la médina historique avec ses remparts portugais et ses ruelles sinueuses. Découvrez le souk animé, les ateliers d'artisans travaillant le bois de thuya et les cafés traditionnels.</p>
+                            <span class="itinerary-day-title">Jour 1 : Marrakech → Essaouira — Arrivée &amp;
+                                Découverte</span>
+                            <p>Nous quittons Marrakech tôt le matin pour un trajet de 3 heures le long de la côte. À
+                                notre arrivée à Essaouira, nous commençons par une visite guidée de la médina historique
+                                avec ses remparts portugais et ses ruelles sinueuses. Découvrez le souk animé, les
+                                ateliers d'artisans travaillant le bois de thuya et les cafés traditionnels.</p>
                         </div>
 
                         <div class="itinerary-step">
                             <span class="itinerary-day-title">Jour 1 : Après-midi — Port &amp; Plage</span>
-                            <p>L'après-midi est consacré à la découverte du port de pêche avec ses bateaux colorés et au marché aux poissons. Dégustez des fruits de mer frais dans un restaurant local, puis détendez-vous sur la plage en regardant les vagues de l'Atlantique.</p>
+                            <p>L'après-midi est consacré à la découverte du port de pêche avec ses bateaux colorés et au
+                                marché aux poissons. Dégustez des fruits de mer frais dans un restaurant local, puis
+                                détendez-vous sur la plage en regardant les vagues de l'Atlantique.</p>
                         </div>
 
                         <div class="itinerary-step">
                             <span class="itinerary-day-title">Jour 2 : Culture &amp; Nature — Retour</span>
-                            <p>Matinée libre pour explorer davantage la ville ou vous détendre. Optionnellement, visitez les jardins ou les coopératives d'huile d'argan voisines. Après le déjeuner, nous retournons à Marrakech avec des souvenirs de cette escapade côtière.</p>
+                            <p>Matinée libre pour explorer davantage la ville ou vous détendre. Optionnellement, visitez
+                                les jardins ou les coopératives d'huile d'argan voisines. Après le déjeuner, nous
+                                retournons à Marrakech avec des souvenirs de cette escapade côtière.</p>
                         </div>
                     </div>
 
                     <div id="accommodation">
                         <h2>Hébergement &amp; Repas</h2>
                         <ul class="info-list">
-                            <li><strong>Hébergement :</strong> 1 Nuit dans un riad traditionnel ou hôtel de charme à Essaouira avec vue sur l'océan.</li>
-                            <li><strong>Repas :</strong> Petit-déjeuner inclus. Déjeuners et dîners libres pour découvrir la cuisine locale.</li>
+                            <li><strong>Hébergement :</strong> 1 Nuit dans un riad traditionnel ou hôtel de charme à
+                                Essaouira avec vue sur l'océan.</li>
+                            <li><strong>Repas :</strong> Petit-déjeuner inclus. Déjeuners et dîners libres pour
+                                découvrir la cuisine locale.</li>
                         </ul>
                     </div>
 
@@ -184,7 +341,9 @@
 
                     <div id="fitness">
                         <h2>Condition Physique &amp; Difficulté</h2>
-                        <p>Cette excursion est <strong>Très Facile</strong>. Elle implique principalement de la marche urbaine légère dans la médina avec des options de détente. Adaptée à tous les niveaux de forme physique.</p>
+                        <p>Cette excursion est <strong>Très Facile</strong>. Elle implique principalement de la marche
+                            urbaine légère dans la médina avec des options de détente. Adaptée à tous les niveaux de
+                            forme physique.</p>
                     </div>
 
                     <div id="know-before">
@@ -199,7 +358,10 @@
 
                     <div id="best-time">
                         <h2>Meilleure Période</h2>
-                        <p>Essaouira est agréable toute l'année, mais les périodes les plus populaires sont de <strong>mai à octobre</strong> lorsque le temps est chaud et les plages sont accessibles. Les mois d'été sont parfaits pour les sports nautiques.</p>
+                        <p>Essaouira est agréable toute l'année, mais les périodes les plus populaires sont de
+                            <strong>mai à octobre</strong> lorsque le temps est chaud et les plages sont accessibles.
+                            Les mois d'été sont parfaits pour les sports nautiques.
+                        </p>
                     </div>
                 </div>
 
@@ -213,13 +375,15 @@
                                 <h3 class="step-title">Sélectionnez Votre Itinéraire</h3>
                             </div>
                             <div class="itinerary-options">
-                                <div class="itinerary-option-card active recommended" data-duration="1" data-label="Côte Atlantique & Forêt d'Argan">
+                                <div class="itinerary-option-card active recommended" data-duration="1"
+                                    data-label="Côte Atlantique & Forêt d'Argan">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">1 Jour</span>
                                         <span class="itinerary-badge popular">Tour Côtier</span>
                                     </div>
                                     <h4 class="itinerary-name">Côte Atlantique & Forêt d'Argan</h4>
-                                    <p class="itinerary-desc">Évasion côtière avec découverte de la forêt d'argan, exploration de la médina et repas en bord de mer</p>
+                                    <p class="itinerary-desc">Évasion côtière avec découverte de la forêt d'argan,
+                                        exploration de la médina et repas en bord de mer</p>
                                 </div>
                             </div>
                         </div>
@@ -284,13 +448,15 @@
                                     <span class="price-unit">/ pers</span>
                                 </div>
                                 <div class="price-details">
-                                    <span class="price-microcopy">Prix par personne · Tour côtier 1 jour · Aucuns frais cachés</span>
+                                    <span class="price-microcopy">Prix par personne · Tour côtier 1 jour · Aucuns frais
+                                        cachés</span>
                                 </div>
                             </div>
                             <div class="price-breakdown">
                                 <div class="breakdown-item">
                                     <span class="breakdown-label">Itinéraire:</span>
-                                    <span class="breakdown-value" id="selectedItinerary">Côte Atlantique & Forêt d'Argan</span>
+                                    <span class="breakdown-value" id="selectedItinerary">Côte Atlantique & Forêt
+                                        d'Argan</span>
                                 </div>
                                 <div class="breakdown-item">
                                     <span class="breakdown-label">Taille du groupe:</span>
@@ -332,7 +498,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nom Complet</label>
-                                    <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+                                    <input type="text" id="name" name="name" placeholder="Entrez votre nom complet"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Adresse Email</label>
@@ -344,7 +511,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Demandes Spéciales</label>
-                                    <textarea id="message" name="message" placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
+                                    <textarea id="message" name="message"
+                                        placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
                                 </div>
                                 <button type="submit" class="luxury-cta">
                                     <span class="cta-text">Demander Réservation</span>
@@ -410,7 +578,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui
                         durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
@@ -428,8 +597,10 @@
                     <h4>Informations de Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Maroc</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -446,7 +617,8 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -470,8 +642,10 @@
     <script src="js/main.js"></script>
     <!-- Luxury Pricing JavaScript -->
     <script src="js/luxury-pricing.js"></script>
-    
 
 
 
-</body></html>
+
+</body>
+
+</html>

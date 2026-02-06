@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,27 +11,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fes: The Cultural Heart | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -49,6 +56,25 @@
       "priceRange": "$$"
     }
     </script>
+    <style>
+        /* Modern Hero Styling */
+        .hero-section {
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,8 +82,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -76,7 +103,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html" class="active">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -86,14 +113,14 @@
                     <ul class="lang-dropdown">
                         <li><a href="blog-fes.html" class="active">English</a></li>
                         <li><a href="blog-fes-fr.html">Français</a></li>
-                        </ul>
+                    </ul>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" style="background-image: url('images/1_hero_fes.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header class="hero-section hero-small" style="--hero-desktop: url('images/1_hero_fes.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Fes</h1>
             <p class="hero-description">The Spiritual Capital and Keeper of Traditions.</p>
@@ -130,7 +157,8 @@
 
                         <!-- Item 1 -->
                         <div>
-                            <img src="images/0_fes.jpg" loading="lazy" alt="Chouara Tannery Fes" style="border-radius: 8px; margin-bottom: 15px;">
+                            <img src="images/0_fes.jpg" loading="lazy" alt="Chouara Tannery Fes"
+                                style="border-radius: 8px; margin-bottom: 15px;">
                             <h3>The Tanneries</h3>
                             <p>The exhilarating scent of mint (given to mask the smell) greets you as you look down upon
                                 the honeycombed vats of natural dyes at the Chouara Tannery. It's a colorful, chaotic,
@@ -139,7 +167,8 @@
 
                         <!-- Item 2 -->
                         <div>
-                            <img src="images/2_fes.jpg" alt="Bou Inania Madrasa" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/2_fes.jpg" alt="Bou Inania Madrasa"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Islamic Architecture</h3>
                             <p>Fes is home to some of the world's finest Islamic architecture. Visit the Bou Inania
                                 Madrasa to see exquisite zellij tilework, carved cedar wood, and intricate stucco
@@ -148,7 +177,8 @@
 
                         <!-- Item 3 -->
                         <div>
-                            <img src="images/4_fes.jpg" alt="Fes Artisans" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/4_fes.jpg" alt="Fes Artisans"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Artisan Workshops</h3>
                             <p>Spend time watching potters, weavers, and metalworkers. Every district in the medina is
                                 dedicated to a craft. Buying directly from the artisan is not only a great souvenir but
@@ -215,8 +245,10 @@
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -232,16 +264,19 @@
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="js/main.js"></script>
-    
 
 
 
 
 
 
-</body></html>
+
+</body>
+
+</html>

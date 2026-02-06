@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Luxury Pricing CSS -->
     <link rel="stylesheet" href="css/luxury-pricing.css">
 
@@ -45,6 +47,30 @@
       "priceRange": "$$"
     }
     </script>
+    <style>
+        /* Modern Hero Styling - Force Full Height & Fixed Background */
+        .tour-hero {
+            height: 100vh !important;
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+        }
+
+        @media (max-width: 768px) {
+            .tour-hero {
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -88,19 +114,153 @@
         </div>
     </nav>
 
-    <!-- Tour Hero Section -->
-    <header class="tour-hero" style="background-image: url('images/destinations/atlas_village.jpg');">
-        <div class="container">
-            <div class="tour-hero-content">
-                <h1 class="tour-hero-title">Circuit Azaden & Tamsoult - Options 1 à 4 Jours</h1>
-                <div class="tour-hero-meta">
-                    <span><i class="far fa-clock"></i> Options 1 - 4 Jours</span>
-                    <span><i class="fas fa-mountain"></i> Haut Atlas</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Vallée d'Azzaden</span>
+    <!-- Hero Section -->
+    <div style="position: sticky; top: 0; width: 100%; height: 100vh; z-index: 1;">
+        <!-- Background Image -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/destinations/atlas_village1.WEBP');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 1;
+        "></div>
+        
+        <!-- Overlay -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        "></div>
+        
+        <!-- Content -->
+        <div class="container" style="position: relative; z-index: 3; height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+            <div style="color: #fff; max-width: 800px;">
+                <h1 style="
+                    font-size: 2.8rem;
+                    margin-bottom: 1rem;
+                    color: #fff;
+                    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+                ">Circuit Azaden & Tamsoult - Options 1 à 4 Jours</h1>
+                
+                <div style="display: flex; gap: 20px; margin: 20px 0; font-size: 1.1rem;">
+                    <span><i class="fas fa-tachometer-alt" style="color: #f39c12;"></i> Modéré</span>
+                    <span><i class="fas fa-map-marker-alt" style="color: #f39c12;"></i> Vallée d'Azzaden</span>
+                    <span><i class="far fa-clock" style="color: #f39c12;"></i> Options 1 - 4 Jours</span>
                 </div>
+                
+                <a href="#book-now" class="btn btn-primary" style="
+                    display: inline-block;
+                    padding: 12px 30px;
+                    background-color: #e67e22;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                ">Réserver Maintenant</a>
             </div>
         </div>
-    </header>
+    </div>
+    
+    <style>
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/atlas_village.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .hero-meta {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-meta i {
+            margin-right: 5px;
+            color: #f39c12;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/atlas_village.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 
     <!-- Main Content -->
     <section class="section-padding">
@@ -257,13 +417,15 @@
                                 <h3 class="step-title">Sélectionnez Votre Itinéraire</h3>
                             </div>
                             <div class="itinerary-options">
-                                <div class="itinerary-option-card active recommended" data-duration="1" data-label="Évasion Vallée 1 Jour">
+                                <div class="itinerary-option-card active recommended" data-duration="1"
+                                    data-label="Évasion Vallée 1 Jour">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">1 Jour</span>
                                         <span class="itinerary-badge popular">Trek Express</span>
                                     </div>
                                     <h4 class="itinerary-name">Évasion Vallée 1 Jour</h4>
-                                    <p class="itinerary-desc">Évasion rapide avec vues panoramiques et déjeuner berbère traditionnel</p>
+                                    <p class="itinerary-desc">Évasion rapide avec vues panoramiques et déjeuner berbère
+                                        traditionnel</p>
                                 </div>
                                 <div class="itinerary-option-card" data-duration="2" data-label="Trek Cascades 2 Jours">
                                     <div class="itinerary-header">
@@ -271,23 +433,28 @@
                                         <span class="itinerary-badge popular">Explorateur Cascades</span>
                                     </div>
                                     <h4 class="itinerary-name">Trek Cascades 2 Jours</h4>
-                                    <p class="itinerary-desc">Cascades Tamsoult et hauts cols avec séjour en village de montagne</p>
+                                    <p class="itinerary-desc">Cascades Tamsoult et hauts cols avec séjour en village de
+                                        montagne</p>
                                 </div>
-                                <div class="itinerary-option-card" data-duration="3" data-label="Immersion Culturelle 3 Jours">
+                                <div class="itinerary-option-card" data-duration="3"
+                                    data-label="Immersion Culturelle 3 Jours">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">3 Jours</span>
                                         <span class="itinerary-badge popular">Trek Culturel</span>
                                     </div>
                                     <h4 class="itinerary-name">Immersion Culturelle 3 Jours</h4>
-                                    <p class="itinerary-desc">Connexion culturelle profonde avec villages berbères et séjours familiaux authentiques</p>
+                                    <p class="itinerary-desc">Connexion culturelle profonde avec villages berbères et
+                                        séjours familiaux authentiques</p>
                                 </div>
-                                <div class="itinerary-option-card" data-duration="4" data-label="Grande Découverte 4 Jours">
+                                <div class="itinerary-option-card" data-duration="4"
+                                    data-label="Grande Découverte 4 Jours">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">4 Jours</span>
                                         <span class="itinerary-badge popular">Grande Boucle</span>
                                     </div>
                                     <h4 class="itinerary-name">Grande Découverte 4 Jours</h4>
-                                    <p class="itinerary-desc">Aventure complète hors sentiers battus avec villages reculés et guide expert</p>
+                                    <p class="itinerary-desc">Aventure complète hors sentiers battus avec villages
+                                        reculés et guide expert</p>
                                 </div>
                             </div>
                         </div>
@@ -352,7 +519,8 @@
                                     <span class="price-unit">/ pers</span>
                                 </div>
                                 <div class="price-details">
-                                    <span class="price-microcopy">Prix par personne · Trek vallée 4 jours · Aucuns frais cachés</span>
+                                    <span class="price-microcopy">Prix par personne · Trek vallée 4 jours · Aucuns frais
+                                        cachés</span>
                                 </div>
                             </div>
                             <div class="price-breakdown">
@@ -400,7 +568,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nom Complet</label>
-                                    <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+                                    <input type="text" id="name" name="name" placeholder="Entrez votre nom complet"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Adresse Email</label>
@@ -412,7 +581,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Demandes Spéciales</label>
-                                    <textarea id="message" name="message" placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
+                                    <textarea id="message" name="message"
+                                        placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
                                 </div>
                                 <button type="submit" class="luxury-cta">
                                     <span class="cta-text">Demander Réservation</span>
@@ -479,7 +649,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui durent toute une vie.</p>
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Liens Rapides</h4>
@@ -496,8 +667,10 @@
                     <h4>Informations de Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Maroc</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">

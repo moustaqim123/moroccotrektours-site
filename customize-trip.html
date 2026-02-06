@@ -22,8 +22,6 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Logo Entrance Animation -->
-    <link rel="stylesheet" href="css/logo-entrance.css">
     <!-- Mobile Optimizations -->
     <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Hreflang tags -->
@@ -40,6 +38,26 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <style>
+        /* Modern Hero Styling for Internal Pages */
+        .hero-section {
+            background-image: url('images/hero/hero_customize.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/hero/hero_customize_mobile.jpg') !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -103,8 +121,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small"
-        style="background-image: url('images/hero/hero_customize.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header class="hero-section"
+        style="--hero-desktop: url('images/hero/hero_customize.jpg'); --hero-mobile: url('images/hero/hero_customize_mobile.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Customize Your Trip</h1>
             <p class="hero-description">Your journey, your rhythm, your memories. Let's create something unique.</p>

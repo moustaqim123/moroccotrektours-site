@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,29 +11,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Happy Valley | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Luxury Pricing CSS -->
     <link rel="stylesheet" href="css/luxury-pricing.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -51,6 +48,30 @@
       "priceRange": "$$"
     }
     </script>
+    <style>
+        /* Modern Hero Styling */
+        .tour-hero {
+            height: 100vh !important;
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+        }
+
+        @media (max-width: 768px) {
+            .tour-hero {
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -59,8 +80,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -79,7 +101,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -89,23 +111,159 @@
                     <ul class="lang-dropdown">
                         <li><a href="tour-ait-bougmez.html" class="active">English</a></li>
                         <li><a href="tour-ait-bougmez-fr.html">Français</a></li>
-                        </ul>
+                    </ul>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Tour Content -->
-    <header class="tour-hero" style="background-image: url('images/happy_valley_main1.jpg');">
-            <div class="tour-hero-content">
-                <h1 class="tour-hero-title">The Happy Valley</h1>
-                <div class="tour-hero-meta">
-                    <span><i class="far fa-clock"></i> 3 Days</span>
-                    <span><i class="fas fa-tachometer-alt"></i> Easy</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Aït Bougmez Valley</span>
+    <!-- Hero Section -->
+    <div style="position: sticky; top: 0; width: 100%; height: 100vh; z-index: 1;">
+        <!-- Background Image -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/happy_valley_main1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 1;
+        "></div>
+        
+        <!-- Overlay -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        "></div>
+        
+        <!-- Content -->
+        <div class="container" style="position: relative; z-index: 3; height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+            <div style="color: #fff; max-width: 800px;">
+                <h1 style="
+                    font-size: 2.8rem;
+                    margin-bottom: 1rem;
+                    color: #fff;
+                    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+                ">The Happy Valley</h1>
+                
+                <div style="display: flex; gap: 20px; margin: 20px 0; font-size: 1.1rem;">
+                    <span><i class="fas fa-tachometer-alt" style="color: #f39c12;"></i> Easy</span>
+                    <span><i class="fas fa-map-marker-alt" style="color: #f39c12;"></i> Aït Bougmez Valley</span>
+                    <span><i class="far fa-clock" style="color: #f39c12;"></i> 3 Days</span>
                 </div>
+                
+                <a href="#book-now" class="btn btn-primary" style="
+                    display: inline-block;
+                    padding: 12px 30px;
+                    background-color: #e67e22;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                ">Book Now</a>
             </div>
-    </header>
+        </div>
+    </div>
+    
+    <style>
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/happy_valley_main1.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .hero-meta {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-meta i {
+            margin-right: 5px;
+            color: #f39c12;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/happy_valley_main1.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 
     <section class="section-padding">
         <div class="container">
@@ -129,144 +287,80 @@
                         <li><i class="fas fa-apple-alt"></i> Apple orchards and terraced agricultural fields</li>
                         <li><i class="fas fa-landmark"></i> Sidi Moussa granary with 360° panoramic views</li>
                         <li><i class="fas fa-paw"></i> Dinosaur tracks at Ibakliwin (Jurassic period)</li>
-                        <li><i class="fas fa-home"></i> Nights in traditional Berber gîtes</li>
-                        <li><i class="fas fa-users"></i> Meet local artisans and farmers</li>
-                        <li><i class="fas fa-mug-hot"></i> Share mint tea and traditional meals with families</li>
+                        <li><i class="fas fa-home"></i> Authentic nights in traditional Berber gîtes</li>
+                        <li><i class="fas fa-users"></i> Warm hospitality and cultural exchanges</li>
+                        <li><i class="fas fa-mountain"></i> Easy walks suitable for all fitness levels</li>
                     </ul>
 
-                    <!-- Day-by-Day Itinerary -->
-                    <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-color);">Day-by-Day Itinerary
-                    </h3>
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">Itinerary</h3>
 
-                    <div style="margin-bottom: 25px;">
-                        <h4 style="color: var(--text-dark); margin-bottom: 10px;"><strong>Day 1: Marrakech → Agouti →
-                                Tabant</strong></h4>
-                        <p>Depart Marrakech and drive through the scenic Ouzoud region. Arrive in Agouti village and
-                            begin a gentle trek through walnut groves and terraced fields to Tabant, the valley's main
-                            village. Settle into a traditional gîte and enjoy a home-cooked Berber dinner.</p>
-                        <p><strong>Trekking:</strong> 2-3 hours | <strong>Elevation:</strong> Minimal</p>
+                    <div class="itinerary-step">
+                        <span class="itinerary-day-title">Day 1: Marrakech → Aït Bougmez Valley</span>
+                        <p>Depart Marrakech early morning for a scenic 4-hour drive through the Atlas Mountains. Arrive
+                            in Aït Bougmez, settle into your traditional gîte, and enjoy a welcome lunch. In the
+                            afternoon, take a gentle walk through the valley to visit local villages and apple orchards.
+                            Dinner and overnight at the gîte.</p>
                     </div>
 
-                    <div style="margin-bottom: 25px;">
-                        <h4 style="color: var(--text-dark); margin-bottom: 10px;"><strong>Day 2: Tabant → Ibakliwin →
-                                Dinosaur Tracks</strong></h4>
-                        <p>Trek to the village of Ibakliwin, famous for its well-preserved dinosaur footprints embedded
-                            in rock formations. Your local guide will explain the geological history. Continue through
-                            scenic valleys with views of traditional kasbahs. Overnight in a family-run gîte.</p>
-                        <p><strong>Trekking:</strong> 4-5 hours | <strong>Highlights:</strong> Dinosaur tracks, kasbahs
-                        </p>
+                    <div class="itinerary-step">
+                        <span class="itinerary-day-title">Day 2: Sidi Moussa Granary & Dinosaur Tracks</span>
+                        <p>After breakfast, hike to the ancient Sidi Moussa granary perched on a hilltop, offering
+                            stunning 360° views of the valley. Continue to Ibakliwin to see the famous dinosaur
+                            footprints preserved in rock. Return to the gîte for lunch, then spend the afternoon
+                            exploring nearby villages or relaxing. Evening cultural exchange with local families.</p>
                     </div>
 
-                    <div style="margin-bottom: 25px;">
-                        <h4 style="color: var(--text-dark); margin-bottom: 10px;"><strong>Day 3: Arouss Village → Sidi
-                                Moussa Granary</strong></h4>
-                        <p>Hike to Arouss village and climb to the ancient Sidi Moussa granary (agadir), perched on a
-                            hilltop with breathtaking 360° views of the entire valley and surrounding peaks. Learn about
-                            traditional grain storage methods. Descend and spend the evening with a local family,
-                            experiencing authentic Berber hospitality.</p>
-                        <p><strong>Trekking:</strong> 3-4 hours | <strong>Highlights:</strong> Panoramic views, cultural
-                            immersion</p>
+                    <div class="itinerary-step">
+                        <span class="itinerary-day-title">Day 3: Valley Exploration → Return to Marrakech</span>
+                        <p>Morning walk through terraced fields and traditional irrigation systems. Visit a local
+                            cooperative to learn about traditional crafts. After lunch, depart for Marrakech, arriving
+                            in the late afternoon with unforgettable memories of the Happy Valley.</p>
                     </div>
 
-                    <div style="margin-bottom: 25px;">
-                        <h4 style="color: var(--text-dark); margin-bottom: 10px;"><strong>Day 4: Valley Trek → Ouzoud →
-                                Marrakech</strong></h4>
-                        <p>Final morning trek through apple orchards and agricultural terraces. Drive to Ouzoud to visit
-                            Morocco's famous waterfalls (optional). Return to Marrakech in the late afternoon, arriving
-                            around 6:00 PM.</p>
-                        <p><strong>Trekking:</strong> 2-3 hours | <strong>Optional:</strong> Ouzoud Waterfalls visit</p>
-                    </div>
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">Accommodation &
+                        Meals</h3>
+                    <ul class="info-list">
+                        <li><strong>Accommodation:</strong> 2 nights in traditional Berber gîtes with shared facilities.
+                            Clean, comfortable, and authentic mountain lodging.</li>
+                        <li><strong>Meals:</strong> Full board included (breakfast, lunch, dinner). Traditional Berber
+                            cuisine prepared with local ingredients. Vegetarian options available.</li>
+                    </ul>
 
-                    <!-- What to Bring -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">What to Bring</h3>
-                    <ul class="packing-list">
-                        <li>Comfortable trekking shoes (trail runners acceptable)</li>
-                        <li>Light daypack (20-30L)</li>
-                        <li>Layers for variable weather (light jacket, fleece)</li>
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">What to Bring</h3>
+                    <ul class="info-list">
+                        <li>Comfortable walking shoes (hiking boots not necessary)</li>
+                        <li>Light layers for varying temperatures</li>
                         <li>Sun protection (hat, sunglasses, sunscreen)</li>
-                        <li>Water bottle (1.5L capacity)</li>
-                        <li>Camera for cultural and landscape photography</li>
-                        <li>Small gifts for host families (optional: tea, sweets)</li>
+                        <li>Camera for capturing stunning landscapes</li>
                         <li>Personal toiletries and medications</li>
+                        <li>Small daypack for daily excursions</li>
                     </ul>
 
-                    <!-- Know Before You Go -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">Know Before You Go
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">Fitness & Difficulty
                     </h3>
+                    <p>This is an <strong>Easy</strong> trek suitable for all fitness levels. Daily walks are 2-4 hours
+                        at a gentle pace with minimal elevation gain. Perfect for families, seniors, and those seeking a
+                        cultural experience rather than a physical challenge.</p>
+
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">Good to Know</h3>
                     <ul class="info-list">
-                        <li><strong>Altitude:</strong> Valley elevation 1,800-2,200m. No altitude concerns.</li>
-                        <li><strong>Difficulty:</strong> Moderate - suitable for anyone with basic fitness.</li>
-                        <li><strong>Cultural sensitivity:</strong> Dress modestly (shoulders and knees covered). Ask
-                            permission before photographing people.</li>
-                        <li><strong>Language:</strong> Local Berber (Tamazight) spoken. Guides speak English/French.
-                        </li>
-                        <li><strong>Connectivity:</strong> Limited mobile signal in the valley.</li>
+                        <li>The valley is at moderate altitude (1,800-2,200m) - no altitude sickness concerns</li>
+                        <li>Dress modestly when visiting villages (shoulders and knees covered)</li>
+                        <li>Basic French or Arabic phrases are appreciated by locals</li>
+                        <li>Mobile phone signal is limited in the valley</li>
+                        <li>Electricity may be limited in gîtes - bring a power bank</li>
                     </ul>
 
-                    <!-- Fitness Requirements -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">Fitness Requirements
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">Best Time to Visit
                     </h3>
-                    <p>This trek is rated <strong>Moderate</strong>. You should be able to:</p>
-                    <ul class="info-list">
-                        <li>Walk 3-5 hours per day at a leisurely pace</li>
-                        <li>Handle gentle ascents and descents</li>
-                        <li>Adapt to basic accommodation (shared facilities)</li>
-                        <li>No previous trekking experience required</li>
-                    </ul>
-
-                    <!-- Accommodation & Food -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">Accommodation &amp; Food
-                    </h3>
-                    <p><strong>Accommodation:</strong> 3 nights in traditional Berber gîtes (family-run guesthouses).
-                        Rooms are simple but clean, with shared bathrooms. Mattresses and blankets provided.</p>
-                    <p><strong>Meals:</strong> All meals included from lunch Day 1 to lunch Day 4. Enjoy authentic
-                        home-cooked Berber cuisine including tagines, couscous, fresh bread, and mint tea. Vegetarian
-                        options always available.</p>
-
-                    <!-- Climate -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">Climate &amp; Best
-                        Season</h3>
-                    <p><strong>Best time:</strong> April to October (pleasant valley climate)</p>
-                    <p><strong>Temperature range:</strong></p>
-                    <ul class="info-list">
-                        <li>Spring/Autumn: 15-25°C daytime, 5-10°C nighttime</li>
-                        <li>Summer: 25-35°C daytime, 10-15°C nighttime</li>
-                        <li>Winter: Possible but colder (0-15°C)</li>
-                    </ul>
-
-                    <!-- Meeting Point -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">Meeting Point</h3>
-                    <p><strong>Location:</strong> Imlil - Asni - Morocco</p>
-                    <p><strong>Time:</strong> 8:00 AM on Day 1</p>
-                    <p>We provide pickup from your Marrakech accommodation (included in price).</p>
-
-                    <!-- Included / Excluded -->
-                    <h3 style="margin-top: 40px; margin-bottom: 15px; color: var(--primary-color);">What's Included</h3>
-                    <ul class="info-list">
-                        <li>Professional local guide (English/French speaking)</li>
-                        <li>3 nights accommodation in traditional gîtes
-                        </li>
-                        <li>All meals (lunch Day 1 to lunch Day 4)</li>
-                        <li>Transportation Marrakech → valley → Marrakech</li>
-                        <li>Mule support for luggage</li>
-                        <li>Entrance fees to dinosaur tracks site</li>
-                    </ul>
-
-                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-color);">What's Not Included
-                    </h3>
-                    <ul class="info-list">
-                        <li>Travel insurance (recommended)</li>
-                        <li>Personal trekking gear</li>
-                        <li>Tips for guides and hosts</li>
-                        <li>Drinks and snacks</li>
-                        <li>Optional Ouzoud Waterfalls entrance (small fee)</li>
-                    </ul>
-
+                    <p>The Happy Valley is beautiful year-round, but the best times are <strong>April to June</strong>
+                        (spring flowers and green landscapes) and <strong>September to November</strong> (apple harvest
+                        season and autumn colors). Winter (December-March) can be cold with occasional snow, while
+                        summer (July-August) is warm and pleasant.</p>
                 </div>
 
-                <!-- Sidebar (standardized) -->
-                <aside class="tour-sidebar">
-                    <!-- Premium Dynamic Pricing & Booking Section -->
+                <div class="tour-sidebar">
+                    <!-- Premium Pricing Section -->
                     <div class="luxury-pricing-section">
                         <!-- Step 1: Itinerary Selection -->
                         <div class="pricing-card floating-card" data-aos="fade-up" data-aos-delay="100">
@@ -275,13 +369,14 @@
                                 <h3 class="step-title">Select Your Itinerary</h3>
                             </div>
                             <div class="itinerary-options">
-                                <div class="itinerary-option-card active recommended" data-duration="4" data-label="The Happy Valley">
+                                <div class="itinerary-option-card active recommended" data-duration="3"
+                                    data-label="Happy Valley 3-Day Trek">
                                     <div class="itinerary-header">
-                                        <span class="itinerary-days">4 Days</span>
-                                        <span class="itinerary-badge popular">Cultural Trek</span>
+                                        <span class="itinerary-days">3 Days</span>
+                                        <span class="itinerary-badge popular">Most Popular</span>
                                     </div>
-                                    <h4 class="itinerary-name">The Happy Valley</h4>
-                                    <p class="itinerary-desc">Cultural immersion through traditional Berber villages and ancient dinosaur tracks</p>
+                                    <h4 class="itinerary-name">Happy Valley 3-Day Trek</h4>
+                                    <p class="itinerary-desc">Cultural immersion in Aït Bougmez Valley</p>
                                 </div>
                             </div>
                         </div>
@@ -294,23 +389,23 @@
                             </div>
 
                             <div class="group-size-section">
-                                <label class="section-label">Group</label>
+                                <label class="section-label">Number of Travelers</label>
                                 <div class="group-size-options">
                                     <div class="group-option" data-size="1">
-                                        <span class="size-label">1</span>
-                                        <span class="size-desc">Solo</span>
+                                        <span class="size-label">Solo</span>
+                                        <span class="size-desc">Private guide</span>
                                     </div>
                                     <div class="group-option active" data-size="2-3">
                                         <span class="size-label">2–3</span>
-                                        <span class="size-desc">Small</span>
+                                        <span class="size-desc">Small group</span>
                                     </div>
                                     <div class="group-option" data-size="4-7">
                                         <span class="size-label">4–7</span>
-                                        <span class="size-desc">Medium</span>
+                                        <span class="size-desc">Medium group</span>
                                     </div>
                                     <div class="group-option" data-size="8-12">
                                         <span class="size-label">8–12</span>
-                                        <span class="size-desc">Large</span>
+                                        <span class="size-desc">Large group</span>
                                     </div>
                                 </div>
                             </div>
@@ -322,14 +417,14 @@
                                         <span class="season-icon">☀️</span>
                                         <div class="season-info">
                                             <span class="season-name">Summer</span>
-                                            <span class="season-dates">Apr - Oct</span>
+                                            <span class="season-dates">Apr - Nov</span>
                                         </div>
                                     </div>
                                     <div class="season-option" data-season="winter">
                                         <span class="season-icon">❄️</span>
                                         <div class="season-info">
                                             <span class="season-name">Winter</span>
-                                            <span class="season-dates">Nov - Mar</span>
+                                            <span class="season-dates">Dec - Mar</span>
                                         </div>
                                     </div>
                                 </div>
@@ -342,20 +437,20 @@
                                 <span class="price-label">Your Adventure Price</span>
                                 <div class="price-amount">
                                     <span class="currency">€</span>
-                                    <span class="price" id="dynamicPrice">580</span>
+                                    <span class="price" id="dynamicPrice">280</span>
                                     <span class="price-unit">/ person</span>
                                 </div>
                                 <div class="price-details">
-                                    <span class="price-microcopy">Price per person · 4-day cultural trek · No hidden fees</span>
+                                    <span class="price-microcopy">Per person · No hidden fees</span>
                                 </div>
                             </div>
                             <div class="price-breakdown">
                                 <div class="breakdown-item">
                                     <span class="breakdown-label">Itinerary:</span>
-                                    <span class="breakdown-value" id="selectedItinerary">The Happy Valley</span>
+                                    <span class="breakdown-value" id="selectedItinerary">Happy Valley 3-Day Trek</span>
                                 </div>
                                 <div class="breakdown-item">
-                                    <span class="breakdown-label">Group Size:</span>
+                                    <span class="breakdown-label">Group size:</span>
                                     <span class="breakdown-value" id="selectedGroupSize">2–3 people</span>
                                 </div>
                                 <div class="breakdown-item">
@@ -394,7 +489,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Full Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email Address</label>
@@ -406,7 +502,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Special Requests</label>
-                                    <textarea id="message" name="message" placeholder="Any special requirements or questions..." rows="3"></textarea>
+                                    <textarea id="message" name="message"
+                                        placeholder="Any dietary requirements or special requests..."
+                                        rows="3"></textarea>
                                 </div>
                                 <button type="submit" class="luxury-cta">
                                     <span class="cta-text">Request Booking</span>
@@ -415,40 +513,15 @@
                             </form>
                         </div>
 
-                        <!-- Included Services -->
-                        <div class="included-card floating-card" data-aos="fade-up" data-aos-delay="500">
-                            <h4 class="included-title">What's Included</h4>
-                            <ul class="included-list">
-                                <li><i class="fas fa-check"></i> Professional local guide</li>
-                                <li><i class="fas fa-check"></i> 3 nights accommodation in gîtes</li>
-                                <li><i class="fas fa-check"></i> All meals (lunch Day 1 to lunch Day 4)</li>
-                                <li><i class="fas fa-check"></i> Transportation Marrakech → valley → Marrakech</li>
-                                <li><i class="fas fa-check"></i> Mule support for luggage</li>
-                                <li><i class="fas fa-check"></i> Entrance fees to dinosaur tracks site</li>
-                            </ul>
-                        </div>
-
-                        <!-- Not Included -->
-                        <div class="not-included-card floating-card" data-aos="fade-up" data-aos-delay="600">
-                            <h4 class="not-included-title">Not Included</h4>
-                            <ul class="not-included-list">
-                                <li><i class="fas fa-times"></i> Travel insurance</li>
-                                <li><i class="fas fa-times"></i> Personal trekking gear</li>
-                                <li><i class="fas fa-times"></i> Tips for guides and hosts</li>
-                                <li><i class="fas fa-times"></i> Drinks and snacks</li>
-                                <li><i class="fas fa-times"></i> Optional Ouzoud Waterfalls entrance</li>
-                            </ul>
-                        </div>
-
                         <!-- Contact Assurance -->
-                        <div class="assurance-card floating-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="assurance-card floating-card" data-aos="fade-up" data-aos-delay="500">
                             <div class="assurance-content">
                                 <div class="assurance-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
                                 <div class="assurance-text">
-                                    <h4>Adventure Guaranteed</h4>
-                                    <p>Expert guides • Flexible booking • 24/7 support</p>
+                                    <h4>Guaranteed Adventure</h4>
+                                    <p>Expert guides · Flexible booking · 24/7 support</p>
                                 </div>
                             </div>
                             <div class="assurance-contact">
@@ -463,7 +536,7 @@
                             </div>
                         </div>
                     </div>
-                </aside>
+                </div>
 
             </div>
         </div>
@@ -475,26 +548,28 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
+                    <p>Your trusted partner for Atlas mountain and Sahara desert adventures. We create memories that
                         last a lifetime.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="tours.html">Our Tours</a></li>
+                        <li><a href="tours.html">Tours</a></li>
                         <li><a href="customize-trip.html">Customize Trip</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="blog.html">Guide</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Info</h4>
+                    <h4>Contact Information</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                 </div>
@@ -506,7 +581,8 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -515,11 +591,11 @@
         <div class="sticky-booking-content">
             <div class="sticky-info">
                 <div class="sticky-details">
-                    <span class="sticky-itinerary" id="stickyItinerary">The Happy Valley</span>
+                    <span class="sticky-itinerary" id="stickyItinerary">Happy Valley 3-Day Trek</span>
                     <span class="sticky-meta" id="stickyMeta">2–3 people · Summer</span>
                 </div>
                 <div class="sticky-price">
-                    €<span id="stickyPrice">580</span>/person
+                    €<span id="stickyPrice">280</span>/person
                 </div>
             </div>
             <button class="sticky-cta" onclick="scrollToBooking()">Book Now</button>
@@ -530,11 +606,6 @@
     <script src="js/main.js"></script>
     <!-- Luxury Pricing JavaScript -->
     <script src="js/luxury-pricing.js"></script>
-    
+</body>
 
-
-
-
-
-
-</body></html>
+</html>

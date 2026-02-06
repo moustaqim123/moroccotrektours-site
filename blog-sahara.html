@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,27 +11,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sahara Desert | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -49,6 +56,25 @@
       "priceRange": "$$"
     }
     </script>
+    <style>
+        /* Modern Hero Styling */
+        .hero-section {
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,8 +82,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -76,7 +103,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html" class="active">Guide</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -86,14 +113,14 @@
                     <ul class="lang-dropdown">
                         <li><a href="blog-sahara.html" class="active">English</a></li>
                         <li><a href="blog-sahara-fr.html">Français</a></li>
-                        </ul>
+                    </ul>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" style="background-image: url('images/sahara_morocco.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header class="hero-section hero-small" style="--hero-desktop: url('images/sahara_morocco.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">The Sahara Desert</h1>
             <p class="hero-description">Where the earth meets the sky in a sea of gold.</p>
@@ -129,7 +156,8 @@
 
                         <!-- Item 1 -->
                         <div>
-                            <img src="images/ait_bougmez.jpg" alt="Camel Trekking Sahara" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/ait_bougmez.jpg" alt="Camel Trekking Sahara"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Camel Trekking</h3>
                             <p>The traditional way to enter the dunes. Swaying atop a dromedary as the sun begins to set
                                 paints the desert in incredible hues. It’s a slow, rhythmic journey that connects you to
@@ -138,7 +166,8 @@
 
                         <!-- Item 2 -->
                         <div>
-                            <img src="images/sahara_1.jpg" alt="Night Camp Sahara" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/sahara_1.jpg" alt="Night Camp Sahara"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Under the Stars</h3>
                             <p>Stay in our luxury tented camps or traditional bivouacs. Enjoy a tagine by the campfire,
                                 listen to traditional Gnawa music, and sleep in the profound quiet of the desert night.
@@ -147,7 +176,8 @@
 
                         <!-- Item 3 -->
                         <div>
-                            <img src="images/petit-desert-en-4X4-Agadir.jpg" alt="4x4 Desert Adventure" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/petit-desert-en-4X4-Agadir.jpg" alt="4x4 Desert Adventure"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>4x4 Exploration</h3>
                             <p>For a faster pace, a 4x4 tour around the dunes reveals hidden oases, fossil beds, and the
                                 black volcanic rock desert (Hamada) that borders the sands. Visit nomadic families to
@@ -167,7 +197,7 @@
             <h2 class="section-title">Local Tips</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    
+
                     <h3>The Cheich</h3>
                     <p>Buy a local turban (cheich). It’s not just for looks; it protects your face from the wind, sun,
                         and sand, and keeps you cool.</p>
@@ -214,8 +244,10 @@
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -231,17 +263,20 @@
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
 
     <script src="js/main.js"></script>
-    
 
 
 
 
 
 
-</body></html>
+
+</body>
+
+</html>

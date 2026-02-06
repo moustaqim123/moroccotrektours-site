@@ -41,6 +41,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
+    <style>
+        /* Modern Hero Styling for Internal Pages */
+        .hero-section {
+            background-image: url('images/hero/hero_about.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/hero/hero_about_mobile.jpg') !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -103,8 +123,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small"
-        style="background-image: url('images/hero/hero_about.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header class="hero-section"
+        style="--hero-desktop: url('images/hero/hero_about.jpg'); --hero-mobile: url('images/hero/hero_about_mobile.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Our Story</h1>
             <p class="hero-description">Driven by passion for the mountains and a commitment to authentic travel

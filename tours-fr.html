@@ -37,19 +37,28 @@
 
         /* Hero Section - Luxury Style */
         .hero-section {
-            height: 70vh;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-                url('images/hero/hero_tours.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            color: #fff;
-            margin-top: 100px;
+            height: 100vh !important;
+            --hero-desktop: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url('images/hero/hero_tours.jpg');
+            --hero-mobile: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url('images/hero/hero_tours_mobile.jpg');
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            position: relative !important;
+            color: #fff !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh !important;
+                background-attachment: scroll !important;
+                margin-top: 0 !important;
+            }
         }
 
         .hero-content {
@@ -763,8 +772,8 @@
                             <!-- Card 1: Toubkal -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/toubkal/toubkal_summit.jpg"
-                                        alt="Défi du Sommet du Mont Toubkal" class="card-image" loading="lazy">
+                                    <img src="images/tours/toubkal/toubkal_summit1.jpg" alt="Défi du Sommet du Toubkal"
+                                        class="card-image" loading="lazy">
                                     <span class="card-badge badge-customizable">Personnalisable</span>
                                 </div>
                                 <div class="card-content">
@@ -788,7 +797,7 @@
                             <!-- Card 4: M'Goun Expedition -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/mgoun/mgoun_main.jpg" alt="Expédition Sommet M'Goun"
+                                    <img src="images/tours/mgoun/mgoun_main1.jpeg" alt="Expédition au Sommet M'Goun"
                                         class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Très Difficile</span>
                                 </div>
@@ -812,8 +821,8 @@
                             <!-- Card 5: Jebel Saghro -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/saghro/saghro_main.jpg" alt="Jebel Saghro Paysage Volcanique"
-                                        class="card-image" loading="lazy">
+                                    <img src="images/tours/saghro/saghro_main1.jpg"
+                                        alt="Paysage Volcanique Jebel Saghro" class="card-image" loading="lazy">
                                     <span class="card-badge badge-moderate">Modéré</span>
                                 </div>
                                 <div class="card-content">
@@ -878,8 +887,8 @@
                             <!-- Card 7: Sahara Erg Chebbi -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/sahara/sahara_erg_chebbi.jpg"
-                                        alt="Désert du Sahara Erg Chebbi Dunes" class="card-image" loading="lazy">
+                                    <img src="images/tours/sahara/sahara_erg_chebbi1.jpeg"
+                                        alt="Dunes du Désert du Sahara Erg Chebbi" class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Difficile</span>
                                 </div>
                                 <div class="card-content">
@@ -902,7 +911,7 @@
                             <!-- Card 8: Agafay Desert -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/agafay/agafay_desert.jpg" alt="Désert d'Agafay Paysages"
+                                    <img src="images/tours/agafay/agafay_desert1.jpg" alt="Paysages Désert d'Agafay"
                                         class="card-image" loading="lazy">
                                     <span class="card-badge badge-easy">Personnalisable</span>
                                 </div>
@@ -992,8 +1001,8 @@
                             <!-- Card: 10-Day Morocco Adventure -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/tour-10-days/tour-10-days-main.jpg"
-                                        alt="Grande Aventure de 10 Jours au Maroc" class="card-image" loading="lazy">
+                                    <img src="images/tours/tour-10-days/tour-10-days-main1.jpg"
+                                        alt="Grand Tour du Maroc 10 Jours" class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Difficile</span>
                                 </div>
                                 <div class="card-content">
@@ -1015,7 +1024,7 @@
                             <!-- Card 10: The Happy Valley -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/happy_valley/happy_valley_main.jpg"
+                                    <img src="images/happy_valley_main1.jpg"
                                         alt="Aït Bougmez Vallée Heureuse Trek Culturel" class="card-image"
                                         loading="lazy">
                                     <span class="card-badge badge-moderate">Modéré</span>
@@ -1064,7 +1073,7 @@
                             <!-- Card 12: Ouzoud Waterfalls -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/ouzoud_card1.jpg" alt="Cascades d'Ouzoud et Lac Bin El Ouidane"
+                                    <img src="images/ouzoud_card.jpg" alt="Cascades d'Ouzoud et Lac Bin El Ouidane"
                                         class="card-image" loading="lazy">
                                     <span class="card-badge badge-easy">Facile</span>
                                 </div>
@@ -1088,7 +1097,7 @@
                             <!-- Card 13: Todra & Dades -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/tours/todra_dades/todra_dades.jpg"
+                                    <img src="images/tours/todra_dades/todra_dades1.jpg"
                                         alt="Gorges du Todra Expédition Canyon" class="card-image" loading="lazy">
                                     <span class="card-badge badge-challenging">Difficile</span>
                                 </div>
@@ -1112,8 +1121,8 @@
                             <!-- Card 14: Essaouira -->
                             <article class="luxury-tour-card" tabindex="0">
                                 <div class="card-image-wrapper">
-                                    <img src="images/guide_coastal_vibes1.jpg" alt="Essaouira Côte & Forêt d'Argan"
-                                        class="card-image" loading="lazy">
+                                    <img src="images/tours/essaouira/guide_coastal_vibes1.jpg"
+                                        alt="Essaouira Côte & Forêt d'Argan" class="card-image" loading="lazy">
                                     <span class="card-badge badge-easy">Très Facile</span>
                                 </div>
                                 <div class="card-content">

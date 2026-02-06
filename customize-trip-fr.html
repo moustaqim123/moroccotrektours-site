@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,29 +11,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personnalisez Votre Voyage | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <style>
+        /* Modern Hero Styling for Internal Pages */
+        .hero-section {
+            background-image: url('images/hero/hero_customize.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/hero/hero_customize_mobile.jpg') !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -56,8 +81,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index-fr.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index-fr.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -76,7 +102,7 @@
                 <li><a href="about-fr.html">À Propos</a></li>
                 <li><a href="blog-fr.html">Guide</a></li>
                 <li><a href="contact-fr.html">Contact</a></li>
-            
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -93,7 +119,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" style="background-image: url('images/hero/hero_customize.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header class="hero-section"
+        style="--hero-desktop: url('images/hero/hero_customize.jpg'); --hero-mobile: url('images/hero/hero_customize_mobile.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Personnalisez Votre Voyage</h1>
             <p class="hero-description">Votre voyage, votre rythme, vos souvenirs. Créons quelque chose d'unique.</p>
@@ -106,7 +133,10 @@
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <h2 class="section-title">Concevez Votre Aventure de Rêve</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                    Chaque voyageur est différent. Que vous rêviez de dormir sous les étoiles du Sahara, de randonner sur des sentiers cachés de l'Atlas, ou d'explorer les médinas animées à votre propre rythme, nous sommes là pour le réaliser. Dites-nous ce qui vous passionne, et nous créerons un itinéraire qui correspond à votre style, votre confort et votre curiosité.
+                    Chaque voyageur est différent. Que vous rêviez de dormir sous les étoiles du Sahara, de randonner
+                    sur des sentiers cachés de l'Atlas, ou d'explorer les médinas animées à votre propre rythme, nous
+                    sommes là pour le réaliser. Dites-nous ce qui vous passionne, et nous créerons un itinéraire qui
+                    correspond à votre style, votre confort et votre curiosité.
                 </p>
             </div>
         </div>
@@ -122,24 +152,31 @@
                     <!-- Trip Details -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                         <div class="form-group">
-                            <label for="dates" style="display: block; margin-bottom: 5px; font-weight: 600;">Dates Approximatives</label>
-                            <input type="text" id="dates" name="dates" class="form-input" placeholder="ex. : 10-20 oct. 2024">
+                            <label for="dates" style="display: block; margin-bottom: 5px; font-weight: 600;">Dates
+                                Approximatives</label>
+                            <input type="text" id="dates" name="dates" class="form-input"
+                                placeholder="ex. : 10-20 oct. 2024">
                         </div>
                         <div class="form-group">
-                            <label for="travelers" style="display: block; margin-bottom: 5px; font-weight: 600;">Nombre de Voyageurs</label>
+                            <label for="travelers" style="display: block; margin-bottom: 5px; font-weight: 600;">Nombre
+                                de Voyageurs</label>
                             <input type="number" id="travelers" name="travelers" class="form-input" placeholder="2">
                         </div>
                     </div>
 
                     <!-- Regions -->
                     <div class="form-group" style="margin-bottom: 20px;">
-                        <label style="display: block; margin-bottom: 10px; font-weight: 600;">Régions Préférées (Sélectionnez toutes celles qui s'appliquent)</label>
+                        <label style="display: block; margin-bottom: 10px; font-weight: 600;">Régions Préférées
+                            (Sélectionnez toutes celles qui s'appliquent)</label>
                         <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                            <label style="cursor: pointer;"><input type="checkbox" name="region" value="atlas"> Montagnes de l'Atlas</label>
-                            <label style="cursor: pointer;"><input type="checkbox" name="region" value="sahara"> Désert du Sahara</label>
+                            <label style="cursor: pointer;"><input type="checkbox" name="region" value="atlas">
+                                Montagnes de l'Atlas</label>
+                            <label style="cursor: pointer;"><input type="checkbox" name="region" value="sahara"> Désert
+                                du Sahara</label>
                             <label style="cursor: pointer;"><input type="checkbox" name="region" value="cities">
                                 Villes Impériales (Fès, Marrakech)</label>
-                            <label style="cursor: pointer;"><input type="checkbox" name="region" value="coast"> Côte Atlantique</label>
+                            <label style="cursor: pointer;"><input type="checkbox" name="region" value="coast"> Côte
+                                Atlantique</label>
                         </div>
                     </div>
 
@@ -151,7 +188,8 @@
                                 Randonnée/Trekking</label>
                             <label style="cursor: pointer;"><input type="checkbox" name="interest" value="culture">
                                 Culture &amp; Histoire</label>
-                            <label style="cursor: pointer;"><input type="checkbox" name="interest" value="food"> Gastronomie &amp;
+                            <label style="cursor: pointer;"><input type="checkbox" name="interest" value="food">
+                                Gastronomie &amp;
                                 Cuisine</label>
                             <label style="cursor: pointer;"><input type="checkbox" name="interest" value="relax">
                                 Détente</label>
@@ -160,7 +198,8 @@
 
                     <!-- Accommodation -->
                     <div class="form-group">
-                        <label for="accommodation" style="display: block; margin-bottom: 5px; font-weight: 600;">Style d'Hébergement</label>
+                        <label for="accommodation" style="display: block; margin-bottom: 5px; font-weight: 600;">Style
+                            d'Hébergement</label>
                         <select id="accommodation" name="accommodation" class="form-input" style="height: 50px;">
                             <option value="standard">Standard (Maisons d'hôtes confortables)</option>
                             <option value="premium">Premium (Riads &amp; Kasbahs)</option>
@@ -177,19 +216,25 @@
                             <input type="text" id="name" name="name" class="form-input" required="">
                         </div>
                         <div class="form-group">
-                            <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Adresse Email</label>
+                            <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Adresse
+                                Email</label>
                             <input type="email" id="email" name="email" class="form-input" required="">
                         </div>
                     </div>
 
                     <!-- Special Requests -->
                     <div class="form-group" style="margin-top: 20px;">
-                        <label for="message" style="display: block; margin-bottom: 5px; font-weight: 600;">Parlez-nous davantage
+                        <label for="message" style="display: block; margin-bottom: 5px; font-weight: 600;">Parlez-nous
+                            davantage
                             de votre voyage de rêve</label>
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Est-ce une lune de miel ? Avez-vous des restrictions alimentaires ? Des éléments spécifiques sur votre liste de souhaits ?" style="height: 150px;"></textarea>
+                        <textarea id="message" name="message" class="form-textarea"
+                            placeholder="Est-ce une lune de miel ? Avez-vous des restrictions alimentaires ? Des éléments spécifiques sur votre liste de souhaits ?"
+                            style="height: 150px;"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; margin-top: 20px; font-size: 1.1rem;">Demander Mon Itinéraire Personnalisé</button>
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; border: none; margin-top: 20px; font-size: 1.1rem;">Demander Mon Itinéraire
+                        Personnalisé</button>
                     <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #666;">Aucun engagement
                         requis. Nous commencerons une conversation.</p>
                 </form>
@@ -205,17 +250,20 @@
                 <div class="feature-item">
                     <i class="fas fa-search-location feature-icon"></i>
                     <h3>Expertise Locale</h3>
-                    <p>Nous connaissons les joyaux cachés, les meilleurs points de vue et les maisons d'hôtes authentiques gérées par des familles qui ne sont pas dans les guides.</p>
+                    <p>Nous connaissons les joyaux cachés, les meilleurs points de vue et les maisons d'hôtes
+                        authentiques gérées par des familles qui ne sont pas dans les guides.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-user-friends feature-icon"></i>
                     <h3>Soin Personnalisé</h3>
-                    <p>Dès le moment où vous nous contactez jusqu'à votre retour à la maison, vous avez un expert dédié qui gère chaque détail.</p>
+                    <p>Dès le moment où vous nous contactez jusqu'à votre retour à la maison, vous avez un expert dédié
+                        qui gère chaque détail.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-hand-holding-heart feature-icon"></i>
                     <h3>Voyage Responsable</h3>
-                    <p>Votre voyage soutient directement les communautés montagnardes locales et respecte les environnements délicats que nous explorons.</p>
+                    <p>Votre voyage soutient directement les communautés montagnardes locales et respecte les
+                        environnements délicats que nous explorons.</p>
                 </div>
             </div>
         </div>
@@ -227,7 +275,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui
                         durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
@@ -245,8 +294,10 @@
                     <h4>Informations de Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Maroc</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -262,7 +313,8 @@
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -271,4 +323,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>

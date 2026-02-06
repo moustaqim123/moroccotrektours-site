@@ -22,6 +22,8 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Mobile Optimizations -->
+  <link rel="stylesheet" href="css/mobile-fixes.css">
   <!-- Luxury Pricing CSS -->
   <link rel="stylesheet" href="css/luxury-pricing.css">
   <!-- Hreflang tags -->
@@ -92,17 +94,152 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="tour-hero" style="background-image: url('images/tours/tour-10-days/tour-10-days-main.jpg');">
-    <div class="container">
-      <div class="tour-hero-content">
-        <h1 class="tour-hero-title">Grande Aventure de 10 Jours au Maroc</h1>
-        <div class="tour-hero-meta">
-          <span><i class="fas fa-tachometer-alt"></i> Difficile</span>
-          <span><i class="fas fa-map-marker-alt"></i> Grand Tour du Maroc</span>
+  <div style="position: sticky; top: 0; width: 100%; height: 100vh; z-index: 1;">
+    <!-- Background Image -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('images/tours/tour-10-days/tour-10-days-main1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: 1;
+    "></div>
+    
+    <!-- Overlay -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    "></div>
+    
+    <!-- Content -->
+    <div class="container" style="position: relative; z-index: 3; height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+      <div style="color: #fff; max-width: 800px;">
+        <h1 style="
+          font-size: 2.8rem;
+          margin-bottom: 1rem;
+          color: #fff;
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        ">Grande Aventure de 10 Jours au Maroc</h1>
+        
+        <div style="display: flex; gap: 20px; margin: 20px 0; font-size: 1.1rem;">
+          <span><i class="fas fa-tachometer-alt" style="color: #f39c12;"></i> Difficile</span>
+          <span><i class="fas fa-map-marker-alt" style="color: #f39c12;"></i> Grand Tour du Maroc</span>
+          <span><i class="far fa-clock" style="color: #f39c12;"></i> 10 Jours</span>
         </div>
+        
+        <a href="#book-now" class="btn btn-primary" style="
+          display: inline-block;
+          padding: 12px 30px;
+          background-color: #e67e22;
+          color: white;
+          text-decoration: none;
+          border-radius: 4px;
+          font-weight: 600;
+          margin-top: 20px;
+        ">Réserver Maintenant</a>
       </div>
     </div>
-  </header>
+  </div>
+  
+  <style>
+    @media (max-width: 768px) {
+      .hero-section {
+        background-image: url('/images/tours/tour-10-days/tour-10-days-main_mobile.jpg') !important;
+        min-height: 60vh;
+        text-align: center;
+      }
+      
+      .hero-content {
+        padding: 2rem 1rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .hero-meta {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .hero-title {
+        font-size: 1.8rem !important;
+      }
+    }
+  </style>
+
+  <style>
+    /* Hero Section Styles */
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    
+    .hero-title {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .hero-meta {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-meta i {
+      margin-right: 5px;
+      color: #f39c12;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        background-image: url('images/tours/tour-10-days/tour-10-days-main_mobile.jpg') !important;
+        min-height: 60vh;
+        text-align: center;
+      }
+      
+      .hero-content {
+        padding: 2rem 1rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .hero-meta {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .hero-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 
   <section class="section-padding">
     <div class="container">
@@ -346,13 +483,15 @@
                 <h3 class="step-title">Sélectionnez Votre Itinéraire</h3>
               </div>
               <div class="itinerary-options">
-                <div class="itinerary-option-card active recommended" data-duration="10" data-label="Aventure Maroc 10 Jours">
+                <div class="itinerary-option-card active recommended" data-duration="10"
+                  data-label="Aventure Maroc 10 Jours">
                   <div class="itinerary-header">
                     <span class="itinerary-days">10 Jours</span>
                     <span class="itinerary-badge popular">Grand Tour</span>
                   </div>
                   <h4 class="itinerary-name">Aventure Maroc 10 Jours</h4>
-                  <p class="itinerary-desc">Expérience Maroc ultime : Villes impériales, montagnes Atlas, désert Sahara et côtière Essaouira</p>
+                  <p class="itinerary-desc">Expérience Maroc ultime : Villes impériales, montagnes Atlas, désert Sahara
+                    et côtière Essaouira</p>
                 </div>
               </div>
             </div>
@@ -477,7 +616,8 @@
                 </div>
                 <div class="form-group">
                   <label for="message">Demandes Spéciales</label>
-                  <textarea id="message" name="message" placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
+                  <textarea id="message" name="message" placeholder="Exigences ou questions spéciales..."
+                    rows="3"></textarea>
                 </div>
                 <button type="submit" class="luxury-cta">
                   <span class="cta-text">Demander Réservation</span>

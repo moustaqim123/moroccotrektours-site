@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,27 +11,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fès : Le Cœur Culturel | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -49,6 +56,25 @@
       "priceRange": "$$"
     }
     </script>
+    <style>
+        /* Modern Hero Styling */
+        .hero-section {
+            background-image: var(--hero-desktop) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,8 +82,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index-fr.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index-fr.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -76,7 +103,7 @@
                 <li><a href="about-fr.html">À Propos</a></li>
                 <li><a href="blog-fr.html" class="active">Guide</a></li>
                 <li><a href="contact-fr.html">Contact</a></li>
-            
+
                 <li class="lang-switcher">
                     <button class="lang-btn">
                         <i class="fas fa-globe"></i>
@@ -93,7 +120,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small" style="background-image: url('images/1_hero_fes.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <header class="hero-section hero-small" style="--hero-desktop: url('images/1_hero_fes.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Fès</h1>
             <p class="hero-description">La Capitale Spirituelle et Gardienne des Traditions.</p>
@@ -107,12 +134,15 @@
                 <h2 class="section-title">Un Voyage dans le Passé</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 2rem;">
                     Entrer dans la médina de Fès el-Bali, c'est comme entrer dans un autre siècle. Avec plus de 9 000
-                    allées étroites, c'est la plus grande zone urbaine sans voiture au monde. Ici, les ânes sont encore le
-                    principal moyen de transport, et les artisans fabriquent du cuir, du cuivre et de la céramique en utilisant des techniques transmises
+                    allées étroites, c'est la plus grande zone urbaine sans voiture au monde. Ici, les ânes sont encore
+                    le
+                    principal moyen de transport, et les artisans fabriquent du cuir, du cuivre et de la céramique en
+                    utilisant des techniques transmises
                     de génération en génération.
                 </p>
                 <p style="font-size: 1.1rem;">
-                    Fès est le cœur intellectuel et spirituel du Maroc. C'est un lieu d'histoire profonde, d'architecture complexe
+                    Fès est le cœur intellectuel et spirituel du Maroc. C'est un lieu d'histoire profonde,
+                    d'architecture complexe
                     et d'un rythme de vie qui refuse d'être précipité. Visiter Fès, c'est comprendre l'âme
                     du pays.
                 </p>
@@ -130,28 +160,37 @@
 
                         <!-- Item 1 -->
                         <div>
-                            <img src="images/0_fes.jpg" loading="lazy" alt="Tanneries Chouara Fès" style="border-radius: 8px; margin-bottom: 15px;">
+                            <img src="images/0_fes.jpg" loading="lazy" alt="Tanneries Chouara Fès"
+                                style="border-radius: 8px; margin-bottom: 15px;">
                             <h3>Les Tanneries</h3>
-                            <p>L'odeur exaltante de la menthe (donnée pour masquer l'odeur) vous accueille lorsque vous regardez les
-                                cuves en nid d'abeille de teintures naturelles à la Tannery Chouara. C'est un spectacle coloré, chaotique,
+                            <p>L'odeur exaltante de la menthe (donnée pour masquer l'odeur) vous accueille lorsque vous
+                                regardez les
+                                cuves en nid d'abeille de teintures naturelles à la Tannery Chouara. C'est un spectacle
+                                coloré, chaotique,
                                 et fascinant qui est resté inchangé pendant des siècles.</p>
                         </div>
 
                         <!-- Item 2 -->
                         <div>
-                            <img src="images/2_fes.jpg" alt="Médersa Bou Inania" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/2_fes.jpg" alt="Médersa Bou Inania"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Architecture Islamique</h3>
-                            <p>Fès abrite certaines des plus belles architectures islamiques au monde. Visitez la Médersa Bou Inania
-                                pour voir des travaux de zellij exquis, du bois de cèdre sculpté et du plâtre stuc complexe
+                            <p>Fès abrite certaines des plus belles architectures islamiques au monde. Visitez la
+                                Médersa Bou Inania
+                                pour voir des travaux de zellij exquis, du bois de cèdre sculpté et du plâtre stuc
+                                complexe
                                 qui montre la maîtrise des artisans marocains.</p>
                         </div>
 
                         <!-- Item 3 -->
                         <div>
-                            <img src="images/4_fes.jpg" alt="Artisans de Fès" style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
+                            <img src="images/4_fes.jpg" alt="Artisans de Fès"
+                                style="border-radius: 8px; margin-bottom: 15px;" loading="lazy">
                             <h3>Ateliers d'Artisans</h3>
-                            <p>Passez du temps à regarder les potiers, les tisserands et les métalliers. Chaque quartier de la médina est
-                                dédié à un métier. Acheter directement à l'artisan n'est pas seulement un excellent souvenir mais
+                            <p>Passez du temps à regarder les potiers, les tisserands et les métalliers. Chaque quartier
+                                de la médina est
+                                dédié à un métier. Acheter directement à l'artisan n'est pas seulement un excellent
+                                souvenir mais
                                 soutient la préservation de ces compétences anciennes.</p>
                         </div>
 
@@ -170,19 +209,22 @@
                 <div class="feature-item">
                     <i class="fas fa-map-signs feature-icon"></i>
                     <h3>Se Perdre</h3>
-                    <p>Vous vous perdrez, et c'est normal. C'est partie de l'expérience de Fès. Si vous avez besoin d'aide, demandez à un
+                    <p>Vous vous perdrez, et c'est normal. C'est partie de l'expérience de Fès. Si vous avez besoin
+                        d'aide, demandez à un
                         commerçant des directions vers la porte principale ou un point de repère.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-hiking feature-icon"></i>
                     <h3>Chaussures Confortables</h3>
-                    <p>La médina implique beaucoup de marche sur un sol pavé et irrégulier. Laissez les talons derrière vous et portez
+                    <p>La médina implique beaucoup de marche sur un sol pavé et irrégulier. Laissez les talons derrière
+                        vous et portez
                         vos chaussures de marche les plus confortables.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-mosque feature-icon"></i>
                     <h3>Vendredi Matin</h3>
-                    <p>Le vendredi est le jour saint. De nombreuses boutiques de la médina seront fermées jusqu'à l'après-midi. C'est un
+                    <p>Le vendredi est le jour saint. De nombreuses boutiques de la médina seront fermées jusqu'à
+                        l'après-midi. C'est un
                         moment plus calme pour marcher et observer le côté spirituel de la ville.</p>
                 </div>
             </div>
@@ -197,7 +239,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui
                         durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
@@ -215,8 +258,10 @@
                     <h4>Informations de Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Maroc</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -232,13 +277,16 @@
         </div>
     </footer>
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="js/main.js"></script>
-    
 
 
 
-</body></html>
+
+</body>
+
+</html>

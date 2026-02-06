@@ -23,10 +23,10 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Logo Entrance Animation -->
-    <link rel="stylesheet" href="css/logo-entrance.css">
     <!-- Mobile Optimizations -->
     <link rel="stylesheet" href="css/mobile-fixes.css">
+    <!-- Page Transitions -->
+    <link rel="stylesheet" href="css/page-transitions.css">
     <!-- Hreflang tags -->
 
 
@@ -151,6 +151,21 @@
                 width: 100%;
             }
         }
+
+        /* Essential Fix for Homepage Hero Image */
+        .hero-section.home-hero {
+            background-image: url('images/hero/hero_home.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section.home-hero {
+                background-image: url('images/hero/hero_home_mobile.jpg') !important;
+                background-attachment: scroll !important;
+            }
+        }
     </style>
     <!-- Hreflang tags -->
 
@@ -228,9 +243,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section hero-small"
-        style="background-image: url('images/hero/hero_home.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <script src="js/cta-whatsapp-analytics.js"></script>
+    <header class="hero-section home-hero"
+        style="--hero-desktop: url('images/hero/hero_home.jpg'); --hero-mobile: url('images/hero/hero_home_mobile.jpg');">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Conquer the Peaks</h1>
             <p class="hero-description">Embark on the journey of a lifetime. Discover hidden trails, majestic summits,
@@ -472,15 +486,11 @@
         <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
     </div>
 
-
-
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
-
-
-
-
-
+    <script src="js/cta-whatsapp-analytics.js"></script>
+    <!-- Page Transitions -->
+    <script src="js/page-transitions.js"></script>
 </body>
 
 </html>

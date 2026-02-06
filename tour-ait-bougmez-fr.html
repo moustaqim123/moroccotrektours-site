@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
     <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
@@ -8,29 +11,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vallée Heureuse &amp; Trek d'Aït Bouguemez | Morocco Trek Tours</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-        
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Luxury Pricing CSS -->
     <link rel="stylesheet" href="css/luxury-pricing.css">
     <!-- Hreflang tags -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
@@ -58,8 +65,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-                        <a href="index-fr.html" class="logo">
-                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png" alt="Morocco Trek Tours" class="logo-img"></div>
+            <a href="index-fr.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
                 <div class="logo-text">
                     <div class="logo-title">
                         <span class="line">MOROCCO</span>
@@ -94,19 +102,153 @@
         </div>
     </nav>
 
-    <!-- Tour Hero Section -->
-    <header class="tour-hero" style="background-image: url('images/happy_valley_main1.jpg');">
-        <div class="container">
-            <div class="tour-hero-content">
-                <h1 class="tour-hero-title">Vallée Heureuse &amp; Trek d'Aït Bouguemez</h1>
-                <div class="tour-hero-meta">
-                    <span><i class="far fa-clock"></i> 2 Jours</span>
-                    <span><i class="fas fa-tachometer-alt"></i> Modéré</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Vallée Heureuse</span>
+    <!-- Hero Section -->
+    <div style="position: sticky; top: 0; width: 100%; height: 100vh; z-index: 1;">
+        <!-- Background Image -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/happy_valley_main1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 1;
+        "></div>
+        
+        <!-- Overlay -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        "></div>
+        
+        <!-- Content -->
+        <div class="container" style="position: relative; z-index: 3; height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+            <div style="color: #fff; max-width: 800px;">
+                <h1 style="
+                    font-size: 2.8rem;
+                    margin-bottom: 1rem;
+                    color: #fff;
+                    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+                ">Vallée Heureuse & Trek d'Aït Bouguemez</h1>
+                
+                <div style="display: flex; gap: 20px; margin: 20px 0; font-size: 1.1rem;">
+                    <span><i class="fas fa-tachometer-alt" style="color: #f39c12;"></i> Modéré</span>
+                    <span><i class="fas fa-map-marker-alt" style="color: #f39c12;"></i> Vallée Heureuse</span>
+                    <span><i class="far fa-clock" style="color: #f39c12;"></i> 2 Jours</span>
                 </div>
+                
+                <a href="#book-now" class="btn btn-primary" style="
+                    display: inline-block;
+                    padding: 12px 30px;
+                    background-color: #e67e22;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                ">Réserver Maintenant</a>
             </div>
         </div>
-    </header>
+    </div>
+    
+    <style>
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('/images/tours/happy_valley/happy_valley_main1_backup_mobile.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .hero-meta {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-meta i {
+            margin-right: 5px;
+            color: #f39c12;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/tours/happy_valley/happy_valley_main1_backup_mobile.jpg') !important;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 
     <!-- Main Content -->
     <section class="section-padding">
@@ -120,10 +262,15 @@
                     <div id="overview">
                         <h2>Aperçu du Voyage</h2>
                         <p class="tour-overview">
-                            Découvrez la vie rurale authentique du Maroc dans la belle Vallée Heureuse, aussi connue sous le nom d'Aït Bouguemez. Cette région préservée offre un aperçu rare de la vie berbère traditionnelle, loin des circuits touristiques habituels.
+                            Découvrez la vie rurale authentique du Maroc dans la belle Vallée Heureuse, aussi connue
+                            sous le nom d'Aït Bouguemez. Cette région préservée offre un aperçu rare de la vie berbère
+                            traditionnelle, loin des circuits touristiques habituels.
                         </p>
                         <p class="tour-overview">
-                            Durant ce trek de 2 jours, vous marcherez à travers des paysages spectaculaires de montagnes et de vallées, dormirez dans des maisons d'hôtes familiales authentiques et participerez à des activités quotidiennes avec les habitants locaux. C'est une immersion culturelle profonde dans la vie berbère.
+                            Durant ce trek de 2 jours, vous marcherez à travers des paysages spectaculaires de montagnes
+                            et de vallées, dormirez dans des maisons d'hôtes familiales authentiques et participerez à
+                            des activités quotidiennes avec les habitants locaux. C'est une immersion culturelle
+                            profonde dans la vie berbère.
                         </p>
 
 
@@ -131,7 +278,8 @@
 
                     <!-- Highlights -->
                     <div id="highlights" class="highlights-box">
-                        <h3><i class="fas fa-star" style="color:var(--accent-color); margin-right:10px;"></i> Points Forts
+                        <h3><i class="fas fa-star" style="color:var(--accent-color); margin-right:10px;"></i> Points
+                            Forts
                         </h3>
                         <ul>
                             <li>Nuits dans des maisons d'hôtes familiales berbères authentiques</li>
@@ -148,26 +296,38 @@
                         <h2>Itinéraire Détaillé</h2>
 
                         <div class="itinerary-step">
-                            <span class="itinerary-day-title">Jour 1 : Marrakech → Aït Bouguemez — Arrivée &amp; Accueil</span>
-                            <p>Nous quittons Marrakech tôt le matin pour un trajet de 2 heures vers la Vallée Heureuse. À notre arrivée dans le village d'Aït Bouguemez, nous sommes accueillis par notre famille d'accueil berbère. Après un thé de bienvenue, nous commençons une marche douce de 3 heures à travers les champs en terrasses et les vergers, apprenant sur l'agriculture locale et la vie rurale.</p>
+                            <span class="itinerary-day-title">Jour 1 : Marrakech → Aït Bouguemez — Arrivée &amp;
+                                Accueil</span>
+                            <p>Nous quittons Marrakech tôt le matin pour un trajet de 2 heures vers la Vallée Heureuse.
+                                À notre arrivée dans le village d'Aït Bouguemez, nous sommes accueillis par notre
+                                famille d'accueil berbère. Après un thé de bienvenue, nous commençons une marche douce
+                                de 3 heures à travers les champs en terrasses et les vergers, apprenant sur
+                                l'agriculture locale et la vie rurale.</p>
                         </div>
 
                         <div class="itinerary-step">
                             <span class="itinerary-day-title">Jour 1 : Après-midi — Vie Villageoise</span>
-                            <p>L'après-midi est consacré à l'immersion culturelle. Aidez à préparer le dîner traditionnel, participez aux tâches quotidiennes, ou détendez-vous avec les enfants du village. Le dîner est un festin préparé avec amour par votre famille d'accueil.</p>
+                            <p>L'après-midi est consacré à l'immersion culturelle. Aidez à préparer le dîner
+                                traditionnel, participez aux tâches quotidiennes, ou détendez-vous avec les enfants du
+                                village. Le dîner est un festin préparé avec amour par votre famille d'accueil.</p>
                         </div>
 
                         <div class="itinerary-step">
                             <span class="itinerary-day-title">Jour 2 : Exploration &amp; Retour</span>
-                            <p>Après le petit-déjeuner traditionnel, nous explorons davantage la vallée avec une randonnée plus longue (environ 4 heures) vers un point de vue panoramique. Au retour, nous partageons un dernier repas avant de retourner à Marrakech dans l'après-midi.</p>
+                            <p>Après le petit-déjeuner traditionnel, nous explorons davantage la vallée avec une
+                                randonnée plus longue (environ 4 heures) vers un point de vue panoramique. Au retour,
+                                nous partageons un dernier repas avant de retourner à Marrakech dans l'après-midi.</p>
                         </div>
                     </div>
 
                     <div id="accommodation">
                         <h2>Hébergement &amp; Repas</h2>
                         <ul class="info-list">
-                            <li><strong>Hébergement :</strong> 1 Nuit dans une maison d'hôtes familiale berbère authentique avec installations basiques.</li>
-                            <li><strong>Repas :</strong> Pension complète incluse (Petit-déjeuner, Déjeuner, Dîner). Tous les repas sont préparés par votre famille d'accueil utilisant des ingrédients locaux frais.</li>
+                            <li><strong>Hébergement :</strong> 1 Nuit dans une maison d'hôtes familiale berbère
+                                authentique avec installations basiques.</li>
+                            <li><strong>Repas :</strong> Pension complète incluse (Petit-déjeuner, Déjeuner, Dîner).
+                                Tous les repas sont préparés par votre famille d'accueil utilisant des ingrédients
+                                locaux frais.</li>
                         </ul>
                     </div>
 
@@ -185,7 +345,9 @@
 
                     <div id="fitness">
                         <h2>Condition Physique &amp; Difficulté</h2>
-                        <p>Cette randonnée est <strong>Modérée</strong>. Elle implique une marche totale d'environ 6-7 heures sur 2 jours avec un dénivelé modéré. Le rythme est lent et adapté à une immersion culturelle plutôt qu'à un défi physique extrême.</p>
+                        <p>Cette randonnée est <strong>Modérée</strong>. Elle implique une marche totale d'environ 6-7
+                            heures sur 2 jours avec un dénivelé modéré. Le rythme est lent et adapté à une immersion
+                            culturelle plutôt qu'à un défi physique extrême.</p>
                     </div>
 
                     <div id="know-before">
@@ -200,7 +362,10 @@
 
                     <div id="best-time">
                         <h2>Meilleure Période</h2>
-                        <p>La Vallée Heureuse est accessible toute l'année, mais les périodes les plus agréables sont de <strong>septembre à juin</strong>. Évitez les fortes chaleurs estivales. La récolte d'automne (septembre-octobre) offre une expérience particulièrement enrichissante.</p>
+                        <p>La Vallée Heureuse est accessible toute l'année, mais les périodes les plus agréables sont de
+                            <strong>septembre à juin</strong>. Évitez les fortes chaleurs estivales. La récolte
+                            d'automne (septembre-octobre) offre une expérience particulièrement enrichissante.
+                        </p>
                     </div>
                 </div>
 
@@ -214,13 +379,15 @@
                                 <h3 class="step-title">Sélectionnez Votre Itinéraire</h3>
                             </div>
                             <div class="itinerary-options">
-                                <div class="itinerary-option-card active recommended" data-duration="4" data-label="La Vallée Heureuse">
+                                <div class="itinerary-option-card active recommended" data-duration="4"
+                                    data-label="La Vallée Heureuse">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">4 Jours</span>
                                         <span class="itinerary-badge popular">Trek Culturel</span>
                                     </div>
                                     <h4 class="itinerary-name">La Vallée Heureuse</h4>
-                                    <p class="itinerary-desc">Immersion culturelle à travers villages berbères traditionnels et traces de dinosaures</p>
+                                    <p class="itinerary-desc">Immersion culturelle à travers villages berbères
+                                        traditionnels et traces de dinosaures</p>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +452,8 @@
                                     <span class="price-unit">/ pers</span>
                                 </div>
                                 <div class="price-details">
-                                    <span class="price-microcopy">Prix par personne · Trek culturel 4 jours · Aucuns frais cachés</span>
+                                    <span class="price-microcopy">Prix par personne · Trek culturel 4 jours · Aucuns
+                                        frais cachés</span>
                                 </div>
                             </div>
                             <div class="price-breakdown">
@@ -333,7 +501,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nom Complet</label>
-                                    <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+                                    <input type="text" id="name" name="name" placeholder="Entrez votre nom complet"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Adresse Email</label>
@@ -345,7 +514,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Demandes Spéciales</label>
-                                    <textarea id="message" name="message" placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
+                                    <textarea id="message" name="message"
+                                        placeholder="Exigences ou questions spéciales..." rows="3"></textarea>
                                 </div>
                                 <button type="submit" class="luxury-cta">
                                     <span class="cta-text">Demander Réservation</span>
@@ -414,7 +584,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Morocco Trek Tours</h4>
-                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons des souvenirs qui
+                    <p>Votre partenaire de confiance pour les aventures dans l'Atlas et le désert du Sahara. Nous créons
+                        des souvenirs qui
                         durent toute une vie.</p>
                 </div>
                 <div class="footer-col">
@@ -432,8 +603,10 @@
                     <h4>Informations de Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Maroc</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040" style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040" style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
                     </ul>
                     <div style="margin-top: 15px;">
@@ -450,7 +623,8 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank" rel="noopener">
+    <a class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -482,4 +656,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>
