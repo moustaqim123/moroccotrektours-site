@@ -12,6 +12,10 @@
 }
 
 :root {
+    /* Hero Images */
+    --hero-desktop: url('../images/hero/azzaden-tamsoult-hero.jpg');
+    --hero-mobile: url('../images/hero/azzaden-tamsoult-hero-mobile.jpg');
+
     /* Color Palette */
     --primary-color: #004d33;
     /* Dark Emerald Green */

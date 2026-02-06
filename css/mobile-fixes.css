@@ -7,34 +7,51 @@
 img {
     max-width: 100%;
     height: auto;
+    -webkit-backface-visibility: hidden; /* Fix for mobile rendering */
+    backface-visibility: hidden; /* Standard property */
+    -webkit-transform: translateZ(0); /* Force hardware acceleration */
+    transform: translateZ(0); /* Standard property */
+    will-change: transform; /* Optimize animations */
+    image-rendering: -webkit-optimize-contrast; /* Improve image rendering */
 }
 
 .tour-hero,
 .hero-section {
-    height: 100vh !important;
+    min-height: 100vh;
+    height: auto !important;
     background-image: var(--hero-desktop) !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
+    background-attachment: scroll !important;
     margin-top: 0 !important;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 @media (max-width: 768px) {
+    /* Optimize rendering performance */
+    html, body {
+        -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+        -webkit-font-smoothing: antialiased; /* Improve text rendering */
+        text-rendering: optimizeSpeed; /* Optimize text rendering */
+    }
 
     .tour-hero,
     .hero-section {
         background-image: var(--hero-mobile, var(--hero-desktop)) !important;
         background-attachment: scroll !important;
-        /* Fixes gray areas/jitter on mobile */
         height: 60vh !important;
-        /* Optimized mobile height */
         min-height: 400px;
+        -webkit-transform: translate3d(0,0,0); /* Force hardware acceleration */
+        transform: translate3d(0,0,0);
+        backface-visibility: hidden;
+        perspective: 1000px; /* Enable 3D rendering context */
+        will-change: transform, opacity; /* Optimize animations */
     }
 }
 
