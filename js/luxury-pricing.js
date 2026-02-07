@@ -277,7 +277,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setupStickyBooking() {
         const stickyBooking = document.getElementById('stickyBooking');
+        const bookBtn = document.getElementById('bookNowBtn');
         let lastScrollY = window.scrollY;
+        
+        // Add click handler to Book Now button
+        if (bookBtn) {
+            bookBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open('https://wa.me/212659565040?text=Hello! I am interested in booking Mount Toubkal tour', '_blank');
+            });
+        }
         
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
@@ -430,3 +440,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// scrollToBooking function - Redirect to WhatsApp with booking details
+window.scrollToBooking = function() {
+    const itinerary = document.getElementById('stickyItinerary').textContent;
+    const meta = document.getElementById('stickyMeta').textContent;
+    const price = document.getElementById('stickyPrice').textContent;
+    
+    const message = encodeURIComponent(
+        `Hello! I'm interested in booking:\n\n` +
+        `Tour: ${itinerary}\n` +
+        `Details: ${meta}\n` +
+        `Price: €${price}/person\n\n` +
+        `Please provide more information about availability and booking process.`
+    );
+    
+    const whatsappUrl = `https://wa.me/212659565040?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+};

@@ -6,10 +6,13 @@
     <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
 
     <meta property="og:title" content="Morocco Trek Tours">
+    <meta property="og:description" content="Gateway To Authentic Adventures">
     <meta property="og:image" content="images/assets/icon-brand.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azaden & Tamsoult Tour | Flexible Day Options 1 to 4 | Morocco Trek Tours</title>
+    <meta name="description"
+        content="Choose your preferred day from 1 to 4 to explore Azaden and Tamsoult's most popular routes, scenic trails, and Atlas cultural highlights.">
 
     <!-- Google Fonts -->
     <link
@@ -48,7 +51,7 @@
         /* Modern Hero Styling - Force Full Height & Fixed Background */
         .tour-hero {
             height: 100vh !important;
-            background-image: url('images/destinations/atlas_village1.webp') !important;
+            background-image: var(--hero-desktop) !important;
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
@@ -62,7 +65,7 @@
 
         @media (max-width: 768px) {
             .tour-hero {
-                background-image: url('images/destinations/atlas_village1.webp') !important;
+                background-image: var(--hero-mobile, var(--hero-desktop)) !important;
                 background-attachment: scroll !important;
                 height: 60vh !important;
             }
@@ -155,7 +158,10 @@
                     <span><i class="far fa-clock" style="color: #f39c12;"></i> 1 - 4 Days Options</span>
                 </div>
                 
-                <a href="#book-now" class="btn btn-primary" style="
+                <a href="https://wa.me/212659565040?text=Hello! I am interested in booking the Azzaden & Tamsoult Tour" 
+                   target="_blank" 
+                   class="btn btn-primary" 
+                   style="
                     display: inline-block;
                     padding: 12px 30px;
                     background-color: #e67e22;
@@ -632,11 +638,13 @@
                                 </div>
                             </div>
                             <div class="assurance-contact">
-                                <a href="tel:+212659565040" class="contact-link" aria-label="Call us">
+                                <a href="tel:+212659565040" class="contact-link">
                                     <i class="fas fa-phone"></i>
+                                    <span>+212 659 56 5040</span>
                                 </a>
-                                <a href="https://wa.me/212659565040" class="contact-link whatsapp" aria-label="Contact us on WhatsApp">
+                                <a href="https://wa.me/212659565040" class="contact-link whatsapp">
                                     <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
                                 </a>
                             </div>
                         </div>
@@ -690,7 +698,11 @@
         </div>
     </footer>
 
-
+    <!-- WhatsApp Floating Button -->
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Sticky Booking Element -->
     <div class="sticky-booking" id="stickyBooking">
@@ -704,7 +716,7 @@
                     €<span id="stickyPrice">580</span>/person
                 </div>
             </div>
-            <button class="sticky-cta" onclick="scrollToBooking()">Book Now</button>
+            <button class="sticky-cta" onclick="window.open('https://wa.me/212659565040?text=Hello! I am interested in booking the Azzaden & Tamsoult Tour', '_blank')">Book Now</button>
         </div>
     </div>
 
