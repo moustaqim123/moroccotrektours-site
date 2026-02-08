@@ -1,0 +1,144 @@
+/* ============================================
+   SMOOTH PAGE TRANSITIONS FOR MOBILE
+   ============================================ */
+
+/* Page Transition Overlay */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #004d33 0%, #006644 100%);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Loading Animation */
+.page-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-loader-logo {
+    width: 60px;
+    height: 60px;
+    background: url('../images/assets/icon-brand.png') center/contain no-repeat;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.page-loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #B8860B;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.page-loader-text {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Page Fade In */
+body {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Prevent Flash of White */
+html {
+    background-color: #f7f9f7;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    .page-transition-overlay {
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+        animation: fadeIn 0.25s ease-in;
+    }
+
+    /* Prevent scroll during transition */
+    body.transitioning {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/* Smooth scroll for mobile */
+@media (max-width: 768px) {
+    html {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Preload next page hint */
+body::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+}

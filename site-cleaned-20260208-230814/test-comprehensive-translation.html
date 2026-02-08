@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head>
+    <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
+    <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
+
+    <meta property="og:title" content="Morocco Trek Tours">
+    <meta property="og:description" content="Gateway To Authentic Adventures">
+    <meta property="og:image" content="images/assets/icon-brand.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Translation Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .test-section { margin: 30px 0; padding: 20px; border: 2px solid #007bff; border-radius: 8px; }
+        .lang-switcher { margin: 20px 0; }
+        .lang-dropdown { display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px; list-style: none; }
+        .lang-switcher.active .lang-dropdown { display: block; }
+        .lang-btn { cursor: pointer; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; margin-bottom: 5px; }
+        .translated { background: #d4edda; border-color: #28a745; }
+        .original { background: #f8d7da; border-color: #dc3545; }
+        h2 { color: #007bff; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; }
+        .info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>Comprehensive French Translation Test</h1>
+    <p>This page tests the automatic French translation system for all types of content.</p>
+
+    <div class="lang-switcher">
+        <button class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span>English</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <ul class="lang-dropdown">
+            <li><a href="test-comprehensive-translation.html" class="active">English</a></li>
+            <li><a href="test-comprehensive-translation-fr.html">Français</a></li>
+        </ul>
+    </div>
+
+    <div id="status" class="status info">Select a language to test translations</div>
+
+    <div class="test-section">
+        <h2>Navigation Elements</h2>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">Tours</a> |
+            <a href="#">About Us</a> |
+            <a href="#">Contact</a> |
+            <a href="#">Book Now</a>
+        </nav>
+    </div>
+
+    <div class="test-section">
+        <h2>Tour Information</h2>
+        <p><strong>High Atlas Summit Challenge</strong> - A challenging trek in the High Atlas mountains.</p>
+        <p><strong>Duration:</strong> 4 Days</p>
+        <p><strong>Difficulty:</strong> Very Challenging</p>
+        <p><strong>Location:</strong> Mount Toubkal, North Morocco</p>
+        <p><strong>Includes:</strong> Local guide, all meals, transport, mules</p>
+        <p><strong>Best time to visit:</strong> Spring (March-May) and Autumn (September-November)</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Accommodation &amp; Activities</h2>
+        <p>Stay in a traditional Berber Village or Mountain Refuge. Enjoy camel trek, sandboarding, and stargazing in the Sahara Desert.</p>
+        <p><strong>What to bring:</strong> Comfortable hiking boots, warm clothing, sun protection, water bottle, sleeping bag.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Booking Information</h2>
+        <p>Book your adventure with secure online booking. Group discounts available. Private tours can be customized.</p>
+        <p><strong>Group rate:</strong> Available for 6+ people</p>
+        <p><strong>Free cancellation:</strong> Up to 24 hours before</p>
+        <p><strong>24/7 support:</strong> Local expertise with certified guides</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Form Elements</h2>
+        <form>
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" placeholder="Enter your email"><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" placeholder="Tell us about your adventure plans"></textarea><br><br>
+            
+            <button type="button">Send Message</button>
+            <button type="button">Book Now</button>
+        </form>
+    </div>
+
+    <div class="test-section">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>"The best experience of my life! The guides were so knowledgeable and the views were unmatched."</p>
+            <cite>- Sarah Jenkins</cite>
+        </blockquote>
+        <p><strong>Rating:</strong> 5 stars - Excellent - Highly recommended</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Dynamic Content Test</h2>
+        <button onclick="addDynamicContent()">Add Dynamic Content</button>
+        <div id="dynamic-content"></div>
+    </div>
+
+    <script>
+        // Language switcher functionality
+        const langSwitcher = document.querySelector('.lang-switcher');
+        const langBtn = langSwitcher.querySelector('.lang-btn span');
+        const langLinks = langSwitcher.querySelectorAll('.lang-dropdown a');
+        const status = document.getElementById('status');
+
+        langBtnWrap = langSwitcher.querySelector('.lang-btn');
+
+        langBtnWrap.addEventListener('click', () => {
+            langSwitcher.classList.toggle('active');
+        });
+
+        langLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const selectedLang = link.textContent;
+                langBtn.textContent = selectedLang;
+
+                langLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                langSwitcher.classList.remove('active');
+
+                localStorage.setItem('preferredLanguage', selectedLang);
+
+                if (window.i18n) {
+                    window.i18n.apply(selectedLang);
+                }
+
+                updateStatus(selectedLang);
+            });
+        });
+
+        function updateStatus(lang) {
+            if (lang === 'Français') {
+                status.className = 'status success';
+                status.innerHTML = '<strong>✅ French translations applied!</strong> The page should now be fully translated to French.';
+                document.querySelectorAll('.test-section').forEach(section => {
+                    section.classList.add('translated');
+                    section.classList.remove('original');
+                });
+            } else {
+                status.className = 'status info';
+                status.innerHTML = '<strong>🇺🇸 English mode</strong> Showing original content.';
+                document.querySelectorAll('.test-section').forEach(section => {
+                    section.classList.add('original');
+                    section.classList.remove('translated');
+                });
+            }
+        }
+
+        function addDynamicContent() {
+            const container = document.getElementById('dynamic-content');
+            const newContent = document.createElement('div');
+            newContent.className = 'test-section';
+            newContent.innerHTML = `
+                <h3>New Tour: Desert Adventure</h3>
+                <p>Experience the magic of the Sahara Desert with camel trek and camping under the stars.</p>
+                <p><strong>Duration:</strong> 3 Days</p>
+                <p><strong>Difficulty:</strong> Moderate</p>
+                <p><strong>Includes:</strong> All meals, local guide, desert camp</p>
+            `;
+            container.appendChild(newContent);
+            
+            // Apply translations if French is active
+            const currentLang = localStorage.getItem('preferredLanguage') || 'English';
+            if (currentLang === 'Français' && window.autoTranslate) {
+                window.autoTranslate.apply(newContent);
+            }
+        }
+
+        // Initialize
+        const savedLang = localStorage.getItem('preferredLanguage') || 'English';
+        langBtn.textContent = savedLang;
+        langLinks.forEach(link => {
+            if (link.textContent === savedLang) {
+                link.classList.add('active');
+            }
+        });
+        updateStatus(savedLang);
+    </script>
+
+
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
+    <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
+
+    <meta property="og:title" content="Morocco Trek Tours">
+    <meta property="og:description" content="Gateway To Authentic Adventures">
+    <meta property="og:image" content="images/assets/icon-brand.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Separation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .demo-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .combined-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .separator {
+            border-left: 2px solid #ddd;
+            height: 60px;
+            margin: 0 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Separation: Graphic + Text</h1>
+
+    <div class="demo-section">
+        <h2>1. Standalone Logo Graphic</h2>
+        <p>This is the logo graphic element only, without any text:</p>
+        <div style="text-align: center; padding: 20px;">
+            <img src="logo-graphic-only.svg" alt="Morocco Trek Tours Logo Graphic" style="width: 120px; height: 120px;">
+        </div>
+        <p><strong>File:</strong> <code>logo-graphic-only.svg</code></p>
+        <p><strong>Features:</strong> Mountain peaks, trekking path, compass, and hiking boots</p>
+        <p><strong>Colors:</strong> Dark green gradient (#004d33), gold (#B8860B), brown (#8B4513)</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>2. Standalone Text</h2>
+        <p>This is the text portion only, cleanly separated and editable:</p>
+        <div style="text-align: center; padding: 20px;">
+            <img src="logo-text-only.svg" alt="Morocco Trek Tours Text" style="width: 400px; height: 80px;">
+        </div>
+        <p><strong>File:</strong> <code>logo-text-only.svg</code></p>
+        <p><strong>Main Text:</strong> "MOROCCO TREK TOURS" (Poppins Bold, #004d33)</p>
+        <p><strong>Subtitle:</strong> "votre passerelle vers l'aventure authentique" (Open Sans Regular, #666666)</p>
+        <p><strong>Editable:</strong> Font, size, color, and text content can be easily modified</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>3. Combined Logo (How They Work Together)</h2>
+        <p>This shows how the separated elements combine:</p>
+        <div class="combined-logo">
+            <img src="logo-graphic-only.svg" alt="Logo Graphic" style="width: 60px; height: 60px;">
+            <div class="separator"></div>
+            <img src="logo-text-only.svg" alt="Logo Text" style="height: 40px;">
+        </div>
+        <p><strong>Usage:</strong> Place graphic and text side by side, or stack vertically as needed</p>
+        <p><strong>Flexibility:</strong> Each element can be resized, recolored, or repositioned independently</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>Technical Details</h2>
+        <h3>Logo Graphic (<code>logo-graphic-only.svg</code>):</h3>
+        <ul>
+            <li><strong>Format:</strong> SVG (vector, scalable)</li>
+            <li><strong>Size:</strong> 120x120px viewBox</li>
+            <li><strong>Colors:</strong> Original gradient and accent colors preserved</li>
+            <li><strong>Elements:</strong> Mountains, path, compass, hiking boots</li>
+            <li><strong>Unchanged:</strong> Exact same visual as original logo graphic</li>
+        </ul>
+
+        <h3>Text Element (<code>logo-text-only.svg</code>):</h3>
+        <ul>
+            <li><strong>Format:</strong> SVG with web fonts (Poppins, Open Sans)</li>
+            <li><strong>Size:</strong> 400x80px viewBox</li>
+            <li><strong>Fonts:</strong> Poppins Bold (title), Open Sans Regular (subtitle)</li>
+            <li><strong>Colors:</strong> #004d33 (title), #666666 (subtitle)</li>
+            <li><strong>Editable:</strong> Text content, font properties, colors</li>
+        </ul>
+    </div>
+</body>
+</html>

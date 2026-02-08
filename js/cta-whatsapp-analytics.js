@@ -20,13 +20,12 @@
     return (el.textContent||'').trim().slice(0,60);
   }
   document.addEventListener('click',function(e){
-    var el = e.target.closest && e.target.closest('.whatsapp-float, .save-contact-float, .btn-primary, .btn-outline, .cta-strip a');
+    var el = e.target.closest && e.target.closest('.btn--primary, .btn--secondary, .btn--outline, .cta-strip a');
     if(!el) return;
     var label = getLabel(el);
     var action = 'click_'+(
-      el.classList.contains('whatsapp-float') ? 'whatsapp' :
-      el.classList.contains('save-contact-float') ? 'save_contact' :
-      el.classList.contains('btn-primary') ? 'book_now' : 'contact'
+      el.classList.contains('btn--primary') ? 'book_now' :
+      el.classList.contains('btn--secondary') ? 'secondary' : 'contact'
     );
     sendEvent(action,label);
   },false);

@@ -1,0 +1,300 @@
+/*
+========================================
+  BADGES COMPONENT
+========================================
+  Tour difficulty badges, status badges, and labels
+*/
+
+/* Base badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--border-radius-full);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+/* Tour difficulty badges */
+.tour-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  color: var(--color-text-inverse);
+}
+
+.tour-badge--very-hard {
+  background-color: #8B0000; /* Dark Red */
+}
+
+.tour-badge--hard {
+  background-color: #FF6B35; /* Orange Red */
+}
+
+.tour-badge--moderate {
+  background-color: #F7931E; /* Orange */
+}
+
+.tour-badge--easy {
+  background-color: #4CAF50; /* Green */
+}
+
+.tour-badge--extreme {
+  background-color: #4A148C; /* Deep Purple */
+}
+
+.tour-badge--family-friendly {
+  background-color: #2196F3; /* Blue */
+}
+
+/* Status badges */
+.badge--status {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+}
+
+.badge--new {
+  background-color: #4CAF50;
+  color: var(--color-text-inverse);
+}
+
+.badge--featured {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.badge--sale {
+  background-color: #dc3545;
+  color: var(--color-text-inverse);
+}
+
+.badge--limited {
+  background-color: #ff9800;
+  color: var(--color-text-inverse);
+}
+
+.badge--popular {
+  background-color: #9c27b0;
+  color: var(--color-text-inverse);
+}
+
+/* Price badges */
+.badge--price {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-md);
+}
+
+.badge--discount {
+  background-color: #dc3545;
+  color: var(--color-text-inverse);
+}
+
+.badge--discount::before {
+  content: '-';
+  margin-right: var(--space-1);
+}
+
+/* Category badges */
+.badge--category {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.badge--category:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+/* Availability badges */
+.badge--available {
+  background-color: #4CAF50;
+  color: var(--color-text-inverse);
+}
+
+.badge--limited-spaces {
+  background-color: #ff9800;
+  color: var(--color-text-inverse);
+}
+
+.badge--sold-out {
+  background-color: #6c757d;
+  color: var(--color-text-inverse);
+}
+
+.badge--waitlist {
+  background-color: #17a2b8;
+  color: var(--color-text-inverse);
+}
+
+/* Season badges */
+.badge--season {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+}
+
+.badge--season::before {
+  font-size: var(--font-size-sm);
+}
+
+.badge--summer {
+  background-color: #ff9800;
+  color: var(--color-text-inverse);
+}
+
+.badge--summer::before {
+  content: '☀️';
+}
+
+.badge--winter {
+  background-color: #2196F3;
+  color: var(--color-text-inverse);
+}
+
+.badge--winter::before {
+  content: '❄️';
+}
+
+.badge--spring {
+  background-color: #4CAF50;
+  color: var(--color-text-inverse);
+}
+
+.badge--spring::before {
+  content: '🌸';
+}
+
+.badge--autumn {
+  background-color: #ff5722;
+  color: var(--color-text-inverse);
+}
+
+.badge--autumn::before {
+  content: '🍂';
+}
+
+/* Badge sizes */
+.badge--sm {
+  padding: var(--space-1) var(--space-2);
+  font-size: 10px;
+}
+
+.badge--lg {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+/* Badge with icon */
+.badge--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.badge--icon svg,
+.badge--icon i {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* Badge groups */
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.badge-group--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Badge animations */
+.badge--pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Badge positioning */
+.badge--top-right {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+}
+
+.badge--top-left {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+}
+
+.badge--bottom-right {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+}
+
+.badge--bottom-left {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .tour-badge {
+    top: var(--space-3);
+    right: var(--space-3);
+    padding: var(--space-1) var(--space-2);
+    font-size: 10px;
+  }
+  
+  .badge--lg {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+  }
+  
+  .badge-group {
+    gap: var(--space-1);
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    font-size: 10px;
+  }
+  
+  .badge--sm {
+    font-size: 9px;
+    padding: var(--space-1) var(--space-1);
+  }
+}

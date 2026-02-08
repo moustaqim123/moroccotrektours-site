@@ -1,0 +1,49 @@
+/*
+========================================
+  NEW CSS ARCHITECTURE - Morocco Trek Tours
+========================================
+  Author: Frontend Architecture Team
+  Version: 2.0.0
+  Created: 2025-02-08
+  
+  STRUCTURE:
+  1. Base - Reset, variables, typography
+  2. Layout - Grid, containers, sections
+  3. Components - Reusable UI elements
+  4. Pages - Page-specific styles
+  5. Utilities - Helper classes
+  
+  NAMING CONVENTION:
+  - BEM methodology
+  - Component-Name__element--modifier
+  - Mobile-first approach
+  - No global selectors
+*/
+
+/* Base Layer */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* Layout Layer */
+@import './layout/container.css';
+@import './layout/grid.css';
+@import './layout/sections.css';
+
+/* Component Layer */
+@import './components/header.css';
+@import './components/navigation.css';
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/footer.css';
+@import './components/forms.css';
+@import './components/badges.css';
+
+/* Page Layer */
+@import './pages/home.css';
+@import './pages/tours.css';
+@import './pages/contact.css';
+
+/* Utility Layer */
+@import './utilities/helpers.css';
+@import './utilities/responsive.css';

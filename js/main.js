@@ -311,235 +311,756 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(url, '_blank');
     });
 
-    // --- ميزة حفظ جهة الاتصال (VCard) مع الصورة الشخصية ---
-
-    // دالة لطي الأسطر الطويلة (ضروري لصور Base64 داخل ملف VCF)
-    function foldLine(str, maxLen = 75) {
-        if (!str || str.length <= maxLen) return str;
-        let out = str.slice(0, maxLen);
-        for (let i = maxLen; i < str.length; i += maxLen) {
-            out += '\r\n ' + str.slice(i, i + maxLen);
-        }
-        return out;
-    }
-
-    // Helper: fetch image and return base64 (no prefix)
-    async function fetchImageAsBase64(url) {
-        try {
-            const res = await fetch(url);
-            if (!res.ok) return null;
-            const blob = await res.blob();
-            return await new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onloadend = () => resolve(reader.result.split(',')[1]);
-                reader.onerror = reject;
-                reader.readAsDataURL(blob);
-            });
-        } catch (err) { return null; }
-    }
-
-    async function buildVCardBlob() {
-        // Fetch the site logo so the VCard contains the same image used on the website
-        const logoBase64 = await fetchImageAsBase64('images/assets/icon-brand.png');
-
+    // --- Modern VCard Feature ---
+    
+    // Create modern VCard with site information
+    async function createModernVCard() {
+        const vcardData = {
+            name: 'Morocco Trek Tours',
+            org: 'Morocco Trek Tours',
+            phone: '+212659565040',
+            email: 'info@moroccotrektours.com',
+            website: 'https://moroccotrektours.com',
+            address: 'Imlil, Marrakech, Morocco',
+            description: 'Expert-guided mountain trekking and desert adventures in Morocco'
+        };
+        
         const lines = [
             'BEGIN:VCARD',
             'VERSION:3.0',
-            // Set N and FN to help phones and WhatsApp display the company name
-            'N:Morocco Trek Tours;;;;',
-            'FN:Morocco Trek Tours',
-            'ORG:Morocco Trek Tours',
-            // Include preferred/mobile and work forms to maximise compatibility
-            'TEL;TYPE=CELL,VOICE;PREF:+212659565040',
-            'TEL;TYPE=WORK,VOICE:+212659565040',
-            'EMAIL:info@moroccotrektours.com',
-            'URL:https://moroccotrektours.com'
+            'FN:' + vcardData.name,
+            'N:Tours;Morocco;;;',
+            'ORG:' + vcardData.org,
+            'TEL;TYPE=CELL,VOICE;PREF:' + vcardData.phone,
+            'TEL;TYPE=WORK,VOICE:' + vcardData.phone,
+            'EMAIL:' + vcardData.email,
+            'URL:' + vcardData.website,
+            'ADR;TYPE=WORK:;;' + vcardData.address + ';;;;',
+            'NOTE:' + vcardData.description,
+            'END:VCARD'
         ];
-
-        if (logoBase64) {
-            // Using PNG as it's the existing format
-            const photoLine = 'PHOTO;ENCODING=BASE64;TYPE=PNG:' + logoBase64.replace(/\s/g, '');
-            lines.push(foldLine(photoLine, 75));
-        }
-
-        lines.push('END:VCARD');
+        
         return new Blob([lines.join('\r\n')], { type: 'text/vcard;charset=utf-8' });
     }
-
-    async function handleSaveContactClick(e) {
-        e.preventDefault();
-        const el = e.currentTarget;
-        const prev = el.innerHTML;
-        el.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-        el.style.pointerEvents = 'none';
-        try {
-            const blob = await buildVCardBlob();
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Morocco_Trek_Tours.vcf';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(url);
-        } catch (err) {
-            alert('Error generating contact file.');
-        } finally {
-            el.innerHTML = prev;
-            el.style.pointerEvents = 'auto';
-        }
-    }
-
-    // إضافة الزر العائم وتنسيقه تلقائياً
-    (function initFloatingButton() {
-        // Ensure only one exists site-wide
-        document.querySelectorAll('.save-contact-float').forEach(el => el.remove());
-
-        const btn = document.createElement('a');
-        btn.className = 'save-contact-float';
-        btn.innerHTML = `
-            <i class="fas fa-address-card" aria-hidden="true"></i>
-            <span class="btn-label">Save Contact</span>
-            <div class="vcard-info-trigger">
-                <i class="fas fa-info-circle"></i>
-                <span class="vcard-tooltip">Save our contact details directly to your phone.</span>
+    
+    // Modern VCard button creation
+    function createModernVCardButton() {
+        // Remove existing buttons
+        document.querySelectorAll('.modern-vcard-btn').forEach(el => el.remove());
+        
+        // Create modern button
+        const button = document.createElement('div');
+        button.className = 'modern-vcard-btn';
+        button.innerHTML = `
+            <div class="vcard-icon">
+                <i class="fas fa-address-book"></i>
+            </div>
+            <div class="vcard-content">
+                <span class="vcard-title">Save Contact</span>
+                <span class="vcard-subtitle">Add Morocco Trek Tours to your phone</span>
+            </div>
+            <div class="vcard-pulse"></div>
+            <div class="vcard-intro">
+                <div class="intro-icon">
+                    <i class="fas fa-info"></i>
+                </div>
+                <div class="intro-text">
+                    <strong>Save Our Contact</strong>
+                    <span>Quickly add our contact details to your phone for easy booking</span>
+                </div>
+                <div class="intro-close">
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
         `;
-        btn.setAttribute('aria-label', 'Save contact info');
-        btn.addEventListener('click', (e) => {
-            if (e.target.closest('.vcard-info-trigger')) {
-                e.preventDefault();
-                e.stopPropagation();
+        
+        button.addEventListener('click', async (e) => {
+            // Check if clicking on intro close button
+            if (e.target.closest('.intro-close')) {
+                button.classList.remove('intro-show');
                 return;
             }
-            handleSaveContactClick(e);
-        });
-        document.body.appendChild(btn);
-
-        // Target the existing WhatsApp button for labeling
-        const wa = document.querySelector('.whatsapp-float');
-        if (wa && !wa.querySelector('.btn-label')) {
-            const label = document.createElement('span');
-            label.className = 'btn-label';
-            label.textContent = 'WhatsApp';
-            wa.appendChild(label);
-        }
-
-        // Position directly above the existing WhatsApp button
-        const gap = 12;
-        const defaultRight = 16;
-        const defaultBottom = 18;
-        let rightPx = defaultRight;
-        let bottomPx = defaultBottom + 56 + gap;
-
-        if (wa) {
+            
+            button.classList.add('vcard-loading');
+            
             try {
-                const rect = wa.getBoundingClientRect();
-                const computed = window.getComputedStyle(wa);
-                const computedRight = parseFloat(computed.right) || defaultRight;
-                const waBottomOffset = Math.round(window.innerHeight - rect.bottom);
-                rightPx = computedRight;
-                bottomPx = waBottomOffset + rect.height + gap;
-            } catch (err) { }
-        }
-
-        // Inject Enhanced Styles
-        const style = document.createElement('style');
-        style.id = 'floating-ui-styles';
-        style.innerHTML = `
-            /* Container Styles */
-            .save-contact-float, .whatsapp-float { 
-                position: fixed; 
-                width: 56px; 
-                height: 56px; 
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                border-radius: 28px; 
-                z-index: 100000; 
-                cursor: pointer; 
-                transition: transform 0.2s, background 0.2s; 
-                text-decoration: none;
+                const blob = await createModernVCard();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Morocco_Trek_Tours.vcf';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+                
+                // Success feedback
+                button.classList.add('vcard-success');
+                setTimeout(() => {
+                    button.classList.remove('vcard-success');
+                }, 2000);
+            } catch (error) {
+                console.error('Error creating VCard:', error);
+                button.classList.add('vcard-error');
+                setTimeout(() => {
+                    button.classList.remove('vcard-error');
+                }, 2000);
+            } finally {
+                button.classList.remove('vcard-loading');
             }
-
-            .save-contact-float { right: ${rightPx}px; bottom: ${bottomPx}px; background: rgba(0,0,0,0.7); color: #fff; }
-            .whatsapp-float { position: fixed; right: ${rightPx}px; bottom: 18px; background: #25d366; color: #fff; }
-
-            .save-contact-float:hover, .whatsapp-float:hover { transform: translateY(-4px); }
-            .save-contact-float:hover { background: rgba(0,0,0,0.9); }
-
-            /* Subtle Labels */
-            .btn-label {
+        });
+        
+        // Show intro tooltip on first visit
+        if (!localStorage.getItem('vcard-intro-shown')) {
+            setTimeout(() => {
+                button.classList.add('intro-show');
+                localStorage.setItem('vcard-intro-shown', 'true');
+            }, 2000);
+        }
+        
+        // Hide intro when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.modern-vcard-btn')) {
+                button.classList.remove('intro-show');
+            }
+        });
+        
+        document.body.appendChild(button);
+        
+        // Add modern styles
+        const style = document.createElement('style');
+        style.id = 'modern-vcard-styles';
+        style.innerHTML = `
+            .modern-vcard-btn {
+                position: fixed;
+                bottom: 30px;
+                left: 30px;
+                width: 60px;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 1000;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow: hidden;
+            }
+            
+            .modern-vcard-btn:hover {
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                transform: translateY(-5px) scale(1.05);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+            
+            .modern-vcard-btn.vcard-loading {
+                pointer-events: none;
+                background: rgba(255, 255, 255, 0.2);
+            }
+            
+            .modern-vcard-btn.vcard-success {
+                background: rgba(17, 153, 142, 0.2);
+                border-color: rgba(17, 153, 142, 0.4);
+                box-shadow: 0 8px 32px rgba(17, 153, 142, 0.2);
+            }
+            
+            .modern-vcard-btn.vcard-error {
+                background: rgba(238, 9, 121, 0.2);
+                border-color: rgba(238, 9, 121, 0.4);
+                box-shadow: 0 8px 32px rgba(238, 9, 121, 0.2);
+            }
+            
+            .vcard-icon {
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.9);
+                transition: all 0.3s ease;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            
+            .modern-vcard-btn:hover .vcard-icon {
+                color: rgba(255, 255, 255, 1);
+                transform: scale(1.1);
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            
+            .vcard-content {
                 position: absolute;
-                right: 70px;
+                left: 80px;
                 background: rgba(0, 0, 0, 0.8);
-                color: #fff;
-                padding: 6px 14px;
-                border-radius: 4px;
-                font-size: 0.75rem;
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                white-space: nowrap;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: white;
+                padding: 12px 16px;
+                border-radius: 12px;
                 opacity: 0;
                 pointer-events: none;
-                transition: opacity 0.2s, transform 0.2s;
-                transform: translateX(10px);
+                transition: all 0.3s ease;
+                transform: translateX(-20px);
+                white-space: nowrap;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             }
-
-            .save-contact-float:hover .btn-label, .whatsapp-float:hover .btn-label {
+            
+            .modern-vcard-btn:hover .vcard-content {
                 opacity: 1;
                 transform: translateX(0);
             }
-
-            /* VCard Info Icon & Tooltip */
-            .vcard-info-trigger {
+            
+            .vcard-title {
+                display: block;
+                font-weight: 600;
+                font-size: 14px;
+                margin-bottom: 2px;
+            }
+            
+            .vcard-subtitle {
+                display: block;
+                font-size: 12px;
+                opacity: 0.8;
+            }
+            
+            /* Intro Tooltip Styles */
+            .vcard-intro {
                 position: absolute;
-                top: -2px;
-                right: -2px;
-                width: 18px;
-                height: 18px;
-                background: var(--accent-color, #e67e22);
+                bottom: 80px;
+                left: 0;
+                background: rgba(0, 0, 0, 0.9);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 16px;
+                padding: 16px;
+                min-width: 280px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(20px) scale(0.9);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                z-index: 1001;
+            }
+            
+            .modern-vcard-btn.intro-show .vcard-intro {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0) scale(1);
+            }
+            
+            .intro-icon {
+                position: absolute;
+                top: -12px;
+                left: 20px;
+                width: 24px;
+                height: 24px;
+                background: rgba(255, 255, 255, 0.9);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 9px;
-                border: 1.5px solid #fff;
-                z-index: 100001;
-            }
-
-            .vcard-tooltip {
-                position: absolute;
-                bottom: 30px;
-                right: 0;
-                width: 200px;
-                background: #fff;
+                font-size: 12px;
                 color: #333;
-                padding: 12px;
-                border-radius: 8px;
-                font-size: 0.85rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            
+            .intro-text {
+                margin-bottom: 12px;
+            }
+            
+            .intro-text strong {
+                display: block;
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+            
+            .intro-text span {
+                display: block;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 12px;
                 line-height: 1.4;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.2s, transform 0.2s;
-                transform: translateY(10px);
-                border: 1px solid #eee;
             }
-
-            .vcard-info-trigger:hover .vcard-tooltip {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .intro-close {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                width: 20px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                color: rgba(255, 255, 255, 0.7);
+                cursor: pointer;
+                transition: all 0.2s ease;
             }
-
-            /* Responsive */
+            
+            .intro-close:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: rgba(255, 255, 255, 1);
+                transform: scale(1.1);
+            }
+            
+            .vcard-pulse {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                animation: pulse 2s infinite;
+            }
+            
+            .modern-vcard-btn.vcard-loading .vcard-pulse {
+                border-color: rgba(255, 255, 255, 0.6);
+                animation: spin 1s linear infinite;
+            }
+            
+            .modern-vcard-btn.vcard-loading .vcard-icon {
+                animation: spin 1s linear infinite;
+            }
+            
+            @keyframes pulse {
+                0% {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                    border-color: rgba(255, 255, 255, 0.3);
+                }
+                50% {
+                    transform: translate(-50%, -50%) scale(1.1);
+                    opacity: 0.6;
+                    border-color: rgba(255, 255, 255, 0.5);
+                }
+                100% {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                    border-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+            
+            @keyframes spin {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+            
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                .modern-vcard-btn {
+                    bottom: 20px;
+                    left: 20px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 15px;
+                }
+                
+                .vcard-icon {
+                    font-size: 20px;
+                }
+                
+                .vcard-content {
+                    left: 70px;
+                    padding: 10px 14px;
+                }
+                
+                .vcard-title {
+                    font-size: 13px;
+                }
+                
+                .vcard-subtitle {
+                    font-size: 11px;
+                }
+                
+                .vcard-intro {
+                    bottom: 70px;
+                    left: -10px;
+                    min-width: 250px;
+                    padding: 14px;
+                }
+                
+                .intro-icon {
+                    left: 15px;
+                }
+                
+                .intro-text strong {
+                    font-size: 13px;
+                }
+                
+                .intro-text span {
+                    font-size: 11px;
+                }
+            }
+            
             @media (max-width: 480px) {
-                .btn-label { display: none; }
+                .modern-vcard-btn {
+                    bottom: 15px;
+                    left: 15px;
+                    width: 45px;
+                    height: 45px;
+                }
+                
+                .vcard-icon {
+                    font-size: 18px;
+                }
+                
+                .vcard-content {
+                    display: none;
+                }
+                
+                .vcard-intro {
+                    bottom: 65px;
+                    left: -20px;
+                    min-width: 220px;
+                    padding: 12px;
+                }
+                
+                .intro-icon {
+                    left: 10px;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 10px;
+                }
+                
+                .intro-text strong {
+                    font-size: 12px;
+                }
+                
+                .intro-text span {
+                    font-size: 10px;
+                }
+                
+                .intro-close {
+                    width: 18px;
+                    height: 18px;
+                    font-size: 9px;
+                }
             }
         `;
+        
+        // Remove existing styles
+        const existingStyle = document.getElementById('modern-vcard-styles');
+        if (existingStyle) {
+            existingStyle.remove();
+        }
+        
         document.head.appendChild(style);
-    })();
+    }
+    
+    // Initialize modern VCard button
+    createModernVCardButton();
+    
+    // --- Modern WhatsApp Button ---
+    
+    // Create modern WhatsApp button
+    function createModernWhatsAppButton() {
+        // Remove existing buttons
+        document.querySelectorAll('.modern-whatsapp-btn').forEach(el => el.remove());
+        
+        // Create modern WhatsApp button
+        const button = document.createElement('div');
+        button.className = 'modern-whatsapp-btn';
+        button.innerHTML = `
+            <div class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="whatsapp-content">
+                <span class="whatsapp-title">Chat on WhatsApp</span>
+                <span class="whatsapp-subtitle">Quick booking support</span>
+            </div>
+            <div class="whatsapp-pulse"></div>
+            <div class="whatsapp-intro">
+                <div class="intro-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="intro-text">
+                    <strong>Chat with Us</strong>
+                    <span>Get instant help and book your adventure</span>
+                </div>
+                <div class="intro-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        `;
+        
+        button.addEventListener('click', async (e) => {
+            // Check if clicking on intro close button
+            if (e.target.closest('.intro-close')) {
+                button.classList.remove('intro-show');
+                return;
+            }
+            
+            // Open WhatsApp
+            const phoneNumber = '212659565040';
+            const message = 'Hello! I am interested in booking a tour with Morocco Trek Tours.';
+            const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+            let url = isMobile
+                ? `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
+                : `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        });
+        
+        // Show intro tooltip on first visit
+        if (!localStorage.getItem('whatsapp-intro-shown')) {
+            setTimeout(() => {
+                button.classList.add('intro-show');
+                localStorage.setItem('whatsapp-intro-shown', 'true');
+            }, 3000);
+        }
+        
+        // Hide intro when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.modern-whatsapp-btn')) {
+                button.classList.remove('intro-show');
+            }
+        });
+        
+        document.body.appendChild(button);
+        
+        // Add WhatsApp styles to existing style sheet
+        const existingStyle = document.getElementById('modern-vcard-styles');
+        if (existingStyle) {
+            existingStyle.innerHTML += `
+                
+                /* WhatsApp Button Styles */
+                .modern-whatsapp-btn {
+                    position: fixed;
+                    bottom: 30px;
+                    left: 110px;
+                    width: 60px;
+                    height: 60px;
+                    background: rgba(37, 211, 102, 0.15);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    border: 1px solid rgba(37, 211, 102, 0.3);
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    z-index: 1000;
+                    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.15);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    overflow: hidden;
+                }
+                
+                .modern-whatsapp-btn:hover {
+                    background: rgba(37, 211, 102, 0.2);
+                    backdrop-filter: blur(25px);
+                    -webkit-backdrop-filter: blur(25px);
+                    transform: translateY(-5px) scale(1.05);
+                    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.25);
+                    border-color: rgba(37, 211, 102, 0.4);
+                }
+                
+                .whatsapp-icon {
+                    font-size: 24px;
+                    color: rgba(37, 211, 102, 0.9);
+                    transition: all 0.3s ease;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+                
+                .modern-whatsapp-btn:hover .whatsapp-icon {
+                    color: rgba(37, 211, 102, 1);
+                    transform: scale(1.1);
+                    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                
+                .whatsapp-content {
+                    position: absolute;
+                    left: 80px;
+                    background: rgba(37, 211, 102, 0.9);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    color: white;
+                    padding: 12px 16px;
+                    border-radius: 12px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.3s ease;
+                    transform: translateX(-20px);
+                    white-space: nowrap;
+                    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+                }
+                
+                .modern-whatsapp-btn:hover .whatsapp-content {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                
+                .whatsapp-title {
+                    display: block;
+                    font-weight: 600;
+                    font-size: 14px;
+                    margin-bottom: 2px;
+                }
+                
+                .whatsapp-subtitle {
+                    display: block;
+                    font-size: 12px;
+                    opacity: 0.9;
+                }
+                
+                .whatsapp-pulse {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    border: 2px solid rgba(37, 211, 102, 0.4);
+                    animation: pulse 2s infinite;
+                }
+                
+                .whatsapp-intro {
+                    position: absolute;
+                    bottom: 80px;
+                    left: 0;
+                    background: rgba(37, 211, 102, 0.9);
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 16px;
+                    padding: 16px;
+                    min-width: 280px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(20px) scale(0.9);
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: 0 20px 60px rgba(37, 211, 102, 0.3);
+                    z-index: 1001;
+                }
+                
+                .modern-whatsapp-btn.intro-show .whatsapp-intro {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0) scale(1);
+                }
+                
+                .whatsapp-intro .intro-icon {
+                    background: rgba(255, 255, 255, 0.9);
+                    color: #25d366;
+                }
+                
+                .whatsapp-intro .intro-text strong {
+                    color: white;
+                }
+                
+                .whatsapp-intro .intro-text span {
+                    color: rgba(255, 255, 255, 0.9);
+                }
+                
+                /* WhatsApp Mobile Responsive */
+                @media (max-width: 768px) {
+                    .modern-whatsapp-btn {
+                        bottom: 20px;
+                        left: 80px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 15px;
+                    }
+                    
+                    .whatsapp-icon {
+                        font-size: 20px;
+                    }
+                    
+                    .whatsapp-content {
+                        left: 70px;
+                        padding: 10px 14px;
+                    }
+                    
+                    .whatsapp-title {
+                        font-size: 13px;
+                    }
+                    
+                    .whatsapp-subtitle {
+                        font-size: 11px;
+                    }
+                    
+                    .whatsapp-intro {
+                        bottom: 70px;
+                        left: -10px;
+                        min-width: 250px;
+                        padding: 14px;
+                    }
+                    
+                    .whatsapp-intro .intro-icon {
+                        left: 15px;
+                        width: 20px;
+                        height: 20px;
+                        font-size: 10px;
+                    }
+                    
+                    .whatsapp-intro .intro-text strong {
+                        font-size: 13px;
+                    }
+                    
+                    .whatsapp-intro .intro-text span {
+                        font-size: 11px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .modern-whatsapp-btn {
+                        bottom: 15px;
+                        left: 70px;
+                        width: 45px;
+                        height: 45px;
+                    }
+                    
+                    .whatsapp-icon {
+                        font-size: 18px;
+                    }
+                    
+                    .whatsapp-content {
+                        display: none;
+                    }
+                    
+                    .whatsapp-intro {
+                        bottom: 65px;
+                        left: -20px;
+                        min-width: 220px;
+                        padding: 12px;
+                    }
+                    
+                    .whatsapp-intro .intro-icon {
+                        left: 10px;
+                        width: 18px;
+                        height: 18px;
+                        font-size: 9px;
+                    }
+                    
+                    .whatsapp-intro .intro-text strong {
+                        font-size: 12px;
+                    }
+                    
+                    .whatsapp-intro .intro-text span {
+                        font-size: 10px;
+                    }
+                }
+            `;
+        }
+    }
+    
+    // Initialize modern WhatsApp button
+    createModernWhatsAppButton();
 
     // --- Global Card Clickability (Tours & Blog) ---
     document.addEventListener('click', (e) => {

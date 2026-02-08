@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
+    <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
+
+    <meta property="og:title" content="Morocco Trek Tours">
+    <meta property="og:description" content="Gateway To Authentic Adventures">
+    <meta property="og:image" content="images/assets/icon-brand.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morocco Trek Tours | Expert-Guided Mountain Adventures</title>
+
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+
+    
+    <link rel="stylesheet" href="css-new/main.css">
+    
+    <link rel="stylesheet" href="css/logo-entrance.css">
+    
+
+    <style>
+        /* Specific styles for the new tour cards */
+        .tour-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .badge-very-hard {
+            background-color: #8B0000;
+        }
+
+        /* Dark Red */
+        .badge-hard {
+            background-color: #d32f2f;
+        }
+
+        /* Red */
+        .badge-medium-high {
+            background-color: #e64a19;
+        }
+
+        /* Deep Orange */
+        .badge-medium {
+            background-color: #f57c00;
+        }
+
+        /* Orange */
+        .badge-medium-easy {
+            background-color: #fbc02d;
+            color: #333;
+        }
+
+        /* Yellow */
+        .badge-easy {
+            background-color: #388e3c;
+        }
+
+        /* Green */
+        .badge-very-easy {
+            background-color: #8bc34a;
+            color: #333;
+        }
+
+        /* Light Green */
+
+        .tour-card {
+            position: relative;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tour-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .tour-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tour-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .tour-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .tour-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tour-details p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .tour-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 480px) {
+            .tour-buttons {
+                flex-direction: column;
+            }
+
+            .tour-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+    
+        
+        
+        
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo-header.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212600000000",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+
+<body>
+
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-container"><img loading="lazy" src="images/assets/logo-header.png"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
+                <div class="logo-text">
+                    <div class="logo-title">
+                        <span class="line">MOROCCO</span>
+                        <span class="line"><span class="trek-word">TREK</span> TOURS</span>
+                    </div>
+                    <span class="logo-subtitle">Your Gateway to Authentic Adventures</span>
+                </div>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="customize-trip.html">Customize</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="index.html" class="active">English</a></li>
+                        <li><a href="index-fr.html">Français</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <header class="hero-section home-hero" style="background-image: url('images/hero/hero_home.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <script src="js/cta-whatsapp-analytics.js"></script>
+        <div class="hero-content">
+            <h1 class="hero-title">Conquer the Peaks</h1>
+            <p class="hero-description">Embark on the journey of a lifetime. Discover hidden trails, majestic summits,
+                and the raw beauty of Morocco's mountains.</p>
+            <div class="hero-buttons">
+                <a href="tours.html" class="btn btn-primary book-now">Book Now</a>
+                <a href="tours.html" class="btn btn-secondary">Explore Tours</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-hiking feature-icon"></i>
+                    <h3>Experienced Guides</h3>
+                    <p>Our certified guides have years of mountaineering experience to ensure your safety and enjoyment.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Safe Adventures</h3>
+                    <p>Safety is our top priority. We use top-quality gear and follow strict safety protocols.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf feature-icon"></i>
+                    <h3>Eco-Friendly</h3>
+                    <p>We believe in sustainable tourism and leaving no trace behind to protect our beautiful mountains.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3>Small Groups</h3>
+                    <p>Small group sizes guarantee a personalized experience and deeper connection with nature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section-padding bg-off-white">
+        <div class="container">
+            <h2 class="section-title">Featured Tours</h2>
+            <div class="tour-card-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+
+                
+                <article class="tour-card tour-toubkal">
+                    <span class="tour-badge badge-very-hard">Customizable</span>
+                    <img src="images/tours/toubkal/toubkal_summit.jpg" loading="lazy" width="600" height="400"
+                        alt="Mount Toubkal Summit Challenge High Atlas Morocco" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">Mount Toubkal: 1 to 6 Days Options</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 1 - 6 Days</span>
+                            <span><i class="fas fa-mountain"></i> Mount Toubkal</span>
+                        </div>
+                        <p>The ultimate challenge to the highest peak in North Africa (4,167m). Choose your pace from
+                            express day trips to 6-day immersive circuits.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-toubkal.html" class="btn btn-secondary">More Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="tour-card">
+                    <span class="tour-badge badge-hard">Very Challenging</span>
+                    <img src="images/tours/mgoun/mgoun_main.jpg" loading="lazy" width="600" height="400"
+                        alt="M'Goun Summit Expedition 4,071m" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">M'Goun Expedition</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 4 Days</span>
+                            <span><i class="fas fa-mountain"></i> Summit Trek</span>
+                        </div>
+                        <p>Conquer Morocco's third-highest peak (4,071m) via the legendary M'Goun ridge and Tarkeddite
+                            Plateau. For experienced trekkers.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-mgoun.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="tour-card tour-10-days">
+                    <span class="tour-badge badge-hard">Challenging</span>
+                    <img src="images/tours/tour-10-days/tour-10-days-main.jpg" loading="lazy" width="600" height="400"
+                        alt="10-Day Morocco Grand Tour Adventure" class="tour-image">
+                    <div class="tour-details">
+                        <h3 class="tour-title">10-Day Morocco Adventure</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 10 Days</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Grand Tour</span>
+                        </div>
+                        <p>From Casablanca to Marrakech: Atlas hikes, Sahara camel treks, and the Blue City. The
+                            comprehensive Moroccan experience.</p>
+
+                        <div class="tour-buttons">
+                            <a href="tour-10-days.html" class="btn btn-secondary">More
+                                Details</a>
+                            <a class="btn btn-primary book-now">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="tours.html" class="btn btn-secondary"
+                    style="color: var(--primary-color); border-color: var(--primary-color);">View All Tours</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            
+            <div id="gallery" class="gallery-grid" aria-live="polite"></div>
+        </div>
+    </section>
+
+    
+    <section class="section-padding" style="background-color: var(--primary-color); color: #fff; text-align: center;">
+        <div class="container">
+            <h2 class="section-title" style="color: #fff; margin-bottom: 1rem;">Design Your Own Adventure</h2>
+            <p style="max-width: 700px; margin: 0 auto; margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9;">
+                Looking for something unique? We specialize in tailor-made itineraries. Tell us your interests, and
+                we'll craft a journey that fits your rhythm and style.
+            </p>
+            <a href="customize-trip.html" class="btn btn-primary"
+                style="background-color: #fff; color: var(--primary-color); border: none; padding: 15px 30px; font-weight: 700;">
+                Create Your Custom Journey
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">What Travelers Say</h2>
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="feature-item" style="text-align: left;">
+                    <div style="color: #e67e22; margin-bottom: 10px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 15px;">"The best experience of my life! The guides were
+                        so knowledgeable and the views were unmatched."</p>
+                    <strong>- Sarah Jenkins</strong>
+                </div>
+                <div class="feature-item" style="text-align: left;">
+                    <div style="color: #e67e22; margin-bottom: 10px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 15px;">"Professional and safe. I felt comfortable the
+                        whole time despite being a beginner trekker."</p>
+                    <strong>- Michael Chen</strong>
+                </div>
+                <div class="feature-item" style="text-align: left;">
+                    <div style="color: #e67e22; margin-bottom: 10px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 15px;">"A perfect mix of adventure and culture. Highly
+                        recommend the Village Experience tour."</p>
+                    <strong>- Emma Watson</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Morocco Trek Tours</h4>
+                    <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
+                        last a lifetime.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Our Tours</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Travel Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> +212 659 56 5040</li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Morocco Trek Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a class="whatsapp-float" aria-label="Contact us on WhatsApp" href="https://wa.me/212659565040" target="_blank"
+        rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.221-.242.248-.412.045-.297-.15-1.256-.593-1.528-.916-.273-.322-.045-.498.12-.645.134-.133.298-.347.446-.521.149-.173.198-.347.149-.521-.05-.173-.446-1.542-1.047-2.067-.5-.525-.805-.447-.87-.372-.065.075-.446.446-.446.446s-.298.199-.298.498c0 .299.149 1.542.149 1.542s.149 3.495 3.495 4.738c3.346 1.243 3.945.521 4.643.446.698-.075 2.242-1.047 2.558-2.067.316-1.02.316-1.894.223-2.079-.094-.185-.347-.299-.644-.447z"/>
+            <path d="M20.52 3.449C18.39 1.319 15.5 0 12.48 0 9.46 0 6.57 1.319 4.44 3.449 2.31 5.579 1 8.469 1 11.489c0 2.52.87 4.83 2.34 6.61L1 23l4.93-1.31c1.7 1.16 3.71 1.77 5.82 1.77 3.02 0 5.91-1.319 8.04-3.449 2.12-2.13 3.44-5.02 3.44-8.04 0-3.02-1.31-5.91-3.44-8.04zM12.48 21.9c-1.86 0-3.61-.51-5.11-1.41l-.37-.22-3.78 1 .99-3.68-.23-.38c-.98-1.56-1.5-3.36-1.5-5.22 0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10z"/>
+        </svg>
+    </a>
+
+    
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-panel" role="dialog" aria-modal="true">
+            <button id="lightbox-close" class="lightbox-close" aria-label="Close gallery">×</button>
+            <div class="lightbox-body">
+                <img loading="lazy" id="lightbox-img" src="" alt="">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+
+    
+
+</body>
+
+</html>

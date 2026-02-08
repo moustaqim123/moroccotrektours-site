@@ -1,0 +1,1338 @@
+/* ---------------------------------- */
+/* Premium Dynamic Pricing & Booking   */
+/* ---------------------------------- */
+.luxury-pricing-section {
+    position: sticky;
+    top: 100px;
+}
+
+/* Floating Cards Base Style */
+.floating-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow:
+        0 10px 40px rgba(0, 77, 51, 0.08),
+        0 2px 10px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.floating-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(184, 134, 11, 0.3),
+            transparent);
+}
+
+.floating-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow:
+        0 20px 60px rgba(0, 77, 51, 0.12),
+        0 8px 20px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Step Headers */
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), #003d29);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Itinerary Options */
+.itinerary-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.itinerary-option-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 77, 51, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.itinerary-option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 77, 51, 0.02) 0%,
+            rgba(184, 134, 11, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.itinerary-option-card:hover::before {
+    opacity: 1;
+}
+
+.itinerary-option-card.active {
+    background: linear-gradient(135deg,
+            rgba(0, 77, 51, 0.08) 0%,
+            rgba(184, 134, 11, 0.05) 100%);
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 77, 51, 0.15);
+}
+
+.itinerary-option-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 77, 51, 0.1);
+}
+
+.itinerary-option-card.active:hover {
+    transform: scale(1.02) translateY(-2px);
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.itinerary-days {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.itinerary-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.itinerary-badge.express {
+    background: rgba(255, 193, 7, 0.2);
+    color: #856404;
+}
+
+.itinerary-badge.popular {
+    background: rgba(40, 167, 69, 0.2);
+    color: #155724;
+}
+
+.itinerary-badge.acclimatization {
+    background: rgba(23, 162, 184, 0.2);
+    color: #0c5460;
+}
+
+.itinerary-badge.circuit {
+    background: rgba(102, 16, 242, 0.2);
+    color: #4a148c;
+}
+
+.itinerary-badge.adventure {
+    background: rgba(255, 87, 34, 0.2);
+    color: #bf360c;
+}
+
+.itinerary-badge.ultimate {
+    background: linear-gradient(135deg, rgba(184, 134, 11, 0.3), rgba(0, 77, 51, 0.3));
+    color: var(--primary-color);
+}
+
+.itinerary-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.itinerary-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Group Size & Season Sections */
+.section-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.group-size-section {
+    margin-bottom: 24px;
+}
+
+.group-size-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.group-option {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 77, 51, 0.1);
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.group-option:hover {
+    background: rgba(0, 77, 51, 0.05);
+    transform: translateY(-1px);
+}
+
+.group-option.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.size-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.size-desc {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Season Options */
+.season-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.season-option {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 77, 51, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.season-option:hover {
+    background: rgba(0, 77, 51, 0.05);
+    transform: translateY(-1px);
+}
+
+.season-option.active {
+    background: linear-gradient(135deg,
+            rgba(0, 77, 51, 0.08) 0%,
+            rgba(184, 134, 11, 0.05) 100%);
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+.season-icon {
+    font-size: 1.5rem;
+}
+
+.season-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.season-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.season-dates {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.season-note {
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.season-note i {
+    color: var(--accent-color);
+}
+
+/* Dynamic Price Display */
+.price-display-card {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(248, 251, 249, 0.95) 100%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.price-header {
+    margin-bottom: 24px;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+}
+
+.price-amount {
+    margin-bottom: 12px;
+}
+
+.currency {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    vertical-align: top;
+    margin-right: 4px;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.3s ease;
+    /* Ensure typographic stability */
+    display: inline-block;
+    min-width: 1.2em;
+    text-align: center;
+    /* Prevent layout jump during animation */
+    will-change: transform, filter, text-shadow;
+}
+
+.price-unit {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.price-microcopy {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.price-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(0, 77, 51, 0.03);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.breakdown-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.breakdown-value {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Booking Form */
+.booking-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.luxury-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 77, 51, 0.15);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 3px rgba(0, 77, 51, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.luxury-cta {
+    background: linear-gradient(135deg,
+            var(--primary-color) 0%,
+            #003d29 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.luxury-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.6s ease;
+}
+
+.luxury-cta:hover::before {
+    left: 100%;
+}
+
+.luxury-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 77, 51, 0.25);
+}
+
+.cta-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.luxury-cta:hover .cta-arrow {
+    transform: translateX(4px);
+}
+
+/* Assurance Card */
+.assurance-card {
+    background: linear-gradient(135deg,
+            rgba(0, 77, 51, 0.03) 0%,
+            rgba(184, 134, 11, 0.02) 100%);
+    border: 1px solid rgba(0, 77, 51, 0.1);
+    cursor: pointer;
+}
+
+.assurance-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.assurance-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg,
+            var(--primary-color) 0%,
+            #003d29 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.assurance-text h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.assurance-text p {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.assurance-contact {
+    display: flex;
+    gap: 12px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 77, 51, 0.1);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.contact-link.whatsapp:hover {
+    background: #25d366;
+    border-color: #25d366;
+}
+
+/* Sticky Booking Element - REMOVED */
+/* All floating elements have been removed to eliminate UI conflicts */
+
+.sticky-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sticky-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-itinerary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.sticky-meta {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.sticky-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    /* Ensure typographic stability for animation */
+    display: inline-block;
+    min-width: 1.2em;
+    text-align: center;
+    /* Prevent layout jump during animation */
+    will-change: transform, filter, text-shadow;
+}
+
+.sticky-cta {
+    background: linear-gradient(135deg,
+            var(--primary-color) 0%,
+            #003d29 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.sticky-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 77, 51, 0.25);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .luxury-pricing-section {
+        position: relative;
+        top: 0;
+        margin-bottom: 80px;
+        /* Space for sticky bar */
+    }
+
+    .floating-card {
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+
+    .price {
+        font-size: 3rem;
+    }
+
+    .group-size-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .season-options {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .sticky-booking-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .sticky-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sticky-cta {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .itinerary-option-card {
+        padding: 16px;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .currency {
+        font-size: 1.5rem;
+    }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    .luxury-pricing-section {
+        position: relative;
+        top: 0;
+        margin-top: 20px;
+    }
+    
+    .tour-sidebar {
+        width: 100%;
+        margin: 0;
+        padding: 0 15px;
+    }
+    
+    .tour-page-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .floating-card {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+    
+    .step-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .step-title {
+        font-size: 1.1rem;
+    }
+    
+    .itinerary-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .itinerary-option-card {
+        padding: 18px;
+        border-radius: 12px;
+        text-align: left;
+    }
+    
+    .itinerary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .itinerary-days {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+        border-radius: 15px;
+    }
+    
+    .itinerary-badge {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+        border-radius: 10px;
+    }
+    
+    .itinerary-name {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+    
+    .itinerary-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .group-size-options,
+    .season-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .group-option,
+    .season-option {
+        padding: 12px 8px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .size-label,
+    .season-icon {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+    
+    .size-desc,
+    .season-name {
+        font-size: 0.8rem;
+    }
+    
+    .season-dates {
+        font-size: 0.7rem;
+    }
+    
+    .price-amount {
+        margin-bottom: 15px;
+    }
+    
+    .price {
+        font-size: 2.2rem;
+    }
+    
+    .currency {
+        font-size: 1.3rem;
+    }
+    
+    .price-unit {
+        font-size: 0.9rem;
+    }
+    
+    .price-microcopy {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+    
+    .price-breakdown {
+        gap: 8px;
+    }
+    
+    .breakdown-item {
+        font-size: 0.85rem;
+        padding: 8px 0;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+    
+    .luxury-cta {
+        padding: 15px 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .included-list,
+    .not-included-list {
+        gap: 8px;
+    }
+    
+    .included-list li,
+    .not-included-list li {
+        font-size: 0.85rem;
+        padding: 8px 0;
+        line-height: 1.3;
+    }
+    
+    .assurance-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .assurance-icon {
+        font-size: 2rem;
+    }
+    
+    .assurance-text h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .assurance-text p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+    
+    .assurance-contact {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .contact-link {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .floating-card {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+    
+    .step-header {
+        gap: 8px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .step-title {
+        font-size: 1rem;
+    }
+    
+    .itinerary-option-card {
+        padding: 15px;
+    }
+    
+    .itinerary-header {
+        gap: 6px;
+    }
+    
+    .itinerary-days {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+    
+    .itinerary-badge {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+    
+    .itinerary-name {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    
+    .itinerary-desc {
+        font-size: 0.85rem;
+    }
+    
+    .group-size-options,
+    .season-options {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .group-option,
+    .season-option {
+        padding: 10px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .size-label,
+    .season-icon {
+        font-size: 1rem;
+        margin-bottom: 0;
+        min-width: 20px;
+    }
+    
+    .size-desc,
+    .season-name {
+        font-size: 0.85rem;
+        text-align: left;
+    }
+    
+    .season-dates {
+        font-size: 0.75rem;
+        text-align: left;
+    }
+    
+    .price {
+        font-size: 2rem;
+    }
+    
+    .currency {
+        font-size: 1.2rem;
+    }
+    
+    .price-unit {
+        font-size: 0.85rem;
+    }
+    
+    .price-microcopy {
+        font-size: 0.75rem;
+    }
+    
+    .breakdown-item {
+        font-size: 0.8rem;
+        padding: 6px 0;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+    
+    .luxury-cta {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .included-list li,
+    .not-included-list li {
+        font-size: 0.8rem;
+        padding: 6px 0;
+    }
+    
+    .assurance-icon {
+        font-size: 1.8rem;
+    }
+    
+    .assurance-text h4 {
+        font-size: 0.95rem;
+    }
+    
+    .assurance-text p {
+        font-size: 0.75rem;
+    }
+    
+    .contact-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Sticky Booking Mobile */
+@media (max-width: 768px) {
+    .sticky-booking {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 1000;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sticky-booking-content {
+        max-width: none;
+        margin: 0;
+    }
+    
+    .sticky-info {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .sticky-details {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .sticky-itinerary {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .sticky-meta {
+        font-size: 0.8rem;
+        opacity: 0.8;
+    }
+    
+    .sticky-price {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    
+    .sticky-cta {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+}
+
+/* Tour Page Mobile Layout */
+@media (max-width: 768px) {
+    .tour-hero-content {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .tour-hero-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .tour-hero-meta {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .tour-main-content {
+        padding: 20px 0;
+    }
+    
+    .tour-main-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .tour-main-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .tour-overview {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .info-list {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .info-list li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+    }
+    
+    .highlights-box {
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .highlights-box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .highlights-box ul {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .highlights-box li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+    }
+    
+    .itinerary-option {
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .itinerary-option h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .itinerary-details ul {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .itinerary-details li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+}
+
+/* Navigation Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .logo-container {
+        max-width: 40px;
+        height: 40px;
+    }
+    
+    .logo-title {
+        font-size: 0.8rem;
+        line-height: 1;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.6rem;
+        display: none;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100vh);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .nav-links li {
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 10px 0;
+        display: block;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    
+    .lang-switcher {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .lang-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .lang-dropdown {
+        position: static;
+        display: none;
+        margin-top: 10px;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background: white;
+    }
+    
+    .lang-dropdown.active {
+        display: block;
+    }
+}
+
+/* Footer Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-col h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-col p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+    
+    .footer-links li {
+        margin: 0;
+    }
+    
+    .copyright {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .copyright p {
+        font-size: 0.8rem;
+    }
+}
+
+/* WhatsApp Button Mobile - REMOVED */
+/* All floating button styles have been removed to eliminate UI conflicts */

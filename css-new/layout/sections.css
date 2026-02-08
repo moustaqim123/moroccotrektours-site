@@ -1,0 +1,433 @@
+/*
+========================================
+  SECTIONS LAYOUT
+========================================
+  Common section layouts and spacing
+*/
+
+/* Base section */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-sm {
+  padding: var(--space-12) 0;
+}
+
+.section-lg {
+  padding: var(--space-24) 0;
+}
+
+.section-xl {
+  padding: var(--space-32) 0;
+}
+
+/* Section with background */
+.section--bg-primary {
+  background-color: var(--color-bg-primary);
+}
+
+.section--bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.section--bg-primary-dark {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.section--bg-accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* Section with gradient */
+.section--gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-text-inverse);
+}
+
+.section--gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: var(--color-text-inverse);
+}
+
+/* Section with image background */
+.section--hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section--hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.section--hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section header */
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section__header--left {
+  text-align: left;
+}
+
+.section__header--right {
+  text-align: right;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-tight);
+}
+
+.section__title--light {
+  color: var(--color-text-inverse);
+}
+
+.section__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.section__subtitle--light {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section__subtitle--left {
+  margin: 0;
+  max-width: none;
+}
+
+.section__subtitle--right {
+  margin: 0;
+  max-width: none;
+}
+
+/* Section content */
+.section__content {
+  margin-bottom: var(--space-8);
+}
+
+.section__content:last-child {
+  margin-bottom: 0;
+}
+
+/* Section footer */
+.section__footer {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.section__footer--left {
+  text-align: left;
+}
+
+.section__footer--right {
+  text-align: right;
+}
+
+/* Section grid layouts */
+.section__grid {
+  display: grid;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.section__grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section__grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section__grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section__grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Section flex layouts */
+.section__flex {
+  display: flex;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.section__flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+.section__flex--between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__flex--column {
+  flex-direction: column;
+}
+
+/* Section with cards */
+.section__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/* Section with features */
+.section__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+/* Section with testimonials */
+.section__testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+/* Section with stats */
+.section__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+/* Section with gallery */
+.section__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+/* Section with timeline */
+.section__timeline {
+  position: relative;
+  padding-left: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.section__timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+/* Section with pricing */
+.section__pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/* Section with team */
+.section__team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/* Section with contact info */
+.section__contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/* Section overlay */
+.section__overlay {
+  position: relative;
+}
+
+.section__overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.section__overlay .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section divider */
+.section__divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--space-12) 0;
+}
+
+.section__divider--thick {
+  height: 2px;
+}
+
+.section__divider--accent {
+  background-color: var(--color-accent);
+}
+
+.section__divider--primary {
+  background-color: var(--color-primary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+  
+  .section-sm {
+    padding: var(--space-8) 0;
+  }
+  
+  .section-lg {
+    padding: var(--space-16) 0;
+  }
+  
+  .section-xl {
+    padding: var(--space-20) 0;
+  }
+  
+  .section__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .section__header {
+    margin-bottom: var(--space-8);
+  }
+  
+  .section__grid--2,
+  .section__grid--3,
+  .section__grid--4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .section__flex--column {
+    flex-direction: column;
+  }
+  
+  .section__cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .section__features {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .section__testimonials {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .section__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .section__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  
+  .section__timeline {
+    padding-left: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-8) 0;
+  }
+  
+  .section-sm {
+    padding: var(--space-6) 0;
+  }
+  
+  .section-lg {
+    padding: var(--space-12) 0;
+  }
+  
+  .section-xl {
+    padding: var(--space-16) 0;
+  }
+  
+  .section__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--font-size-sm);
+  }
+  
+  .section__header {
+    margin-bottom: var(--space-6);
+  }
+  
+  .section__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .section__gallery {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  
+  .section__timeline {
+    padding-left: var(--space-4);
+  }
+}

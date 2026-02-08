@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head>
+    <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
+    <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
+
+    <meta property="og:title" content="Morocco Trek Tours">
+    <meta property="og:description" content="Gateway To Authentic Adventures">
+    <meta property="og:image" content="images/assets/icon-brand.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Filter Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        .lang-dropdown { display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px; }
+        .lang-switcher.active .lang-dropdown { display: block; }
+        .lang-btn { cursor: pointer; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; }
+        select { padding: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Language Filter Test Page</h1>
+    <p>This page demonstrates the language filter removing Arabic, Spanish, and German options while keeping English and French.</p>
+
+    <div class="test-section">
+        <h2>Test 1: Navigation Dropdown</h2>
+        <div class="lang-switcher">
+            <button class="lang-btn">
+                <i class="fas fa-globe"></i>
+                <span>English</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="lang-dropdown">
+                <li><a href="test-language-filter.html" class="active">English</a></li>
+                <li><a href="test-language-filter-fr.html">Français</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Select Dropdown</h2>
+        <select class="language-select">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Language Buttons</h2>
+        <div class="language-selector">
+            <button>English</button>
+            <button>Français</button>
+            <button>العربية</button>
+            <button>Español</button>
+            <button>Deutsch</button>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Mixed Language Names</h2>
+        <div class="lang-switcher">
+            <button class="lang-btn">
+                <span>English</span>
+            </button>
+            <ul class="lang-dropdown">
+                <li><a href="test-language-filter.html">English</a></li>
+                <li><a href="test-language-filter-fr.html">Français</a></li>
+                <li><a href="#">Arabic</a></li>
+                <li><a href="#">Spanish</a></li>
+                <li><a href="#">German</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Enable dropdowns for testing
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.lang-switcher').classList.toggle('active');
+            });
+        });
+        
+        // Log results
+        setTimeout(() => {
+            console.log('Language filter test completed');
+            console.log('Dropdown options:', document.querySelectorAll('.lang-dropdown a').length);
+            console.log('Select options:', document.querySelectorAll('.language-select option').length);
+            console.log('Buttons visible:', document.querySelectorAll('.language-selector button:not([style*="display: none"])').length);
+        }, 1000);
+    </script>
+
+
+
+
+</body></html>
