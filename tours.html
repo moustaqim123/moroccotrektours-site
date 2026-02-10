@@ -159,6 +159,44 @@
             border-top: 1px solid #f0f0f0 !important;
             gap: 15px !important;
         }
+        
+        /* Force larger logo on mobile for tours page - MAXIMUM PRIORITY */
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 70px !important;
+            min-height: 70px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        /* Force larger logo on small mobile for tours page - MAXIMUM PRIORITY */
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 65px !important;
+            min-height: 65px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
     }
     </style>
 
@@ -177,9 +215,7 @@
         /* Hero Section - Luxury Style */
         .hero-section {
             height: 100vh !important;
-            --hero-desktop: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url('images/hero/hero_tours.jpg');
-            --hero-mobile: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url('images/hero/hero_tours_mobile.jpg');
-            background-image: var(--hero-desktop) !important;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url('images/hero/hero_tours.jpg') !important;
             background-size: cover !important;
             background-position: center !important;
             background-attachment: fixed !important;
@@ -195,6 +231,7 @@
         @media (max-width: 768px) {
             .hero-section {
                 height: 60vh !important;
+                background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url('images/hero/hero_tours_mobile.jpg') !important;
                 background-attachment: scroll !important;
                 margin-top: 0 !important;
             }

@@ -2,8 +2,8 @@
 /* Premium Dynamic Pricing & Booking   */
 /* ---------------------------------- */
 .luxury-pricing-section {
-    position: sticky;
-    top: 100px;
+    position: relative;
+    top: 0;
 }
 
 /* Floating Cards Base Style */
@@ -1055,20 +1055,21 @@
     }
 }
 
-/* Sticky Booking Mobile */
+/* Sticky Booking Mobile - DISABLED */
 @media (max-width: 768px) {
     .sticky-booking {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 15px;
-        z-index: 1000;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        z-index: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
     }
     
     .sticky-booking-content {

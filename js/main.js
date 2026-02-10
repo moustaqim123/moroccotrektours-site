@@ -1083,22 +1083,129 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
-        });
-
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+    // Only apply mobile menu logic on mobile devices
+    if (window.innerWidth <= 768) {
+        // Force reset menu state on page load
+        if (navLinks) {
+            navLinks.classList.remove('active');
+            navLinks.style.right = '-100%';
+            navLinks.style.transform = 'translateX(100%)';
+        }
+        
+        if (mobileMenuBtn && navLinks) {
+            // Toggle menu
+            mobileMenuBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const isActive = navLinks.classList.contains('active');
+                
+                if (isActive) {
+                    // Close menu
+                    navLinks.classList.remove('active');
+                    navLinks.style.right = '-100%';
+                    navLinks.style.transform = 'translateX(100%)';
+                    
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                } else {
+                    // Open menu
+                    navLinks.classList.add('active');
+                    navLinks.style.right = '0';
+                    navLinks.style.transform = 'translateX(0)';
+                    
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                }
             });
-        });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Force close menu
+                    navLinks.classList.remove('active');
+                    navLinks.style.right = '-100%';
+                    navLinks.style.transform = 'translateX(100%)';
+                    
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    // Navigate after a short delay
+                    setTimeout(() => {
+                        window.location.href = link.href;
+                    }, 100);
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (navLinks.classList.contains('active') && 
+                    !navLinks.contains(e.target) && 
+                    !mobileMenuBtn.contains(e.target)) {
+                    
+                    // Force close menu
+                    navLinks.classList.remove('active');
+                    navLinks.style.right = '-100%';
+                    navLinks.style.transform = 'translateX(100%)';
+                    
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    // Force close menu
+                    navLinks.classList.remove('active');
+                    navLinks.style.right = '-100%';
+                    navLinks.style.transform = 'translateX(100%)';
+                    
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        }
     }
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+            // Force close menu when switching to desktop
+            navLinks.classList.remove('active');
+            navLinks.style.right = '';
+            navLinks.style.transform = '';
+            
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        } else if (window.innerWidth <= 768 && navLinks) {
+            // Reset mobile styles when switching to mobile
+            if (!navLinks.classList.contains('active')) {
+                navLinks.style.right = '-100%';
+                navLinks.style.transform = 'translateX(100%)';
+            }
+        }
+    });
 
     // --- Unify Tour Detail Inline Styles ---
     // Many tour pages have inline styles on itinerary blocks (duration-section/itinerary-option).

@@ -28,6 +28,47 @@
     <link rel="stylesheet" href="css/luxury-pricing.css">
     <!-- Hreflang tags -->
 
+    <style>
+    /* Force larger logo on mobile for tour-ait-bougmez-fr page - MAXIMUM PRIORITY */
+    @media (max-width: 768px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 70px !important;
+            min-height: 70px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 65px !important;
+            min-height: 65px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    </style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 

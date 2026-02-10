@@ -22,7 +22,52 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Logo Entrance Animation -->
+    <link rel="stylesheet" href="css/logo-entrance.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Hreflang tags -->
+
+    <style>
+    /* Force larger logo on mobile for customize-trip-fr page - MAXIMUM PRIORITY */
+    @media (max-width: 768px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 70px !important;
+            min-height: 70px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 65px !important;
+            min-height: 65px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -240,8 +285,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section"
-        style="--hero-desktop: url('images/hero/hero_customize.jpg'); --hero-mobile: url('images/hero/hero_customize_mobile.jpg');">
+    <header class="hero-section">
         <div class="hero-content" style="color: #FFFFFF;">
             <h1 class="hero-title">Personnalisez Votre Voyage</h1>
             <p class="hero-description">Votre voyage, votre rythme, vos souvenirs. Créons quelque chose d'unique.</p>

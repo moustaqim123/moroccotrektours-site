@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function setupEventListeners() {
-        // Itinerary selection
-        document.querySelectorAll('.itinerary-option-card').forEach(card => {
+        // Itinerary selection - only target sidebar options
+        document.querySelectorAll('.itinerary-option-card.sidebar-option').forEach(card => {
             card.addEventListener('click', function() {
-                // Remove active class from all cards
-                document.querySelectorAll('.itinerary-option-card').forEach(c => c.classList.remove('active'));
+                // Remove active class from all sidebar cards
+                document.querySelectorAll('.itinerary-option-card.sidebar-option').forEach(c => c.classList.remove('active'));
                 
                 // Add active class to clicked card
                 this.classList.add('active');
@@ -72,6 +72,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Update selection
                 currentSelection.duration = parseInt(this.dataset.duration);
                 currentSelection.label = this.dataset.label;
+                
+                // Sync with main content options
+                const mainContentOptions = document.querySelectorAll('.tour-main-content .itinerary-option-card');
+                mainContentOptions.forEach(mainCard => {
+                    if (parseInt(mainCard.dataset.duration) === currentSelection.duration) {
+                        mainCard.classList.add('active');
+                    } else {
+                        mainCard.classList.remove('active');
+                    }
+                });
+                
+                // Animate selection
+                animateSelection(this);
+                
+                // Update price
+                updatePrice();
+                updateBreakdown();
+                updateStickyBooking();
+            });
+        });
+
+        // Also handle main content options
+        document.querySelectorAll('.tour-main-content .itinerary-option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove active class from all main content cards
+                document.querySelectorAll('.tour-main-content .itinerary-option-card').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked card
+                this.classList.add('active');
+                
+                // Update selection
+                currentSelection.duration = parseInt(this.dataset.duration);
+                currentSelection.label = this.dataset.label;
+                
+                // Sync with sidebar options
+                const sidebarOptions = document.querySelectorAll('.itinerary-option-card.sidebar-option');
+                sidebarOptions.forEach(sidebarCard => {
+                    if (parseInt(sidebarCard.dataset.duration) === currentSelection.duration) {
+                        sidebarCard.classList.add('active');
+                    } else {
+                        sidebarCard.classList.remove('active');
+                    }
+                });
                 
                 // Animate selection
                 animateSelection(this);
@@ -143,6 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function getExactPrice() {
+        // Debug: Log current selection
+        console.log('Current selection:', currentSelection);
+        
         // Get exact price from predefined data - NO CALCULATIONS OR MODIFICATIONS
         const durationPrices = exactPricing[currentSelection.duration];
         if (!durationPrices) {
@@ -162,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return 0;
         }
         
+        console.log('Calculated price:', price);
         return price; // Return exact price as provided
     }
 
@@ -170,19 +217,32 @@ document.addEventListener('DOMContentLoaded', function() {
         const priceElement = document.getElementById('dynamicPrice');
         const stickyPriceElement = document.getElementById('stickyPrice');
         
-        if (priceElement && stickyPriceElement) {
+        console.log('Updating price to:', price);
+        
+        if (priceElement) {
             const currentPrice = parseInt(priceElement.textContent) || 0;
+            
+            console.log('Current price in element:', currentPrice);
             
             // Only animate if price actually changed
             if (currentPrice !== price) {
-                // Animate both main price and sticky price
+                console.log('Price changed, updating...');
+                // Animate main price
                 animatePriceValue(priceElement, currentPrice, price);
-                animatePriceValue(stickyPriceElement, currentPrice, price);
                 
                 // Add micro-highlight effect
                 addMicroHighlight(priceElement);
-                addMicroHighlight(stickyPriceElement);
+                
+                // Update sticky price if it exists
+                if (stickyPriceElement) {
+                    animatePriceValue(stickyPriceElement, currentPrice, price);
+                    addMicroHighlight(stickyPriceElement);
+                }
+            } else {
+                console.log('Price unchanged, no animation needed');
             }
+        } else {
+            console.error('Price element #dynamicPrice not found');
         }
     }
 

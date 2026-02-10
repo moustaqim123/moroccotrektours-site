@@ -28,6 +28,47 @@
     <!-- Hreflang tags -->
 
     <style>
+    /* Force larger logo on mobile for tour-toubkal page - MAXIMUM PRIORITY */
+    @media (max-width: 768px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 70px !important;
+            min-height: 70px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 65px !important;
+            min-height: 65px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    </style>
+
+    <style>
     /* Unified Navigation Styles */
     .navbar {
         background: white !important;
@@ -101,15 +142,12 @@
         visibility: hidden !important;
         transition: opacity 0.3s ease, visibility 0.3s ease !important;
         z-index: 1000 !important;
-        transform: translateY(-10px);
-        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease !important;
     }
     
     .lang-switcher:hover .lang-dropdown,
     .lang-dropdown:hover {
         opacity: 1 !important;
         visibility: visible !important;
-        transform: translateY(0) !important;
     }
     
     .lang-dropdown li {
@@ -584,8 +622,10 @@
 
                         <div class="itinerary-options-container" style="margin-top: 20px;">
                             <!-- Option 1 -->
-                            <div class="itinerary-option"
-                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                            <div class="itinerary-option-card"
+                                data-duration="1"
+                                data-label="1-Day Express Challenge"
+                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px; cursor: pointer;">
                                 <h3 style="color: var(--primary-color);">Option 1: The 1-Day Challenge (Express)</h3>
                                 <div class="itinerary-details">
                                     <p><strong>Route:</strong> Imlil → Toubkal Refuge → Return OR Imlil Valley
@@ -599,8 +639,10 @@
                             </div>
 
                             <!-- Option 2 -->
-                            <div class="itinerary-option"
-                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                            <div class="itinerary-option-card"
+                                data-duration="2"
+                                data-label="Classic 2-Day Summit"
+                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px; cursor: pointer;">
                                 <h3 style="color: var(--primary-color);">Option 2: The Classic 2-Day Summit</h3>
                                 <div class="itinerary-details">
                                     <p><strong>Day 1:</strong> Hike from Imlil (1,740m) up to the Toubkal Refuge
@@ -612,8 +654,10 @@
                             </div>
 
                             <!-- Option 3 -->
-                            <div class="itinerary-option"
-                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                            <div class="itinerary-option-card"
+                                data-duration="3"
+                                data-label="3-Day Azzaden Valley Loop"
+                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px; cursor: pointer;">
                                 <h3 style="color: var(--primary-color);">Option 3: 3-Day Toubkal & Azzaden Valley</h3>
                                 <div class="itinerary-details">
                                     <p><strong>Day 1:</strong> Trek from Imlil over Tizi Mzik pass (2,500m) into the
@@ -628,8 +672,10 @@
                             </div>
 
                             <!-- Option 4 -->
-                            <div class="itinerary-option"
-                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                            <div class="itinerary-option-card"
+                                data-duration="4"
+                                data-label="4-Day Complete Circuit"
+                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px; cursor: pointer;">
                                 <h3 style="color: var(--primary-color);">Option 4: 4-Day Toubkal Circuit</h3>
                                 <div class="itinerary-details">
                                     <p><strong>Day 1:</strong> Imlil to Tacheddirt village (2,300m) via Tizi n'Tamatert
@@ -645,8 +691,10 @@
                             </div>
 
                             <!-- Option 5 -->
-                            <div class="itinerary-option"
-                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                            <div class="itinerary-option-card"
+                                data-duration="5"
+                                data-label="5-Day Grand Atlas Experience"
+                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px; cursor: pointer;">
                                 <h3 style="color: var(--primary-color);">Option 5: 5-Day Grand Atlas Experience</h3>
                                 <div class="itinerary-details">
                                     <p><strong>Day 1:</strong> Imlil to Tacheddirt.</p>
@@ -663,8 +711,10 @@
                             </div>
 
                             <!-- Option 6 -->
-                            <div class="itinerary-option"
-                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                            <div class="itinerary-option-card"
+                                data-duration="6"
+                                data-label="6-Day Ultimate Experience"
+                                style="margin-bottom: 40px; border-left: 4px solid var(--primary-color); padding-left: 20px; cursor: pointer;">
                                 <h3 style="color: var(--primary-color);">Option 6: 6-Day Ultimate Toubkal & Valleys</h3>
                                 <div class="itinerary-details">
                                     <p>The definitive High Atlas journey. This route covers the lush Azzaden Valley, the
@@ -739,7 +789,7 @@
                                 <h3 class="step-title">Select Your Itinerary</h3>
                             </div>
                             <div class="itinerary-options">
-                                <div class="itinerary-option-card" data-duration="1" data-label="The 1-Day Challenge">
+                                <div class="itinerary-option-card sidebar-option" data-duration="1" data-label="The 1-Day Challenge">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">1 Day</span>
                                         <span class="itinerary-badge express">Express</span>
@@ -748,7 +798,7 @@
                                     <p class="itinerary-desc">Intense summit push for experienced climbers</p>
                                 </div>
 
-                                <div class="itinerary-option-card active recommended" data-duration="2"
+                                <div class="itinerary-option-card sidebar-option active recommended" data-duration="2"
                                     data-label="Classic 2-Day Summit">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">2 Days</span>
@@ -758,7 +808,7 @@
                                     <p class="itinerary-desc">Traditional route with refuge overnight</p>
                                 </div>
 
-                                <div class="itinerary-option-card" data-duration="3"
+                                <div class="itinerary-option-card sidebar-option" data-duration="3"
                                     data-label="Toubkal & Azzaden Valley">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">3 Days</span>
@@ -768,7 +818,7 @@
                                     <p class="itinerary-desc">Scenic valley loop with better success rate</p>
                                 </div>
 
-                                <div class="itinerary-option-card" data-duration="4" data-label="Toubkal Circuit">
+                                <div class="itinerary-option-card sidebar-option" data-duration="4" data-label="Toubkal Circuit">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">4 Days</span>
                                         <span class="itinerary-badge circuit">Multi-Valley</span>
@@ -777,7 +827,7 @@
                                     <p class="itinerary-desc">Comprehensive exploration of hidden valleys</p>
                                 </div>
 
-                                <div class="itinerary-option-card" data-duration="5"
+                                <div class="itinerary-option-card sidebar-option" data-duration="5"
                                     data-label="Grand Atlas Experience">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">5 Days</span>
@@ -787,7 +837,7 @@
                                     <p class="itinerary-desc">Dramatic landscapes and remote mountain passes</p>
                                 </div>
 
-                                <div class="itinerary-option-card" data-duration="6"
+                                <div class="itinerary-option-card sidebar-option" data-duration="6"
                                     data-label="Ultimate Toubkal & Valleys">
                                     <div class="itinerary-header">
                                         <span class="itinerary-days">6 Days</span>

@@ -165,16 +165,24 @@ img {
     justify-content: center;
 }
 
-.logo-container img {
-    max-height: 95px;
-    width: auto;
-    display: block;
-}
-
+.logo-container img,
 .logo-img {
     max-height: 95px !important;
-    width: auto;
-    display: block;
+    width: auto !important;
+    display: block !important;
+    height: auto !important;
+}
+
+/* Force consistent logo size across all pages */
+.logo .logo-container img,
+.logo .logo-img,
+.navbar .logo-container img,
+.navbar .logo-img {
+    max-height: 95px !important;
+    min-height: 95px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
 }
 
 .logo-container.logo-animating img {
@@ -271,8 +279,17 @@ img {
 
     /* Hero section gap fix applied */
 
-    .logo-container img {
-        max-height: 95px;
+    .logo-container img,
+    .logo-img,
+    .logo .logo-container img,
+    .logo .logo-img,
+    .navbar .logo-container img,
+    .navbar .logo-img {
+        max-height: 75px !important;
+        min-height: 75px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
 
     .logo-title .line {
@@ -299,12 +316,23 @@ img {
 @media (max-width: 768px) {
     .navbar {
         height: 100px;
+        padding: 10px 0;
+        /* Increased padding to fit larger logo */
     }
 
     /* Hero section gap fix applied */
 
-    .logo-container img {
-        max-height: 95px;
+    .logo-container img,
+    .logo-img,
+    .logo .logo-container img,
+    .logo .logo-img,
+    .navbar .logo-container img,
+    .navbar .logo-img {
+        max-height: 75px !important;
+        min-height: 75px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
 
     .logo-title .line {
@@ -323,8 +351,8 @@ img {
     .nav-links {
         position: fixed;
         right: -100%;
-        top: 85px;
-        height: calc(100vh - 85px);
+        top: 100px;
+        height: calc(100vh - 100px);
         background-color: var(--bg-light);
         flex-direction: column;
         width: 100%;
@@ -342,14 +370,26 @@ img {
 @media (max-width: 480px) {
     .navbar {
         height: 100px;
+        padding: 10px 0;
+        /* Increased padding to fit larger logo */
     }
 
     .hero-section {
-        margin-top: 75px;
+        margin-top: 100px;
+        /* Adjusted for new navbar height */
     }
 
-    .logo-container img {
-        max-height: 95px;
+    .logo-container img,
+    .logo-img,
+    .logo .logo-container img,
+    .logo .logo-img,
+    .navbar .logo-container img,
+    .navbar .logo-img {
+        max-height: 75px !important;
+        min-height: 75px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
 }
 
@@ -2121,24 +2161,20 @@ body.page-transitioning {
 
     .nav-links {
         position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        right: -100%;
+        top: 85px;
+        height: calc(100vh - 85px);
+        background-color: var(--bg-light);
         flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100vh);
-        transition: transform 0.3s ease;
-        z-index: 999;
-        max-height: calc(100vh - 60px);
-        overflow-y: auto;
+        width: 100%;
+        padding: var(--spacing-md);
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        transform: translateY(0);
+        right: 0;
     }
 
     .nav-links li {
