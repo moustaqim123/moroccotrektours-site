@@ -1,0 +1,12 @@
+private/email-config.php
+private/email-config.local.php
+_backups/
+vendor/
+node_modules/
+.env
+.env.*
+smtp-auth-test.php
+*.log
+logs/
+
+.vscode/

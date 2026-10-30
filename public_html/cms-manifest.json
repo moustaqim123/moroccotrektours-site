@@ -1,0 +1,572 @@
+{
+  "images": {
+    "auto.images.agafay_desert": "images/agafay_desert1.jpg",
+    "auto.images.ait_bougmez": "images/ait_bougmez.jpg",
+    "auto.images.atlas_village": "images/atlas_village.jpg",
+    "auto.images.guide_coastal_vibes": "images/guide_coastal_vibes.jpg",
+    "auto.images.guide_culture_flavors": "images/guide_culture_flavors.jpg",
+    "auto.images.guide_high_atlas": "images/guide_high_atlas.jpg",
+    "auto.images.guide_sahara_desert": "images/guide_sahara_desert1.jpeg",
+    "auto.images.happy_valley_main": "images/happy_valley_main1.jpg",
+    "auto.images.mgoun": "images/mgoun_main1.jpeg",
+    "auto.images.mgoun_main": "images/mgoun_main1.jpeg",
+    "auto.images.saghro_bab_nali": "images/saghro_bab_nali.jpg",
+    "auto.images.saghro_cathedral": "images/saghro_cathedral.jpg",
+    "auto.images.saghro_main": "images/saghro_main.jpg",
+    "auto.images.saghro_sunset_rocks": "images/saghro_sunset_rocks.jpg",
+    "auto.images.sahara_erg_chebbi": "images/sahara_erg_chebbi.jpg",
+    "auto.images.siroua_main": "images/siroua_main1.jpeg",
+    "auto.images.siroua_volcanic_pools": "images/siroua_volcanic_pools.jpg",
+    "auto.images.todra_dades": "images/todra_dades1.jpg",
+    "auto.images.toubkal_summit": "images/toubkal_summit.jpg",
+    "auto.images.volcanic_canyon": "images/volcanic_canyon.jpg",
+    "pages.about.team.team4.image": "images/team4.jpg",
+    "pages.blog.cards.guide_coastal_vibes.image": "images/guide_coastal_vibes.jpg",
+    "pages.blog.cards.guide_culture_flavors.image": "images/guide_culture_flavors.jpg",
+    "pages.blog.cards.guide_high_atlas.image": "images/guide_high_atlas.jpg",
+    "pages.blog.cards.guide_sahara_desert.image": "images/guide_sahara_desert.jpg",
+    "pages.index.cards.tour-saghro.image": "images/saghro_main.jpg",
+    "pages.tours.cards.tour-agafay.image": "images/agafay_desert1.jpg",
+    "pages.tours.cards.tour-ait-bougmez.image": "images/happy_valley_main1.jpg",
+    "pages.tours.cards.tour-atlas-villages.image": "images/atlas_village.jpg",
+    "pages.tours.cards.tour-mgoun.image": "images/mgoun_main1.jpeg",
+    "pages.tours.cards.tour-saghro.image": "images/saghro_main.jpg",
+    "pages.tours.cards.tour-sahara-erg-chebbi.image": "images/sahara_erg_chebbi1.jpeg",
+    "pages.tours.cards.tour-siroua.image": "images/siroua_main1.jpeg",
+    "pages.tours.cards.tour-todra-dades.image": "images/todra_dades1.jpg",
+    "pages.tours.cards.tour-toubkal.image": "images/toubkal_summit.jpg",
+    "pages.tours.cards.tour-10-days.image": "images/tours/tour-10-days/tour-10-days-main.jpg",
+    "site.logo": "images/assets/logo-header.png"
+  },
+  "packages": {
+    "site": {
+      "slug": "site",
+      "title": "Site Contact",
+      "whatsapp_message": "Hello! I'm interested and would like more information."
+    },
+    "tour-agafay": {
+      "slug": "tour-agafay",
+      "title": "Agafay Desert & Marrakech Day Trek",
+      "whatsapp_message": "Hello! I'm interested in the Agafay Desert & Marrakech Day Trek (tour-agafay)."
+    },
+    "tour-atlas-villages": {
+      "slug": "tour-atlas-villages",
+      "title": "Atlas Mountain Village Discovery",
+      "whatsapp_message": "Hello! I'm interested in the Atlas Mountain Village Discovery (tour-atlas-villages)."
+    },
+    "tour-saghro": {
+      "slug": "tour-saghro",
+      "title": "Jebel Saghro & Aït Atta",
+      "whatsapp_message": "Hello! I'm interested in the Jebel Saghro & Aït Atta trek (tour-saghro)."
+    },
+    "tour-todra-dades": {
+      "slug": "tour-todra-dades",
+      "title": "Todra & Dades Gorges Expedition",
+      "whatsapp_message": "Hello! I'm interested in the Todra & Dades Gorges Expedition (tour-todra-dades)."
+    },
+    "tour-siroua": {
+      "slug": "tour-siroua",
+      "title": "Massif du Siroua & Saffron",
+      "whatsapp_message": "Hello! I'm interested in the Massif du Siroua trek (tour-siroua)."
+    },
+    "tour-ait-bougmez": {
+      "slug": "tour-ait-bougmez",
+      "title": "The Happy Valley (Aït Bougmez)",
+      "whatsapp_message": "Hello! I'm interested in The Happy Valley (Aït Bougmez) trek (tour-ait-bougmez)."
+    },
+    "tour-mgoun": {
+      "slug": "tour-mgoun",
+      "title": "M'Goun Expedition",
+      "whatsapp_message": "Hello! I'm interested in the M'Goun Expedition (tour-mgoun)."
+    },
+    "tour-sahara-erg-chebbi": {
+      "slug": "tour-sahara-erg-chebbi",
+      "title": "Sahara Desert & Erg Chebbi Trek",
+      "whatsapp_message": "Hello! I'm interested in the Sahara Desert & Erg Chebbi Trek (tour-sahara-erg-chebbi)."
+    },
+    "tour-toubkal": {
+      "slug": "tour-toubkal",
+      "title": "High Atlas Summit Challenge",
+      "whatsapp_message": "Hello! I'm interested in the High Atlas Summit Challenge (tour-toubkal)."
+    },
+    "tour-chefchaouen": {
+      "slug": "tour-chefchaouen",
+      "title": "Chefchaouen Mountains & Blue City",
+      "whatsapp_message": "Hello! I'm interested in the Chefchaouen Mountains (tour-chefchaouen)."
+    },
+    "tour-essaouira": {
+      "slug": "tour-essaouira",
+      "title": "Essaouira Coastal Trek",
+      "whatsapp_message": "Hello! I'm interested in the Essaouira Coastal Trek (tour-essaouira)."
+    },
+    "tour-10-days": {
+      "slug": "tour-10-days",
+      "title": "10-Day Morocco Adventure",
+      "whatsapp_message": "Hello! I'm interested in the 10-Day Morocco Adventure (tour-10-days)."
+    }
+  },
+  "backgrounds_meta": {
+    "pages.tours.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.about.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog-atlas.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog-coastal.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog-culture.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog-fes.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog-marrakech.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog-sahara.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.blog.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.contact.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.customize-trip.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.index.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-small"
+      ],
+      "required": true
+    },
+    "pages.tour-ait-bougmez.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-medium"
+      ],
+      "required": true
+    },
+    "pages.tour-mgoun.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-medium"
+      ],
+      "required": true
+    },
+    "pages.tour-sahara-erg-chebbi.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    },
+    "pages.tour-toubkal.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    },
+    "pages.tour-todra-dades.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    },
+    "pages.tour-siroua.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-medium"
+      ],
+      "required": true
+    },
+    "pages.tour-saghro.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.hero-section.hero-medium"
+      ],
+      "required": true
+    },
+    "pages.tour-essaouira.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    },
+    "pages.tour-atlas-villages.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    },
+    "pages.tour-chefchaouen.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    },
+    "pages.tour-agafay.hero": {
+      "type": "background",
+      "usage": "hero",
+      "targets": [
+        "header.tour-hero"
+      ],
+      "required": true
+    }
+  },
+  "backgrounds": {
+    "pages.tours.hero": "images/hero/hero_tours.jpg",
+    "pages.about.hero": "images/hero/hero_about.jpg",
+    "pages.blog-atlas.hero": "images/atlas_village.jpg",
+    "pages.blog-coastal.hero": "images/guide_coastal_vibes1.jpg",
+    "pages.blog-culture.hero": "images/saghro_cathedral.jpg",
+    "pages.blog-fes.hero": "images/guide_culture_flavors.jpg",
+    "pages.blog-marrakech.hero": "images/guide_high_atlas.jpg",
+    "pages.blog-sahara.hero": "images/guide_sahara_desert.jpg",
+    "pages.blog.hero": "images/hero/hero_guide.jpg",
+    "pages.contact.hero": "images/hero/hero_contact.jpg",
+    "pages.customize-trip.hero": "images/hero/hero_customize.jpg",
+    "pages.index.hero": "images/hero/hero_home.jpg",
+    "pages.tour-ait-bougmez.hero": "images/happy_valley_main1.jpg",
+    "pages.tour-mgoun.hero": "images/mgoun_main1.jpeg",
+    "pages.tour-sahara-erg-chebbi.hero": "images/sahara_erg_chebbi1.jpeg",
+    "pages.tour-toubkal.hero": "images/toubkal_summit.jpg",
+    "pages.tour-todra-dades.hero": "images/todra_dades1.jpg",
+    "pages.tour-siroua.hero": "images/siroua_main1.jpeg",
+    "pages.tour-saghro.hero": "images/saghro_main.jpg",
+    "pages.tour-essaouira.hero": "images/guide_coastal_vibes1.jpg",
+    "pages.tour-atlas-villages.hero": "images/atlas_village.jpg",
+    "pages.tour-chefchaouen.hero": "images/chefchaoun_akchour.jpg",
+    "pages.tour-agafay.hero": "images/agafay_desert1.jpg"
+  },
+  "images_meta": {
+    "auto.images.todra_dades": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.volcanic_canyon": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.blog.cards.guide_coastal_vibes.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "section .cards img"
+      ],
+      "required": true
+    },
+    "auto.images.mgoun_main": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.saghro_bab_nali": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.index.cards.tour-saghro.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "section .tours-grid article.tour-card img.tour-image"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-sahara-erg-chebbi.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(8) img.tour-image"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-agafay.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(1) img.tour-image"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-todra-dades.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(4) img.tour-image"
+      ],
+      "required": true
+    },
+    "auto.images.ait_bougmez": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.saghro_cathedral": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.blog.cards.guide_sahara_desert.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "section .cards img"
+      ],
+      "required": true
+    },
+    "auto.images.atlas_village": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.blog.cards.guide_culture_flavors.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "section .cards img"
+      ],
+      "required": true
+    },
+    "auto.images.guide_coastal_vibes": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.sahara_erg_chebbi": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.toubkal_summit": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.mgoun": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.happy_valley_main": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.saghro_sunset_rocks": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.agafay_desert": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.about.team.team4.image": {
+      "type": "image",
+      "usage": "team",
+      "targets": [
+        ".team-member img.team-photo"
+      ],
+      "required": true
+    },
+    "auto.images.guide_high_atlas": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "auto.images.saghro_main": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.tours.cards.tour-atlas-villages.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(2) img.tour-image"
+      ],
+      "required": true
+    },
+    "auto.images.siroua_main": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.tours.cards.tour-siroua.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(5) img.tour-image"
+      ],
+      "required": true
+    },
+    "auto.images.siroua_volcanic_pools": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.tours.cards.tour-saghro.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(3) img.tour-image"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-toubkal.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(9) img.tour-image"
+      ],
+      "required": true
+    },
+    "auto.images.guide_sahara_desert": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.tours.cards.tour-ait-bougmez.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(6) img.tour-image"
+      ],
+      "required": true
+    },
+    "auto.images.guide_culture_flavors": {
+      "required": false,
+      "usage": "asset",
+      "type": "image",
+      "targets": []
+    },
+    "pages.blog.cards.guide_high_atlas.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "section .cards img"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-mgoun.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card:nth-of-type(7) img.tour-image"
+      ],
+      "required": true
+    },
+    "pages.tours.cards.tour-10-days.image": {
+      "type": "image",
+      "usage": "card",
+      "targets": [
+        "article.tour-card.tour-10-days img.tour-image"
+      ],
+      "required": true
+    }
+  },
+  "site": {
+    "whatsapp_default": "212659565040"
+  }
+}

@@ -39,6 +39,16 @@ img {
         max-height: none !important;
         overflow: visible !important;
     }
+
+    /* Tour detail pages (30 × tour-*.html) build their hero from a classless
+       div whose *inline* style sets `background-attachment: fixed`. Class
+       selectors cannot reach inline declarations, so the scrolling fallback is
+       applied to the inline-styled backdrop itself. iOS Safari does not paint
+       fixed-attachment backgrounds reliably; desktop (>768px) keeps `fixed`,
+       so the desktop appearance is unchanged. */
+    div[style*="background-attachment: fixed"] {
+        background-attachment: scroll !important;
+    }
 }
 
 /* Add a premium overlay to ensure text readability on all images */
@@ -211,9 +221,11 @@ img {
    ================================================================== */
 
 /* --- 4. Hero image fallbacks -------------------------------------
-   styles.css points these at images/hero/hero_contact_mobile.jpg and
-   hero_customize_mobile.jpg, neither of which exists. Re-point them at
-   the desktop artwork that already ships with the site. */
+   styles.css used to point these at images/hero/hero_contact_mobile.jpg
+   and hero_customize_mobile.jpg, neither of which exists locally or on
+   the server. Both files now resolve to the desktop artwork that ships
+   with the site; this :root block is kept as a defensive duplicate so a
+   cached copy of styles.css cannot reintroduce the 404. */
 :root {
     --hero-contact-mobile: url('../images/hero/hero_contact.jpg');
     --hero-customize-mobile: url('../images/hero/hero_customize.jpg');
