@@ -52,12 +52,12 @@ moroccotrektours-working/
 `_backups/2026-10-28-contact/` (README + original-snippets.md) — خارج public_html.
 `_backups/2026-10-28-contact-config-path/original-snippets.md` — قبل تعديل مسار إعدادات البريد (العطل الحقيقي).
 
-## تشخيص نموذج الكونتاكت الحيّ (2026-10-28، دليل من الموقع نفسه)
-- الموقع الحقيقي يرد 503 `code` غائب حاليًا برسالة "temporarily unavailable" على **كل** POST (بما فيها بلا CSRF) → الحارس يعمل قبل التحقق، أي أن العطل اعتماد/إعدادات لا SMTP ولا النموذج.
-- دليل البنية على الاستضافة: أي ملف عشوائي تحت `/vendor/` و`/private/` و`/includes/` يرجع **403** بينما تحت `/css/`, `/images/` يرجع 404 → قواعد حجب صريحة لهذه المجلدات، أي أنها **موجودة داخل `public_html`** (نشر مسطّح).
-- لذلك `send-email.php` صار يقبل `private/email-config.php` في الموضعين: خارج جذر الموقع (المفضّل) أو بجانب السكربت داخل `public_html`.
-- أُضيف حقل `code` (غير حساس: `autoload_missing` / `library_incomplete` / `config_missing` / `config_incomplete`) ليحدد المالك المرحلة الفاشلة بعد الرفع دون كشف مسارات أو أسرار.
-- `vendor/phpmailer/phpmailer/src/PHPMailer.php` **ناقص محليًا** (v7.0.2، الحجم الرسمي 194,030 بايت) — استُعيد عبر المتصفح لكن تعذّر إيداعه لأن الأوامر التنفيذية معطلة: يُستكمل بـ `composer install --no-dev`.
+## تشخيص نموذج الكونتاكت الحيّ (2026-10-30)
+- الموقع الحقيقي يرد 503 ومعه `code` بعد رفع `send-email.php` الجديد: **`autoload_missing`** — أي أن `vendor/autoload.php` غير موجود لا بجانب `public_html` ولا داخله. النموذج وCSRF وSMTP ليست سبب العطل.
+- تصحيح استنتاج سابق: الـ403 على `/vendor/`, `/private/`, `/includes/` مصدره قواعد `public_html/.htaccess` (RewriteRule + RedirectMatch) وليس دليلًا على وجود الملفات.
+- البنية القابلة للنشر: `public_html/vendor/` + `public_html/private/email-config.php` + `.htaccess` في كل منهما. يجهّزها `tools/prepare-mail-deploy.ps1` (نسخ فقط، بلا طباعة أسرار) ويتحقق منها `tools/verify-mail-setup.php` (PASS/FAIL وأسماء الثوابت الناقصة فقط).
+- `vendor/` محليًا مكتمل عبر Composer (phpmailer 7.1.1): `autoload.php` + `composer/autoload_real.php` + `autoload_static.php` + `autoload_classmap.php` متسقة وتشير إلى `src/PHPMailer.php`.
 
-## حدود البيئة
-لا Git، ولا خادم PHP/node يتمسك بالحياة، والمتصفح يفشل على localhost (502) والأوامر التنفيذية لا تُرجع إخراجًا — **الاختبار ثابت/تحليلي فقط**؛ أي ادعاء اختبار بصري ممنوع.
+## حدود البيئة (2026-10-30)
+- أداة تنفيذ الأوامر معطّلة تمامًا في هذه الجلسة: كل أمر يرجع فراغًا ولا ينشئ أي ملف (اختُبرت `New-Item`, `robocopy`, `php -l`, ووضع الخلفية). لذلك النسخ وفحص PHP يجب أن ينفّذهما المالك عبر السكربت.
+- لا خادم محلي؛ المتصفح يرفض `file://` وlocalhost عبر البروكسي — **الاختبار البصري/PHP غير ممكن هنا**.

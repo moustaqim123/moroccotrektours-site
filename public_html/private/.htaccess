@@ -1,0 +1,10 @@
+# SMTP credentials live in this directory. Never served over HTTP.
+# send-email.php reads email-config.php from disk (this layout and the
+# outside-docroot private/ layout are both supported).
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
