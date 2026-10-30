@@ -185,44 +185,6 @@ img {
     object-fit: contain !important;
 }
 
-.logo-container.logo-animating img {
-    opacity: 0;
-}
-
-.logo-anim-svg {
-    position: absolute;
-    inset: -10px;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
-    pointer-events: none;
-    overflow: visible;
-}
-
-.logo-anim-svg path,
-.logo-anim-svg line,
-.logo-anim-svg polyline,
-.logo-anim-svg polygon,
-.logo-anim-svg circle,
-.logo-anim-svg rect,
-.logo-anim-svg ellipse {
-    fill: none;
-    stroke: var(--accent-color);
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .logo-container.logo-animating img {
-        opacity: 1;
-    }
-
-    .logo-anim-svg {
-        display: none;
-    }
-}
-
 .logo-text {
     display: flex;
     flex-direction: row;
@@ -2935,13 +2897,10 @@ body.page-transitioning {
 }
 
 /* ==========================================================================
-   UNIFIED MOBILE OPTIMIZATIONS & LOGO ENTRANCE (INTEGRATED)
+   UNIFIED MOBILE OPTIMIZATIONS
    ========================================================================== */
 
 /* --- Logo Styles --- */
-/* Entrance is owned by js/main.js (anime.js stroke draw). The old CSS-only
-   "logoDepthApproach" 3D entrance was the source of the outdated double
-   animation and ran even with prefers-reduced-motion, so it was removed. */
 .logo-container {
     position: relative;
     display: inline-block;
