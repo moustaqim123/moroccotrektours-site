@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO canonical and language alternatives -->
+    <link rel="canonical" href="https://moroccotrektours.com/customize-trip.html">
+    <link rel="alternate" hreflang="en" href="https://moroccotrektours.com/customize-trip.html">
+    <link rel="alternate" hreflang="fr" href="https://moroccotrektours.com/customize-trip-fr.html">
+    <link rel="alternate" hreflang="x-default" href="https://moroccotrektours.com/customize-trip.html">
+
+    <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
+    <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Morocco Trek Tours">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:url" content="https://moroccotrektours.com/customize-trip.html">
+    <meta property="og:title" content="Customize Your Trip | Morocco Trek Tours">
+    <meta property="og:description" content="Design a tailor-made Morocco trip with Morocco Trek Tours. Share your dates, pace and interests, and we will build a private itinerary just for you.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/hero/hero_customize.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Customize Your Trip | Morocco Trek Tours">
+    <meta name="twitter:description" content="Design a tailor-made Morocco trip with Morocco Trek Tours. Share your dates, pace and interests, and we will build a private itinerary just for you.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/hero/hero_customize.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Trip | Morocco Trek Tours</title>
+    <meta name="description" content="Design a tailor-made Morocco trip with Morocco Trek Tours. Share your dates, pace and interests, and we will build a private itinerary just for you.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon -->
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
+
+    <link rel="stylesheet" href="css/site-common.css">
+    <style>:root{ --hero-bg: url(""); }</style>
+
+    <style>
+    /* Force larger logo on mobile for customize-trip page - MAXIMUM PRIORITY */
+    @media (max-width: 768px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 70px !important;
+            min-height: 70px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 65px !important;
+            min-height: 65px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    </style>
+
+    <style>
+    /* Unified Navigation Styles */
+    .navbar {
+        background: white !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        padding: 15px 0 !important;
+    }
+    
+    .navbar .container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    .nav-links {
+        display: flex !important;
+        align-items: center !important;
+        gap: 25px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+    
+    .nav-links li a {
+        color: #333 !important;
+        font-weight: 500 !important;
+        font-size: 0.95rem !important;
+        text-decoration: none !important;
+        padding: 5px 0 !important;
+        transition: color 0.2s ease !important;
+    }
+    
+    .nav-links li a:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .nav-links li a.active {
+        color: var(--primary-color) !important;
+    }
+    
+    .lang-switcher {
+        position: relative !important;
+    }
+    
+    .lang-btn {
+        background: transparent !important;
+        border: none !important;
+        color: #666 !important;
+        padding: 5px 10px !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        font-size: 0.9rem !important;
+        transition: color 0.2s ease !important;
+    }
+    
+    .lang-btn:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .lang-dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        right: 0 !important;
+        background: white !important;
+        border: 1px solid #f0f0f0 !important;
+        padding: 5px 0 !important;
+        margin-top: 5px !important;
+        min-width: 100px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+        z-index: 1000 !important;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease !important;
+    }
+    
+    .lang-switcher:hover .lang-dropdown,
+    .lang-dropdown:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+    
+    .lang-dropdown li {
+        margin: 0 !important;
+    }
+    
+    .lang-dropdown li a {
+        display: block !important;
+        padding: 6px 12px !important;
+        color: #666 !important;
+        text-decoration: none !important;
+        font-size: 0.9rem !important;
+        transition: color 0.2s ease !important;
+    }
+    
+    .lang-dropdown li a:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .lang-dropdown li a.active {
+        color: var(--primary-color) !important;
+        font-weight: 500 !important;
+    }
+    
+    .mobile-menu-btn {
+        display: none !important;
+        background: transparent !important;
+        border: 1px solid #e0e0e0 !important;
+        color: #666 !important;
+        padding: 8px 12px !important;
+        border-radius: 6px !important;
+        cursor: pointer !important;
+    }
+    
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block !important;
+        }
+        
+        .nav-links {
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: white !important;
+            flex-direction: column !important;
+            padding: 20px !important;
+            border-top: 1px solid #f0f0f0 !important;
+            gap: 15px !important;
+        }
+    }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <style>
+        /* Modern Hero Styling for Internal Pages */
+        .hero-section {
+            background-image: url('images/hero/hero_customize.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/hero/hero_customize.jpg') !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+
+        /* Simple & Elegant Navigation - Same as index.html */
+        .navbar {
+            background: white !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+            padding: 15px 0 !important;
+        }
+        
+        .navbar .container {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+        
+        .nav-links {
+            display: flex !important;
+            align-items: center !important;
+            gap: 25px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+        }
+        
+        .nav-links li a {
+            color: #333 !important;
+            font-weight: 500 !important;
+            font-size: 0.95rem !important;
+            text-decoration: none !important;
+            padding: 5px 0 !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .nav-links li a:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-links li a.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-switcher {
+            position: relative !important;
+        }
+        
+        .lang-btn {
+            background: transparent !important;
+            border: none !important;
+            color: #666 !important;
+            padding: 5px 10px !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+            font-size: 0.9rem !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .lang-btn:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-dropdown {
+            position: absolute !important;
+            top: 100% !important;
+            right: 0 !important;
+            background: white !important;
+            border: 1px solid #f0f0f0 !important;
+            padding: 5px 0 !important;
+            margin-top: 5px !important;
+            min-width: 100px !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transition: opacity 0.2s ease !important;
+            z-index: 1000 !important;
+        }
+        
+        .lang-switcher:hover .lang-dropdown,
+        .lang-dropdown:hover {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .lang-dropdown li {
+            margin: 0 !important;
+        }
+        
+        .lang-dropdown li a {
+            display: block !important;
+            padding: 6px 12px !important;
+            color: #666 !important;
+            text-decoration: none !important;
+            font-size: 0.9rem !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .lang-dropdown li a:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-dropdown li a.active {
+            color: var(--primary-color) !important;
+            font-weight: 500 !important;
+        }
+        
+        .mobile-menu-btn {
+            display: none !important;
+            background: transparent !important;
+            border: 1px solid #e0e0e0 !important;
+            color: #666 !important;
+            padding: 8px 12px !important;
+            border-radius: 6px !important;
+            cursor: pointer !important;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block !important;
+            }
+            
+            .nav-links {
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                background: white !important;
+                flex-direction: column !important;
+                padding: 20px !important;
+                border-top: 1px solid #f0f0f0 !important;
+                gap: 15px !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo-header.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212659565040",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-container"><img src="images/assets/logo-header.png" width="1024" height="567" decoding="async"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
+                <div class="logo-text">
+                    <span class="logo-subtitle">Your Gateway to Authentic Adventures</span>
+                </div>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="customize-trip.html" class="active">Customize</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="customize-trip.html" class="active">English</a></li>
+                        <li><a href="customize-trip-fr.html">Français</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section"
+        style="--hero-desktop: url('images/hero/hero_customize.jpg'); --hero-mobile: url('images/hero/hero_customize.jpg');">
+        <div class="hero-content" style="color: #FFFFFF;">
+            <h1 class="hero-title">Customize Your Trip</h1>
+            <p class="hero-description">Your journey, your rhythm, your memories. Let's create something unique.</p>
+            <div class="hero-buttons" style="display: flex; gap: 20px; justify-content: center; margin-top: 30px;">
+                <a href="https://wa.me/212659565040?text=Hello%21%20I%20would%20like%20to%20customize%20my%20Morocco%20trip" target="_blank" rel="noopener noreferrer" class="btn btn-primary book-now">Start Planning</a>
+                <a href="#customize-form" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title">Design Your Custom Morocco Experience</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    Every traveler is different. Whether you dream of sleeping under the Sahara stars, hiking hidden
+                    Atlas trails, or exploring the vibrant medinas at your own pace, we are here to make it happen. Tell
+                    us what moves you, and we'll craft an itinerary that fits your style, comfort, and curiosity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Form -->
+    <section class="section-padding bg-off-white">
+        <div class="container">
+            <div class="customization-container" style="max-width: 900px; margin: 0 auto;">
+                <div class="form-header">
+                    <div class="header-content">
+                        <div class="header-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h2 class="section-title">Create Your Perfect Morocco Adventure</h2>
+                        <p class="form-subtitle">Tell us about your dream trip and we'll design a personalized itinerary just for you</p>
+                        <div class="header-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Customizable</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Expert Local Guides</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No Hidden Fees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="modern-custom-form" id="customizeForm" method="post" action="send-email.php">
+                    <input type="hidden" name="form_type" value="customize">
+                    <input type="hidden" name="language" value="en">
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <!-- Trip Details Section -->
+                    <div class="form-section">
+                        <div class="section-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="section-title">Trip Details</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group modern">
+                                <label for="dates" class="modern-label">
+                                    <i class="fas fa-calendar"></i>
+                                    Approximate Dates
+                                </label>
+                                <input type="text" id="dates" name="dates" class="modern-input" 
+                                       placeholder="e.g., Oct 10-20, 2024" required>
+                                <div class="input-hint">Flexible dates? Just give us a rough timeframe</div>
+                            </div>
+                            
+                            <div class="form-group modern">
+                                <label for="travelers" class="modern-label">
+                                    <i class="fas fa-users"></i>
+                                    Number of Travelers
+                                </label>
+                                <div class="traveler-selector">
+                                    <button type="button" class="traveler-btn minus" onclick="updateTravelers(-1)">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input type="number" id="travelers" name="travelers" class="traveler-input" value="2" min="1" max="20" readonly>
+                                    <button type="button" class="traveler-btn plus" onclick="updateTravelers(1)">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="input-hint">Including children? Let us know their ages</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regions Section -->
+                    <div class="form-section">
+                        <div class="section-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="section-title">Preferred Regions</h3>
+                        <p class="section-desc">Select all regions you'd like to explore</p>
+                        
+                        <div class="regions-grid">
+                            <div class="region-card" data-region="atlas">
+                                <div class="region-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="region-content">
+                                    <h4>Atlas Mountains</h4>
+                                    <p>Majestic peaks and Berber villages</p>
+                                </div>
+                                <div class="region-checkbox">
+                                    <input type="checkbox" id="region-atlas" name="region" value="atlas">
+                                    <label for="region-atlas"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="region-card" data-region="sahara">
+                                <div class="region-icon">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="region-content">
+                                    <h4>Sahara Desert</h4>
+                                    <p>Golden dunes and starry nights</p>
+                                </div>
+                                <div class="region-checkbox">
+                                    <input type="checkbox" id="region-sahara" name="region" value="sahara">
+                                    <label for="region-sahara"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="region-card" data-region="cities">
+                                <div class="region-icon">
+                                    <i class="fas fa-mosque"></i>
+                                </div>
+                                <div class="region-content">
+                                    <h4>Imperial Cities</h4>
+                                    <p>Fes, Marrakech & cultural heritage</p>
+                                </div>
+                                <div class="region-checkbox">
+                                    <input type="checkbox" id="region-cities" name="region" value="cities">
+                                    <label for="region-cities"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="region-card" data-region="coast">
+                                <div class="region-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <div class="region-content">
+                                    <h4>Atlantic Coast</h4>
+                                    <p>Coastal towns and ocean views</p>
+                                </div>
+                                <div class="region-checkbox">
+                                    <input type="checkbox" id="region-coast" name="region" value="coast">
+                                    <label for="region-coast"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests Section -->
+                    <div class="form-section">
+                        <div class="section-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="section-title">Your Interests</h3>
+                        <p class="section-desc">What activities excite you the most?</p>
+                        
+                        <div class="interests-grid">
+                            <div class="interest-item" data-interest="hiking">
+                                <div class="interest-icon">
+                                    <i class="fas fa-hiking"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Hiking/Trekking</h4>
+                                    <p>Mountain trails and summit challenges</p>
+                                </div>
+                                <div class="interest-checkbox">
+                                    <input type="checkbox" id="interest-hiking" name="interest" value="hiking">
+                                    <label for="interest-hiking"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-item" data-interest="culture">
+                                <div class="interest-icon">
+                                    <i class="fas fa-landmark"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Culture & History</h4>
+                                    <p>Heritage sites and local traditions</p>
+                                </div>
+                                <div class="interest-checkbox">
+                                    <input type="checkbox" id="interest-culture" name="interest" value="culture">
+                                    <label for="interest-culture"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-item" data-interest="food">
+                                <div class="interest-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Food & Cooking</h4>
+                                    <p>Culinary experiences and local cuisine</p>
+                                </div>
+                                <div class="interest-checkbox">
+                                    <input type="checkbox" id="interest-food" name="interest" value="food">
+                                    <label for="interest-food"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-item" data-interest="relax">
+                                <div class="interest-icon">
+                                    <i class="fas fa-spa"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Relaxation</h4>
+                                    <p>Wellness and peaceful experiences</p>
+                                </div>
+                                <div class="interest-checkbox">
+                                    <input type="checkbox" id="interest-relax" name="interest" value="relax">
+                                    <label for="interest-relax"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-item" data-interest="photography">
+                                <div class="interest-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Photography</h4>
+                                    <p>Scenic landscapes and cultural moments</p>
+                                </div>
+                                <div class="interest-checkbox">
+                                    <input type="checkbox" id="interest-photography" name="interest" value="photography">
+                                    <label for="interest-photography"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-item" data-interest="adventure">
+                                <div class="interest-icon">
+                                    <i class="fas fa-parachute-box"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Adventure</h4>
+                                    <p>Thrilling activities and experiences</p>
+                                </div>
+                                <div class="interest-checkbox">
+                                    <input type="checkbox" id="interest-adventure" name="interest" value="adventure">
+                                    <label for="interest-adventure"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accommodation Section -->
+                    <div class="form-section">
+                        <div class="section-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h3 class="section-title">Accommodation Style</h3>
+                        
+                        <div class="accommodation-options">
+                            <div class="accommodation-card" data-accommodation="standard">
+                                <div class="accommodation-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="accommodation-content">
+                                    <h4>Standard</h4>
+                                    <p>Comfortable guesthouses with local charm</p>
+                                </div>
+                                <div class="accommodation-price">From $45/night</div>
+                                <input type="radio" id="acc-standard" name="accommodation" value="standard">
+                                <label for="acc-standard"></label>
+                            </div>
+                            
+                            <div class="accommodation-card" data-accommodation="premium">
+                                <div class="accommodation-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="accommodation-content">
+                                    <h4>Premium</h4>
+                                    <p>Traditional riads and kasbahs</p>
+                                </div>
+                                <div class="accommodation-price">From $85/night</div>
+                                <input type="radio" id="acc-premium" name="accommodation" value="premium">
+                                <label for="acc-premium"></label>
+                            </div>
+                            
+                            <div class="accommodation-card" data-accommodation="luxury">
+                                <div class="accommodation-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="accommodation-content">
+                                    <h4>Luxury</h4>
+                                    <p>High-end hotels and resorts</p>
+                                </div>
+                                <div class="accommodation-price">From $150/night</div>
+                                <input type="radio" id="acc-luxury" name="accommodation" value="luxury">
+                                <label for="acc-luxury"></label>
+                            </div>
+                            
+                            <div class="accommodation-card" data-accommodation="camping">
+                                <div class="accommodation-icon">
+                                    <i class="fas fa-campground"></i>
+                                </div>
+                                <div class="accommodation-content">
+                                    <h4>Camping</h4>
+                                    <p>Trekking style and wilderness camps</p>
+                                </div>
+                                <div class="accommodation-price">From $25/night</div>
+                                <input type="radio" id="acc-camping" name="accommodation" value="camping">
+                                <label for="acc-camping"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Info Section -->
+                    <div class="form-section">
+                        <div class="section-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="section-title">Your Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group modern">
+                                <label for="name" class="modern-label">
+                                    <i class="fas fa-user"></i>
+                                    Your Name
+                                </label>
+                                <input type="text" id="name" name="name" class="modern-input" required>
+                            </div>
+                            
+                            <div class="form-group modern">
+                                <label for="email" class="modern-label">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address
+                                </label>
+                                <input type="email" id="email" name="email" class="modern-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group modern">
+                            <label for="phone" class="modern-label">
+                                <i class="fas fa-phone"></i>
+                                Phone Number (Optional)
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="modern-input">
+                            <div class="input-hint">Include country code for international numbers</div>
+                        </div>
+                    </div>
+
+                    <!-- Special Requests Section -->
+                    <div class="form-section">
+                        <div class="section-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h3 class="section-title">Special Requests</h3>
+                        <p class="section-desc">Tell us anything else that would make your trip perfect</p>
+                        
+                        <div class="form-group modern">
+                            <textarea id="message" name="message" class="modern-textarea" 
+                                      placeholder="Is this a honeymoon? Do you have dietary restrictions? Any specific wishlist items or special occasions we should know about?"
+                                      rows="4"></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0</span> / 500 characters
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
+
+                    <!-- Submit Section -->
+                    <div class="form-submit">
+                        <div class="submit-info">
+                            <div class="submit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="submit-text">
+                                <h4>No Commitment Required</h4>
+                                <p>We'll start a conversation about your dream trip</p>
+                            </div>
+                        </div>
+                        <button type="submit" class="modern-submit-btn">
+                            <span class="btn-text">Request My Custom Itinerary</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Travel With Us -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Why Customize With Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-search-location feature-icon"></i>
+                    <h3>Local Expertise</h3>
+                    <p>We know the hidden gems, the best viewpoints, and the authentic family-run guesthouses that
+                        aren't in the guidebooks.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-friends feature-icon"></i>
+                    <h3>Personalized Care</h3>
+                    <p>From the moment you contact us until you return home, you have a dedicated expert handling every
+                        detail.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-heart feature-icon"></i>
+                    <h3>Responsible Travel</h3>
+                    <p>Your trip directly supports local mountain communities and respects the delicate environments we
+                        explore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Morocco Trek Tours</h4>
+                    <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
+                        last a lifetime.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Our Tours</a></li>
+                        <li><a href="customize-trip.html">Customize Trip</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+212659565040"
+                                style="color:inherit; text-decoration:none;">+212 659 56 5040</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/212659565040"
+                                style="color:inherit; text-decoration:none;">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Morocco Trek Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="js/main.js"></script>
+    <script src="js/customize-form.js" defer></script>
+    
+    <style>
+    /* Modern Custom Form Styles */
+    .customization-container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 40px 0;
+    }
+    
+    .form-header {
+        text-align: center;
+        padding: 50px 40px;
+        background: linear-gradient(135deg, var(--primary-color) 0%, #003d29 100%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .form-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+        background-size: 100px 100px;
+        animation: float 20s infinite linear;
+    }
+    
+    @keyframes float {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100px, -100px); }
+    }
+    
+    .header-content {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .header-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 32px;
+        color: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .form-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+    
+    .form-header h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--accent-color);
+        border-radius: 2px;
+    }
+    
+    .form-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.95;
+        max-width: 600px;
+        margin: 25px auto 0;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+    
+    .header-features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .feature-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    .feature-item i {
+        color: var(--accent-color);
+        font-size: 14px;
+    }
+    
+    .modern-custom-form {
+        padding: 40px;
+    }
+    
+    .form-section {
+        margin-bottom: 50px;
+        position: relative;
+        padding-left: 60px;
+    }
+    
+    .section-icon {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+    }
+    
+    .form-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    
+    .section-desc {
+        color: #666;
+        margin-bottom: 25px;
+        font-size: 0.95rem;
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .form-group.modern {
+        position: relative;
+    }
+    
+    .modern-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+    
+    .modern-label i {
+        color: var(--accent-color);
+        font-size: 16px;
+    }
+    
+    .modern-input, .modern-textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #fafafa;
+    }
+    
+    .modern-input:focus, .modern-textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        background: white;
+        box-shadow: 0 0 0 4px rgba(0, 77, 51, 0.1);
+    }
+    
+    .input-hint {
+        font-size: 0.85rem;
+        color: #888;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    /* Traveler Selector */
+    .traveler-selector {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        background: #fafafa;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .traveler-btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: var(--accent-color);
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .traveler-btn:hover {
+        background: #a07800;
+    }
+    
+    .traveler-btn.minus {
+        border-radius: 12px 0 0 12px;
+    }
+    
+    .traveler-btn.plus {
+        border-radius: 0 12px 12px 0;
+    }
+    
+    .traveler-input {
+        border: none;
+        background: transparent;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 60px;
+    }
+    
+    /* Regions Grid */
+    .regions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .region-card {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 16px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .region-card:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 77, 51, 0.15);
+    }
+    
+    .region-card.selected {
+        border-color: var(--primary-color);
+        background: linear-gradient(135deg, rgba(0, 77, 51, 0.05) 0%, rgba(0, 77, 51, 0.02) 100%);
+    }
+    
+    .region-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--primary-color), #003d29);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .region-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: var(--primary-color);
+    }
+    
+    .region-content p {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .region-checkbox {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .region-checkbox input[type="checkbox"] {
+        display: none;
+    }
+    
+    .region-checkbox label {
+        width: 24px;
+        height: 24px;
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 50%;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .region-checkbox label::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .region-checkbox input[type="checkbox"]:checked + label {
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+    }
+    
+    .region-checkbox input[type="checkbox"]:checked + label::after {
+        opacity: 1;
+    }
+    
+    /* Interests Grid */
+    .interests-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .interest-item {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .interest-item:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(184, 134, 11, 0.15);
+    }
+    
+    .interest-item.selected {
+        border-color: var(--accent-color);
+        background: linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(184, 134, 11, 0.02) 100%);
+    }
+    
+    .interest-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--accent-color), #a07800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .interest-content h4 {
+        font-size: 1rem;
+        margin-bottom: 3px;
+        color: var(--accent-color);
+    }
+    
+    .interest-content p {
+        color: #666;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .interest-checkbox {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .interest-checkbox input[type="checkbox"] {
+        display: none;
+    }
+    
+    .interest-checkbox label {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 50%;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .interest-checkbox label::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .interest-checkbox input[type="checkbox"]:checked + label {
+        border-color: var(--accent-color);
+        background: var(--accent-color);
+    }
+    
+    .interest-checkbox input[type="checkbox"]:checked + label::after {
+        opacity: 1;
+    }
+    
+    /* Accommodation Options */
+    .accommodation-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .accommodation-card {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 16px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .accommodation-card:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(184, 134, 11, 0.15);
+    }
+    
+    .accommodation-card.selected {
+        border-color: var(--accent-color);
+        background: linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(184, 134, 11, 0.02) 100%);
+    }
+    
+    .accommodation-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--accent-color), #a07800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .accommodation-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: var(--accent-color);
+    }
+    
+    .accommodation-content p {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .accommodation-price {
+        font-size: 0.9rem;
+        color: var(--accent-color);
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .accommodation-checkbox {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .accommodation-checkbox input[type="radio"] {
+        display: none;
+    }
+    
+    .accommodation-checkbox label {
+        width: 24px;
+        height: 24px;
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 50%;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .accommodation-checkbox label::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .accommodation-checkbox input[type="radio"]:checked + label {
+        border-color: var(--accent-color);
+        background: var(--accent-color);
+    }
+    
+    .accommodation-checkbox input[type="radio"]:checked + label::after {
+        opacity: 1;
+    }
+    
+    /* Submit Section */
+    .form-submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        background: linear-gradient(135deg, rgba(0, 77, 51, 0.05) 0%, rgba(0, 77, 51, 0.02) 100%);
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .submit-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .submit-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .submit-text h4 {
+        font-size: 1rem;
+        margin-bottom: 3px;
+        color: var(--text-dark);
+    }
+    
+    .submit-text p {
+        font-size: 0.85rem;
+        color: #666;
+    }
+    
+    .modern-submit-btn {
+        background: linear-gradient(135deg, var(--primary-color), #003d29);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(0, 77, 51, 0.3);
+    }
+    
+    .modern-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(0, 77, 51, 0.4);
+    }
+    
+    .btn-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .modern-submit-btn:hover .btn-icon {
+        transform: translateX(3px);
+    }
+    
+    /* Character Counter */
+    .char-counter {
+        text-align: right;
+        font-size: 0.85rem;
+        color: #888;
+        margin-top: 5px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .form-header {
+            padding: 40px 20px;
+        }
+        
+        .header-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .form-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        
+        .form-header h2::after {
+            width: 50px;
+            height: 2px;
+            bottom: -8px;
+        }
+        
+        .form-subtitle {
+            font-size: 1rem;
+            margin: 20px auto 0;
+        }
+        
+        .header-features {
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .feature-item {
+            font-size: 0.85rem;
+            padding: 6px 12px;
+        }
+        
+        .form-section {
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+        
+        .section-icon {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .regions-grid,
+        .interests-grid,
+        .accommodation-options {
+            grid-template-columns: 1fr;
+        }
+        
+        .form-submit {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .modern-submit-btn {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .form-header {
+            padding: 30px 15px;
+        }
+        
+        .header-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .form-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .form-header h2::after {
+            width: 40px;
+            height: 2px;
+            bottom: -6px;
+        }
+        
+        .form-subtitle {
+            font-size: 0.95rem;
+            margin: 15px auto 0;
+        }
+        
+        .header-features {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            width: 100%;
+            max-width: 200px;
+            justify-content: center;
+        }
+    }
+    </style>
+    
+    <script>
+    // Traveler counter function
+    function updateTravelers(change) {
+        const input = document.getElementById('travelers');
+        let value = parseInt(input.value) || 2;
+        value += change;
+        
+        if (value < 1) value = 1;
+        if (value > 20) value = 20;
+        
+        input.value = value;
+    }
+    
+    // Character counter
+    document.addEventListener('DOMContentLoaded', function() {
+        const messageTextarea = document.getElementById('message');
+        const charCount = document.getElementById('charCount');
+        
+        if (messageTextarea && charCount) {
+            messageTextarea.addEventListener('input', function() {
+                const count = this.value.length;
+                charCount.textContent = count;
+                
+                if (count > 500) {
+                    this.value = this.value.substring(0, 500);
+                    charCount.textContent = 500;
+                }
+            });
+        }
+        
+        // Card selection interactions
+        const regionCards = document.querySelectorAll('.region-card');
+        regionCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const checkbox = this.querySelector('input[type="checkbox"]');
+                checkbox.checked = !checkbox.checked;
+                this.classList.toggle('selected', checkbox.checked);
+            });
+        });
+        
+        const interestItems = document.querySelectorAll('.interest-item');
+        interestItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const checkbox = this.querySelector('input[type="checkbox"]');
+                checkbox.checked = !checkbox.checked;
+                this.classList.toggle('selected', checkbox.checked);
+            });
+        });
+        
+        const accommodationCards = document.querySelectorAll('.accommodation-card');
+        accommodationCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                radio.checked = true;
+                
+                // Remove selected class from all cards
+                accommodationCards.forEach(c => c.classList.remove('selected'));
+                
+                // Add selected class to clicked card
+                this.classList.add('selected');
+            });
+        });
+        
+        // Submission is handled by js/customize-form.js, which posts the form to
+        // send-email.php and only reports success once the server confirms it.
+    });
+    </script>
+
+    <!-- Language switcher behaviour is handled by js/main.js -->
+
+    <style>
+    /* Mobile Optimizations for Customize Trip English Page */
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2rem !important;
+            margin-bottom: 20px !important;
+        }
+        
+        .features-grid {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+            justify-items: center !important;
+        }
+        
+        .feature-item {
+            text-align: center !important;
+            padding: 20px !important;
+            max-width: 300px !important;
+        }
+        
+        .feature-icon {
+            font-size: 2rem !important;
+            margin-bottom: 15px !important;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.3rem !important;
+            margin-bottom: 10px !important;
+        }
+        
+        .feature-item p {
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .section-title {
+            font-size: 1.8rem !important;
+        }
+        
+        .feature-item {
+            padding: 15px !important;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.2rem !important;
+        }
+        
+        .feature-item p {
+            font-size: 0.9rem !important;
+        }
+        
+        .feature-icon {
+            font-size: 1.8rem !important;
+        }
+    }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<svg width="400" height="80" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Morocco Trek Tours Text (Standalone - Clean & Editable) -->
+
+  <!-- Main Title Text -->
+  <text x="200" y="25" font-family="Poppins, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#004d33">
+    MOROCCO TREK TOURS
+  </text>
+
+  <!-- Subtitle Text -->
+  <text x="200" y="55" font-family="Open Sans, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#666666">
+    votre passerelle vers l'aventure authentique
+  </text>
+
+  <!-- Alternative English Subtitle (for reference) -->
+  <!--
+  <text x="200" y="55" font-family="Open Sans, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#666666">
+    your gateway to the authentic adventure
+  </text>
+  -->
+</svg>

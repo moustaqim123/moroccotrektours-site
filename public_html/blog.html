@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO canonical and language alternatives -->
+    <link rel="canonical" href="https://moroccotrektours.com/blog.html">
+    <link rel="alternate" hreflang="en" href="https://moroccotrektours.com/blog.html">
+    <link rel="alternate" hreflang="fr" href="https://moroccotrektours.com/blog-fr.html">
+    <link rel="alternate" hreflang="x-default" href="https://moroccotrektours.com/blog.html">
+
+    <link rel="icon" type="image/png" href="images/assets/icon-brand.png">
+    <link rel="apple-touch-icon" href="images/assets/icon-brand.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Morocco Trek Tours">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:url" content="https://moroccotrektours.com/blog.html">
+    <meta property="og:title" content="Destination Guide | Morocco Trek Tours">
+    <meta property="og:description" content="Use this Morocco destination guide to explore ideas for visiting ancient medinas, mountain regions, Atlantic towns, and the Sahara.">
+    <meta property="og:image" content="https://moroccotrektours.com/images/hero/hero_guide.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Destination Guide | Morocco Trek Tours">
+    <meta name="twitter:description" content="Use this Morocco destination guide to explore ideas for visiting ancient medinas, mountain regions, Atlantic towns, and the Sahara.">
+    <meta name="twitter:image" content="https://moroccotrektours.com/images/hero/hero_guide.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Guide | Morocco Trek Tours</title>
+    <meta name="description" content="Use this Morocco destination guide to explore ideas for visiting ancient medinas, mountain regions, Atlantic towns, and the Sahara.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon -->
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Mobile Optimizations -->
+    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <!-- Hreflang tags -->
+
+    <style>
+    /* Force larger logo on mobile for blog page - MAXIMUM PRIORITY */
+    @media (max-width: 768px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 70px !important;
+            min-height: 70px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo-container img,
+        .logo-img,
+        .logo .logo-container img,
+        .logo .logo-img,
+        .navbar .logo-container img,
+        .navbar .logo-img,
+        body .logo-container img,
+        body .logo-img {
+            max-height: 65px !important;
+            min-height: 65px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+    }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <style>
+    /* Unified Navigation Styles */
+    .navbar {
+        background: white !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        padding: 15px 0 !important;
+    }
+    
+    .navbar .container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    .nav-links {
+        display: flex !important;
+        align-items: center !important;
+        gap: 25px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+    
+    .nav-links li a {
+        color: #333 !important;
+        font-weight: 500 !important;
+        font-size: 0.95rem !important;
+        text-decoration: none !important;
+        padding: 5px 0 !important;
+        transition: color 0.2s ease !important;
+    }
+    
+    .nav-links li a:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .nav-links li a.active {
+        color: var(--primary-color) !important;
+    }
+    
+    .lang-switcher {
+        position: relative !important;
+    }
+    
+    .lang-btn {
+        background: transparent !important;
+        border: none !important;
+        color: #666 !important;
+        padding: 5px 10px !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        font-size: 0.9rem !important;
+        transition: color 0.2s ease !important;
+    }
+    
+    .lang-btn:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .lang-dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        right: 0 !important;
+        background: white !important;
+        border: 1px solid #f0f0f0 !important;
+        padding: 5px 0 !important;
+        margin-top: 5px !important;
+        min-width: 100px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+        z-index: 1000 !important;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease !important;
+    }
+    
+    .lang-switcher:hover .lang-dropdown,
+    .lang-dropdown:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+    
+    .lang-dropdown li {
+        margin: 0 !important;
+    }
+    
+    .lang-dropdown li a {
+        display: block !important;
+        padding: 6px 12px !important;
+        color: #666 !important;
+        text-decoration: none !important;
+        font-size: 0.9rem !important;
+        transition: color 0.2s ease !important;
+    }
+    
+    .lang-dropdown li a:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .lang-dropdown li a.active {
+        color: var(--primary-color) !important;
+        font-weight: 500 !important;
+    }
+    
+    .mobile-menu-btn {
+        display: none !important;
+        background: transparent !important;
+        border: 1px solid #e0e0e0 !important;
+        color: #666 !important;
+        padding: 8px 12px !important;
+        border-radius: 6px !important;
+        cursor: pointer !important;
+    }
+    
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block !important;
+        }
+        
+        .nav-links {
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: white !important;
+            flex-direction: column !important;
+            padding: 20px !important;
+            border-top: 1px solid #f0f0f0 !important;
+            gap: 15px !important;
+        }
+    }
+    </style>
+
+    <style>
+        /* Modern Hero Styling for Internal Pages */
+        .hero-section {
+            background-image: url('images/hero/hero_guide.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: url('images/hero/hero_guide_mobile.jpg') !important;
+                background-attachment: scroll !important;
+                height: 60vh !important;
+            }
+        }
+
+        /* Simple & Elegant Navigation - Same as index.html */
+        .navbar {
+            background: white !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+            padding: 15px 0 !important;
+        }
+        
+        .navbar .container {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+        
+        .nav-links {
+            display: flex !important;
+            align-items: center !important;
+            gap: 25px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+        }
+        
+        .nav-links li a {
+            color: #333 !important;
+            font-weight: 500 !important;
+            font-size: 0.95rem !important;
+            text-decoration: none !important;
+            padding: 5px 0 !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .nav-links li a:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-links li a.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-switcher {
+            position: relative !important;
+        }
+        
+        .lang-btn {
+            background: transparent !important;
+            border: none !important;
+            color: #666 !important;
+            padding: 5px 10px !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+            font-size: 0.9rem !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .lang-btn:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-dropdown {
+            position: absolute !important;
+            top: 100% !important;
+            right: 0 !important;
+            background: white !important;
+            border: 1px solid #f0f0f0 !important;
+            padding: 5px 0 !important;
+            margin-top: 5px !important;
+            min-width: 100px !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transition: opacity 0.2s ease !important;
+            z-index: 1000 !important;
+        }
+        
+        .lang-switcher:hover .lang-dropdown,
+        .lang-dropdown:hover {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .lang-dropdown li {
+            margin: 0 !important;
+        }
+        
+        .lang-dropdown li a {
+            display: block !important;
+            padding: 6px 12px !important;
+            color: #666 !important;
+            text-decoration: none !important;
+            font-size: 0.9rem !important;
+            transition: color 0.2s ease !important;
+        }
+        
+        .lang-dropdown li a:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-dropdown li a.active {
+            color: var(--primary-color) !important;
+            font-weight: 500 !important;
+        }
+        
+        .mobile-menu-btn {
+            display: none !important;
+            background: transparent !important;
+            border: 1px solid #e0e0e0 !important;
+            color: #666 !important;
+            padding: 8px 12px !important;
+            border-radius: 6px !important;
+            cursor: pointer !important;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block !important;
+            }
+            
+            .nav-links {
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                background: white !important;
+                flex-direction: column !important;
+                padding: 20px !important;
+                border-top: 1px solid #f0f0f0 !important;
+                gap: 15px !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Trek Tours",
+      "image": "https://moroccotrektours.com/images/assets/logo-header.png",
+      "description": "Expert-guided mountain trekking and desert adventures in Morocco.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marrakech",
+        "addressCountry": "MA"
+      },
+      "url": "https://moroccotrektours.com/",
+      "telephone": "+212659565040",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-container"><img src="images/assets/logo-header.png" width="1024" height="567" decoding="async"
+                        alt="Morocco Trek Tours" class="logo-img"></div>
+                <div class="logo-text">
+                    <div class="logo-title">
+                        <span class="line">MOROCCO</span>
+                        <span class="line"><span class="trek-word">TREK</span> TOURS</span>
+                    </div>
+                    <span class="logo-subtitle">Your Gateway to Authentic Adventures</span>
+                </div>
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="customize-trip.html">Customize</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html" class="active">Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li class="lang-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="blog.html" class="active">English</a></li>
+                        <li><a href="blog-fr.html">Français</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section"
+        style="--hero-desktop: url('images/hero/hero_guide.jpg'); --hero-mobile: url('images/hero/hero_guide_mobile.jpg');">
+        <div class="hero-content">
+            <h1 class="hero-title">Morocco Destination Guide</h1>
+            <p class="hero-description">Discover the magic of the Kingdom. From ancient medinas to the endless dunes.
+            </p>
+        </div>
+    </header>
+
+    <!-- Destination Guide Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- 1. Marrakech -->
+                <article class="blog-card">
+                    <img src="images/destinations/marrakech.jpg" loading="lazy" alt="Marrakech Jemaa el-Fna Souks"
+                        class="blog-image">
+                    <div class="blog-content">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Marrakech: The Red City</h3>
+                        <p>Lose yourself in the vibrant souks, witness the storyteller at Jemaa el-Fna, and find peace
+                            in hidden gardens.</p>
+                        <a href="blog-marrakech.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 2. Fes -->
+                <article class="blog-card">
+                    <img src="images/destinations/fes.jpg" loading="lazy" alt="Fes Medina Tannery" class="blog-image">
+                    <div class="blog-content">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Fes: The Cultural Heart</h3>
+                        <p>Explore the world's largest car-free urban area, ancient tanneries, and the spiritual soul of
+                            Morocco.</p>
+                        <a href="blog-fes.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 3. Atlas Mountains -->
+                <article class="blog-card">
+                    <img src="images/hight_atlas.jpg" loading="lazy" alt="Atlas Mountains Berber Village"
+                        class="blog-image">
+                    <div class="blog-content">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem;">The High Atlas</h3>
+                        <p>Walk among the clouds in traditional Berber villages and challenge yourself on North Africa's
+                            highest peaks.</p>
+                        <a href="blog-atlas.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 4. Sahara Desert -->
+                <article class="blog-card">
+                    <img src="images/sahara_morocco.jpg" loading="lazy" alt="Sahara Desert Dunes Camel Trek"
+                        class="blog-image">
+                    <div class="blog-content">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Sahara Desert</h3>
+                        <p>Experience the silence of the Erg Chebbi dunes, ride camels at sunset, and sleep under a
+                            blanket of stars.</p>
+                        <a href="blog-sahara.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 5. Coastal Morocco -->
+                <article class="blog-card">
+                    <img src="images/guide_coastal_vibes1.jpg" loading="lazy" alt="Essaouira Blue Boats Coast"
+                        class="blog-image">
+                    <div class="blog-content">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Coastal Vibes</h3>
+                        <p>Relax in the breezy medina of Essaouira, watch the blue fishing boats, and walk through Argan
+                            forests.</p>
+                        <a href="blog-coastal.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 6. Culture & Food -->
+                <article class="blog-card">
+                    <img src="images/tagin.jpg" loading="lazy" alt="Moroccan Tagine Food Culture" class="blog-image">
+                    <div class="blog-content">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Culture &amp; Flavors</h3>
+                        <p>Taste the spices of a slow-cooked tagine, experience a traditional Hammam, and learn local
+                            customs.</p>
+                        <a href="blog-culture.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Morocco Trek Tours</h4>
+                    <p>Your trusted partner for Atlas Mountain and Sahara Desert adventures. We create memories that
+                        last a lifetime.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Our Tours</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Travel Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Imlil, Marrakech, Morocco</li>
+                        <li><i class="fas fa-phone"></i> +212 659 56 5040</li>
+                        <li><i class="fas fa-envelope"></i> info@moroccotrektours.com</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #fff; margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Morocco Trek Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+# Morocco Trek Tours — public_html/.htaccess
+# Compatible with Hostinger (Apache / LiteSpeed). Active only when the matching
+# module exists, so unknown directives can never take the whole site down.
+#
+# IMPORTANT: public files that MUST stay reachable are NOT blocked here:
+#   - images.json (fetched by js/main.js as the gallery fallback)
+#   - sitemap.xml, robots.txt, *.svg assets, all HTML/JS/CSS/images
+#   - the public PHP endpoints: send-email.php, send-custom-trip.php,
+#     generate-csrf-token.php
+#
+# NOTE: deny rules protect against HTTP requests only. PHP itself may still
+# read files from disk (this is how send-email.php loads the Composer
+# autoloader inside vendor/), so blocking /vendor/ over HTTP does not break
+# the contact or customization forms.
+
+# ------------------------------------------------------------------
+# 1. No directory listings
+# ------------------------------------------------------------------
+Options -Indexes
+
+# ------------------------------------------------------------------
+# 2. Prevent MIME sniffing
+# ------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ------------------------------------------------------------------
+# 3. Block internal dependency / build / project metadata files
+#    (composer.json, composer.lock, package.json, package-lock.json,
+#     cms-manifest.json, server.js, plus documentation, logs, dumps)
+# ------------------------------------------------------------------
+<FilesMatch "^(composer\.(json|lock)|package(-lock)?\.json|cms-manifest\.json|server\.js|package\.json|.*\.(md|log|sql|bak|sh|phar))$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ------------------------------------------------------------------
+# 4. Block internal directories entirely (HTTP level only)
+#    Includes .env and .git if they are ever uploaded to the docroot.
+# ------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Node/Composer/tooling directories must never be served publicly.
+    RewriteRule ^vendor(/|$) - [F,L]
+    RewriteRule ^node_modules(/|$) - [F,L]
+    RewriteRule ^private(/|$) - [F,L]
+    RewriteRule ^tools(/|$) - [F,L]
+    RewriteRule ^includes(/|$) - [F,L]
+    RewriteRule ^_backups(/|$) - [F,L]
+
+    # Secrets and version-control data.
+    RewriteRule ^\.env - [F,L]
+    RewriteRule ^\.git(/|$) - [F,L]
+</IfModule>
+
+# Fallback for hosts where mod_rewrite cannot be enabled in .htaccess
+# (mod_alias). Harmless if the rewrite rules above already fired.
+<IfModule mod_alias.c>
+    RedirectMatch 403 ^/?(vendor|node_modules|private|tools|includes|_backups)(/|$)
+    RedirectMatch 403 ^/?\.env
+    RedirectMatch 403 ^/?\.git(/|$)
+</IfModule>
