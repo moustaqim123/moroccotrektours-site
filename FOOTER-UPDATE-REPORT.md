@@ -146,3 +146,49 @@ checkpoint as usual; local-only, no git commit, no upload).
 | `customize-trip-fr.html` footer content | 1 Ga… Galerie link, 1 Contact link, 1 copyright span with static `2026` fallback, 1 year script — verified by read `:738-753` |
 | JS disabled | static fallback year `2026` is real text in HTML — renders without JS |
 | Files modified | **1** (`public_html/customize-trip-fr.html`) — all other 53 pages and all CSS/JS/images untouched |
+
+---
+
+# Addendum 2 — 2026-10-31: single-year copyright (`© 2026`)
+
+## Change
+
+On **all 54 HTML pages**, inside the existing footer copyright `<p>` only:
+
+```diff
+- © 2024–<span class="footer-year">2026</span> Morocco Trek Tours. …
++ © <span class="footer-year">2026</span> Morocco Trek Tours. …
+```
+
+(`&copy; ` form kept on `index-fr.html` and `tours-fr.html`, matching their existing entity style.)
+
+The `.footer-year` span, its static `2026` text, and the year-update script were **not
+modified** — only the `2024–` prefix was deleted, so:
+- renders as `© 2026 Morocco Trek Tours. All rights reserved.` / `Tous droits réservés.`
+- single year only (no range);
+- `2026` remains the visible fallback if JavaScript is off/blocked;
+- the script keeps rewriting the span with the browser's current year each January;
+- design/layout/links unchanged (same classes, same `<p>`, inline script invisible).
+
+## Pre-edit evidence
+
+grep `2024–` across `public_html/*.html` returned **exactly 54 matches — one per page,
+all inside the copyright `<p>`**. No other occurrence anywhere.
+
+## Validation (2026-10-31)
+
+| Check | Result |
+|---|---|
+| Required format `© <year> Morocco Trek Tours …` on all 54 pages | **54/54** (52 literal `©` + 2 `&copy;` entity pages) |
+| `2024–` remaining anywhere in HTML | **0 matches** |
+| One copyright notice per page (`class="copyright"`) | **54** (untouched this task) |
+| One year-update script per page (`querySelectorAll('.footer-year')`) | **54** (untouched this task) |
+| Fallback year without JavaScript | static text `2026` inside `<span class="footer-year">` — verified by direct read (`index.html:642`); renders with JS disabled |
+| Auto-update preserved | same ES5 IIFE at line 643 etc. — unchanged from the original implementation |
+| `2026` HTML fallback kept | yes — literal text in markup on every page |
+
+## Backup
+
+`_backups/2026-10-31-copyright-single-year/BEFORE-copyright.md` — exact pre-edit text of
+every copyright variant (3 groups) + rollback instructions. Local-only; no upload, no
+git commit, no deploy. Modified files: **54** (all HTML pages under `public_html/`).
